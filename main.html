@@ -6,7 +6,87 @@
 	<title>Кенгуру-мама</title>
 	<link rel="stylesheet" href="./pages/main.css">
 </head>
-<body>
+<body class="root">
+  <div class="page">
+    <main class="content">
+      <section class="popular">
+        <div class="content-slider">
+          <figure class="popular__item">
+            <img src="./images/popular1.svg" alt="" class="popular__item-img">
+            <!-- <img src="./images/popular_new.svg" alt="new" class="popular__item-img-new"> -->
+            <figcaption class="popular__item-title">Пеленальный кокон</figcaption>            
+            <p class="popular__item-price">890</p>
+          </figure>
 
+          <figure class="popular__item popular__item_new">
+            <img src="./images/popular1.svg" alt="" class="popular__item-img">
+            <!-- <img src="./images/popular_new.svg" alt="new" class="popular__item-img-new"> -->
+            <figcaption class="popular__item-title">Пеленальный кокон</figcaption>            
+            <p class="popular__item-price">890</p>
+          </figure>
+
+          <figure class="popular__item">
+            <img src="./images/popular1.svg" alt="" class="popular__item-img">
+            <!-- <img src="./images/popular_new.svg" alt="new" class="popular__item-img-new"> -->
+            <figcaption class="popular__item-title">Пеленальный кокон</figcaption>            
+            <p class="popular__item-price">890</p>
+          </figure>
+
+          <figure class="popular__item">
+            <img src="./images/popular1.svg" alt="" class="popular__item-img">
+            <!-- <img src="./images/popular_new.svg" alt="new" class="popular__item-img-new"> -->
+            <figcaption class="popular__item-title">Пелёнка-кокон "Авокадо"</figcaption>            
+            <p class="popular__item-price">890</p>
+          </figure>
+        </div>
+      </section>
+
+      <section class="review">
+
+      </section>
+    </main>
+  </div>
+
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js" ></script>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js" ></script>
+  <script type="text/javascript" src="./vendor/slick-1.8.1/slick/slick.min.js" ></script>
+
+  <script>
+    $('.popular .content-slider').slick({
+      dots: true,
+      infinite: false,
+      //speed: 300,
+      slidesToShow: 4,
+      slidesToScroll: 4,
+      // responsive: [
+      //   {
+      //     breakpoint: 1024,
+      //     settings: {
+      //       slidesToShow: 3,
+      //       slidesToScroll: 3,
+      //       infinite: true,
+      //       dots: true
+      //     }
+      //   },
+      //   {
+      //     breakpoint: 600,
+      //     settings: {
+      //       slidesToShow: 2,
+      //       slidesToScroll: 2
+      //     }
+      //   },
+      //   {
+      //     breakpoint: 480,
+      //     settings: {
+      //       slidesToShow: 1,
+      //       slidesToScroll: 1
+      //     }
+      //   }
+      //   // You can unslick at a given breakpoint now by adding:
+      //   // settings: "unslick"
+      //   // instead of a settings object
+      // ]
+    });
+  </script>
 </body>
 </html>
