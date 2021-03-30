@@ -1,0 +1,9 @@
+.page{
+	max-width: 1440px;
+	background-color: #fff;
+	color: #DC8962;
+	margin: 0 auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-family: Montserrat sans-serif;
+}

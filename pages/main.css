@@ -1,2 +1,18 @@
 @import url("../vendor/normalize.css");
 @import url("../vendor/fonts/fonts.css");
+@import url("../blocks/page/page.css");
+@import url("../blocks/section-btn/section-btn.css");
+@import url("../blocks/section-btn/__block/section-btn__block.css");
+@import url("../blocks/section-btn/__block/_place/section-btn__block_place_left.css");
+@import url("../blocks/section-btn/__block/_place/section-btn__block_place_right.css");
+@import url("../blocks/section-btn/__image/section-btn__image.css");
+@import url("../blocks/section-btn/__image/_place/section-btn__image_place_left.css");
+@import url("../blocks/section-btn/__image/_place/section-btn__image_place_right.css");
+@import url("../blocks/section-btn/__inner/section-btn__inner.css");
+@import url("../blocks/section-btn/__inner/_place/section-btn__inner_place_left.css");
+@import url("../blocks/section-btn/__inner/_place/section-btn__inner_place_right.css");
+@import url("../blocks/section-btn/__title/section-btn__title.css");
+@import url("../blocks/section-btn/__text/section-btn__text.css");
+@import url("../blocks/button/button.css");
+
+
