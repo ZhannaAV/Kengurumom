@@ -21,6 +21,7 @@
 @import url('../blocks/review/review.css');
 @import url('../blocks/review/__title/review__title.css');
 @import url('../blocks/review/__item/review__item.css');
+@import url('../blocks/review/__item-img/review__item-img.css');
 @import url('../blocks/review/__item-title/review__item-title.css');
 @import url('../blocks/review/__item-insta/review__item-insta.css');
 @import url('../blocks/review/__item-text/review__item-text.css');
