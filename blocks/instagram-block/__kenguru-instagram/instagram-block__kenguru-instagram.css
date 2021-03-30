@@ -1,0 +1,8 @@
+.instagram-block__kenguru-instagram {
+  padding: 0;
+  margin-left: 87px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
