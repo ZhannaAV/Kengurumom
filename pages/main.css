@@ -20,3 +20,13 @@
 @import url("../blocks/section-btn/__title/section-btn__title.css");
 @import url("../blocks/section-btn/__text/section-btn__text.css");
 @import url("../blocks/button/button.css");
+@import url("../blocks/instagram-block/instagram-block.css");
+@import url("../blocks/instagram-block/__text-block/instagram-block__text-block.css");
+@import url("../blocks/instagram-block/__text/instagram-block__text.css");
+@import url("../blocks/instagram-block/__kenguru-instagram/instagram-block__kenguru-instagram.css");
+@import url("../blocks/instagram-block/__instagram-icon/instagram-block__instagram-icon.css");
+@import url("../blocks/photo-grid/photo-grid.css");
+@import url("../blocks/photo-grid/__element/photo-grid__element.css");
+@import url("../blocks/photo-grid/__link/photo-grid__link.css");
+@import url("../blocks/photo-grid/__icon/photo-grid__icon.css");
+@import url("../blocks/photo-grid/__image/photo-grid__image.css");

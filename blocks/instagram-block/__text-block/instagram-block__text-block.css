@@ -1,0 +1,8 @@
+.instagram-block__text-block {
+  padding: 0;
+  margin: 0 0 84px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
