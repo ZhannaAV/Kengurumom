@@ -1,0 +1,8 @@
+.content-slider {
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1257px;
+}

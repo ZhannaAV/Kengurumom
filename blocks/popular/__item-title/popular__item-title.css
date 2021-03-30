@@ -1,6 +1,6 @@
 .popular__item-title {
   max-width: 200px;
-  min-height: 46px;
+  height: 100%;
   text-align: center;
   margin: 22px auto 0 auto;
   color: #dc8962;

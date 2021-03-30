@@ -1,8 +1,8 @@
 /*basic*/
 @import url('../vendor/normalize.css');
 @import url("../vendor/fonts/fonts.css");
-@import url('../vendor/slick-1.8.1/slick/slick.css');
-@import url('../vendor/slick-1.8.1/slick/slick-theme.css');
+/* @import url('../vendor/slick-1.8.1/slick/slick.css'); */
+/* @import url('../vendor/slick-1.8.1/slick/slick-theme.css'); */
 @import url('../blocks/page/page.css');
 @import url('../blocks/root/root.css');
 /*popular*/
@@ -11,10 +11,16 @@
 @import url('../blocks/popular/__item/popular__item.css');
 @import url('../blocks/popular/__item/_new/popular__item_new.css');
 @import url('../blocks/popular/__title/popular__title.css');
-@import url('../blocks/popular/__item-title/popular__item-title.css');
 @import url('../blocks/popular/__item-price/popular__item-price.css');
+@import url('../blocks/popular/__item-price-sale/popular__item-price-sale.css');
+@import url('../blocks/popular/__item-title/popular__item-title.css');
 @import url('../blocks/popular/__item-img/popular__item-img.css');
 @import url('../blocks/popular/__item-img-new/popular__item-img-new.css');
 /*review*/
 @import url('../blocks/review/review.css');
+@import url('../blocks/review/__title/review__title.css');
 @import url('../blocks/review/__item/review__item.css');
+@import url('../blocks/review/__item-title/review__item-title.css');
+@import url('../blocks/review/__item-insta/review__item-insta.css');
+@import url('../blocks/review/__item-text/review__item-text.css');
+@import url('../blocks/review/__item-text-full/review__item-text-full.css');

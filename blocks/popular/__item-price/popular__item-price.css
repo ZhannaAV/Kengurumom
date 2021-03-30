@@ -1,6 +1,6 @@
 .popular__item-price{
-  align-self: flex-end;
-  /* margin: 7px auto 0 auto; */
+  margin: 7px auto 0 auto;
+  position: relative;
   text-align: center;
   margin: 0 auto;
   color: #513629;
