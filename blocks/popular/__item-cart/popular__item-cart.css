@@ -9,8 +9,9 @@
   width: 82px;
   height: 82px;
   object-fit: none;
+  cursor: pointer;
 }
 
-.popular__item:hover .popular__item-cart {
+.popular__item-img:hover+.popular__item-cart {
   display: block;
 }
