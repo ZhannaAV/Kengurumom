@@ -10,6 +10,7 @@
 @import url('../blocks/popular/popular.css');
 @import url('../blocks/popular/__item/popular__item.css');
 @import url('../blocks/popular/__item/_new/popular__item_new.css');
+@import url('../blocks/popular/__item-cart/popular__item-cart.css');
 @import url('../blocks/popular/__title/popular__title.css');
 @import url('../blocks/popular/__item-price/popular__item-price.css');
 @import url('../blocks/popular/__item-price-sale/popular__item-price-sale.css');

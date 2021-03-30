@@ -1,0 +1,16 @@
+.popular__item-cart {
+  position: absolute;
+  top: calc(165px - 82px / 2);
+  left: calc(50% - 82px / 2);
+  display: none;
+  background-color:#fff;
+  opacity: 0.8;
+  border-radius: 50%;
+  width: 82px;
+  height: 82px;
+  object-fit: none;
+}
+
+.popular__item:hover .popular__item-cart {
+  display: block;
+}
