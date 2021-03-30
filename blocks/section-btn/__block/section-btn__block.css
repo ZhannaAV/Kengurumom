@@ -1,0 +1,8 @@
+.section-btn__block {
+	width: 805px;
+	min-height: 351px;
+	max-height: 588px;
+	background: #FAF1E9;
+	z-index: 1;
+	display: flex;
+}

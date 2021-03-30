@@ -1,0 +1,8 @@
+.section-btn {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 668px;
+	margin-bottom: 80px;
+}
