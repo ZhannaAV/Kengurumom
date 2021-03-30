@@ -3,7 +3,8 @@
 .navigation {
     display: flex;
     justify-content: space-between;
-    max-width: 600px;
+    width: 600px;
     margin: 0;
     padding: 0;
+    opacity: 1;
 }

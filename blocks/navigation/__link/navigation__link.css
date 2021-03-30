@@ -7,6 +7,7 @@
     margin: 0;
     padding: 0;
     cursor: pointer;
+    transition: all .26s ease-in-out;
 }
 
 .navigation__link:hover {
