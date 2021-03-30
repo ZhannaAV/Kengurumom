@@ -1,0 +1,10 @@
+@import url('./__content/header__content.css');
+@import url('./__text/header__text.css');
+
+.header {
+    position: fixed;
+    width: 100%;
+    margin: 0;
+    background-color: #fff;
+    opacity: .5;
+}

@@ -1,0 +1,9 @@
+@import url('./__link/navigation__link.css');
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    max-width: 600px;
+    margin: 0;
+    padding: 0;
+}
