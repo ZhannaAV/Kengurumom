@@ -1,0 +1,10 @@
+.advantages__card-element {
+  max-width: 232px;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.advantages__card-element:nth-of-type(3n) {
+  margin-right: 0;
+}
