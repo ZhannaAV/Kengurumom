@@ -1,6 +1,10 @@
 @import url("../vendor/normalize.css");
 @import url("../vendor/fonts/fonts.css");
 @import url("../blocks/page/page.css");
+@import url('../blocks/header/header.css');
+@import url('../blocks/logo/logo.css');
+@import url('../blocks/navigation/navigation.css');
+@import url('../blocks/basket/basket.css');
 @import url("../blocks/advantages/advantages.css");
 @import url("../blocks/advantages/__cards/advantages__cards.css");
 @import url("../blocks/advantages/__card-element/advantages__card-element.css");
