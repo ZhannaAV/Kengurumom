@@ -1,4 +1,5 @@
 .product__minor-image {
-  max-width: 570px;
+  max-width: 168px;
   height: auto;
+	object-fit: cover;
 }

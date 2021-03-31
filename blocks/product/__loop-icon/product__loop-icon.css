@@ -6,3 +6,7 @@
   height: 50px;
   z-index: 3;
 }
+
+.product__loop-icon {
+  cursor: pointer;
+}
