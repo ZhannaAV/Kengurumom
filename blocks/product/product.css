@@ -1,0 +1,7 @@
+.product {
+  margin: 0 auto;
+  padding: 190px 0 250px;
+  max-width: 1170px;
+  display: flex;
+  flex-direction: row;
+}
