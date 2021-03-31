@@ -2,16 +2,21 @@
   position: absolute;
   top: calc(165px - 82px / 2);
   left: calc(50% - 82px / 2);
-  display: none;
   background-color:#fff;
-  opacity: 0.8;
+  opacity: 0;
+  border: 0;
   border-radius: 50%;
   width: 82px;
   height: 82px;
   object-fit: none;
   cursor: pointer;
+  
+  background-image: url('../../../images/popular_cart.svg');
+  background-repeat: no-repeat;
+  background-size: unset;
+  background-position: center;
 }
 
-.popular__item-img:hover+.popular__item-cart {
-  display: block;
+.popular__item-img:hover+.popular__item-cart,.popular__item-cart:hover {
+  opacity: 0.8;
 }
