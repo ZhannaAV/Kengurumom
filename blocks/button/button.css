@@ -27,7 +27,7 @@
 
 .product {
   margin: 0 auto;
-  padding: 20px 0 20px;
+  padding: 80px 0 250px;
   max-width: 1170px;
   display: flex;
   flex-direction: row;
@@ -255,7 +255,8 @@
   left: 0;
   right: 0;
   z-index: 100;
-	border-radius: 10px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
 	opacity: 1;
 	visibility: visible;
 	transition: all 0.4s ease-in-out;
@@ -282,4 +283,4 @@
 .select-items div:last-of-type {
 	border-top-left-radius: 0;
 	border-top-right-radius: 0;
-}
+}	

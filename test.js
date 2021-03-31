@@ -1,37 +1,31 @@
-var x, i, j, l, ll, selElmnt, a, b, c;
-/* Look for any elements with the class "custom-select": */
-x = document.getElementsByClassName("custom-select");
-l = x.length;
-for (i = 0; i < l; i++) {
-  selElmnt = x[i].getElementsByTagName("select")[0];
-  ll = selElmnt.length;
+// Ищем все элементы с классом "custom-select"
+const selectArray = Array.from(document.querySelectorAll(".custom-select"));
+for (let i = 0; i < selectArray.length; i++) {
+  const selElmnt = selectArray[i].getElementsByTagName("select")[0];
   /* For each element, create a new DIV that will act as the selected item: */
-  a = document.createElement("DIV");
+  const a = document.createElement("DIV");
   a.setAttribute("class", "select-selected");
   a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
-  x[i].appendChild(a);
+  selectArray[i].appendChild(a);
   /* For each element, create a new DIV that will contain the option list: */
-  b = document.createElement("DIV");
+  const b = document.createElement("DIV");
   b.setAttribute("class", "select-items select-hide");
-  for (j = 0; j < ll; j++) {
+  for (let j = 0; j < selElmnt.length; j++) {
     /* For each option in the original select element,
     create a new DIV that will act as an option item: */
-    c = document.createElement("DIV");
+    const c = document.createElement("DIV");
     c.innerHTML = selElmnt.options[j].innerHTML;
     c.addEventListener("click", function(e) {
         /* When an item is clicked, update the original select box,
         and the selected item: */
-        var y, i, k, s, h, sl, yl;
-        s = this.parentNode.parentNode.getElementsByTagName("select")[0];
-        sl = s.length;
-        h = this.parentNode.previousSibling;
-        for (i = 0; i < sl; i++) {
+        const s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+        const h = this.parentNode.previousSibling;
+        for (let i = 0; i < s.length; i++) {
           if (s.options[i].innerHTML == this.innerHTML) {
             s.selectedIndex = i;
             h.innerHTML = this.innerHTML;
-            y = this.parentNode.getElementsByClassName("same-as-selected");
-            yl = y.length;
-            for (k = 0; k < yl; k++) {
+            const y = this.parentNode.getElementsByClassName("same-as-selected");
+            for (let k = 0; k < y.length; k++) {
               y[k].removeAttribute("class");
             }
             this.setAttribute("class", "same-as-selected");
@@ -42,7 +36,7 @@ for (i = 0; i < l; i++) {
     });
     b.appendChild(c);
   }
-  x[i].appendChild(b);
+  selectArray[i].appendChild(b);
   a.addEventListener("click", function(e) {
     /* When the select box is clicked, close any other select boxes,
     and open/close the current select box: */
@@ -56,10 +50,10 @@ for (i = 0; i < l; i++) {
 function closeAllSelect(elmnt) {
   /* A function that will close all select boxes in the document,
   except the current select box: */
-  var x, y, i, xl, yl, arrNo = [];
-  x = document.getElementsByClassName("select-items");
+  var selectArray, y, i, xl, yl, arrNo = [];
+  selectArray = document.getElementsByClassName("select-items");
   y = document.getElementsByClassName("select-selected");
-  xl = x.length;
+  xl = selectArray.length;
   yl = y.length;
   for (i = 0; i < yl; i++) {
     if (elmnt == y[i]) {
@@ -70,7 +64,7 @@ function closeAllSelect(elmnt) {
   }
   for (i = 0; i < xl; i++) {
     if (arrNo.indexOf(i)) {
-      x[i].classList.add("select-hide");
+      selectArray[i].classList.add("select-hide");
     }
   }
 }
