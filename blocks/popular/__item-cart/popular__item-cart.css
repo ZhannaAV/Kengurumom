@@ -17,6 +17,13 @@
   background-position: center;
 }
 
-.popular__item-img:hover+.popular__item-cart,.popular__item-cart:hover {
+.popular__item-img:hover+.popular__item-cart {
   opacity: 0.8;
+}
+
+.popular__item-cart:hover {
+  opacity: 0.8;
+  background-color: #dc8962;
+  /*этого в дизайне нет, можно убрать. сделал hover кнопки корзины по наведению аналогичным для корзины в меню*/
+  background-image: url('../../../images/popular_cart_hover.svg');
 }
