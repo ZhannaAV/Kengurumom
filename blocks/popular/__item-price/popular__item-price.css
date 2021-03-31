@@ -1,0 +1,14 @@
+.popular__item-price{
+  margin: 7px auto 0 auto;
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+  color: #513629;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 23px;
+}
+
+.popular__item-price::after{
+  content:' \20BD';
+}
