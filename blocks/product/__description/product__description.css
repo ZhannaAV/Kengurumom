@@ -13,3 +13,9 @@
 .product__description:last-of-type {
 	margin-bottom: 20px;
 }
+
+@media screen and (max-width: 900px) {
+  .product__description {
+    max-width: 860px;
+  }
+}
