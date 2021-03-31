@@ -1,0 +1,26 @@
+.content-slider {
+  padding: 0 30px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1257px;
+}
+
+/* .content-slider::before {
+  content: '';
+  background-image: url('../../images/slider_arrorw_left.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  width: 15px;
+}
+
+.content-slider::after {
+  content: '';
+  background-image: url('../../images/slider_arrorw_right.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  width: 15px;
+} */
