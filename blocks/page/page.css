@@ -1,27 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-.page{
-	max-width: 1440px;
-	background-color: #fff;
-	color: #DC8962;
-	margin: 0 auto;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	font-family: Montserrat Alternates, sans-serif;
-}
-=======
-=======
->>>>>>> dev/popular_review
 .page {
   min-width: 310px;
   max-width: 1900px;
   margin: 0 auto;
 
-<<<<<<< HEAD
   font-family: 'Inter', Arial, sans-serif;
-=======
-  font-family: 'Montserrat', Arial, sans-serif;
->>>>>>> dev/popular_review
 
   color: #000;
 
@@ -32,9 +14,4 @@
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%; 
   /*text-rendering: optimizeLegibility; */
-<<<<<<< HEAD
 } 
->>>>>>> Add main skeleton of popular section
-=======
-} 
->>>>>>> dev/popular_review
