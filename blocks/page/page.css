@@ -1,9 +1,14 @@
-.page{
-	max-width: 1440px;
-	background-color: #fff;
-	color: #DC8962;
-	margin: 0 auto;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	font-family: Montserrat Alternates, sans-serif;
-}
+.page {
+  min-width: 320px;
+  max-width: 1440px;
+  margin: 0 auto;
+  font-family: 'Montserrat Alternates', Arial, sans-serif;
+  color: #dc8962;
+  /*сглаживание шрифтов и тд*/
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%; 
+  /*text-rendering: optimizeLegibility; */
+} 

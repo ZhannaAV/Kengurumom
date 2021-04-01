@@ -6,3 +6,9 @@
 	content: '';
 	top: 0;
 }
+
+@media screen and (max-width: 825px) {
+	.section-btn__image{
+		width: calc(100% - 20px);
+	}
+}
