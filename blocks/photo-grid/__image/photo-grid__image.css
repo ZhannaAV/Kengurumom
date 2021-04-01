@@ -8,3 +8,10 @@
   border-radius: 10px;
   z-index: 1;
 }
+
+
+@media screen and (max-width: 768px) {
+  .photo-grid__image {
+    border: 3px solid #FFFFFF;
+  }
+}
