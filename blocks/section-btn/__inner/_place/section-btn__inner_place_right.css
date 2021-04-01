@@ -1,3 +1,10 @@
 .section-btn__inner_place_right {
-	margin: auto auto auto 100px
+	margin: auto auto auto 60px
+}
+
+@media screen and (max-width: 825px) {
+	.section-btn__inner_place_right{
+		margin: auto 20px;
+		text-align: right;
+	}
 }

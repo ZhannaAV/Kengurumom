@@ -6,3 +6,9 @@
 	height: 668px;
 	margin-bottom: 80px;
 }
+
+@media screen and (max-width: 768px) {
+	.section-btn{
+		height: 620px;
+	}
+}
