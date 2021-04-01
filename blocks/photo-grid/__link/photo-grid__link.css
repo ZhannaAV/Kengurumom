@@ -28,3 +28,9 @@
 .photo-grid__link:hover::after {
   opacity: .59;
 }
+
+@media screen and (max-width: 768px) {
+  .photo-grid__link::after {
+    border-radius: 10px;
+  }
+}

@@ -5,5 +5,14 @@
   max-width: 100%;
   width: 267px;
   transition: opacity .3s ease-in-out;
+  border-radius: 40px;
+  box-sizing: border-box;
   z-index: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .photo-grid__image {
+    border: 3px solid #FFFFFF;
+    border-radius: 10px;
+  }
 }

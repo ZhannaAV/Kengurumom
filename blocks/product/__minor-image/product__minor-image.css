@@ -1,0 +1,5 @@
+.product__minor-image {
+  object-fit: cover;
+  width: 100%;
+  border-radius: 10px;
+}

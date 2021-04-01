@@ -31,6 +31,14 @@
 @import url("../blocks/instagram-block/__instagram-icon/instagram-block__instagram-icon.css");
 @import url("../blocks/photo-grid/photo-grid.css");
 @import url("../blocks/photo-grid/__element/photo-grid__element.css");
+@import url("../blocks/photo-grid/__element/_position/photo-grid__element_position_first.css");
+@import url("../blocks/photo-grid/__element/_position/photo-grid__element_position_second.css");
+@import url("../blocks/photo-grid/__element/_position/photo-grid__element_position_third.css");
+@import url("../blocks/photo-grid/__element/_position/photo-grid__element_position_fourth.css");
+@import url("../blocks/photo-grid/__element/_position/photo-grid__element_position_fifth.css");
+@import url("../blocks/photo-grid/__element/_position/photo-grid__element_position_sixth.css");
+@import url("../blocks/photo-grid/__element/_position/photo-grid__element_position_seventh.css");
+@import url("../blocks/photo-grid/__element/_position/photo-grid__element_position_eighth.css");
 @import url("../blocks/photo-grid/__link/photo-grid__link.css");
 @import url("../blocks/photo-grid/__icon/photo-grid__icon.css");
 @import url("../blocks/photo-grid/__image/photo-grid__image.css");

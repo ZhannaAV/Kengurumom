@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Кенгуру-мама</title>
+	<link rel="stylesheet" href="./pages/product-page.css">
+</head>
+<body class="page">
+  <header class="header">
+    <div class="header__content">
+      <a class="logo" href="./main.html"></a>
+      <nav class="navigation">
+        <a href="./product-page.html" class="navigation__link">Каталог</a>
+        <a class="navigation__link">Индивидуальный пошив</a>
+        <a class="navigation__link">О бренде</a>
+        <a class="navigation__link">Доставка</a>
+      </nav>
+      <p class="header__text">+1 234 567 89 01</p>
+      <div class="basket">
+        <div class="basket__icon"></div>
+        <div class="basket__count basket__count_visible">9</div>
+      </div>
+    </div>
+  </header>
+  <main class="content">
+    <!-- начало секции "карточка продукта" -->
+    <section class="product">
+      <ul class="product__photos">
+        <li class="product__photo-with-zoom">
+          <img src="./images/product/loop.svg" alt="Лупа" class="product__loop-icon">
+          <img class="product__main-image" src="./images/product/test.jpg"
+            alt="Главное изображение">
+        </li>
+        <li class="product__photo-without-zoom">
+          <img class="product__minor-image product__minor-image_position_first"
+          src="./images/product/test.jpg" alt="Второстепенное изображение">
+        </li>
+        <li class="product__photo-without-zoom">
+          <img class="product__minor-image product__minor-image_position_second"
+          src="./images/product/test.jpg" alt="Второстепенное изображение">
+        </li>
+        <li class="product__photo-without-zoom">
+          <img class="product__minor-image product__minor-image_position_third"
+          src="./images/product/test.jpg" alt="Второстепенное изображение">
+        </li>
+      </ul>
+      <div class="product__specifications">
+        <h2 class="product__title">Пелёнка-кокон "Авокадо"</h2>
+        <h3 class="product__price">890 &#8381;</h3>
+        <div class="product__specification-box">
+          <h3 class="product__text product__text_type_bold">Размер:</h3>
+          <select class="select-custom" id="product-clothes-size" name="clothes-size">
+            <option value="0-3">0-3 мес (55 см)</option>
+            <option value="3-6">3-6 мес (65 см)</option>
+            <option value="7-12">7-12 мес (77 см)</option>
+          </select>
+        </div>
+        <button class="button button_type_add-to-card">В корзину</button>
+        <div class="product__specification-box">
+          <h3 class="product__text product__text_type_bold">Рекомендуемый возраст:</h3>
+          <h3 class="product__text" id="product-recommended-age">от 0 до 6 месяцев</h3>
+        </div>
+        <div class="product__specification-box">
+          <h3 class="product__text product__text_type_bold">Состав:</h3>
+          <h3 class="product__text" id="product-structure">100% хлопок (Интерлок)</h3>
+        </div>
+        <p class="product__description">Наши пеленальные коконы созданы для тех, кто ценит качество 
+          и комфорт. Пеленальный кокон на двухзамковой молнии сшит из сертифицированного
+          трикотажного хлопка высшей категории качества. Потайные швы не потревожат нежную
+          кожу малыша, а трикотаж не вызовет аллергии.
+        </p>
+        <p class="product__description">Многие мамы уже оценили пеленальные
+          коконы и знают, на сколько это комфортная и удобная альтернатива пеленанию.
+          Пройма пелёнки открывается, чтобы освободить ручки малыша и сохраняет физиологическое
+          положение тела, позволяя ручкам и ножкам расправляться постепенно и естественно.
+        </p>
+        <p class="product__description">Обеспечивается отличная воздухопроницаемость, кожа
+          дышит даже в жару.
+        </p>
+        <p class="product__description">Малышу уютно. В пелёнке прекрасно спится - мягкая бесшовная
+          изнанка, не давит и не тянет. Кокон создаёт обволакивающую среду, к которой малыш
+          привык во время его ожидания. Движения ребенка ограничены до той степени, при которой
+          он не навредит себе и не проснется.
+        </p>
+        <p class="product__description">Удобно маме и папе. Надеть пелёнку очень легко,
+          подгузник меняется без лишних движений. Папа легко справится ;) Можно носить и дома,
+          и на прогулке в коляске.
+        </p>
+        <div class="product__specification-box">
+          <h3 class="product__text product__text_type_bold">Артикул:</h3>
+          <h3 class="product__text" id="product-vendor-code">KNG.EW.K2152</h3>
+        </div>
+        <a class="product__care-link" href="#" target="_blank">Рекомендация по уходу</a>
+      </div>
+    </section>
+    <!-- конец секции "карточка продукта" -->
+    <section class="popular popular_page_product-page">
+      <!-- начало секции "Популярное" -->
+      <h2 class="popular__title">Вам может понравиться</h2>
+      <div class="content-slider">
+        <figure class="popular__item">
+          <img src="./images/popular_cocoon.png" alt="Пеленальный кокон" class="popular__item-img">
+          <button class="popular__item-cart" alt="В корзину"></button>
+          <figcaption class="popular__item-title">Пеленальный кокон</figcaption>
+          <div class="popular__item-price">890
+            <p class="popular__item-price-sale">1090</p>
+          </div>
+        </figure>
+  
+        <figure class="popular__item popular__item_new">
+          <img src="./images/popular_sleepingbag.png" alt="Спальник" class="popular__item-img">
+          <button class="popular__item-cart" alt="В корзину"></button>
+          <figcaption class="popular__item-title">Спальник</figcaption>
+          <div class="popular__item-price">890</div>
+        </figure>
+  
+        <figure class="popular__item">
+          <img src="./images/popular_milksnud.png" alt="Милкснуд" class="popular__item-img">
+          <button class="popular__item-cart" alt="В корзину"></button>
+          <figcaption class="popular__item-title">Милкснуд</figcaption>
+          <div class="popular__item-price">1090</div>
+        </figure>
+  
+        <figure class="popular__item">
+          <img src="./images/popular_avokado.png" alt="Пелёнка-кокон Авокадо" class="popular__item-img">
+          <button class="popular__item-cart" alt="В корзину"></button>
+          <figcaption class="popular__item-title">Пелёнка-кокон "Авокадо"</figcaption>
+          <div class="popular__item-price">1200</div>
+        </figure>
+      </div>
+    </section>
+   </main>
+ 	<!-- футер -->
+ 	<footer class="footer">
+    <div class="footer__container">
+      <div class="footer__top">
+        <a aria-label="Kenguru" href="#" target="_self"><img class="logo" src="./images/icons/footer-logo.svg"></a>
+      </div>
+      <div class="footer__columns">
+        <nav class="footer__menu">
+          <ul class="footer__menu-links">
+            <li class="footer__menu-item"><a class="footer__menu-link footer__menu-link_none-decoration" href="#">Каталог</a></li>
+            <li class="footer__menu-item"><a class="footer__menu-link footer__menu-link_none-decoration" href="#">Индивидуальный пошив</a></li>
+            <li class="footer__menu-item"><a class="footer__menu-link footer__menu-link_none-decoration" href="#">О бренде</a></li>
+            <li class="footer__menu-item"><a class="footer__menu-link footer__menu-link_none-decoration" href="#">Покупателям</a></li>
+            <li class="footer__menu-item"><a class="footer__menu-link footer__menu-link_none-decoration" href="#">Контакты</a></li>
+            <li class="footer__menu-item"><a class="footer__menu-link" href="#">Оферта</a>
+            </li>
+            <li class="footer__menu-item"><a class="footer__menu-link" href="#">Политика
+             конфиденциальности</a></li>
+          </ul>
+        </nav>
+        <div class="footer__info">
+          <div class="footer__contacts">
+            <p class="footer__text">+ 7 964 589 06 96</p>
+            <p class="footer__text">Звонки и заказы: пн-пт 09:00 - 21:00 по МСК</p>
+            <ul class="footer__social">
+              <li class="footer__social-item">
+                <a class="footer__social-link footer__social-link_icon_whatsup" href="#">
+                </a>
+              </li>
+              <li class="footer__social-item">
+                <a class="footer__social-link footer__social-link_icon_instagram" href="#">
+                </a>
+              </li>
+              <li class="footer__social-item">
+                <a class="footer__social-link footer__social-link_icon_telegram" href="#">
+                </a>
+              </li>
+            </ul>
+          </div>
+          <p class="footer__copyright">Все фото и видео материалы являются собственностью автора. Любое копирование и
+            использование материалов в сети Интернет или печатных СМИ, допускается только с условием размещения
+            активной ссылки без запрета индексации или с письменного согласия администрации сайта.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

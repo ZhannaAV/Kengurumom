@@ -1,0 +1,5 @@
+.product__photo-with-zoom {
+  margin: 0 auto;
+	grid-area: main;
+	position: relative;
+}

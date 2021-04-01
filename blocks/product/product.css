@@ -1,0 +1,26 @@
+.product {
+  margin: 0 auto;
+  padding: 190px 0 130px;
+  max-width: 1170px;
+  display: flex;
+  flex-direction: row;
+}
+
+@media screen and (max-width: 1280px) {
+  .product {
+    padding: 190px 50px 130px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .product {
+    padding: 190px 20px 130px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .product {
+    flex-direction: column;
+    padding-bottom: 50px;
+  }
+}

@@ -8,3 +8,19 @@
   line-height: 107.9%;
   align-self: center;
 }
+
+@media screen and (max-width: 930px) {
+  .instagram-block__text {
+    max-width: min-content;
+  }
+
+  .instagram-block__text:first-child {
+    margin-bottom: 29px;
+    line-height: 127%;
+  }
+
+  .instagram-block__text:last-child {
+    font-weight: normal;
+    font-size: 20px;
+  }
+}
