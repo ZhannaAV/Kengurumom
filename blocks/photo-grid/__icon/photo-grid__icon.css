@@ -1,8 +1,15 @@
 .photo-grid__icon {
   position: absolute;
-  top: 7%;
-  right: 7%;
+  top: 10%;
+  right: 10%;
   width: 17.54px;
   height: 17.54px;
   z-index: 3;
+}
+
+@media screen and (max-width: 768px) {
+  .photo-grid__icon {
+    top: 5%;
+    right: 5%;
+  }
 }

@@ -16,6 +16,7 @@
 
   .instagram-block__text:first-child {
     margin-bottom: 29px;
+    line-height: 127%;
   }
 
   .instagram-block__text:last-child {

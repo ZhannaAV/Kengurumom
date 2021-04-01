@@ -1,7 +1,7 @@
 @media screen and (max-width: 768px) {
   .photo-grid__element_position_first {
-    justify-self: center;
+    justify-self: end;
     align-self: flex-end;
-    max-width: 62.5%;
+    max-width: 78%;
   }
 }
