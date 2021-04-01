@@ -1,24 +1,5 @@
 .product__minor-image {
   object-fit: cover;
   width: 100%;
-  height: 163px;
   border-radius: 10px;
-}
-
-@media screen and (max-width: 1180px) {
-  .product__minor-image {
-    height: 150px;
-  }
-}
-
-@media screen and (max-width: 1080px) {
-  .product__minor-image {
-    height: 145px;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .product__minor-image {
-    height: 142px;
-  }
 }

@@ -8,6 +8,7 @@
 @import url("../blocks/product/product.css");
 @import url("../blocks/product/__photos/product__photos.css");
 @import url("../blocks/product/__photo-with-zoom/product__photo-with-zoom.css");
+@import url("../blocks/product/__photo-without-zoom/product__photo-without-zoom.css");
 @import url("../blocks/product/__loop-icon/product__loop-icon.css");
 @import url("../blocks/product/__main-image/product__main-image.css");
 @import url("../blocks/product/__minor-image/product__minor-image.css");
