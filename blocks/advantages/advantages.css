@@ -2,3 +2,9 @@
   padding: 210px 0 210px;
   margin: 0 auto;
 }
+
+@media screen and (max-width: 900px) {
+  .advantages {
+    padding: 100px 0 100px;
+  }
+}

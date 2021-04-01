@@ -1,0 +1,7 @@
+@media screen and (max-width: 768px) {
+  .photo-grid__element_position_second {
+    justify-self: flex-start;
+    align-self: flex-end;
+    max-width: 100%;
+  }
+}
