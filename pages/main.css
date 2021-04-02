@@ -5,6 +5,16 @@
 @import url('../blocks/logo/logo.css');
 @import url('../blocks/navigation/navigation.css');
 @import url('../blocks/basket/basket.css');
+@import url("../blocks/slider/slider.css");
+@import url("../blocks/slider/__cover/slider__cover.css");
+@import url("../blocks/slider/__contain/slider__contain.css");
+@import url("../blocks/slider/__title/slider__title.css");
+@import url("../blocks/slider/__title/_accent/slider__title_accent.css");
+@import url("../blocks/slider/__subtitle/slider__subtitle.css");
+@import url("../blocks/slider/__navigation/slider__navigation.css");
+@import url("../blocks/slider/__dott/slider__dott.css");
+@import url("../blocks/slider/__dott/_active/slider__dott_active.css");
+@import url("../blocks/slider/__background/slider__background.css");
 @import url("../blocks/advantages/advantages.css");
 @import url("../blocks/advantages/__cards/advantages__cards.css");
 @import url("../blocks/advantages/__card-element/advantages__card-element.css");
