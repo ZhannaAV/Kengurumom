@@ -14,6 +14,7 @@
 @import url("../blocks/slider/__navigation/slider__navigation.css");
 @import url("../blocks/slider/__dott/slider__dott.css");
 @import url("../blocks/slider/__dott/_active/slider__dott_active.css");
+@import url("../blocks/slider/__overlay/slider__overlay.css");
 @import url("../blocks/slider/__background/slider__background.css");
 @import url("../blocks/advantages/advantages.css");
 @import url("../blocks/advantages/__cards/advantages__cards.css");
