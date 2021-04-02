@@ -1,0 +1,11 @@
+.slider__title {
+  padding: 0;
+  margin: 0 0 30px;
+  max-width: 610px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 49px;
+  text-align: left;
+  color: #FAF1E9;
+}
