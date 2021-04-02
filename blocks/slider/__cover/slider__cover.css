@@ -1,0 +1,28 @@
+.slider__cover {
+  margin: 0 auto;
+  padding: 0;
+  max-width: 1440px;
+  max-height: 43.2%;
+  display: grid;
+  grid-template-columns: minmax(auto, 1440px);
+  grid-template-rows: auto;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 0;
+  color: white;
+}
+  
+.slider__cover::after {
+  display: block;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color:#2A2C2F;
+  opacity: .1;
+  z-index: -1;
+  transition: opacity .5s ease-in-out;
+}
