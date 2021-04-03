@@ -3,7 +3,19 @@
   margin: 0 auto;
 }
 
+@media screen and (max-width: 1024px) {
+  .advantages {
+    padding: 190px 0 190px;
+  }
+}
+
 @media screen and (max-width: 900px) {
+  .advantages {
+    padding: 175px 0 175px;
+  }
+}
+
+@media screen and (max-width: 750px) {
   .advantages {
     padding: 100px 0 100px;
   }
