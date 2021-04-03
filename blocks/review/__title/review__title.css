@@ -12,3 +12,10 @@
     font-size: 25px;
   }
 }
+
+@media screen and (max-width: 480px) {
+  .review__title {
+    max-width: 240px;
+    margin-bottom: 50px;
+  }
+}
