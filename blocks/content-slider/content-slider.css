@@ -7,20 +7,8 @@
   max-width: 1257px;
 }
 
-/* .content-slider::before {
-  content: '';
-  background-image: url('../../images/slider_arrorw_left.svg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: auto;
-  width: 15px;
+@media screen and (max-width: 1024px) {
+  .content-slider {
+    max-width: 996px;
+  }
 }
-
-.content-slider::after {
-  content: '';
-  background-image: url('../../images/slider_arrorw_right.svg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: auto;
-  width: 15px;
-} */

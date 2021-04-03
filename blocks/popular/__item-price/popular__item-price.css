@@ -3,10 +3,11 @@
   position: relative;
   text-align: center;
   margin: 0 auto;
+  margin-top: auto;
   color: #513629;
   font-weight: 600;
   font-size: 18px;
-  line-height: 23px;
+  line-height: 127%;
 }
 
 .popular__item-price::after{

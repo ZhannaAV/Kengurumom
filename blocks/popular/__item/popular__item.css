@@ -7,3 +7,17 @@
   margin: 0 16px;
   padding: 0;
 }
+
+.popular__item:first-child {
+  margin-left: 0px;
+}
+
+.popular__item:last-child {
+  margin-right: 0px;
+}
+
+@media screen and (max-width: 1024px) {
+  .popular__item {
+    margin: 0 13px;
+  }
+}
