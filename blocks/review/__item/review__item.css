@@ -9,3 +9,11 @@
   padding: 0;
   color: #dc8962;
 }
+
+.review__item:first-child {
+  margin-left: 0px;
+}
+
+.review__item:last-child {
+  margin-right: 0px;
+}

@@ -3,15 +3,12 @@
   text-align: center;
   font-weight: 400;
   font-size: 20px;
-  line-height: 22px;
+  line-height: 108%;
 }
 
-/* .review__item-text::after{
-  content: 'Читать полностью';
-  margin: 33px auto 0 auto;
-  color: #edbdba;
-  text-decoration: underline;
-  font-size: 18px;
-  line-height: 108%;
-  font-weight: 500;
-} */
+@media screen and (max-width: 1024px) {
+  .review__item-text{
+    margin: 29px auto 32px auto;
+    font-size: 18px;
+  }
+}

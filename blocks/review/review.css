@@ -3,3 +3,9 @@
   padding: 210px 0;
   width: 100%;
 }
+
+@media screen and (max-width: 1024px) {
+  .review {
+    padding-top: 190px;
+  }
+}
