@@ -18,3 +18,10 @@ img.popular__item-img {
     height: 328px;
   }
 }
+
+@media screen and (max-width: 480px) {
+  .popular__item-img {
+    width: 280px;
+    height: 342px;
+  }
+}

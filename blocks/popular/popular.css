@@ -15,3 +15,9 @@
     padding-top: 97px;
   }
 }
+
+@media screen and (max-width: 480px) {
+  .popular {
+    padding-top: 80px;
+  }
+}

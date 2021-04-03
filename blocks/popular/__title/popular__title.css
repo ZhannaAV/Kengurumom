@@ -18,3 +18,9 @@
     margin-bottom: 92px;
   }
 }
+
+@media screen and (max-width: 480px) {
+  .popular__title {
+    margin-bottom: 63px;
+  }
+}
