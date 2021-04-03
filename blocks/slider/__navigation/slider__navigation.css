@@ -8,3 +8,22 @@
   display: flex;
   flex-direction: row;
 }
+
+@media screen and (max-width: 1280px) {
+  .slider__navigation {
+    left: 70px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .slider__navigation {
+    bottom: 9%;
+    left: 20px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .slider__navigation {
+    bottom: 5%;
+  }
+}
