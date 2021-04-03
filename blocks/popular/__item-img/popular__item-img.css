@@ -11,3 +11,10 @@ img.popular__item-img {
     height: 328px;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .popular__item-img {
+    width: 230px;
+    height: 328px;
+  }
+}

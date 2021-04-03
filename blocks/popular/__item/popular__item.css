@@ -21,3 +21,9 @@
     margin: 0 13px;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .popular__item {
+    margin: 0 9px;
+  }
+}

@@ -12,3 +12,11 @@
     max-width: 996px;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .content-slider {
+    max-width: 724px;
+    /* padding: 0 21px; */
+    padding: 0;
+  }
+}
