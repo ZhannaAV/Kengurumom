@@ -8,3 +8,9 @@
   font-size: 18px;
   line-height: 127%;
 }
+
+@media screen and (max-width: 480px) {
+  .popular__item-title {
+    margin-top: 15px;
+  }
+}

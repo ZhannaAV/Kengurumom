@@ -27,3 +27,11 @@
     padding: 0;
   }
 }
+
+@media screen and (max-width: 320px) {
+  .content-slider {
+    justify-content: center;
+    max-width: 280px;
+    padding: 0;
+  }
+}
