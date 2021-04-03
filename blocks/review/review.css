@@ -9,3 +9,9 @@
     padding-top: 190px;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .review {
+    padding-top: 200px;
+  }
+}

@@ -17,3 +17,10 @@
 .review__item:last-child {
   margin-right: 0px;
 }
+
+@media screen and (max-width: 1024px) {
+  .review__item {
+    margin: 0 10px;
+    max-width: 225px;
+  }
+}

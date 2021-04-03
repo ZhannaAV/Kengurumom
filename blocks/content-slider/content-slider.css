@@ -5,11 +5,13 @@
   justify-content: space-between;
   width: 100%;
   max-width: 1257px;
+  box-sizing: border-box;
 }
 
 @media screen and (max-width: 1024px) {
   .content-slider {
-    max-width: 996px;
+    /* max-width: 996px; */
+    padding: 0 23px;
   }
 }
 
