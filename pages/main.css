@@ -50,6 +50,7 @@
 @import url("../blocks/photo-grid/__element/_position/photo-grid__element_position_sixth.css");
 @import url("../blocks/photo-grid/__element/_position/photo-grid__element_position_seventh.css");
 @import url("../blocks/photo-grid/__element/_position/photo-grid__element_position_eighth.css");
+@import url("../blocks/photo-grid/__element/_not-active/photo-grid__element_not-active.css");
 @import url("../blocks/photo-grid/__link/photo-grid__link.css");
 @import url("../blocks/photo-grid/__icon/photo-grid__icon.css");
 @import url("../blocks/photo-grid/__image/photo-grid__image.css");
