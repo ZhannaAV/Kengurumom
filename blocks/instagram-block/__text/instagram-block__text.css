@@ -9,13 +9,19 @@
   align-self: center;
 }
 
-@media screen and (max-width: 930px) {
+@media screen and (max-width: 1024px) {
+  .instagram-block__text:first-child {
+    margin: 0 auto 40px 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
   .instagram-block__text {
     max-width: min-content;
   }
 
   .instagram-block__text:first-child {
-    margin-bottom: 29px;
+    margin: 0 0 29px;
     line-height: 127%;
   }
 

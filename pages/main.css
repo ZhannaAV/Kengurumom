@@ -6,6 +6,9 @@
 @import url('../blocks/navigation/navigation.css');
 @import url('../blocks/basket/basket.css');
 @import url("../blocks/slider/slider.css");
+@import url("../blocks/slider/__list/slider__list.css");
+@import url("../blocks/slider/__slide/slider__slide.css");
+@import url("../blocks/slider/__slide/_active/slider__slide_active.css");
 @import url("../blocks/slider/__cover/slider__cover.css");
 @import url("../blocks/slider/__contain/slider__contain.css");
 @import url("../blocks/slider/__title/slider__title.css");
@@ -42,14 +45,7 @@
 @import url("../blocks/instagram-block/__instagram-icon/instagram-block__instagram-icon.css");
 @import url("../blocks/photo-grid/photo-grid.css");
 @import url("../blocks/photo-grid/__element/photo-grid__element.css");
-@import url("../blocks/photo-grid/__element/_position/photo-grid__element_position_first.css");
-@import url("../blocks/photo-grid/__element/_position/photo-grid__element_position_second.css");
-@import url("../blocks/photo-grid/__element/_position/photo-grid__element_position_third.css");
-@import url("../blocks/photo-grid/__element/_position/photo-grid__element_position_fourth.css");
-@import url("../blocks/photo-grid/__element/_position/photo-grid__element_position_fifth.css");
-@import url("../blocks/photo-grid/__element/_position/photo-grid__element_position_sixth.css");
-@import url("../blocks/photo-grid/__element/_position/photo-grid__element_position_seventh.css");
-@import url("../blocks/photo-grid/__element/_position/photo-grid__element_position_eighth.css");
+@import url("../blocks/photo-grid/__element/_not-active/photo-grid__element_not-active.css");
 @import url("../blocks/photo-grid/__link/photo-grid__link.css");
 @import url("../blocks/photo-grid/__icon/photo-grid__icon.css");
 @import url("../blocks/photo-grid/__image/photo-grid__image.css");
