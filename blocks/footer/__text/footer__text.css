@@ -5,3 +5,10 @@
   margin: 0 0 22px 0;
   padding: 0;
 }
+
+@media screen and (max-width: 480px) {
+  .footer__text {
+    line-height: 1.2;
+    font-size: 15px;
+    text-align: center;
+}

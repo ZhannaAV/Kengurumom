@@ -1,0 +1,13 @@
+.footer__wrapper{
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  grid-area: copyright;
+}
+
+@media screen and (max-width: 480px) {
+  .footer__wrapper {
+    justify-content: center;
+    align-items: center;
+  }
+}

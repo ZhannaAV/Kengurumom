@@ -13,3 +13,9 @@
 .footer__menu-link:hover {
   color: #513629;
 }
+
+@media screen and (max-width: 480px) {
+  .footer__menu-link {
+    line-height: 1.2;
+    font-size: 15px;
+}

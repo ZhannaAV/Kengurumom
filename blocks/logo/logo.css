@@ -15,3 +15,17 @@
 .logo:hover {
     opacity: .7;
 }
+
+@media screen and (max-width: 480px){
+  .logo {
+    width: 168px;
+    height: 61px;
+  }
+}
+
+@media screen and (max-width: 375px){
+  .logo {
+    width: 130px;
+    height: 47px;
+  }
+}
