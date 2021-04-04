@@ -8,7 +8,13 @@
 	display: flex;
 }
 
-@media screen and (max-width: 825px) {
+@media screen and (max-width: 1024px) {
+	.section-btn__block{
+		width: 589px;
+	}
+}
+
+@media screen and (max-width: 767px) {
 	.section-btn__block{
 		width: 300px;
 		padding: 30px 0;
