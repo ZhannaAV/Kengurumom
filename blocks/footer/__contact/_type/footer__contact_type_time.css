@@ -1,0 +1,9 @@
+.footer__contact_type_time {
+  grid-area: time;
+}
+
+@media screen and (max-width: 480px) {
+  .footer__contact_type_time {
+   max-width: 225px;
+  }
+}

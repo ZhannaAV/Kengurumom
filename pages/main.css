@@ -69,7 +69,6 @@
 @import url('../blocks/review/__item-text-full/review__item-text-full.css');
 @import url("../blocks/footer/footer.css");
 @import url("../blocks/footer/__contacts/footer__contacts.css");
-@import url("../blocks/footer/__columns/footer__columns.css");
 @import url("../blocks/footer/__container/footer__container.css");
 @import url("../blocks/footer/__copyright/footer__copyright.css");
 @import url("../blocks/footer/__info/footer__info.css");
@@ -85,4 +84,9 @@
 @import url("../blocks/footer/__social-link/_icon/footer__social-link_icon_telegram.css");
 @import url("../blocks/footer/__social-link/_icon/footer__social-link_icon_instagram.css");
 @import url("../blocks/footer/__text/footer__text.css");
+@import url("../blocks/footer/__contact/_type/footer__contact_type_phone.css");
+@import url("../blocks/footer/__contact/_type/footer__contact_type_time.css");
 @import url("../blocks/footer/__top/footer__top.css");
+@import url("../blocks/footer/__wrapper/footer__wrapper.css");
+@import url("../blocks/footer/__contact/footer__contact.css");
+
