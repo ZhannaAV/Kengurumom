@@ -11,9 +11,13 @@
   margin-bottom: 40px;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 455px) {
   .product__specification-box:not(:last-of-type, :first-of-type) {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .product__specification-box:first-of-type {
+    margin-bottom: 45px;
   }
 }

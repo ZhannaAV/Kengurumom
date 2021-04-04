@@ -27,21 +27,23 @@
     <!-- начало секции "карточка продукта" -->
     <section class="product">
       <ul class="product__photos">
-        <li class="product__photo-with-zoom">
+        <li class="product__photo">
           <img src="./images/product/loop.svg" alt="Лупа" class="product__loop-icon">
-          <img class="product__main-image" src="./images/product/test.jpg"
+          <img src="./images/product/product-arrow.jpg" alt="Предыдущая" class="product__arrow">
+          <img src="./images/product/product-arrow.jpg" alt="Следующая" class="product__arrow product__arrow_right">
+          <img class="product__image" src="./images/product/test.jpg"
             alt="Главное изображение">
         </li>
-        <li class="product__photo-without-zoom">
-          <img class="product__minor-image product__minor-image_position_first"
+        <li class="product__photo">
+          <img class="product__image"
           src="./images/product/test.jpg" alt="Второстепенное изображение">
         </li>
-        <li class="product__photo-without-zoom">
-          <img class="product__minor-image product__minor-image_position_second"
+        <li class="product__photo">
+          <img class="product__image"
           src="./images/product/test.jpg" alt="Второстепенное изображение">
         </li>
-        <li class="product__photo-without-zoom">
-          <img class="product__minor-image product__minor-image_position_third"
+        <li class="product__photo">
+          <img class="product__image"
           src="./images/product/test.jpg" alt="Второстепенное изображение">
         </li>
       </ul>
@@ -49,7 +51,7 @@
         <h2 class="product__title">Пелёнка-кокон "Авокадо"</h2>
         <h3 class="product__price">890 &#8381;</h3>
         <div class="product__specification-box">
-          <h3 class="product__text product__text_type_bold">Размер:</h3>
+          <h3 class="product__text">Размер:</h3>
           <select class="select-custom" id="product-clothes-size" name="clothes-size">
             <option value="0-3">0-3 мес (55 см)</option>
             <option value="3-6">3-6 мес (65 см)</option>
@@ -58,38 +60,30 @@
         </div>
         <button class="button button_type_add-to-card">В корзину</button>
         <div class="product__specification-box">
-          <h3 class="product__text product__text_type_bold">Рекомендуемый возраст:</h3>
-          <h3 class="product__text" id="product-recommended-age">от 0 до 6 месяцев</h3>
+          <h3 class="product__text">Рекомендуемый возраст:</h3>
+          <p class="product__text" id="product-recommended-age">от 0 до 6 месяцев</p>
         </div>
         <div class="product__specification-box">
-          <h3 class="product__text product__text_type_bold">Состав:</h3>
-          <h3 class="product__text" id="product-structure">100% хлопок (Интерлок)</h3>
+          <h3 class="product__text">Состав:</h3>
+          <p class="product__text" id="product-structure">100% хлопок (Интерлок)</p>
         </div>
         <p class="product__description">Наши пеленальные коконы созданы для тех, кто ценит качество 
           и комфорт. Пеленальный кокон на двухзамковой молнии сшит из сертифицированного
           трикотажного хлопка высшей категории качества. Потайные швы не потревожат нежную
-          кожу малыша, а трикотаж не вызовет аллергии.
-        </p>
-        <p class="product__description">Многие мамы уже оценили пеленальные
+          кожу малыша, а трикотаж не вызовет аллергии.</br>Многие мамы уже оценили пеленальные
           коконы и знают, на сколько это комфортная и удобная альтернатива пеленанию.
           Пройма пелёнки открывается, чтобы освободить ручки малыша и сохраняет физиологическое
-          положение тела, позволяя ручкам и ножкам расправляться постепенно и естественно.
-        </p>
-        <p class="product__description">Обеспечивается отличная воздухопроницаемость, кожа
-          дышит даже в жару.
-        </p>
-        <p class="product__description">Малышу уютно. В пелёнке прекрасно спится - мягкая бесшовная
-          изнанка, не давит и не тянет. Кокон создаёт обволакивающую среду, к которой малыш
-          привык во время его ожидания. Движения ребенка ограничены до той степени, при которой
-          он не навредит себе и не проснется.
-        </p>
-        <p class="product__description">Удобно маме и папе. Надеть пелёнку очень легко,
-          подгузник меняется без лишних движений. Папа легко справится ;) Можно носить и дома,
-          и на прогулке в коляске.
+          положение тела, позволяя ручкам и ножкам расправляться постепенно и естественно.</br>
+          Обеспечивается отличная воздухопроницаемость, кожа дышит даже в жару.</br>Малышу уютно. 
+          В пелёнке прекрасно спится - мягкая бесшовная изнанка, не давит и не тянет. Кокон 
+          создаёт обволакивающую среду, к которой малыш привык во время его ожидания. Движения 
+          ребенка ограничены до той степени, при которой он не навредит себе и не проснется.</br>
+          Удобно маме и папе. Надеть пелёнку очень легко, подгузник меняется без лишних движений. 
+          Папа легко справится ;) Можно носить и дома, и на прогулке в коляске.
         </p>
         <div class="product__specification-box">
-          <h3 class="product__text product__text_type_bold">Артикул:</h3>
-          <h3 class="product__text" id="product-vendor-code">KNG.EW.K2152</h3>
+          <h3 class="product__text">Артикул:</h3>
+          <p class="product__text" id="product-vendor-code">KNG.EW.K2152</p>
         </div>
         <a class="product__care-link" href="#" target="_blank">Рекомендация по уходу</a>
       </div>
