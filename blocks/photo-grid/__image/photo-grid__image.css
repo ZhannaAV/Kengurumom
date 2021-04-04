@@ -3,7 +3,6 @@
   justify-content: stretch;
   object-fit: cover;
   width: 100%;
-  /* width: 267px; */
   transition: opacity .3s ease-in-out;
   border-radius: 10px;
   box-sizing: border-box;

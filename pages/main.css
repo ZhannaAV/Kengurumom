@@ -6,6 +6,9 @@
 @import url('../blocks/navigation/navigation.css');
 @import url('../blocks/basket/basket.css');
 @import url("../blocks/slider/slider.css");
+@import url("../blocks/slider/__list/slider__list.css");
+@import url("../blocks/slider/__slide/slider__slide.css");
+@import url("../blocks/slider/__slide/_active/slider__slide_active.css");
 @import url("../blocks/slider/__cover/slider__cover.css");
 @import url("../blocks/slider/__contain/slider__contain.css");
 @import url("../blocks/slider/__title/slider__title.css");
