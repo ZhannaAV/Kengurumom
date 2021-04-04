@@ -3,15 +3,28 @@
   text-align: center;
   font-weight: 400;
   font-size: 20px;
-  line-height: 22px;
+  line-height: 108%;
+  max-height: 284px;
+  text-overflow: ellipsis;
 }
 
-/* .review__item-text::after{
-  content: 'Читать полностью';
-  margin: 33px auto 0 auto;
-  color: #edbdba;
-  text-decoration: underline;
-  font-size: 18px;
-  line-height: 108%;
-  font-weight: 500;
-} */
+@media screen and (max-width: 1024px) {
+  .review__item-text{
+    margin: 29px auto 32px auto;
+    max-height: 225px;
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .review__item-text{
+    max-height: 229px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .review__item-text{
+    margin: 28px auto 33px auto;
+    max-height: 229px;
+  }
+}

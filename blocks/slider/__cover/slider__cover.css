@@ -1,0 +1,12 @@
+.slider__cover {
+  margin: 0 auto;
+  padding: 0;
+  max-width: 1440px;
+  display: grid;
+  grid-template-columns: minmax(1fr, 1440px);
+  grid-template-rows: auto;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+  color: white;
+}
