@@ -10,13 +10,12 @@
     "social";
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 660px) {
   .footer__contacts {
     grid-template-areas:
       "social"
       "phone"
       "time";
- 
     justify-items: center;
   }
 }
