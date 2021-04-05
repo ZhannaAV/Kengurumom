@@ -3,11 +3,8 @@
   font-size: 12px;
   font-weight: normal;
   text-align: right;
-  margin: 0;
+  margin: 0 0 0 40px;
   padding: 0;
-  //display: block;
-  //align-self: flex-end;
-  //justify-content: flex-end;
   max-width: 546px;
 }
 
@@ -17,13 +14,12 @@
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 660px) {
   .footer__copyright {
     justify-content: center;
     align-items: center;
     text-align: center;
     font-size: 8px;
-    //padding: 0 20px;
-    //max-width: 440px;
+    margin: 0;
   }
 }
