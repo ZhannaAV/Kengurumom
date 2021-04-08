@@ -1,0 +1,34 @@
+.basket {
+  position: relative;
+  width: 64px;
+  height: 64px;
+}
+
+.basket__icon {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 58px;
+  height: 58px;
+  background-image: url(../../images/icons/basket-icon.svg);
+  transition: background-image .26s ease-in-out;
+  cursor: pointer;
+}
+
+.basket__icon:hover {
+  background-image: url(../../images/icons/basket-icon-hover.svg);
+}
+
+.basket__count {
+  position: absolute;
+  background-color: #ffcd74;
+  color: #fff;
+  border-radius: 50%;
+  width: 23px;
+  height: 23px;
+  text-align: center;
+  top: 0;
+  right: 0;
+  font-size: 16px;
+  line-height: 23px;
+}
