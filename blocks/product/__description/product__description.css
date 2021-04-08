@@ -1,7 +1,6 @@
 .product__description {
 	padding: 0;
 	margin: 0;
-	max-width: 570px;
 	text-align: left;
 	font-style: normal;
 	font-weight: normal;
@@ -9,11 +8,6 @@
 	line-height: 126%;
 	color: #513629;
 	font-family: 'Montserrat', Arial, sans-serif;
-	-webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%; 
 }
 
 .product__description:last-of-type {
@@ -22,6 +16,12 @@
 
 @media screen and (max-width: 900px) {
   .product__description {
-    max-width: 860px;
+		font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 735px) {
+  .product__description {
+		font-size: 16px;
   }
 }

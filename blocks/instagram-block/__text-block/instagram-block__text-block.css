@@ -8,14 +8,22 @@
 
 @media screen and (max-width: 1280px) {
   .instagram-block__text-block {
-    padding: 0 50px;
+    padding: 0 70px;
   }
 }
 
-@media screen and (max-width: 930px) {
+@media screen and (max-width: 1024px) {
+  .instagram-block__text-block {
+    padding: 0 20px;
+    flex-direction: column;
+    margin-bottom: 70px;
+  }
+}
+
+@media screen and (max-width: 600px) {
   .instagram-block__text-block {
     padding: 0;
-    margin: 0 auto 53px;
+    margin: 0 auto 28px;
     flex-direction: column;
     justify-content: center;
   }

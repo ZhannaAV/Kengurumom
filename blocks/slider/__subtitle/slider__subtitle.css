@@ -1,6 +1,6 @@
 .slider__subtitle {
   padding: 0;
-  margin: 0 0 40px;
+  margin: 0;
   max-width: 500px;
   font-style: normal;
   font-weight: normal;
@@ -11,12 +11,19 @@
   white-space: pre-line;
 }
 
+.slider__subtitle:last-of-type {
+  margin-bottom: 40px;
+}
+
 @media screen and (max-width: 720px) {
   .slider__subtitle {
-    margin-bottom: 30px;
     font-size: 18px;
     text-align: center;
     color: #513629;
     max-width: 300px;
+  }
+
+  .slider__subtitle:last-of-type {
+    margin-bottom: 30px;
   }
 }

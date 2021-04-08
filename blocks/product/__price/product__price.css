@@ -7,3 +7,17 @@
   line-height: 30px;
   color: #513629;
 }
+
+@media screen and (max-width: 900px) {
+  .product__price {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+@media screen and (max-width: 735px) {
+  .product__price {
+    font-size: 25px;
+    line-height: 30px;
+  }
+}

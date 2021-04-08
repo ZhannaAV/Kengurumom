@@ -4,4 +4,12 @@
   font-weight: 500;
   margin: 0 0 22px 0;
   padding: 0;
+  text-align: right;
+}
+
+@media screen and (max-width: 660px) {
+  .footer__text {
+    line-height: 1.2;
+    font-size: 15px;
+    text-align: center;
 }
