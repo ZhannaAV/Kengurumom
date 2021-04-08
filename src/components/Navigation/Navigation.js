@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
 import { 
     PERSONAL_SEWING_PAGE, CATALOGUE_PAGE, ABOUT_PAGE, DELIVERY_PAGE 
-} from '../../Config/links';
+} from '../../config/links';
 import { 
     PERSONAL_SEWING_TEXT, CATALOGUE_TEXT, ABOUT_TEXT, DELIVERY_TEXT 
-} from '../../Config/texts';
+} from '../../config/texts';
 import './Navigation.css';
 
 function Navigation() {
