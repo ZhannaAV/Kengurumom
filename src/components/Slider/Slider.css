@@ -1,16 +1,18 @@
 .slider {
-    margin: 0 auto;
+    margin: 0;
     padding: 130px 0 0;
     position: relative;
-    overflow: hidden;
+    width: 100%;
+    /* overflow: hidden; */
   }
 
   .slider__background {
     width: 100%;
-    min-height: 622px;
-    object-position: 65% 50%;
+    height: 737px;
     object-fit: cover;
     z-index: -2;
+    opacity: 1;
+    /* transition: opacity 1s 0 ease-out; */
   }
   
   @media screen and (max-width: 720px) {
@@ -65,11 +67,10 @@
   .slider__cover {
     margin: 0;
     padding: 0;
-    max-width: 1440px;
+    width: 100%;
     display: grid;
     grid-template-columns: minmax(1fr, 1440px);
     grid-template-rows: auto;
-    justify-content: center;
     align-items: center;
     z-index: 0;
     color: white;
@@ -141,7 +142,6 @@
     z-index: 0;
     font-size: 0;
     position: relative;
-    overflow: hidden;
   }
   
   .slider__overlay::after {

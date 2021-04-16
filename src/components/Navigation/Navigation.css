@@ -1,9 +1,9 @@
 .navigation {
     display: flex;
     justify-content: space-between;
-    width: 600px;
+    width: 100%;
     margin: 0;
-    padding: 0;
+    padding: 0 26px 0 90px;
     opacity: 1;
 }
 

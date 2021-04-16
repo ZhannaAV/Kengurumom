@@ -1,7 +1,14 @@
 import './Slider.css';
 import '../../blocks/button/button.css';
+import slider1 from '../../images/slider/photo-on-slider-3.jpg';
+import slider2 from '../../images/slider/photo-on-slider-2.jpg';
+import { useState } from 'react';
+import cn from 'classnames';
 
 function Slider() {
+	const [isFirstSlide, setIsFirstSlide] = useState(true);
+
+
     return (
         <section className="slider">
 			<ul className="slider__list">
@@ -9,7 +16,7 @@ function Slider() {
 					<div className="slider__cover">
 						<div className="slider__contain">
 							<h2 className="slider__title">
-                                <span className="slider__title_accent">Kenguru</span>
+                                <span className="slider__title_accent">Kenguru </span>
                                 комфорт	и эстетика с первых дней
 							</h2>
 							<p className="slider__subtitle">Качественная одежда и аксессуары
@@ -21,7 +28,7 @@ function Slider() {
 							<button className="button">Заказать</button>
 						</div>
 						<div className="slider__overlay">
-							<img className="slider__background" src="../../images/slider/photo-on-slider-1.jpg" alt="#" />
+							<img className="slider__background" src={slider1} alt="#" />
 						</div>
 					</div>
 				</li>
@@ -37,7 +44,7 @@ function Slider() {
 							<button className="button">В каталог</button>
 						</div>
 						<div className="slider__overlay">
-							<img className="slider__background" src="../../images/slider/photo-on-slider-2.jpg" alt="#" />
+							<img className="slider__background" src={slider2} alt="#" />
 						</div>
 					</div>
 				</li>
