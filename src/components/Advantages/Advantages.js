@@ -1,36 +1,13 @@
-import { useState, useEffect } from "react";
-import "./Advantages.css";
-import AdvantageElement from "../AdvantageElement/AdvantageElement";
-import handicraft from "../../images/advantages/handicraft.svg";
-import reasonableConsumption from "../../images/advantages/reasonable-consumption.svg";
-import uniqueCut from "../../images/advantages/unique-cut.svg";
+import { useState, useEffect } from 'react';
+import './Advantages.css';
+import AdvantageElement from '../AdvantageElement/AdvantageElement';
+import { advantagesData } from '../../config/constants';
 
 function Advantages() {
   const [elements, setElements] = useState([]);
 
-  const initialData = [
-    {
-      image: handicraft,
-      alt: "Ручная работа",
-      title: "Ручная работа",
-      description: "Все вещи сделаны вручную с любовью небольшими партиями",
-    },
-    {
-      image: reasonableConsumption,
-      alt: "Разумное потребление",
-      title: "Разумное потребление",
-      description: "Все вещи сделаны вручную с любовью небольшими партиями",
-    },
-    {
-      image: uniqueCut,
-      alt: "Уникальный крой",
-      title: "Уникальный крой",
-      description: "Все вещи сделаны вручную с любовью небольшими партиями",
-    },
-  ];
-
   useEffect(() => {
-    setElements(initialData);
+    setElements(advantagesData);
   }, []);
 
   return (

@@ -1,6 +1,6 @@
-import "./Instagram.css";
-import instKenguruIcon from "../../images/instagram/inst-kenguru-icon.svg";
-import PhotoGrid from "../PhotoGrid/PhotoGrid";
+import './Instagram.css';
+import instKenguruIcon from '../../images/instagram/inst-kenguru-icon.svg';
+import PhotoGrid from '../PhotoGrid/PhotoGrid';
 
 function Instagram() {
   return (

@@ -1,19 +1,19 @@
-import "./PhotoElement.css";
-import instCornerIcon from "../../images/instagram/inst-corner-icon.svg";
+import './PhotoElement.css';
+import instCornerIcon from '../../images/instagram/inst-corner-icon.svg';
 
 function PhotoElement({ link, additionalClass }) {
   return (
-    <li className={`photo-grid__element ${additionalClass}`}>
-      <a target="_blank" href="#" className="photo-grid__link">
+    <li className={`photo-element ${additionalClass}`}>
+      <a target="_blank" href="#" className="photo-element__link">
         <img
           src={instCornerIcon}
           alt="Иконка instagram"
-          className="photo-grid__icon"
+          className="photo-element__icon"
         />
         <img
           alt={`Фотография: ${link}`}
           src={link}
-          className="photo-grid__image"
+          className="photo-element__image"
         />
       </a>
     </li>
