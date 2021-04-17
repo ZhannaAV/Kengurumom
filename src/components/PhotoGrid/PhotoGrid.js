@@ -11,7 +11,7 @@ import photoInstSeven from "../../images/instagram/inst-7.jpg";
 import photoInstEight from "../../images/instagram/inst-8.jpg";
 
 function PhotoGrid() {
-  const [elements, setCards] = useState([]);
+  const [elements, setElements] = useState([]);
 
   const initialData = [
     { link: photoInstOne },
@@ -21,11 +21,11 @@ function PhotoGrid() {
     { link: photoInstFive },
     { link: photoInstSix },
     { link: photoInstSeven },
-    { link: photoInstEight },
+    { link: photoInstEight }
   ];
 
   useEffect(() => {
-    setCards(initialData);
+    setElements(initialData);
   }, []);
 
   return (
