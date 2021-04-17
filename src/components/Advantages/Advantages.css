@@ -19,10 +19,10 @@
   font-weight: 500;
   font-size: 25px;
   line-height: 30px;
-  color: #EDBDBA;
+  color: #edbdba;
   width: min-content;
 }
-  
+
 .advantages__card-description {
   margin: 0;
   text-align: center;
@@ -32,7 +32,7 @@
   line-height: 127%;
   color: #513629;
 }
-  
+
 .advantages__card-image {
   width: 77px;
   height: 77px;
