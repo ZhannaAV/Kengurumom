@@ -6,8 +6,8 @@ import { useState } from 'react';
 import cn from 'classnames';
 
 function Slider() {
-	const [isFirstSlide, setIsFirstSlide] = useState(true);
 
+	const [isFirstSlide, setIsFirstSlide] = useState(true);
 
     return (
         <section className="slider">
