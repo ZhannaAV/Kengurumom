@@ -3,6 +3,8 @@ import { useMediaQuery } from 'react-responsive';
 import Header from '../Header/Header';
 import SideMenu from '../SideMenu/SideMenu';
 import Slider from '../Slider/Slider';
+import Advantages from '../Advantages/Advantages';
+import Instagram from '../Instagram/Instagram';
 import './App.css';
 
 function App() {
@@ -37,6 +39,8 @@ function App() {
                 openSideMenu={openSideMenu}
             />
             <Slider media={media} />
+            <Advantages />
+            <Instagram />
         </>
     );
 }
