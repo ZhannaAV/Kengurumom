@@ -10,9 +10,13 @@
 	border: none;
 	outline: none;
 	transition: background-color 0.4s ease-in-out;
-  cursor: pointer;
+	cursor: pointer;
 }
 
 .button:hover {
-  background-color: #CA764E;
+	background-color: #CA764E;
+}
+
+.button_type_add-to-card {
+	margin-bottom: 40px;
 }
