@@ -5,22 +5,48 @@ import Logo from '../Logo/Logo';
 import Navigation from '../Navigation/Navigation';
 import './Header.css';
 
-function Header() {
+function Header({ media, openSideMenu }) {
 
 	const [isCatMenuOpnd, setIsCatMenuOpnd] = useState(false);
-	const showCatalogue = _ => setIsCatMenuOpnd(true);
-	const hideCatalogue = _ => setIsCatMenuOpnd(false);
+
+
+	const showCatalogue = _ => {
+		setIsCatMenuOpnd(true);
+		document.addEventListener('click', hideCatalogue);
+	};	
+	
+	const hideCatalogue = _ => { 
+		setIsCatMenuOpnd(false);
+		document.removeEventListener('click', hideCatalogue);
+	};
 
 	return (
+
 		<header className="header">
 			<div className="header__content">
 				<Logo />
-				<Navigation onMouseOver={showCatalogue} onMouseOut={hideCatalogue} />
+				<Navigation
+					media={media}
+					openCatalogueMenu={showCatalogue}
+					closeCatalogueMenu={hideCatalogue}
+				/>
 				{
-					isCatMenuOpnd && <CatalogueMenu />
+					media.isDesktop 
+						&& <CatalogueMenu 
+							isCatMenuOpnd={isCatMenuOpnd}
+						/>
 				}
-				{/* <p className="header__text">+1 234 567 89 01</p> */}
 				<Basket />
+				{
+					media.isLaptop 
+						&& 	<button 
+								type="button" 
+								className="header__burger-button" 
+								onClick={openSideMenu} 
+							>
+							</button>
+				}
+
 			</div>
 		</header>
 	);

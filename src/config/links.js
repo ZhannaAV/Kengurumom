@@ -7,13 +7,13 @@ export const CONTACTS_PAGE = '/contacts';
 
 // catalogue links
 export const catalogueLinks = [
-    ['пеленальные коконы', '/changing-cocoons'],
-    ['слюнявчики и грызунки', '/bibs'],
-    ['спальники', '/sleeping-bags'],
-    ['конверты', '/envelops'],
-    ['пелёнки и пледы', '/napkins'],
-    ['милкснуды', '/milksnuds'],
-    ['вязаные пледы', '/knitted-blankets'],
-    ['органайзеры для детских вещей', '/organizers'],
-    ['подарочный сертификат', '/gift-certificate'],
+    ['Пеленальные коконы', '/changing-cocoons'],
+    ['Слюнявчики и грызунки', '/bibs'],
+    ['Спальники', '/sleeping-bags'],
+    ['Конверты', '/envelops'],
+    ['Пелёнки и пледы', '/napkins'],
+    ['Милкснуды', '/milksnuds'],
+    ['Вязаные пледы', '/knitted-blankets'],
+    ['Органайзеры для детских вещей', '/organizers'],
+    ['Подарочный сертификат', '/gift-certificate'],
 ]

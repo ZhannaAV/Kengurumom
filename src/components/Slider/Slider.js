@@ -1,6 +1,6 @@
 import './Slider.css';
 import '../../blocks/button/button.css';
-import slider1 from '../../images/slider/photo-on-slider-3.jpg';
+import slider1 from '../../images/slider/photo-on-slider-1.jpg';
 import slider2 from '../../images/slider/photo-on-slider-2.jpg';
 import { useState } from 'react';
 import cn from 'classnames';
