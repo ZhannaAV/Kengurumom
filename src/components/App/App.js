@@ -9,14 +9,7 @@ import './App.css';
 import SectionsWithBtn from "../SectionsWithBtn/SectionsWithBtn";
 
 
-import SlickSlider from '../SharedComponents/Slider/SlickSlider';
 import Popular from '../Popular/Popular';
-
-import popular_cocoon from '../../images/popular_cocoon.png';
-import popular_sleepingbag from '../../images/popular_sleepingbag.png';
-import popular_milksnud from '../../images/popular_milksnud.png';
-import popular_avokado from '../../images/popular_avokado.png';
-
 import Review from '../Review/Review';
 
 function App() {

@@ -41,12 +41,24 @@ const popularConfig = [
 ];
 
 export default function Popular(props){
+  let slides = 4;
+  console.log(document.body.offsetWidth);
+  if (document.body.offsetWidth < 570) {
+    slides = 1
+  }
+  else if (document.body.offsetWidth < 800) {
+    slides = 2
+  }
+  else if (document.body.offsetWidth < 1000) {
+    slides = 3
+  }
+
   return (
     <section class="popular">
       <h2 class="popular__title">Популярное</h2>
-      <SlickSlider className="content-slider">
+      <SlickSlider className="content-slider" slides={slides}>
         {popularConfig.map(item => (
-          <PopularItem item={item} />
+          <PopularItem {...item} />
         ))}
       </SlickSlider>
     </section>

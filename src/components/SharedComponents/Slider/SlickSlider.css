@@ -36,3 +36,27 @@
     padding: 0;
   }
 }
+
+/*replace slick slider styles*/
+.slick-arrow.slick-prev {
+  background: url('../../../images/slider_arrorw_left.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.slick-arrow.slick-next {
+  background: url('../../../images/slider_arrorw_right.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.slick-initialized .slick-slide {
+  display: flex !important;
+  justify-content: center;
+}
+
+.slick-list {
+  overflow: visible !important;
+}
