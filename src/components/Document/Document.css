@@ -1,0 +1,38 @@
+.document__container {
+  max-width: 770px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+  .document__container {
+    margin: 0 20px;
+  }
+}
+
+.document__title {
+  font-family: Montserrat Alternates;
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 600;
+  color: #DC8962;
+  text-align: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .document__title {
+  }
+}
+
+.document__text {
+  font-family: Montserrat;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 500;
+  color: #513629;
+}
+
+@media screen and (max-width: 1024px) {
+  .document__text {
+    font-size: 14px;
+  }
+}

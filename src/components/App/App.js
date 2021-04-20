@@ -7,6 +7,7 @@ import SideMenu from '../SideMenu/SideMenu';
 import Slider from '../Slider/Slider';
 import Advantages from '../Advantages/Advantages';
 import Instagram from '../Instagram/Instagram';
+import Footer from '../Footer/Footer';
 import './App.css';
 import SectionsWithBtn from '../SectionsWithBtn/SectionsWithBtn';
 import Popular from '../Popular/Popular';
@@ -16,7 +17,7 @@ import About from '../About/About';
 import PopupCare from '../PopupCare/PopupCare';
 import Button from '../Button/Button';
 import Product from '../Product/Product';
-
+import Document from '../Document/Document';
 import { testObjectOfProduct } from '../../config/constants';
 
 function App() {
@@ -68,6 +69,13 @@ function App() {
         </Route>
         <Route path={ABOUT_PAGE}>
           <About />
+        </Route>
+        <Route path='/offer'>
+          <Document type='offer' />
+        </Route>
+
+        <Route path='/terms-of-use'>
+          <Document type='terms-of-use' />
         </Route>
         <Route path={CATALOGUE_PAGE}>
           <Product product={testObjectOfProduct} media={media} />
