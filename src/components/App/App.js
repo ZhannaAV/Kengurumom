@@ -6,6 +6,8 @@ import Slider from '../Slider/Slider';
 import Advantages from '../Advantages/Advantages';
 import Instagram from '../Instagram/Instagram';
 import './App.css';
+import { Route, Switch } from 'react-router';
+import { CATALOGUE_PAGE, DELIVERY_PAGE } from '../../config/links';
 
 function App() {
 
@@ -38,9 +40,20 @@ function App() {
                 media={media}
                 openSideMenu={openSideMenu}
             />
-            <Slider media={media} />
-            <Advantages />
-            <Instagram />
+            <Switch>
+                <Route exact path='/'>
+                    <Slider media={media} />
+                    <Advantages />
+                    <Instagram />
+                </Route>
+                <Route exact path={CATALOGUE_PAGE}>
+                    <Advantages />
+                    <Instagram />
+                </Route>
+                <Route exact path={DELIVERY_PAGE}>
+                    <Advantages />
+                </Route>
+            </Switch>
         </>
     );
 }

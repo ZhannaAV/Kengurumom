@@ -3,8 +3,8 @@
     width: 100%;
     margin: 0;
     z-index: 10;
-    background-color: rgba(255, 255, 255, .9);
-    border-bottom: solid 1px #ccc;
+    background-color: #fff;
+    border-bottom: solid 1px #ddd;
 }
 
 .header__container {

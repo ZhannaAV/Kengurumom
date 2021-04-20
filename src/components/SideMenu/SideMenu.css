@@ -32,7 +32,8 @@
     height: 100vh;
     background-color: #dc8962;
     border-bottom-left-radius: 10px;
-    box-shadow: -5px 5px 5px rgba(0, 0, 0, .1);
+    /* box-shadow: -5px 5px 5px rgba(0, 0, 0, .1); */
+    border: 0 1px 1px 1px solid #ccc;
     padding-right: 25px;
     display: flex;
     flex-direction: column;
@@ -83,6 +84,7 @@
     .side-menu__container {
         min-width: 100%;
         margin-right: -100%;
+        border-bottom-left-radius: 0;
     }
 
     .side-menu__container_opened {
@@ -90,7 +92,7 @@
     }
 
     .side-menu__close-button {
-        margin: 20px 20px 80px auto;
+        margin: 20px 40px 80px auto;
         width: 19px;
         height: 18px;
     }
