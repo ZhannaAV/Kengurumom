@@ -1,5 +1,6 @@
-import {useState} from 'react';
+import {Component, useState} from 'react';
 import {useMediaQuery} from 'react-responsive';
+import {Switch, Route} from 'react-router-dom';
 import Header from '../Header/Header';
 import SideMenu from '../SideMenu/SideMenu';
 import Slider from '../Slider/Slider';
@@ -7,9 +8,12 @@ import Advantages from '../Advantages/Advantages';
 import Instagram from '../Instagram/Instagram';
 import './App.css';
 import SectionsWithBtn from "../SectionsWithBtn/SectionsWithBtn";
+<<<<<<< HEAD
 import Popular from '../Popular/Popular';
 import Review from '../Review/Review';
 import PopupAddCart from '../PopupAddCart/PopupAddCart';
+=======
+>>>>>>> Feat: add main about
 
 function App() {
     const isDesktop = useMediaQuery({'minWidth': 1440});
