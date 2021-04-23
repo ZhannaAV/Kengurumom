@@ -39,6 +39,7 @@ function App() {
                 media={media}
                 openSideMenu={openSideMenu}
             />
+
             <Slider media={media}/>
             <Advantages/>
             <SectionsWithBtn/>
