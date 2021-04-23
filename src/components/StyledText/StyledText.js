@@ -1,6 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
+//Styled Components
+const StyledParagraph = styled.p`${props => props.style}`;
+const StyledSpan = styled.span`${props => props.style}`;
+
 export default function StyledText({text, styles}){
   //set default style/className for main paragraph
   if (!styles.default.style && !styles.default.className) {
@@ -24,36 +28,19 @@ export default function StyledText({text, styles}){
       }
 
       if (styles[tagName].style) {
-        const StyledSpan = styled.span(styles[tagName].style)
-        output = <StyledSpan> {text} </StyledSpan>
+        output = <StyledSpan key={text} style={styles[tagName].style}> {text} </StyledSpan>
       }
       else if (styles[tagName].className) {
-        const StyledSpan = styled.span({})
-        output = <StyledSpan className={styles[tagName].className}> {text} </StyledSpan>
+        output = <StyledSpan key={text} className={styles[tagName].className}> {text} </StyledSpan>
       }
     }
     return output;
   }
 
-  //create array of groups of words and objects (without this we`ll have every word at single line in our html code! not good)
-  const inputWords = text.split(/ +/).map(createWordComponent);
-  const words = [];
-  if (text) {
-    let prevTextWord = '';
-    for (let word of inputWords) {
-      if (typeof word === 'object') {
-        words.push(prevTextWord);
-        words.push(word);
-        prevTextWord = '';
-      }
-      else if (typeof word === 'string') {
-        prevTextWord += ' ' + word;
-      }
-    }
-  }
+  //create array of groups of words and objects (without this we`ll have every word at single line in our html code! not good) 
+  const words = text.split(/(<\w+?>.+?<\/\w+?>)/).map(createWordComponent);
 
-  const StyledParagraph = styled.p(style);
-  return <StyledParagraph className={className}>{words}</StyledParagraph>
+  return <StyledParagraph style={style} className={className}>{words}</StyledParagraph>
 }
 
 //Usage
