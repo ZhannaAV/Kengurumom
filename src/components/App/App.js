@@ -46,6 +46,7 @@ function App() {
                 openSideMenu={openSideMenu}
             />
 
+<<<<<<< HEAD
             <Slider media={media}/>
             <Popular media={media}/>
             <Advantages/>
@@ -54,6 +55,24 @@ function App() {
             <Instagram/>
 
             <PopupAddCart />
+=======
+            <Switch>
+                <Route exact path='/'>
+                    <Slider media={media}/>
+                    <Advantages/>
+                    <SectionsWithBtn/>
+                    <Instagram/>
+                </Route>
+
+                <Route path='/about'>
+                    <About media={media}/>
+                </Route>
+
+                <Route path='*'>
+                    <NotFound />
+                </Route>
+            </Switch>
+>>>>>>> Add text from variables with StyledText
         </>
     );
 }
