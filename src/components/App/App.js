@@ -47,6 +47,11 @@ function App() {
             <Advantages/>
             <SectionsWithBtn/>
             <Instagram/>
+<<<<<<< HEAD
+=======
+
+            <BasketDialogSuccess />
+>>>>>>> just 4 rebase
         </>
     );
 }
