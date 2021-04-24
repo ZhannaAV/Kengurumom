@@ -13,6 +13,7 @@ import Popular from '../Popular/Popular';
 import Review from '../Review/Review';
 import PopupAddCart from '../PopupAddCart/PopupAddCart';
 import About from '../About/About';
+import PopupCare from '../PopupCare/PopupCare';
 
 function App() {
     const isDesktop = useMediaQuery({'minWidth': 1440});
@@ -60,6 +61,7 @@ function App() {
                 </Route>
             </Switch>
 
+            <PopupCare isOpened={true}>
             {/* <PopupAddCart isOpened={true} onClose={() => }/> */}
         </>
     );

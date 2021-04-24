@@ -1,0 +1,39 @@
+.popup-care {
+  margin: 0;
+  padding: 47px 115px 37px 85px;
+  max-width: 675px;
+  width: 100%;
+  background-color: #FAF1E9;
+}
+
+.popup-care__title {
+  margin: 0 0 5px 0;
+  padding: 0;
+  text-align: center;
+  font-family: 'Montserrat Alternates';
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 37px;
+  color: #DC8962;
+}
+
+.popup-care__text-title {
+  margin: 50px 0 0 0;
+  padding: 0;
+  text-align: left;
+  font-family: 'Montserrat Alternates';
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  color: #DC8962;
+}
+
+.popup-care__text {
+  margin: 10px 0 0 0;
+  padding: 0;
+  text-align: left;
+  font-family: 'Montserrat Alternates';
+  font-size: 18px;
+  line-height: 127%;
+  color: #513629;
+}
