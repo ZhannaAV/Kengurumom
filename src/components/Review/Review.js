@@ -1,3 +1,4 @@
+import React from 'react';
 import "./Review.css";
 
 import review_popovadaria from '../../images/review_popovadaria.png';
@@ -33,14 +34,26 @@ const reviewConfig = [
 ];
 
 export default function Review(props){
-  let slides = 3;
-  // console.log(document.body.offsetWidth);
-  if (document.body.offsetWidth < 600) {
-    slides = 1
-  }
-  else if (document.body.offsetWidth < 860) {
-    slides = 2
-  }
+  const [width, setWidth] = React.useState(window.innerWidth);
+  const [slides, setSlides] = React.useState(3);
+
+  const updateWidth = () => {
+    setWidth(window.innerWidth)
+    if (width < 580) {
+      setSlides(1);
+    }
+    else if (width < 857) {
+      setSlides(2);
+    }
+    else {
+      setSlides(3);
+    }
+  };
+
+  React.useEffect(() => {
+    window.addEventListener("resize", updateWidth);
+    return () => window.removeEventListener("resize", updateWidth);
+  });
 
   return (
     <section class="review">

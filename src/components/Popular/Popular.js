@@ -7,6 +7,7 @@ import popular_avokado from '../../images/popular_avokado.png';
 
 import PopularItem from '../../components/PopularItem/PopularItem';
 import SlickSlider from '../SharedComponents/Slider/SlickSlider';
+import React from 'react';
 
 //temp config. replace it with tests
 const popularConfig = [
@@ -41,17 +42,29 @@ const popularConfig = [
 ];
 
 export default function Popular(props){
-  let slides = 4;
-  console.log(document.body.offsetWidth);
-  if (document.body.offsetWidth < 570) {
-    slides = 1
-  }
-  else if (document.body.offsetWidth < 800) {
-    slides = 2
-  }
-  else if (document.body.offsetWidth < 1000) {
-    slides = 3
-  }
+  const [width, setWidth] = React.useState(window.innerWidth);
+  const [slides, setSlides] = React.useState(4);
+
+  const updateWidth = () => {
+    setWidth(window.innerWidth)
+    if (width < 570) {
+      setSlides(1);
+    }
+    else if (width < 857) {
+      setSlides(2);
+    }
+    else if (width < 1020) {
+      setSlides(3);
+    }
+    else {
+      setSlides(4);
+    }
+  };
+
+  React.useEffect(() => {
+    window.addEventListener("resize", updateWidth);
+    return () => window.removeEventListener("resize", updateWidth);
+  });
 
   return (
     <section class="popular">

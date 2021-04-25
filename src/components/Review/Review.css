@@ -1,24 +1,32 @@
 .review {
-  margin: 0;
+  margin: 0 auto;
   padding: 210px 0;
   width: 100%;
+  max-width: 1257px;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 1440px) {
+  .review {
+    max-width: 1169px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
   .review {
-    padding-top: 190px;
+    padding: 190px 21px 210px 21px;
   }
 }
 
 @media screen and (max-width: 768px) {
   .review {
-    padding-top: 200px;
+    padding: 200px 21px 210px 21px;
   }
 }
 
 @media screen and (max-width: 768px) {
   .review {
-    padding-top: 100px;
+    padding: 100px 21px 210px 21px;
   }
 }
 

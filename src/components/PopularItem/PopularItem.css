@@ -66,7 +66,7 @@
 }
 
 /*item-image*/
-img.popular__item-img {
+.popular__item-img {
   border: 0;
   border-radius: 10px;
   object-fit: cover;
@@ -75,14 +75,14 @@ img.popular__item-img {
   height: 391px;
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1540px) {
   .popular__item-img {
     width: 269px;
     height: 328px;
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1224px) {
   .popular__item-img {
     width: 225px;
     height: 328px;

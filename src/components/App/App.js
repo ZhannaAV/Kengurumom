@@ -8,7 +8,6 @@ import Instagram from '../Instagram/Instagram';
 import './App.css';
 import SectionsWithBtn from "../SectionsWithBtn/SectionsWithBtn";
 
-
 import Popular from '../Popular/Popular';
 import Review from '../Review/Review';
 
@@ -44,14 +43,11 @@ function App() {
             />
 
             <Slider media={media}/>
+            <Popular media={media}/>
             <Advantages/>
             <SectionsWithBtn/>
+            <Review media={media}/>
             <Instagram/>
-<<<<<<< HEAD
-=======
-
-            <BasketDialogSuccess />
->>>>>>> just 4 rebase
         </>
     );
 }

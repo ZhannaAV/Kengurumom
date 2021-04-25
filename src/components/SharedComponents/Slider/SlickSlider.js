@@ -11,12 +11,9 @@ export default function SlickSlider(props){
     speed: 500,
     slidesToShow: props.slides ? props.slides : 3,
     slidesToScroll: props.slides ? props.slides : 3,
-    arrows: true,
+    arrows: false,
     // centerMode: true,
   };
-
-  console.log(props)
-  console.log(settings)
 
   return (
     <Slider {...settings} className={props.className}>
