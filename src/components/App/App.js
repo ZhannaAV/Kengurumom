@@ -10,6 +10,8 @@ import { Route, Switch } from 'react-router-dom';
 import { CATALOGUE_PAGE, DELIVERY_PAGE } from '../../config/links';
 import SectionsWithBtn from "../SectionsWithBtn/SectionsWithBtn";
 
+import Popular from '../Popular/Popular';
+import Review from '../Review/Review';
 
 function App() {
     const isDesktop = useMediaQuery({'minWidth': 1440});
@@ -58,6 +60,12 @@ function App() {
             </Switch>
             
 
+            <Slider media={media}/>
+            <Popular media={media}/>
+            <Advantages/>
+            <SectionsWithBtn/>
+            <Review media={media}/>
+            <Instagram/>
         </>
     );
 }

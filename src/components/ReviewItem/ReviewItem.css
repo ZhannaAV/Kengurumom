@@ -1,0 +1,124 @@
+/*item*/
+.review__item {
+  position: relative;
+  display: flex;
+  max-width: 285px;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: center;
+  margin: 0 16px;
+  padding: 0;
+  color: #dc8962;
+}
+
+.review__item:first-child {
+  margin-left: 0px;
+}
+
+.review__item:last-child {
+  margin-right: 0px;
+}
+
+@media screen and (max-width: 1024px) {
+  .review__item {
+    margin: 0 10px;
+    max-width: 225px;
+  }
+}
+
+/*item title*/
+.review__item-title {
+  text-align: center;
+  margin: 44px auto 0 auto;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 108%;
+}
+
+@media screen and (max-width: 1024px) {
+  .review__item-title {
+    margin-top: 45px;
+    font-size: 18px;
+  }  
+}
+
+@media screen and (max-width: 480px) {
+  .review__item-title {
+    margin-top: 40px;
+  }  
+}
+
+/*item insta image*/
+.review__item-img {
+  border: 0;
+  border-radius: 10px;
+  object-fit: contain;
+  max-width: 99px;
+  max-height: 99px;
+  margin: 0 auto;
+}
+
+/*item insta link*/
+.review__item-insta {
+  text-decoration: none;
+  color: #dc8962;
+}
+
+.review__item-insta:hover {
+  color: #CA764E;
+}
+
+.review__item-insta:active {
+  color: #FCBA9B;
+}
+
+/*item review text*/
+.review__item-text {
+  margin: 25px auto 33px auto;
+  text-align: center;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 108%;
+  max-height: 284px;
+  text-overflow: ellipsis;
+}
+
+@media screen and (max-width: 1024px) {
+  .review__item-text{
+    margin: 29px auto 32px auto;
+    max-height: 225px;
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .review__item-text{
+    max-height: 229px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .review__item-text{
+    margin: 28px auto 33px auto;
+    max-height: 229px;
+  }
+}
+
+/*item review text button Show full*/
+.review__item-text-full {
+  color: #edbdba;
+  text-decoration: underline;
+  font-size: 18px;
+  line-height: 108%;
+  font-weight: 500;
+  text-align: center;
+  margin-top: auto;
+}
+
+.review__item-text-full:hover {
+  color: #CA764E;
+}
+
+.review__item-text-full:active {
+  color: #FCBA9B;
+}
