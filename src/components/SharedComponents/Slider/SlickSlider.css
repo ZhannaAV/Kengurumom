@@ -19,6 +19,8 @@
   border-radius: 50% !important;
 } */
 
+.slick-track{ margin-left: 0; }
+
 .slick-slide:nth-of-type(1) {
   justify-content: left;
 }

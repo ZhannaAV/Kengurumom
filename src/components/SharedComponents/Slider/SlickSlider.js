@@ -13,6 +13,8 @@ export default function SlickSlider(props){
     slidesToScroll: props.slides ? props.slides : 3,
     arrows: false,
     // centerMode: true,
+    // nextArrow: <SampleNextArrow />,
+    // prevArrow: <SamplePrevArrow />
   };
 
   return (
