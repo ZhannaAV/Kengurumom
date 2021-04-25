@@ -1,9 +1,0 @@
-.section-btn__inner {
-	width: 482px;
-}
-
-@media screen and (max-width: 767px) {
-	.section-btn__inner {
-		width: 260px;
-	}
-}

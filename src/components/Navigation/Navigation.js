@@ -19,7 +19,7 @@ function Navigation({
                 && <Link 
                         className="navigation__link" 
                         to={CATALOGUE_PAGE}
-                        onMouseOver={type !== 'side' && openCatalogueMenu}
+                        onMouseOver={type !== 'side' ? openCatalogueMenu : null}
                     >
                         {CATALOGUE_TEXT}
                     </Link>
@@ -27,7 +27,7 @@ function Navigation({
             {
                 (media.isDesktop || type === 'side')
                 &&  <Link 
-                        onMouseOver={type !== 'side' && closeCatalogueMenu}
+                        onMouseOver={type !== 'side' ? closeCatalogueMenu : null}
                         className="navigation__link"
                         to={PERSONAL_SEWING_PAGE}
                     >
@@ -37,7 +37,7 @@ function Navigation({
             {
                 (media.isDesktop || type === 'side') 
                 && <Link 
-                        onMouseOver={type !== 'side' && closeCatalogueMenu}
+                        onMouseOver={type !== 'side' ? closeCatalogueMenu : null}
                         className="navigation__link" 
                         to={ABOUT_PAGE}
                     >
@@ -47,7 +47,7 @@ function Navigation({
             {
                 (!media.isTabletVert || type === 'side')
                  && <Link 
-                        onMouseOver={type !== 'side' && closeCatalogueMenu}
+                        onMouseOver={type !== 'side' ? closeCatalogueMenu : null}
                         className="navigation__link"
                         to={DELIVERY_PAGE}
                     >
@@ -66,7 +66,7 @@ function Navigation({
             {
                 (!media.isMobileVert || type === 'side')
                 &&  <Link 
-                        onMouseOver={type !== 'side' && closeCatalogueMenu} 
+                        onMouseOver={type !== 'side' ? closeCatalogueMenu : null} 
                         className="navigation__link" 
                         to={CONTACTS_PAGE}
                     >

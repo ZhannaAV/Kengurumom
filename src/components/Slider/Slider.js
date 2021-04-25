@@ -1,9 +1,9 @@
 import './Slider.css';
-import '../../blocks/button/button.css';
 import slider1 from '../../images/slider/photo-on-slider-1.jpg';
 import slider2 from '../../images/slider/photo-on-slider-2.jpg';
 import { useState } from 'react';
 import cn from 'classnames';
+import Button from "../Button/Button";
 
 function Slider() {
 
@@ -25,7 +25,7 @@ function Slider() {
 							<p className="slider__subtitle">
                                 От сердца к сердцу!
 							</p>
-							<button className="button">Заказать</button>
+							<Button text={'Заказать'}/>
 						</div>
 						<div className="slider__overlay">
 							<img className="slider__background" src={slider1} alt="#" />
@@ -41,7 +41,7 @@ function Slider() {
 							<p className="slider__subtitle">По Вашим размерам 
 								и Вашему выбору ткани
 							</p>
-							<button className="button">В каталог</button>
+                            <Button text={'В каталог'}/>
 						</div>
 						<div className="slider__overlay">
 							<img className="slider__background" src={slider2} alt="#" />
