@@ -1,3 +1,5 @@
+// временные переменные до появления БД -----------------------------------------
+
 // компонент AdvantageElement
 import handicraft from '../images/advantages/handicraft.svg';
 import reasonableConsumption from '../images/advantages/reasonable-consumption.svg';
@@ -15,6 +17,29 @@ import photoInstEight from '../images/instagram/inst-8.jpg';
 import photoAboutOneImg from '../images/about/about-1.jpg';
 import photoAboutTwoImg from '../images/about/about-2.jpg';
 import photoAboutThreeImg from '../images/about/about-3.jpg';
+
+// компонент Product
+import photoProductOne from '../images/product/test.jpg';
+
+export const instagramPhotoData = [
+  { link: photoInstOne },
+  { link: photoInstTwo },
+  { link: photoInstThree },
+  { link: photoInstFour },
+  { link: photoInstFive },
+  { link: photoInstSix },
+  { link: photoInstSeven },
+  { link: photoInstEight },
+];
+
+export const productPhotoData = [
+  { link: photoProductOne },
+  { link: photoInstOne },
+  { link: photoInstThree },
+  { link: photoInstSix },
+];
+
+// -------------------------------------------------------------------------------
 
 export const advantagesData = [
   {

@@ -16,7 +16,7 @@ function PhotoGrid() {
         <PhotoElement
           link={element.link}
           key={i}
-          additionalClass={i > 5 ? 'photo-element_not-active' : null}
+          additionalClass={i > 5 && 'photo-element_not-active'}
         />
       ))}
     </ul>
