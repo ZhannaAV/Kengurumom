@@ -1,3 +1,5 @@
+// временные переменные до появления БД -----------------------------------------
+
 // компонент AdvantageElement
 import handicraft from '../images/advantages/handicraft.svg';
 import reasonableConsumption from '../images/advantages/reasonable-consumption.svg';
@@ -11,6 +13,29 @@ import photoInstFive from '../images/instagram/inst-5.jpg';
 import photoInstSix from '../images/instagram/inst-6.jpg';
 import photoInstSeven from '../images/instagram/inst-7.jpg';
 import photoInstEight from '../images/instagram/inst-8.jpg';
+
+// компонент Product
+import photoProductOne from '../images/product/test.jpg';
+
+export const instagramPhotoData = [
+  { link: photoInstOne },
+  { link: photoInstTwo },
+  { link: photoInstThree },
+  { link: photoInstFour },
+  { link: photoInstFive },
+  { link: photoInstSix },
+  { link: photoInstSeven },
+  { link: photoInstEight },
+];
+
+export const productPhotoData = [
+  { link: photoProductOne },
+  { link: photoInstOne },
+  { link: photoInstThree },
+  { link: photoInstSix },
+];
+
+// -------------------------------------------------------------------------------
 
 export const advantagesData = [
   {
@@ -31,15 +56,4 @@ export const advantagesData = [
     title: 'Уникальный крой',
     description: 'Все вещи сделаны вручную с любовью небольшими партиями',
   },
-];
-
-export const instagramPhotoData = [
-  { link: photoInstOne },
-  { link: photoInstTwo },
-  { link: photoInstThree },
-  { link: photoInstFour },
-  { link: photoInstFive },
-  { link: photoInstSix },
-  { link: photoInstSeven },
-  { link: photoInstEight },
 ];
