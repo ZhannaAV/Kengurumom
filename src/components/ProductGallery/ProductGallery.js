@@ -2,7 +2,7 @@ import './ProductGallery.css';
 import loopImg from '../../images/product/loop.svg';
 import arrowImg from '../../images/product/product-arrow.jpg';
 import { useState, useRef } from 'react';
-import photoProductOne from '../../images/product/test.jpg';
+import photoProductMain from '../../images/product/main.jpg';
 
 function ProductGallery({ galleryImages }) {
   const [mainImage, setMainImage] = useState(null);
@@ -11,7 +11,7 @@ function ProductGallery({ galleryImages }) {
 
   const [zoomParams, setZoomParams] = useState({
     backgroundPosition: '0% 0%',
-    backgroundImage: `url(${photoProductOne})`,
+    backgroundImage: `url(${photoProductMain})`,
   });
 
   const handleZoomMove = (evt) => {
@@ -23,6 +23,7 @@ function ProductGallery({ galleryImages }) {
 
   const handleClick = () => {
     console.log(currentImage.current.src)
+    setZoomParams({ ...zoomParams, backgroundImage: `url(${currentImage.current.src})`});
     setMainImage(currentImage.current.src);
   };
 
