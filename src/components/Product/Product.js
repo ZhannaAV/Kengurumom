@@ -1,10 +1,9 @@
 import './Product.css';
-import ProductGallery from '../ProductGallery/ProductGallery';
+import ProductGallery from './ProductGallery/ProductGallery';
 import { useState, useEffect } from 'react';
-import {productPhotoData} from '../../config/constants';
+import { productPhotoData } from '../../config/constants';
 
 function Product() {
-
   const [galleryImages, setGalleryImages] = useState([]);
 
   useEffect(() => {
@@ -14,8 +13,7 @@ function Product() {
   return (
     <section className="product">
       <ProductGallery galleryImages={galleryImages} />
-
-      {/* <div className="product__specifications">
+      <div className="product__specifications">
         <h2 className="product__title">Пелёнка-кокон "Авокадо"</h2>
         <h3 className="product__price">890 &#8381;</h3>
         <div className="product__specification-box">
@@ -80,7 +78,6 @@ function Product() {
           Рекомендация по уходу
         </a>
       </div>
-       */}
     </section>
   );
 }
