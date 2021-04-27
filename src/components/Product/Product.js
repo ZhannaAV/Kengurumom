@@ -1,18 +1,11 @@
 import './Product.css';
-import ProductGallery from './ProductGallery/ProductGallery';
-import { useState, useEffect } from 'react';
+import ProdGallery from '../Product/ProdGallery/ProdGallery';
 import { productPhotoData } from '../../config/constants';
 
 function Product() {
-  const [galleryImages, setGalleryImages] = useState([]);
-
-  useEffect(() => {
-    setGalleryImages(productPhotoData);
-  }, []);
-
   return (
     <section className="product">
-      <ProductGallery galleryImages={galleryImages} />
+      <ProdGallery galleryImages={productPhotoData} />
       <div className="product__specifications">
         <h2 className="product__title">Пелёнка-кокон "Авокадо"</h2>
         <h3 className="product__price">890 &#8381;</h3>

@@ -22,7 +22,6 @@ import photoAboutThreeImg from '../images/about/about-3.jpg';
 import photoProductMain from '../images/product/main.jpg';
 import photoProductOne from '../images/product/one.jpg';
 import photoProductTwo from '../images/product/two.jpg';
-import photoProductThree from '../images/product/three.jpg';
 
 export const instagramPhotoData = [
   { link: photoInstOne },
@@ -37,7 +36,6 @@ export const instagramPhotoData = [
 
 export const productPhotoData = [
   { link: photoProductMain },
-  { link: photoProductThree },
   { link: photoProductOne },
   { link: photoProductTwo },
 ];
