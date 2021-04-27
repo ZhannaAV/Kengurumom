@@ -1,7 +1,7 @@
 .product {
   margin: 0 auto;
-  padding: 130px 0 140px;
-  max-width: 1170px;
+  padding: 80px 0 250px;
+  max-width: 1400px;
   display: flex;
   flex-direction: row;
 }
@@ -87,6 +87,12 @@
 	font-size: 16px;
 	line-height: 20px;
 	color: #513629;
+}
+
+@media screen and (max-width: 1440px) {
+  .product {
+    max-width: 1170px;
+  }
 }
 
 @media screen and (max-width: 1280px) {
