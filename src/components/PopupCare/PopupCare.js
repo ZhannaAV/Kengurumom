@@ -35,11 +35,6 @@ const theme = createMuiTheme({
         backgroundColor: '#FAF1E9',
         borderRadius: '20px',
       }
-    },
-    MuiDialog: {
-      root: {
-        // maxWidth: '1170px',
-      }
     }
   }
 });
