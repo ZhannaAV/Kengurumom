@@ -45,7 +45,7 @@ const theme = createMuiTheme({
 });
 
 export default function PopupCare(props){
-  const [open, setOpen] = React.useState(props.open || false);
+  const [open, setOpen] = React.useState(props.isOpened || false);
 
   const handleClose = () => {setOpen(false)};
 
