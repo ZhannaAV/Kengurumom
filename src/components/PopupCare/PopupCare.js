@@ -2,7 +2,6 @@ import React from 'react';
 import './PopupCare.css';
 import Dialog from '@material-ui/core/Dialog';
 import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-import StyledText from '../StyledText/StyledText';
 import { 
   POPUP_CARE_TITLE, 
   POPUP_CARE_WASH_TITLE, 
@@ -16,19 +15,25 @@ import {
   POPUP_CARE_WHITENING_TITLE,
   POPUP_CARE_WHITENING_TEXT} from '../../config/texts';
 
+import iconWash from '../../images/care_wash.png';
+import iconDrying from '../../images/care_drying.png';
+import iconIroning from '../../images/care_ironing.png';
+import iconDrycleanin from '../../images/care_drycleaning.png';
+import iconWhitening from '../../images/care_whitening.png';
+import iconClose from '../../images/popup_close.png';
+
 //change main color
 const theme = createMuiTheme({
   overrides: {
     MuiBackdrop: {
       root: {
-        backgroundColor: 'rgba(81, 54, 41, 0)',
+        backgroundColor: 'rgba(81, 54, 41, 0.7)',
       }
     },
     MuiPaper: {
       root: {
         backgroundColor: '#FAF1E9',
         borderRadius: '20px',
-        // maxWidth: '1170px',
       }
     },
     MuiDialog: {
@@ -52,26 +57,37 @@ export default function PopupCare(props){
         aria-labelledby="popup-care"
         open={open}>
         <h2 className='popup-care__title'>{POPUP_CARE_TITLE}</h2>
+        <button onClick={handleClose} className="popup-care__btn-close"><img src={iconClose} /></button>
         <div>
           <div>
-            <StyledText text={POPUP_CARE_WASH_TITLE} styles={{default:{className: 'popup-care__text-title'}}}/>
-            <StyledText text={POPUP_CARE_WASH_TEXT} styles={{default:{className: 'popup-care__text'}}}/>
+            <h3 className='popup-care__text-title'>
+              {POPUP_CARE_WASH_TITLE}<img src={iconWash} className="popup-care__text-title-img"/>
+            </h3>
+            <p className="popup-care__text">{POPUP_CARE_WASH_TEXT}</p>
           </div>
           <div>
-            <StyledText text={POPUP_CARE_DRYING_TITLE} styles={{default:{className: 'popup-care__text-title'}}}/>
-            <StyledText text={POPUP_CARE_DRYING_TEXT} styles={{default:{className: 'popup-care__text'}}}/>
+            <h3 className='popup-care__text-title'>
+              {POPUP_CARE_DRYING_TITLE}<img src={iconDrying} className="popup-care__text-title-img"/>
+            </h3>
+            <p className="popup-care__text">{POPUP_CARE_DRYING_TEXT}</p>
           </div>
           <div>
-            <StyledText text={POPUP_CARE_IRONING_TITLE} styles={{default:{className: 'popup-care__text-title'}}}/>
-            <StyledText text={POPUP_CARE_IRONING_TEXT} styles={{default:{className: 'popup-care__text'}}}/>
+            <h3 className='popup-care__text-title'>
+              {POPUP_CARE_IRONING_TITLE}<img src={iconIroning} className="popup-care__text-title-img"/>
+            </h3>
+            <p className="popup-care__text">{POPUP_CARE_IRONING_TEXT}</p>
           </div>
           <div>
-            <StyledText text={POPUP_CARE_DRYCLEANING_TITLE} styles={{default:{className: 'popup-care__text-title'}}}/>
-            <StyledText text={POPUP_CARE_DRYCLEANING_TEXT} styles={{default:{className: 'popup-care__text'}}}/>
+            <h3 className='popup-care__text-title'>
+              {POPUP_CARE_DRYCLEANING_TITLE}<img src={iconDrycleanin} className="popup-care__text-title-img"/>
+            </h3>
+            <p className="popup-care__text">{POPUP_CARE_DRYCLEANING_TEXT}</p>
           </div>
           <div>
-            <StyledText text={POPUP_CARE_WHITENING_TITLE} styles={{default:{className: 'popup-care__text-title'}}}/>
-            <StyledText text={POPUP_CARE_WHITENING_TEXT} styles={{default:{className: 'popup-care__text'}}}/>
+            <h3 className='popup-care__text-title'>
+              {POPUP_CARE_WHITENING_TITLE}<img src={iconWhitening} className="popup-care__text-title-img"/>
+            </h3>
+            <p className="popup-care__text">{POPUP_CARE_WHITENING_TEXT}</p>
           </div>
         </div>
       </Dialog>

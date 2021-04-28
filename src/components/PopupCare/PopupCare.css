@@ -1,9 +1,10 @@
 .popup-care {
   margin: 0;
   padding: 47px 115px 37px 85px;
-  max-width: 675px;
-  width: 100%;
   background-color: #FAF1E9;
+  width: 1167px !important;
+  max-width: 1167px !important;
+  box-sizing: border-box;
 }
 
 .popup-care__title {
@@ -28,6 +29,11 @@
   color: #DC8962;
 }
 
+.popup-care__text-title-img {
+  margin: 0 0 0 15px;
+  padding: 0;
+}
+
 .popup-care__text {
   margin: 10px 0 0 0;
   padding: 0;
@@ -36,4 +42,14 @@
   font-size: 18px;
   line-height: 127%;
   color: #513629;
+}
+
+.popup-care__btn-close {
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 30px;
+  right: 30px;
 }
