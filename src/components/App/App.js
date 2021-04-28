@@ -9,11 +9,15 @@ import Instagram from '../Instagram/Instagram';
 import './App.css';
 import SectionsWithBtn from "../SectionsWithBtn/SectionsWithBtn";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Popular from '../Popular/Popular';
 import Review from '../Review/Review';
 import PopupAddCart from '../PopupAddCart/PopupAddCart';
 =======
 >>>>>>> Feat: add main about
+=======
+import About from '../About/About';
+>>>>>>> Fix: little style & padding fixes
 
 function App() {
     const isDesktop = useMediaQuery({'minWidth': 1440});
@@ -66,10 +70,6 @@ function App() {
 
                 <Route path='/about'>
                     <About media={media}/>
-                </Route>
-
-                <Route path='*'>
-                    <NotFound />
                 </Route>
             </Switch>
 >>>>>>> Add text from variables with StyledText
