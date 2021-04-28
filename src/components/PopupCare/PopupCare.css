@@ -2,9 +2,11 @@
   margin: 0;
   padding: 47px 115px 37px 85px;
   background-color: #FAF1E9;
-  width: 1167px !important;
+  width: 100% !important;
   max-width: 1167px !important;
   box-sizing: border-box;
+  position: absolute !important;
+  top: 100px;
 }
 
 .popup-care__title {

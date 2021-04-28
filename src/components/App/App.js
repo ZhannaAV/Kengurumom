@@ -61,7 +61,7 @@ function App() {
                 </Route>
             </Switch>
 
-            <PopupCare isOpened={true}>
+            <PopupCare isOpened={true} />
             {/* <PopupAddCart isOpened={true} onClose={() => }/> */}
         </>
     );
