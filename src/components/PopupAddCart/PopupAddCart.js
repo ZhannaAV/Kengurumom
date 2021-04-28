@@ -55,7 +55,7 @@ const theme = createMuiTheme({
 });
 
 export default function PopupAddCart(props){
-  const [open, setOpen] = React.useState(props.isOpened || true);
+  const [open, setOpen] = React.useState(props.isOpened || false);
   const [item, setItem] = React.useState(props.item || {})
 
   React.useEffect(() => {
