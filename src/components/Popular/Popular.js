@@ -39,11 +39,25 @@ const popularConfig = [
     price: 1200,
     priceSale: undefined,
   },
+  {
+    new: false,
+    title: 'Пелёнка-кокон "Авокадо"',
+    src: popular_avokado,
+    price: 1200,
+    priceSale: undefined
+  },
+  {
+    new: false,
+    title: 'Пелёнка-кокон "Авокадо"',
+    src: popular_avokado,
+    price: 1200,
+    priceSale: undefined
+  },
 ];
 
-export default function Popular({ products }) {
+export default function Popular(props){
   const [width, setWidth] = React.useState(window.innerWidth);
-  const [slides, setSlides] = React.useState(4);
+  const [slides, setSlides] = React.useState( props.media.isDesktop ? 4 : props.media.isTabletVert ? 3 : props.media.isMobileHor ? 2 : 1);
 
   const updateWidth = () => {
     setWidth(window.innerWidth);
@@ -59,8 +73,9 @@ export default function Popular({ products }) {
   };
 
   React.useEffect(() => {
-    window.addEventListener('resize', updateWidth);
-    return () => window.removeEventListener('resize', updateWidth);
+    updateWidth();
+    window.addEventListener("resize", updateWidth);
+    return () => window.removeEventListener("resize", updateWidth);
   });
 
   return (

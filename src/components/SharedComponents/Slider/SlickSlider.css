@@ -19,6 +19,18 @@
   border-radius: 50% !important;
 } */
 
+.slick-dots li button::before{
+  color: #DC8962 !important;
+  opacity: 0.5 !important;
+  width: 12px !important;
+  height: 12px !important;
+}
+
+.slick-dots li.slick-active button::before{
+  color: #DC8962 !important;
+  opacity: 1 !important;
+}
+
 .slick-track{ margin-left: 0; }
 
 .slick-slide:nth-of-type(1) {
@@ -95,4 +107,5 @@
 
 .slick-list {
   overflow: visible !important;
+  position: static;
 }

@@ -1,0 +1,29 @@
+.slickSliderArrow {
+  font-size: 0;
+  line-height: 0;
+  position: absolute;
+  top: 50%;
+  display: block;
+  width: 41px;
+  height: 41px;
+  padding: 0;
+  transform: translate(0, -50%);
+  cursor: pointer;
+  color: transparent;
+  border: 1px solid #FAF1E9;
+  border-radius: 50%;
+  outline: none;
+  background-color: #FAF1E9;
+}
+
+.slickSliderArrow_left {
+  left: -25px;
+}
+
+.slickSliderArrow_right {
+  right: -25px;
+}
+
+.slickSliderArrow__img {
+  
+}
