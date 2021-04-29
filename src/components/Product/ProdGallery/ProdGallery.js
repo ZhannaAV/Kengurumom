@@ -1,27 +1,21 @@
 import './ProdGallery.css';
 import ThumbnailImage from './ThumbnailImage/ThumbnailImage';
 import ZoomContainer from './ZoomContainer/ZoomContainer';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
-function ProdGallery({galleryImages}) {
+function ProdGallery({ galleryImages }) {
+  const [currentImageIndex, setCurrentImageIndex] = useState(null);
 
-  useEffect(() => {
-    setImages(galleryImages);
-  }, [])
-
-  const [images, setImages] = useState([]);
-  const [zoomImage, setZoomImage] = useState(galleryImages[0].link);
-
-  const getImage = (src) => {
-    setZoomImage(src);
+  const getImage = (index) => {
+    setCurrentImageIndex(index);
   };
 
   return (
     <section className="product-gallery">
-      <ZoomContainer zoomImage={zoomImage} />
+      <ZoomContainer slides={galleryImages} currentThumb={currentImageIndex} />
       <ul className="thumbnails">
-        {images.map((image, i) => (
-          <ThumbnailImage src={image.link} key={i} getImage={getImage} />
+        {galleryImages.map((image, i) => (
+          <ThumbnailImage src={image} key={i} getImage={getImage} index={i} />
         ))}
       </ul>
     </section>

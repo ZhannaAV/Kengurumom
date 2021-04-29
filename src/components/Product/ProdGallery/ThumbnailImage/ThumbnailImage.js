@@ -1,10 +1,9 @@
 import './ThumbnailImage.css';
 
-function ThumbnailImage({src, getImage}) {
-
-  const handleImageClick = (evt) => {
-    getImage(evt.target.src);
-  }
+function ThumbnailImage({ src, getImage, index }) {
+  const handleImageClick = () => {
+    getImage(index);
+  };
 
   return (
     <li className="thumbnail">
