@@ -3,7 +3,7 @@ import ThumbnailImage from './ThumbnailImage/ThumbnailImage';
 import ZoomContainer from './ZoomContainer/ZoomContainer';
 import { useState } from 'react';
 
-function ProdGallery({ galleryImages }) {
+function ProdGallery({ photos }) {
   const [currentImageIndex, setCurrentImageIndex] = useState(null);
 
   const getImage = (index) => {
@@ -12,9 +12,9 @@ function ProdGallery({ galleryImages }) {
 
   return (
     <section className="product-gallery">
-      <ZoomContainer slides={galleryImages} currentThumb={currentImageIndex} />
+      <ZoomContainer slides={photos} currentThumb={currentImageIndex} />
       <ul className="thumbnails">
-        {galleryImages.map((image, i) => (
+        {photos.map((image, i) => (
           <ThumbnailImage src={image} key={i} getImage={getImage} index={i} />
         ))}
       </ul>

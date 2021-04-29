@@ -12,6 +12,8 @@ import Product from '../Product/Product';
 import Popular from '../Popular/Popular';
 import Review from '../Review/Review';
 
+import { testObjectOfProduct } from '../../config/constants';
+
 function App() {
     const isDesktop = useMediaQuery({'minWidth': 1440});
     const isLaptop = useMediaQuery({'maxWidth': 1440});
@@ -49,7 +51,7 @@ function App() {
             <SectionsWithBtn/>
             <Review media={media}/>
             <Instagram/>
-            <Product />
+            <Product product={testObjectOfProduct} />
         </>
     );
 }

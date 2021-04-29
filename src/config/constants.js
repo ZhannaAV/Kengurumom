@@ -14,11 +14,6 @@ import photoInstSix from '../images/instagram/inst-6.jpg';
 import photoInstSeven from '../images/instagram/inst-7.jpg';
 import photoInstEight from '../images/instagram/inst-8.jpg';
 
-// компонент Product
-import photoProductMain from '../images/product/main.jpg';
-import photoProductOne from '../images/product/one.jpg';
-import photoProductTwo from '../images/product/two.jpg';
-
 export const instagramPhotoData = [
   { link: photoInstOne },
   { link: photoInstTwo },
@@ -30,11 +25,25 @@ export const instagramPhotoData = [
   { link: photoInstEight },
 ];
 
-export const productPhotoData = [
-  photoProductMain,
-  photoProductOne,
-  photoProductTwo,
-];
+export const testObjectOfProduct = {
+  name: 'Пелёнка-кокон "Авокадо"',
+  price: '890',
+  sizes: ['0-3 мес (55см)', '3-6 мес (65см)', '7-12 мес (77см)'],
+  recommendedAge: 'от 0 до 6 месяцев',
+  structure: '100% хлопок (Интерлок)',
+  vendorCode: 'KNG.EW.K2152',
+  description: [
+    'Наши пеленальные коконы созданы для тех, кто ценит качество и комфорт. Пеленальный кокон на двухзамковой молнии сшит из сертифицированного трикотажного хлопка высшей категории качества. Потайные швы не потревожат нежную кожу малыша, а трикотаж не вызовет аллергии.',
+    'Многие мамы уже оценили пеленальные коконы и знают, на сколько это комфортная и удобная альтернатива пеленанию. Пройма пелёнки открывается, чтобы освободить ручки малыша и сохраняет физиологическое положение тела, позволяя ручкам и ножкам расправляться постепенно и естественно. Обеспечивается отличная воздухопроницаемость, кожа дышит даже в жару.',
+    'Малышу уютно. В пелёнке прекрасно спится - мягкая бесшовная изнанка, не давит и не тянет. Кокон создаёт обволакивающую среду, к которой малыш привык о время его ожидания. Движения ребенка ограничены до той степени, при которой он не навредит себе и не проснется.',
+    'Удобно маме и папе. Надеть пелёнку очень легко, подгузник меняется без лишних движений. Папа легко справится ;) Можно носить и дома, и на прогулке в коляске.',
+  ],
+  photos: [
+    'https://images.unsplash.com/photo-1619614860940-73378f5c190b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2134&q=80',
+    'https://images.unsplash.com/photo-1619631632892-3e5b9ff8fef9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
+    'https://images.unsplash.com/photo-1619597285851-c4a04326a7dd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80',
+  ],
+};
 
 // -------------------------------------------------------------------------------
 

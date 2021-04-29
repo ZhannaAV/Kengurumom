@@ -7,7 +7,9 @@ function ZoomContainer({ slides, currentThumb }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
-    currentThumb !== null && setCurrentIndex(currentThumb);
+    currentThumb !== null &&
+      currentThumb !== currentIndex &&
+      setCurrentIndex(currentThumb);
   }, [currentThumb]);
 
   const [activeSlide, setActiveSlide] = useState(slides[0]);
