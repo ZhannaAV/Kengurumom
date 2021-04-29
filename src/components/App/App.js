@@ -1,6 +1,7 @@
 import {Component, useState} from 'react';
 import {useMediaQuery} from 'react-responsive';
 import {Switch, Route} from 'react-router-dom';
+import {ABOUT_PAGE} from '../../config/links';
 import Header from '../Header/Header';
 import SideMenu from '../SideMenu/SideMenu';
 import Slider from '../Slider/Slider';
@@ -68,7 +69,7 @@ function App() {
                     <Instagram/>
                 </Route>
 
-                <Route path='/about'>
+                <Route path={ABOUT_PAGE}>
                     <About media={media}/>
                 </Route>
             </Switch>
