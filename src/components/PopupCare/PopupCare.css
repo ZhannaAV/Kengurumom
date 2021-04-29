@@ -2,11 +2,7 @@
   margin: 0;
   padding: 47px 115px 37px 85px;
   background-color: #FAF1E9;
-  width: 100% !important;
-  max-width: 1167px !important;
   box-sizing: border-box;
-  position: absolute !important;
-  top: 100px;
 }
 
 .popup-care__title {
@@ -17,7 +13,13 @@
   font-size: 30px;
   font-weight: 600;
   line-height: 37px;
-  color: #DC8962;
+  color: #DC8962;  
+}
+
+.popup-care__text-list {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 37px 0;
 }
 
 .popup-care__text-title {
@@ -29,6 +31,7 @@
   font-weight: 500;
   line-height: 24px;
   color: #DC8962;
+  display: flex;
 }
 
 .popup-care__text-title-img {

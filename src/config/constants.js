@@ -15,6 +15,12 @@ import photoInstEight from '../images/instagram/inst-8.jpg';
 import photoAboutOneImg from '../images/about/about-1.jpg';
 import photoAboutTwoImg from '../images/about/about-2.jpg';
 import photoAboutThreeImg from '../images/about/about-3.jpg';
+import iconWash from '../images/popup_care/wash.svg';
+import iconDrying from '../images/popup_care/drying.svg';
+import iconIroning from '../images/popup_care/ironing.svg';
+import iconDrycleaning from '../images/popup_care/drycleaning.svg';
+import iconWhitening from '../images/popup_care/whitening.svg';
+import iconClose from '../images/popup_close.svg';
 
 export const advantagesData = [
   {
@@ -52,3 +58,12 @@ export const instagramPhotoData = [
 export const photoAboutOne = photoAboutOneImg;
 export const photoAboutTwo = photoAboutTwoImg;
 export const photoAboutThree = photoAboutThreeImg;
+export const popupClose = iconClose;
+
+export const popupCareIcons = {
+  wash: iconWash,
+  drying: iconDrying,
+  ironing: iconIroning,
+  drycleaning: iconDrycleaning,
+  whitening: iconWhitening
+};

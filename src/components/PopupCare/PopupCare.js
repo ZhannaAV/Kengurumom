@@ -15,12 +15,7 @@ import {
   POPUP_CARE_WHITENING_TITLE,
   POPUP_CARE_WHITENING_TEXT} from '../../config/texts';
 
-import iconWash from '../../images/care_wash.png';
-import iconDrying from '../../images/care_drying.png';
-import iconIroning from '../../images/care_ironing.png';
-import iconDrycleanin from '../../images/care_drycleaning.png';
-import iconWhitening from '../../images/care_whitening.png';
-import iconClose from '../../images/popup_close.png';
+import {popupCareIcons, popupClose} from '../../config/constants';
 
 //change main color
 const theme = createMuiTheme({
@@ -35,14 +30,25 @@ const theme = createMuiTheme({
         backgroundColor: '#FAF1E9',
         borderRadius: '20px',
       }
+    },
+    MuiDialog: {
+      paperWidthSm: {
+        width: "100%",
+        maxWidth: "1167px",
+      },
+      paper: {
+        position: "absolute",
+        top: "177px",
+      },
+      paperScrollPaper: {
+        maxHeight: "calc(100% - 177px - 100px)",
+      }
     }
   }
 });
 
 export default function PopupCare(props){
-  const [open, setOpen] = React.useState(props.isOpened || true);
-
-  const handleClose = () => {setOpen(false)};
+  const handleClose = () => {props.onClose(false)};
 
   return (
     <ThemeProvider theme={theme}>
@@ -50,41 +56,41 @@ export default function PopupCare(props){
         classes={{paper: 'popup-care'}}
         onClose={handleClose}
         aria-labelledby="popup-care"
-        open={open}>
+        open={props.isOpened || true}>
         <h2 className='popup-care__title'>{POPUP_CARE_TITLE}</h2>
-        <button onClick={handleClose} className="popup-care__btn-close"><img src={iconClose} /></button>
-        <div>
-          <div>
+        <button onClick={handleClose} className="popup-care__btn-close"><img src={popupClose} /></button>
+        <ul className="popup-care__text-list">
+          <li>
             <h3 className='popup-care__text-title'>
-              {POPUP_CARE_WASH_TITLE}<img src={iconWash} className="popup-care__text-title-img"/>
+              {POPUP_CARE_WASH_TITLE}<img src={popupCareIcons.wash} className="popup-care__text-title-img"/>
             </h3>
             <p className="popup-care__text">{POPUP_CARE_WASH_TEXT}</p>
-          </div>
-          <div>
+          </li>
+          <li>
             <h3 className='popup-care__text-title'>
-              {POPUP_CARE_DRYING_TITLE}<img src={iconDrying} className="popup-care__text-title-img"/>
+              {POPUP_CARE_DRYING_TITLE}<img src={popupCareIcons.drying} className="popup-care__text-title-img"/>
             </h3>
             <p className="popup-care__text">{POPUP_CARE_DRYING_TEXT}</p>
-          </div>
-          <div>
+          </li>
+          <li>
             <h3 className='popup-care__text-title'>
-              {POPUP_CARE_IRONING_TITLE}<img src={iconIroning} className="popup-care__text-title-img"/>
+              {POPUP_CARE_IRONING_TITLE}<img src={popupCareIcons.ironing} className="popup-care__text-title-img"/>
             </h3>
             <p className="popup-care__text">{POPUP_CARE_IRONING_TEXT}</p>
-          </div>
-          <div>
+          </li>
+          <li>
             <h3 className='popup-care__text-title'>
-              {POPUP_CARE_DRYCLEANING_TITLE}<img src={iconDrycleanin} className="popup-care__text-title-img"/>
+              {POPUP_CARE_DRYCLEANING_TITLE}<img src={popupCareIcons.drycleaning} className="popup-care__text-title-img"/>
             </h3>
             <p className="popup-care__text">{POPUP_CARE_DRYCLEANING_TEXT}</p>
-          </div>
-          <div>
+          </li>
+          <li>
             <h3 className='popup-care__text-title'>
-              {POPUP_CARE_WHITENING_TITLE}<img src={iconWhitening} className="popup-care__text-title-img"/>
+              {POPUP_CARE_WHITENING_TITLE}<img src={popupCareIcons.whitening} className="popup-care__text-title-img"/>
             </h3>
             <p className="popup-care__text">{POPUP_CARE_WHITENING_TEXT}</p>
-          </div>
-        </div>
+          </li>
+        </ul>
       </Dialog>
     </ThemeProvider>
   );
