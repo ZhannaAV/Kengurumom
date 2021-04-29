@@ -14,6 +14,8 @@ import Review from '../Review/Review';
 import PopupAddCart from '../PopupAddCart/PopupAddCart';
 import About from '../About/About';
 
+import { testObjectOfProduct } from '../../config/constants';
+
 function App() {
     const isDesktop = useMediaQuery({'minWidth': 1440});
     const isLaptop = useMediaQuery({'maxWidth': 1440});
