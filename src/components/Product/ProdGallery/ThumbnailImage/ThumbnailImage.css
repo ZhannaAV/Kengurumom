@@ -6,7 +6,6 @@
 
 .thumbnail__image {
   width: 100%;
-  height: 200px;
   object-fit: cover;
   border-radius: 10px;
   cursor: pointer;
@@ -21,4 +20,28 @@
   gap: 30px;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr;
+}
+
+@media screen and (min-width: 1920px) {
+  .thumbnails {
+    gap: 40px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .thumbnails {
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .thumbnails {
+    gap: 15px;
+  }
+}
+
+@media screen and (max-width: 735px) {
+  .thumbnails {
+    gap: 20px;
+  }
 }

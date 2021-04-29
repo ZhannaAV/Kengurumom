@@ -43,9 +43,9 @@ export const testObjectOfProduct = {
     'Удобно маме и папе. Надеть пелёнку очень легко, подгузник меняется без лишних движений. Папа легко справится ;) Можно носить и дома, и на прогулке в коляске.',
   ],
   photos: [
-    'https://images.unsplash.com/photo-1619614860940-73378f5c190b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2134&q=80',
-    'https://images.unsplash.com/photo-1619631632892-3e5b9ff8fef9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80',
-    'https://images.unsplash.com/photo-1619597285851-c4a04326a7dd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80',
+    'https://www.artensoft.com/sources/artensoft_com/ArtensoftPhotoCollageMaker/gallery/0004/photo-collage-example-0004_2560.jpg',
+    'https://www.artensoft.com/sources/artensoft_com/ArtensoftPhotoCollageMaker/gallery/0002/photo-collage-example-0002_2560.jpg',
+    'https://images.unsplash.com/photo-1617929912008-eaa24413b9ac?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80',
   ],
 };
 
