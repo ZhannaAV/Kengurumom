@@ -7,9 +7,9 @@ import Advantages from '../Advantages/Advantages';
 import Instagram from '../Instagram/Instagram';
 import './App.css';
 import SectionsWithBtn from "../SectionsWithBtn/SectionsWithBtn";
-
 import Popular from '../Popular/Popular';
 import Review from '../Review/Review';
+import PopupAddCart from '../PopupAddCart/PopupAddCart';
 
 function App() {
     const isDesktop = useMediaQuery({'minWidth': 1440});
@@ -48,6 +48,8 @@ function App() {
             <SectionsWithBtn/>
             <Review media={media}/>
             <Instagram/>
+
+            <PopupAddCart />
         </>
     );
 }
