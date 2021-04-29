@@ -31,9 +31,9 @@ export const instagramPhotoData = [
 ];
 
 export const productPhotoData = [
-  { link: photoProductMain },
-  { link: photoProductOne },
-  { link: photoProductTwo },
+  photoProductMain,
+  photoProductOne,
+  photoProductTwo,
 ];
 
 // -------------------------------------------------------------------------------
