@@ -34,8 +34,9 @@ function Product({ product }) {
           </p>
         </div>
         {product.description.map((element, i) => (
-          <p key={i} className="product__description">{element}
-        </p>
+          <p key={i} className="product__description">
+            {element}
+          </p>
         ))}
         <div className="product__specification-box">
           <p className="product__text">Артикул:</p>
