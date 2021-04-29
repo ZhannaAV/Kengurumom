@@ -12,9 +12,9 @@ import photoInstSix from '../images/instagram/inst-6.jpg';
 import photoInstSeven from '../images/instagram/inst-7.jpg';
 import photoInstEight from '../images/instagram/inst-8.jpg';
 // компонент О бренде
-import photoAboutOneImg from '../images/about/about-1.png';
-import photoAboutTwoImg from '../images/about/about-2.png';
-import photoAboutThreeImg from '../images/about/about-3.png';
+import photoAboutOneImg from '../images/about/about-1.jpg';
+import photoAboutTwoImg from '../images/about/about-2.jpg';
+import photoAboutThreeImg from '../images/about/about-3.jpg';
 
 export const advantagesData = [
   {
