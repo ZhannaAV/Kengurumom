@@ -9,16 +9,10 @@ import Advantages from '../Advantages/Advantages';
 import Instagram from '../Instagram/Instagram';
 import './App.css';
 import SectionsWithBtn from "../SectionsWithBtn/SectionsWithBtn";
-<<<<<<< HEAD
-<<<<<<< HEAD
 import Popular from '../Popular/Popular';
 import Review from '../Review/Review';
 import PopupAddCart from '../PopupAddCart/PopupAddCart';
-=======
->>>>>>> Feat: add main about
-=======
 import About from '../About/About';
->>>>>>> Fix: little style & padding fixes
 
 function App() {
     const isDesktop = useMediaQuery({'minWidth': 1440});
@@ -51,29 +45,22 @@ function App() {
                 openSideMenu={openSideMenu}
             />
 
-<<<<<<< HEAD
-            <Slider media={media}/>
-            <Popular media={media}/>
-            <Advantages/>
-            <SectionsWithBtn/>
-            <Review media={media}/>
-            <Instagram/>
-
-            <PopupAddCart />
-=======
             <Switch>
-                <Route exact path='/'>
+                <Route exact path="/">
                     <Slider media={media}/>
+                    <Popular media={media}/>
                     <Advantages/>
                     <SectionsWithBtn/>
+                    <Review media={media}/>
                     <Instagram/>
                 </Route>
 
                 <Route path={ABOUT_PAGE}>
-                    <About media={media}/>
+                    <About />
                 </Route>
             </Switch>
->>>>>>> Add text from variables with StyledText
+
+            {/* <PopupAddCart isOpened={true} onClose={() => }/> */}
         </>
     );
 }
