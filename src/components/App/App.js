@@ -74,8 +74,8 @@ function App() {
                 </Route>
             </Switch>
 
-            {/* <PopupCare isOpened={isPopupOpened} onClose={setIsPopupOpened}/> */}
-            <PopupAddCart isOpened={isPopupOpened} onClose={setIsPopupOpened}/>
+            <PopupCare isOpened={isPopupOpened} onClose={setIsPopupOpened}/>
+            {/* <PopupAddCart isOpened={isPopupOpened} onClose={setIsPopupOpened}/> */}
         </>
     );
 }
