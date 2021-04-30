@@ -8,7 +8,6 @@ import Instagram from '../Instagram/Instagram';
 import './App.css';
 import SectionsWithBtn from "../SectionsWithBtn/SectionsWithBtn";
 import Product from '../Product/Product';
-
 import Popular from '../Popular/Popular';
 import Review from '../Review/Review';
 
@@ -51,7 +50,7 @@ function App() {
             <SectionsWithBtn/>
             <Review media={media}/>
             <Instagram/>
-            <Product product={testObjectOfProduct} />
+            <Product product={testObjectOfProduct} media={media} />
         </>
     );
 }

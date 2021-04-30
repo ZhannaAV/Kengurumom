@@ -1,10 +1,16 @@
 import './ZoomContainer.css';
 import loopImg from '../../../../images/product/loop.svg';
 import arrowImg from '../../../../images/product/product-arrow.jpg';
+import PopupProductGallery from './PopupProductGallery/PopupProductGallery';
 import { useState, useEffect } from 'react';
 
-function ZoomContainer({ slides, currentThumb }) {
+function ZoomContainer({ slides, currentThumb, media }) {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isPopupOpened, setIsPopupOpened] = useState(false);
+
+  useEffect(() => {
+    !media.isMobileVert && setIsPopupOpened(false);
+  }, [media.isMobileVert])
 
   useEffect(() => {
     currentThumb !== null &&
@@ -50,9 +56,24 @@ function ZoomContainer({ slides, currentThumb }) {
     setZoomParams({ ...zoomParams, backgroundPosition: `${x}% ${y}%` });
   };
 
+  const handleLoopClick = () => {
+    media.isMobileVert && setIsPopupOpened(true);
+  };
+
+  const closedPopup = () => {
+    setIsPopupOpened(false);
+  };
+
   return (
+    <>
+    <PopupProductGallery isOpened={isPopupOpened} image={activeSlide} closePopup={closedPopup} />
     <div className="zoom-container">
-      <img src={loopImg} alt="Лупа" className="zoom-container__loop-icon" />
+      <img
+        onClick={handleLoopClick}
+        src={loopImg}
+        alt="Лупа"
+        className="zoom-container__loop-icon"
+      />
       <img
         src={arrowImg}
         alt="Предыдущая"
@@ -65,18 +86,27 @@ function ZoomContainer({ slides, currentThumb }) {
         className="zoom-container__arrow zoom-container__arrow_right"
         onClick={handleRightArrowClick}
       />
-      <figure
-        onMouseMove={handleZoomMove}
-        style={zoomParams}
-        className="zoom-container__image-wrapper"
-      >
+      {!media.isMobileVert ? (
+        <figure
+          onMouseMove={handleZoomMove}
+          style={zoomParams}
+          className="zoom-container__image-wrapper"
+        >
+          <img
+            className="zoom-container__image"
+            src={activeSlide}
+            alt="Главное изображение"
+          />
+        </figure>
+      ) : (
         <img
           className="zoom-container__image"
           src={activeSlide}
           alt="Главное изображение"
         />
-      </figure>
+      )}
     </div>
+    </>
   );
 }
 
