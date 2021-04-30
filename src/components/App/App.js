@@ -1,5 +1,7 @@
-import {useState} from 'react';
+import {Component, useState} from 'react';
 import {useMediaQuery} from 'react-responsive';
+import {Switch, Route} from 'react-router-dom';
+import {ABOUT_PAGE} from '../../config/links';
 import Header from '../Header/Header';
 import SideMenu from '../SideMenu/SideMenu';
 import Slider from '../Slider/Slider';
@@ -10,6 +12,7 @@ import SectionsWithBtn from "../SectionsWithBtn/SectionsWithBtn";
 import Popular from '../Popular/Popular';
 import Review from '../Review/Review';
 import PopupAddCart from '../PopupAddCart/PopupAddCart';
+import About from '../About/About';
 
 function App() {
     const isDesktop = useMediaQuery({'minWidth': 1440});
@@ -42,14 +45,22 @@ function App() {
                 openSideMenu={openSideMenu}
             />
 
-            <Slider media={media}/>
-            <Popular media={media}/>
-            <Advantages/>
-            <SectionsWithBtn/>
-            <Review media={media}/>
-            <Instagram/>
+            <Switch>
+                <Route exact path="/">
+                    <Slider media={media}/>
+                    <Popular media={media}/>
+                    <Advantages/>
+                    <SectionsWithBtn/>
+                    <Review media={media}/>
+                    <Instagram/>
+                </Route>
 
-            <PopupAddCart />
+                <Route path={ABOUT_PAGE}>
+                    <About />
+                </Route>
+            </Switch>
+
+            {/* <PopupAddCart isOpened={true} onClose={() => }/> */}
         </>
     );
 }

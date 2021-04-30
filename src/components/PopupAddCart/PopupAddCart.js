@@ -55,14 +55,13 @@ const theme = createMuiTheme({
 });
 
 export default function PopupAddCart(props){
-  const [open, setOpen] = React.useState(props.isOpened || false);
   const [item, setItem] = React.useState(props.item || {})
 
   React.useEffect(() => {
     setItem(items[parseInt(Math.random()*5)]);
   }, []);
 
-  const handleClose = () => {setOpen(false)};
+  const handleClose = () => {props.onClose(false)};
 
   return (
     <ThemeProvider theme={theme}>
@@ -70,7 +69,7 @@ export default function PopupAddCart(props){
         classes={{paper: 'popup-add-cart'}}
         onClose={handleClose}
         aria-labelledby="popup-add-cart"
-        open={open}>
+        open={props.isOpened || false}>
         <h2 className='popup-add-cart__title'>{POPUP_ADD_CART_TITLE}</h2>
         <div className='popup-add-cart__item'>
           <div className="popup-add-cart__item-img-title">
