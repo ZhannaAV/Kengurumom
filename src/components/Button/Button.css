@@ -13,6 +13,25 @@
 	cursor: pointer;
 }
 
+.button_outlined {
+	border: 1px solid #513629;
+  color: #513629;
+  font-size: 16px;
+  background-color: #fff;
+}
+
+.button_outlined:hover {
+	border: 1px solid #DC8962;
+  background-color: #DC8962;
+  color: #fff;
+}
+
+.button_outlined:active {
+	border: 1px solid #FCBA9B;
+  background-color: #FCBA9B;
+  color: #fff;
+}
+
 @media screen and (max-width: 1440px) {
 	.button{
 		width: 160px;
@@ -24,6 +43,10 @@
 
 .button:hover {
 	background-color: #CA764E;
+}
+
+.button:active {
+	background-color: #FCBA9B;
 }
 
 .button_type_add-to-card {

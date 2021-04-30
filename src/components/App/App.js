@@ -14,8 +14,11 @@ import Review from '../Review/Review';
 import PopupAddCart from '../PopupAddCart/PopupAddCart';
 import About from '../About/About';
 import PopupCare from '../PopupCare/PopupCare';
+import Button from '../Button/Button';
 
 function App() {
+    const [isPopupOpened, setIsPopupOpened] = useState(false);
+
     const isDesktop = useMediaQuery({'minWidth': 1440});
     const isLaptop = useMediaQuery({'maxWidth': 1440});
     const isTabletHor = useMediaQuery({'maxWidth': 1280});
@@ -29,6 +32,9 @@ function App() {
 
     const openSideMenu = _ => setIsSideMenuOpened(true);
     const closeSideMenu = _ => setIsSideMenuOpened(false);
+
+    const handleClosePopup = () => {setIsPopupOpened(false)}
+    const handleOpenPopup = () => {setIsPopupOpened(true)}
 
 
     return (
@@ -59,10 +65,17 @@ function App() {
                 <Route path={ABOUT_PAGE}>
                     <About />
                 </Route>
+
+                {/* use for test !!! */}
+                <Route path="/test_popup/">
+                    <div style={{width:"100wh", height:"100vh", display: "flex", justifyContent: "center", alignItems: "center"}}>
+                        <Button text="CLICK ME!" onClick={handleOpenPopup}/>
+                    </div>
+                </Route>
             </Switch>
 
-            <PopupCare isOpened={true} />
-            {/* <PopupAddCart isOpened={true} onClose={() => }/> */}
+            {/* <PopupCare isOpened={isPopupOpened} onClose={setIsPopupOpened}/> */}
+            <PopupAddCart isOpened={isPopupOpened} onClose={setIsPopupOpened}/>
         </>
     );
 }

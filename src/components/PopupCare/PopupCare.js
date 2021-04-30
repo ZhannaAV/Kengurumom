@@ -56,7 +56,7 @@ export default function PopupCare(props){
         classes={{paper: 'popup-care'}}
         onClose={handleClose}
         aria-labelledby="popup-care"
-        open={props.isOpened || true}>
+        open={props.isOpened || false}>
         <h2 className='popup-care__title'>{POPUP_CARE_TITLE}</h2>
         <button onClick={handleClose} className="popup-care__btn-close"><img src={popupClose} /></button>
         <ul className="popup-care__text-list">
