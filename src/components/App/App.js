@@ -1,13 +1,13 @@
-import {useState} from 'react';
-import {useMediaQuery} from 'react-responsive';
+import { useState } from 'react';
+import { useMediaQuery } from 'react-responsive';
 import Header from '../Header/Header';
 import SideMenu from '../SideMenu/SideMenu';
-import Slider from '../Slider/Slider';
+import TopSlider from '../TopSlider/TopSlider';
 import Advantages from '../Advantages/Advantages';
 import Instagram from '../Instagram/Instagram';
 import './App.css';
 import { Route, Switch } from 'react-router-dom';
-import { CATALOGUE_PAGE, DELIVERY_PAGE } from '../../config/links';
+// import { CATALOGUE_PAGE, DELIVERY_PAGE } from '../../config/links';
 import SectionsWithBtn from "../SectionsWithBtn/SectionsWithBtn";
 
 import Popular from '../Popular/Popular';
@@ -45,27 +45,15 @@ function App() {
             />
             <Switch>
                 <Route exact path='/'>
-                    <Slider media={media} />
-                    <Advantages />
+                    <TopSlider media={media}/>
+                    <Popular media={media}/>
+                    <Advantages/>
                     <SectionsWithBtn/>
+                    <Review media={media}/>
                     <Instagram/>
                 </Route>
-                <Route exact path={CATALOGUE_PAGE}>
-                    <Advantages />
-                    <Instagram />
-                </Route>
-                <Route exact path={DELIVERY_PAGE}>
-                    <Advantages />
-                </Route>
             </Switch>
-            
 
-            <Slider media={media}/>
-            <Popular media={media}/>
-            <Advantages/>
-            <SectionsWithBtn/>
-            <Review media={media}/>
-            <Instagram/>
         </>
     );
 }
