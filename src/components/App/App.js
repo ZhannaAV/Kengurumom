@@ -11,7 +11,7 @@ import './App.css';
 import SectionsWithBtn from "../SectionsWithBtn/SectionsWithBtn";
 import Popular from '../Popular/Popular';
 import Review from '../Review/Review';
-import PopupAddCart from '../PopupAddCart/PopupAddCart';
+// import PopupAddCart from '../PopupAddCart/PopupAddCart';
 import About from '../About/About';
 import PopupCare from '../PopupCare/PopupCare';
 import Button from '../Button/Button';
@@ -33,7 +33,6 @@ function App() {
     const openSideMenu = _ => setIsSideMenuOpened(true);
     const closeSideMenu = _ => setIsSideMenuOpened(false);
 
-    const handleClosePopup = () => {setIsPopupOpened(false)}
     const handleOpenPopup = () => {setIsPopupOpened(true)}
 
 

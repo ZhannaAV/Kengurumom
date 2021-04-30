@@ -56,11 +56,11 @@ export default function Review(props){
   });
 
   return (
-    <section class="review">
-      <h2 class="review__title">Отзывы счастливых мам</h2>
+    <section className="review">
+      <h2 className="review__title">Отзывы счастливых мам</h2>
       <SlickSlider className="content-slider" slides={slides}>
         {reviewConfig.map(item => (
-          <ReviewItem {...item}/>
+          <ReviewItem {...item} key={item.instaTitle}/>
         ))}
       </SlickSlider>
     </section>

@@ -58,35 +58,35 @@ export default function PopupCare(props){
         aria-labelledby="popup-care"
         open={props.isOpened || false}>
         <h2 className='popup-care__title'>{POPUP_CARE_TITLE}</h2>
-        <button onClick={handleClose} className="popup-care__btn-close"><img src={popupClose} /></button>
+        <button onClick={handleClose} className="popup-care__btn-close"><img src={popupClose} alt="Закрыть" /></button>
         <ul className="popup-care__text-list">
           <li>
             <h3 className='popup-care__text-title'>
-              {POPUP_CARE_WASH_TITLE}<img src={popupCareIcons.wash} className="popup-care__text-title-img"/>
+              {POPUP_CARE_WASH_TITLE}<img src={popupCareIcons.wash} alt={POPUP_CARE_WASH_TITLE} className="popup-care__text-title-img"/>
             </h3>
             <p className="popup-care__text">{POPUP_CARE_WASH_TEXT}</p>
           </li>
           <li>
             <h3 className='popup-care__text-title'>
-              {POPUP_CARE_DRYING_TITLE}<img src={popupCareIcons.drying} className="popup-care__text-title-img"/>
+              {POPUP_CARE_DRYING_TITLE}<img src={popupCareIcons.drying} alt={POPUP_CARE_DRYING_TITLE}  className="popup-care__text-title-img"/>
             </h3>
             <p className="popup-care__text">{POPUP_CARE_DRYING_TEXT}</p>
           </li>
           <li>
             <h3 className='popup-care__text-title'>
-              {POPUP_CARE_IRONING_TITLE}<img src={popupCareIcons.ironing} className="popup-care__text-title-img"/>
+              {POPUP_CARE_IRONING_TITLE}<img src={popupCareIcons.ironing} alt={POPUP_CARE_IRONING_TITLE} className="popup-care__text-title-img"/>
             </h3>
             <p className="popup-care__text">{POPUP_CARE_IRONING_TEXT}</p>
           </li>
           <li>
             <h3 className='popup-care__text-title'>
-              {POPUP_CARE_DRYCLEANING_TITLE}<img src={popupCareIcons.drycleaning} className="popup-care__text-title-img"/>
+              {POPUP_CARE_DRYCLEANING_TITLE}<img src={popupCareIcons.drycleaning} alt={POPUP_CARE_DRYCLEANING_TITLE} className="popup-care__text-title-img"/>
             </h3>
             <p className="popup-care__text">{POPUP_CARE_DRYCLEANING_TEXT}</p>
           </li>
           <li>
             <h3 className='popup-care__text-title'>
-              {POPUP_CARE_WHITENING_TITLE}<img src={popupCareIcons.whitening} className="popup-care__text-title-img"/>
+              {POPUP_CARE_WHITENING_TITLE}<img src={popupCareIcons.whitening} alt={POPUP_CARE_WHITENING_TITLE} className="popup-care__text-title-img"/>
             </h3>
             <p className="popup-care__text">{POPUP_CARE_WHITENING_TEXT}</p>
           </li>
