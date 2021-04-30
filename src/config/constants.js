@@ -49,8 +49,6 @@ export const testObjectOfProduct = {
   ],
 };
 
-// -------------------------------------------------------------------------------
-
 export const advantagesData = [
   {
     image: handicraft,
@@ -70,17 +68,6 @@ export const advantagesData = [
     title: 'Уникальный крой',
     description: 'Все вещи сделаны вручную с любовью небольшими партиями',
   },
-];
-
-export const instagramPhotoData = [
-  { link: photoInstOne },
-  { link: photoInstTwo },
-  { link: photoInstThree },
-  { link: photoInstFour },
-  { link: photoInstFive },
-  { link: photoInstSix },
-  { link: photoInstSeven },
-  { link: photoInstEight },
 ];
 
 // компонент О бренде
