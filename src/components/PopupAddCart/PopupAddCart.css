@@ -27,12 +27,14 @@
 }
 
 .popup-add-cart__button {
-  box-sizing: border-box;
-  border-radius: 10px;
   font-size: 16px;  
   line-height: 107.9%;
+  width: unset;
+  height: unset;
+  padding: 12px 32px 11px 33px;
+  text-decoration: none;
 }
-
+/*
 .popup-add-cart__button_keep-shopping {
   border: 1px solid #513629;
   color: #513629;
@@ -68,7 +70,7 @@
 .popup-add-cart__button_go-to-basket:active {
   background-color: #FCBA9B;
 }
-
+ */
 .popup-add-cart__item {
   margin: 0;
   padding: 0;
