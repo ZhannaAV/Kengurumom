@@ -29,7 +29,7 @@ function PopupProductGallery({ isOpened, image, closePopup }) {
         type="button"
         className="popup-product-gallery__button-zoom"
       />
-      <div className="popup-product-gallery__container">
+      <div className={`popup-product-gallery__container ${isZoomed && 'popup-product-gallery__container_zoomed'}`}>
         <img
           src={image}
           alt="Картинка в попапе"
