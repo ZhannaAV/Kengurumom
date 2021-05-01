@@ -1,7 +1,9 @@
 .product {
   margin: 0 auto;
   max-width: 1170px;
-  padding: 30px 20px 290px;
+  /* padding: 30px 20px 290px; */
+  /* временно, пока нет крошек, иначе не видно часть компонента */
+  padding: 150px 20px 290px;
   display: flex;
   flex-direction: row;
 }
@@ -91,7 +93,9 @@
 
 @media screen and (min-width: 1441px) {
   .product {
-    padding: 80px 0 250px;
+    /* padding: 80px 0 250px; */
+    /* временно, пока нет крошек, иначе не видно часть компонента */
+    padding: 150px 0 250px;
     max-width: 1400px;
   }
 
@@ -167,7 +171,9 @@
 @media screen and (max-width: 735px) {
   .product {
     flex-direction: column;
-    padding: 45px 20px 125px;
+    /* padding: 45px 20px 125px; */
+    /* временно, пока нет крошек, иначе не видно часть компонента */
+    padding: 150px 20px 125px;
   }
 
   .product__title {
