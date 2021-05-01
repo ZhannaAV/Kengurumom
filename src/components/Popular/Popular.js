@@ -67,11 +67,11 @@ export default function Popular(props){
   });
 
   return (
-    <section class="popular">
-      <h2 class="popular__title">Популярное</h2>
+    <section className="popular">
+      <h2 className="popular__title">Популярное</h2>
       <SlickSlider className="content-slider" slides={slides}>
         {popularConfig.map(item => (
-          <PopularItem {...item} />
+          <PopularItem {...item} key={item.title}/>
         ))}
       </SlickSlider>
     </section>

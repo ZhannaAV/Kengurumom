@@ -44,7 +44,7 @@ export default function StyledText({text, styles}){
 }
 
 //Usage
-{/* <StyledText 
+/* <StyledText 
   text="Let's make some <ml>multistyle</ml> <ms>multistyle</ms> text for <pixi>Pixi.js!</pixi>"
   styles={{
       "default": {
@@ -71,4 +71,4 @@ export default function StyledText({text, styles}){
               fontSize: "64px",
               color: "#efefef"
           }},
-  }}/> */}
+  }}/> */

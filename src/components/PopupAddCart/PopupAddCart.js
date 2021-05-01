@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import './PopupAddCart.css';
 import Dialog from '@material-ui/core/Dialog';
 import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
@@ -81,8 +80,6 @@ export default function PopupAddCart(props){
           <p className="popup-add-cart__item-title">{item.price} &#8381;</p>
         </div>
         <div className='popup-add-cart__action-buttons'>
-          {/* <button className='popup-add-cart__button popup-add-cart__button_keep-shopping' onClick={handleClose}>{POPUP_ADD_CART_KEEP_SHOPPING}</button>
-          <Link to='/cart' className='popup-add-cart__button popup-add-cart__button_go-to-basket' onClick={handleClose}>{POPUP_ADD_CART_GO_TO_BASKET}</Link> */}
           <Button btnType='button' btnStyle='outlined' type='popup-add-cart__button' text={POPUP_ADD_CART_KEEP_SHOPPING} onClick={handleClose}/>
           <Button btnType='link' linkTo='/cart' btnStyle='filled' type='popup-add-cart__button' text={POPUP_ADD_CART_GO_TO_BASKET} onClick={handleClose}/>
         </div>
