@@ -78,13 +78,12 @@
     object-fit: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    transform: scale(1);
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, transform-origin 0.3s ease-in-out;
   }
 
   .popup-product-gallery__image_zoomed {
+    transform-origin: top left;
     transform: scale(3);
-    object-position: left;
   }
 }
 
