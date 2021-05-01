@@ -1,4 +1,4 @@
-import { Component, useState } from 'react';
+import { useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { Switch, Route } from 'react-router-dom';
 import { ABOUT_PAGE, CATALOGUE_PAGE } from '../../config/links';
@@ -16,8 +16,10 @@ import About from '../About/About';
 import PopupCare from '../PopupCare/PopupCare';
 import Button from '../Button/Button';
 import Product from '../Product/Product';
+import Catalog from '../Catalog/Catalog';
 
-import { testObjectOfProduct } from '../../config/constants';
+import { catalogCategories } from '../../config/links';
+import { exampleArrProducts } from '../../config/constants';
 
 function App() {
   const [isPopupOpened, setIsPopupOpened] = useState(false);
@@ -60,7 +62,7 @@ function App() {
       <Switch>
         <Route exact path="/">
           <Slider media={media} />
-          <Popular media={media} />
+          <Popular media={media} products={exampleArrProducts} />
           <Advantages />
           <SectionsWithBtn />
           <Review media={media} />
@@ -69,9 +71,20 @@ function App() {
         <Route path={ABOUT_PAGE}>
           <About />
         </Route>
-        <Route path={CATALOGUE_PAGE}>
-          <Product product={testObjectOfProduct} media={media} />
+        <Route exact path={CATALOGUE_PAGE}>
+          <Catalog products={exampleArrProducts} />
         </Route>
+        <Route exact path={`${CATALOGUE_PAGE}/:id`}>
+          <Product products={exampleArrProducts} media={media} />
+        </Route>
+        {catalogCategories.map((category, i) => (
+          <Route key={i} exact path={`${CATALOGUE_PAGE}/:${category[1]}`}>
+            <Catalog products={exampleArrProducts} />
+          </Route>
+        ))}
+        {/* <Route path={PERSONAL_SEWING_PAGE}>
+          <Product product={exampleArrProducts[0]} media={media} />
+        </Route> */}
         {/* use for test !!! */}
         <Route path="/test_popup/">
           <div

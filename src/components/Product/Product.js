@@ -1,7 +1,11 @@
 import './Product.css';
 import ProdGallery from '../Product/ProdGallery/ProdGallery';
+import { useParams } from 'react-router-dom';
 
-function Product({ product, media }) {
+function Product({ products, media }) {
+
+  let { id } = useParams();
+  const product = products.find(product => product.id === id);
 
   return (
       <section className="product">
