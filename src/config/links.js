@@ -13,7 +13,7 @@ export const catalogueLinks = [
     ['Пеленальные коконы', '/changing-cocoons'],
     ['Слюнявчики и грызунки', '/bibs'],
     ['Спальники', '/sleeping-bags'],
-    ['Конверты', '/envelops'],
+    ['Конверты на выписку', '/envelops'],
     ['Пелёнки и пледы', '/napkins'],
     ['Милкснуды', '/milksnuds'],
     ['Вязаные пледы', '/knitted-blankets'],
