@@ -1,5 +1,6 @@
 import './Product.css';
 import ProdGallery from '../Product/ProdGallery/ProdGallery';
+import { useParams } from 'react-router-dom';
 
 function Product({ product, media, onPopupCareOpen }) {
 
