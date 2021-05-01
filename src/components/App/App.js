@@ -1,13 +1,13 @@
 import { Component, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { Switch, Route } from 'react-router-dom';
-import { ABOUT_PAGE, CATALOGUE_PAGE } from '../../config/links';
+import { ABOUT_PAGE, TERMS_OF_USE, OFFER, CATALOGUE_PAGE } from '../../config/links';
 import Header from '../Header/Header';
 import SideMenu from '../SideMenu/SideMenu';
 import Slider from '../Slider/Slider';
 import Advantages from '../Advantages/Advantages';
 import Instagram from '../Instagram/Instagram';
-import Footer from '../Footer/Footer';
+//import Footer from '../Footer/Footer';
 import './App.css';
 import SectionsWithBtn from '../SectionsWithBtn/SectionsWithBtn';
 import Popular from '../Popular/Popular';
@@ -70,11 +70,12 @@ function App() {
         <Route path={ABOUT_PAGE}>
           <About />
         </Route>
-        <Route path='/offer'>
+
+        <Route path={OFFER}>
           <Document type='offer' />
         </Route>
 
-        <Route path='/terms-of-use'>
+        <Route path={TERMS_OF_USE}>
           <Document type='terms-of-use' />
         </Route>
         <Route path={CATALOGUE_PAGE}>
