@@ -1,7 +1,7 @@
 import { Component, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { Switch, Route } from 'react-router-dom';
-import { ABOUT_PAGE, TERMS_OF_USE, OFFER, CATALOGUE_PAGE } from '../../config/links';
+import { ABOUT_PAGE, TERMS_OF_USE, OFFER, CATALOGUE_PAGE,DELIVERY_PAGE } from '../../config/links';
 import Header from '../Header/Header';
 import SideMenu from '../SideMenu/SideMenu';
 import Slider from '../Slider/Slider';
@@ -19,86 +19,93 @@ import Button from '../Button/Button';
 import Product from '../Product/Product';
 import Document from '../Document/Document';
 import { testObjectOfProduct } from '../../config/constants';
+import DeliveryPage from '../DeliveryPage/DeliveryPage'
+
 
 function App() {
-  const [isPopupOpened, setIsPopupOpened] = useState(false);
+    const [isPopupOpened, setIsPopupOpened] = useState(false);
 
-  const isDesktop = useMediaQuery({ minWidth: 1440 });
-  const isLaptop = useMediaQuery({ maxWidth: 1440 });
-  const isTabletHor = useMediaQuery({ maxWidth: 1280 });
-  const isTabletVert = useMediaQuery({ maxWidth: 1024 });
-  const isMobileHor = useMediaQuery({ maxWidth: 768 });
-  const isMobileVert = useMediaQuery({ maxWidth: 480 });
+    const isDesktop = useMediaQuery({minWidth: 1440});
+    const isLaptop = useMediaQuery({maxWidth: 1440});
+    const isTabletHor = useMediaQuery({maxWidth: 1280});
+    const isTabletVert = useMediaQuery({maxWidth: 1024});
+    const isMobileHor = useMediaQuery({maxWidth: 768});
+    const isMobileVert = useMediaQuery({maxWidth: 480});
 
-  const [isSideMenuOpened, setIsSideMenuOpened] = useState(false);
+    const [isSideMenuOpened, setIsSideMenuOpened] = useState(false);
 
-  const media = {
-    isDesktop,
-    isLaptop,
-    isTabletHor,
-    isTabletVert,
-    isMobileHor,
-    isMobileVert,
-  };
+    const media = {
+        isDesktop,
+        isLaptop,
+        isTabletHor,
+        isTabletVert,
+        isMobileHor,
+        isMobileVert,
+    };
 
-  const openSideMenu = (_) => setIsSideMenuOpened(true);
-  const closeSideMenu = (_) => setIsSideMenuOpened(false);
+    const openSideMenu = (_) => setIsSideMenuOpened(true);
+    const closeSideMenu = (_) => setIsSideMenuOpened(false);
 
-  const handleOpenPopup = () => {
-    setIsPopupOpened(true);
-  };
+    const handleOpenPopup = () => {
+        setIsPopupOpened(true);
+    };
 
-  return (
-    <>
-      {isLaptop && (
-        <SideMenu
-          media={media}
-          isOpened={isSideMenuOpened}
-          onCloseClick={closeSideMenu}
-        />
-      )}
-      <Header media={media} openSideMenu={openSideMenu} />
-      <Switch>
-        <Route exact path="/">
-          <Slider media={media} />
-          <Popular media={media} />
-          <Advantages />
-          <SectionsWithBtn />
-          <Review media={media} />
-          <Instagram />
-        </Route>
-        <Route path={ABOUT_PAGE}>
-          <About />
-        </Route>
 
-        <Route path={OFFER}>
-          <Document type='offer' />
-        </Route>
+    return (
+        <>
+            {isLaptop && (
+                <SideMenu
+                    media={media}
+                    isOpened={isSideMenuOpened}
+                    onCloseClick={closeSideMenu}
+                />
+            )}
+            <Header media={media} openSideMenu={openSideMenu}/>
+            <Switch>
+                <Route exact path="/">
+                    <Slider media={media}/>
+                    <Popular media={media}/>
+                    <Advantages/>
+                    <SectionsWithBtn/>
+                    <Review media={media}/>
+                    <Instagram/>
+                </Route>
+                <Route path={ABOUT_PAGE}>
+                    <About/>
+                </Route>
 
-        <Route path={TERMS_OF_USE}>
-          <Document type='terms-of-use' />
-        </Route>
-        <Route path={CATALOGUE_PAGE}>
-          <Product product={testObjectOfProduct} media={media} />
-        </Route>
-        {/* use for test !!! */}
-        <Route path="/test_popup/">
-          <div
-            style={{
-              width: '100wh',
-              height: '100vh',
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-            }}
-          >
-            <Button text="CLICK ME!" onClick={handleOpenPopup} />
-          </div>
-        </Route>
-      </Switch>
-      <PopupCare isOpened={isPopupOpened} onClose={setIsPopupOpened} />
-      {/* <PopupAddCart isOpened={isPopupOpened} onClose={setIsPopupOpened}/> */}
-    </>
-  );
+                <Route path={OFFER}>
+                    <Document type='offer'/>
+                </Route>
+
+                <Route path={TERMS_OF_USE}>
+                    <Document type='terms-of-use'/>
+                </Route>
+                <Route path={DELIVERY_PAGE}>
+                    <DeliveryPage/>
+                </Route>
+                <Route path={CATALOGUE_PAGE}>
+                    <Product product={testObjectOfProduct} media={media}/>
+                </Route>
+                {/* use for test !!! */}
+                <Route path="/test_popup/">
+                    <div
+                        style={{
+                            width: '100wh',
+                            height: '100vh',
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                        }}
+                    >
+                        <Button text="CLICK ME!" onClick={handleOpenPopup}/>
+                    </div>
+                </Route>
+            </Switch>
+            <PopupCare isOpened={isPopupOpened} onClose={setIsPopupOpened}/>
+            {/* <PopupAddCart isOpened={isPopupOpened} onClose={setIsPopupOpened}/> */}
+        </>
+    );
 }
+
 export default App;
