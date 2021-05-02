@@ -17,3 +17,7 @@ export const catalogueLinks = [
     ['Органайзеры для детских вещей', '/organizers'],
     ['Подарочный сертификат', '/gift-certificate'],
 ]
+
+// footer links
+export const TERMS_OF_USE = '/terms-of-use';
+export const OFFER = '/offer';
