@@ -11,8 +11,8 @@ import About from '../About/About';
 import Document from '../Document/Document';
 import DeliveryPage from '../DeliveryPage/DeliveryPage';
 import Button from '../Button/Button';
-import Product from '../Product/Product';
-import Catalog from '../Catalog/Catalog';
+import ProductPage from '../ProductPage/ProductPage';
+import CatalogPage from '../CatalogPage/CatalogPage';
 
 import { exampleArrProducts } from '../../config/constants';
 
@@ -42,10 +42,10 @@ function Content(props) {
       </Route>
 
       <Route exact path={CATALOGUE_PAGE}>
-        <Catalog products={exampleArrProducts} />
+        <CatalogPage products={exampleArrProducts} />
       </Route>
       <Route exact path={`${CATALOGUE_PAGE}/:id`}>
-        <Product products={exampleArrProducts} media={media} />
+        <ProductPage products={exampleArrProducts} media={media} />
       </Route>
 
       {/* use for test !!! */}
