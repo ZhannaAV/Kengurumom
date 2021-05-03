@@ -10,7 +10,7 @@ export const catalogueLinks = [
     ['Пеленальные коконы', '/changing-cocoons'],
     ['Слюнявчики и грызунки', '/bibs'],
     ['Спальники', '/sleeping-bags'],
-    ['Конверты', '/envelops'],
+    ['Конверты на выписку', '/envelops'],
     ['Пелёнки и пледы', '/napkins'],
     ['Милкснуды', '/milksnuds'],
     ['Вязаные пледы', '/knitted-blankets'],
@@ -21,3 +21,13 @@ export const catalogueLinks = [
 // footer links
 export const TERMS_OF_USE = '/terms-of-use';
 export const OFFER = '/offer';
+
+export const catalogCategories = [
+    ['Пеленальные коконы', '/changing-cocoons'],
+    ['Спальники', '/sleeping-bags'],
+    ['Пелёнки и пледы', '/napkins'],
+    ['Слюнявчики и грызунки', '/bibs'],
+    ['Милкснуды', '/milksnuds'],
+    [`Органайзеры для${'\u00A0'}детских${'\u00A0'}вещей`, '/organizers'],
+    ['Подарочный сертификат', '/gift-certificate'],
+]

@@ -2,14 +2,19 @@
   padding: 0;
   margin: 0;
   font-size: 0;
+  height: 0;
+  padding-bottom: 100%;
 }
 
 .thumbnail__image {
+  margin: 0;
   width: 100%;
-  object-fit: cover;
+  padding-bottom: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   border-radius: 10px;
   cursor: pointer;
-  object-position: 50% 50%;
 }
 
 .thumbnails {
@@ -40,7 +45,7 @@
   }
 }
 
-@media screen and (max-width: 735px) {
+@media screen and (max-width: 480px) {
   .thumbnails {
     gap: 20px;
   }

@@ -1,40 +1,51 @@
-import {Route, Switch} from "react-router-dom";
-import {ABOUT_PAGE, CATALOGUE_PAGE, DELIVERY_PAGE, OFFER, TERMS_OF_USE} from "../../config/links";
-import {testObjectOfProduct} from "../../config/constants";
-import MainPage from "../MainPage/MainPage";
-import About from "../About/About";
-import Document from "../Document/Document";
-import DeliveryPage from "../DeliveryPage/DeliveryPage";
-import Product from "../Product/Product";
-import Button from "../Button/Button";
+import { Route, Switch } from 'react-router-dom';
+import {
+  ABOUT_PAGE,
+  CATALOGUE_PAGE,
+  DELIVERY_PAGE,
+  OFFER,
+  TERMS_OF_USE,
+} from '../../config/links';
+import MainPage from '../MainPage/MainPage';
+import About from '../About/About';
+import Document from '../Document/Document';
+import DeliveryPage from '../DeliveryPage/DeliveryPage';
+import Button from '../Button/Button';
+import Product from '../Product/Product';
+import Catalog from '../Catalog/Catalog';
+
+import { exampleArrProducts } from '../../config/constants';
 
 function Content(props) {
-  const {isOpened, media} = props
+  const { isOpened, media } = props;
 
   return (
     <Switch>
       <Route exact path="/">
-        <MainPage media={media}/>
+        <MainPage media={media} />
       </Route>
 
       <Route path={ABOUT_PAGE}>
-        <About/>
+        <About />
       </Route>
 
       <Route path={OFFER}>
-        <Document type='offer'/>
+        <Document type="offer" />
       </Route>
 
       <Route path={TERMS_OF_USE}>
-        <Document type='terms-of-use'/>
+        <Document type="terms-of-use" />
       </Route>
 
       <Route path={DELIVERY_PAGE}>
-        <DeliveryPage/>
+        <DeliveryPage />
       </Route>
 
-      <Route path={CATALOGUE_PAGE}>
-        <Product product={testObjectOfProduct} media={media}/>
+      <Route exact path={CATALOGUE_PAGE}>
+        <Catalog products={exampleArrProducts} />
+      </Route>
+      <Route exact path={`${CATALOGUE_PAGE}/:id`}>
+        <Product products={exampleArrProducts} media={media} />
       </Route>
 
       {/* use for test !!! */}
@@ -48,12 +59,11 @@ function Content(props) {
             alignItems: 'center',
           }}
         >
-          <Button text="CLICK ME!" onClick={isOpened}/>
+          <Button text="CLICK ME!" onClick={isOpened} />
         </div>
       </Route>
     </Switch>
-
-  )
+  );
 }
 
-export default Content
+export default Content;
