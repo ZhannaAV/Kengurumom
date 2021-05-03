@@ -1,9 +1,9 @@
-import './Catalog.css';
+import './CatalogPage.css';
 import { catalogCategories } from '../../config/links';
 import { Link } from 'react-router-dom';
 import PopularItem from '../PopularItem/PopularItem';
 
-function Catalog({ products }) {
+function CatalogPage({ products }) {
   return (
     <section className="catalog">
       <h1 className="catalog__title">Каталог</h1>
@@ -31,4 +31,4 @@ function Catalog({ products }) {
   );
 }
 
-export default Catalog;
+export default CatalogPage;
