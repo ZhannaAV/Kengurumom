@@ -1,0 +1,29 @@
+.delivery {
+    color: #513629;
+}
+
+.delivery__title {
+    text-align: center;
+    color: #dc8962;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 37px;
+}
+
+.delivery__world-title {
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 30px;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.delivery__world-text {
+    width: 406px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 140%;
+    text-align: center;
+    margin: auto;
+}

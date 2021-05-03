@@ -23,6 +23,7 @@ import iconIroning from '../images/popup_care/ironing.svg';
 import iconDrycleaning from '../images/popup_care/drycleaning.svg';
 import iconWhitening from '../images/popup_care/whitening.svg';
 import iconClose from '../images/popup_close.svg';
+import {useMediaQuery} from "react-responsive";
 
 export const instagramPhotoData = [
   { link: photoInstOne },
@@ -89,3 +90,4 @@ export const popupCareIcons = {
   drycleaning: iconDrycleaning,
   whitening: iconWhitening
 };
+
