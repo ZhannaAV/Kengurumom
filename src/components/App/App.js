@@ -18,7 +18,6 @@ import Button from '../Button/Button';
 import Product from '../Product/Product';
 import Catalog from '../Catalog/Catalog';
 
-import { catalogCategories } from '../../config/links';
 import { exampleArrProducts } from '../../config/constants';
 
 function App() {
@@ -77,14 +76,6 @@ function App() {
         <Route exact path={`${CATALOGUE_PAGE}/:id`}>
           <Product products={exampleArrProducts} media={media} />
         </Route>
-        {catalogCategories.map((category, i) => (
-          <Route key={i} exact path={`${CATALOGUE_PAGE}/:${category[1]}`}>
-            <Catalog products={exampleArrProducts} />
-          </Route>
-        ))}
-        {/* <Route path={PERSONAL_SEWING_PAGE}>
-          <Product product={exampleArrProducts[0]} media={media} />
-        </Route> */}
         {/* use for test !!! */}
         <Route path="/test_popup/">
           <div
