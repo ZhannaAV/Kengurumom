@@ -42,7 +42,7 @@ export const exampleArrProducts = [
       'Удобно маме и папе. Надеть пелёнку очень легко, подгузник меняется без лишних движений. Папа легко справится ;) Можно носить и дома, и на прогулке в коляске.',
     ],
     photos: [
-      'https://www.artensoft.com/sources/artensoft_com/ArtensoftPhotoCollageMaker/gallery/0004/photo-collage-example-0004_2560.jpg',
+      'https://images.unsplash.com/photo-1619800174740-db1639d3936e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2134&q=80',
       'https://www.artensoft.com/sources/artensoft_com/ArtensoftPhotoCollageMaker/gallery/0002/photo-collage-example-0002_2560.jpg',
       'https://images.unsplash.com/photo-1617929912008-eaa24413b9ac?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80',
     ],
@@ -65,7 +65,7 @@ export const exampleArrProducts = [
       'Удобно маме и папе. Надеть пелёнку очень легко, подгузник меняется без лишних движений. Папа легко справится ;) Можно носить и дома, и на прогулке в коляске.',
     ],
     photos: [
-      'https://www.artensoft.com/sources/artensoft_com/ArtensoftPhotoCollageMaker/gallery/0004/photo-collage-example-0004_2560.jpg',
+      'https://images.unsplash.com/photo-1619795079867-362a67e20a91?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2140&q=80',
       'https://www.artensoft.com/sources/artensoft_com/ArtensoftPhotoCollageMaker/gallery/0002/photo-collage-example-0002_2560.jpg',
       'https://images.unsplash.com/photo-1617929912008-eaa24413b9ac?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80',
     ],
@@ -88,7 +88,7 @@ export const exampleArrProducts = [
       'Удобно маме и папе. Надеть пелёнку очень легко, подгузник меняется без лишних движений. Папа легко справится ;) Можно носить и дома, и на прогулке в коляске.',
     ],
     photos: [
-      'https://www.artensoft.com/sources/artensoft_com/ArtensoftPhotoCollageMaker/gallery/0004/photo-collage-example-0004_2560.jpg',
+      'https://images.unsplash.com/photo-1619793615805-a59602265c40?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80',
       'https://www.artensoft.com/sources/artensoft_com/ArtensoftPhotoCollageMaker/gallery/0002/photo-collage-example-0002_2560.jpg',
       'https://images.unsplash.com/photo-1617929912008-eaa24413b9ac?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80',
     ],
@@ -111,7 +111,7 @@ export const exampleArrProducts = [
       'Удобно маме и папе. Надеть пелёнку очень легко, подгузник меняется без лишних движений. Папа легко справится ;) Можно носить и дома, и на прогулке в коляске.',
     ],
     photos: [
-      'https://www.artensoft.com/sources/artensoft_com/ArtensoftPhotoCollageMaker/gallery/0004/photo-collage-example-0004_2560.jpg',
+      'https://images.unsplash.com/photo-1619806629350-7fe987c8f613?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2134&q=80',
       'https://www.artensoft.com/sources/artensoft_com/ArtensoftPhotoCollageMaker/gallery/0002/photo-collage-example-0002_2560.jpg',
       'https://images.unsplash.com/photo-1617929912008-eaa24413b9ac?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80',
     ],
@@ -134,7 +134,7 @@ export const exampleArrProducts = [
       'Удобно маме и папе. Надеть пелёнку очень легко, подгузник меняется без лишних движений. Папа легко справится ;) Можно носить и дома, и на прогулке в коляске.',
     ],
     photos: [
-      'https://www.artensoft.com/sources/artensoft_com/ArtensoftPhotoCollageMaker/gallery/0004/photo-collage-example-0004_2560.jpg',
+      'https://images.unsplash.com/photo-1619792847729-100c8538f81a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80',
       'https://www.artensoft.com/sources/artensoft_com/ArtensoftPhotoCollageMaker/gallery/0002/photo-collage-example-0002_2560.jpg',
       'https://images.unsplash.com/photo-1617929912008-eaa24413b9ac?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80',
     ],
@@ -157,11 +157,11 @@ export const exampleArrProducts = [
       'Удобно маме и папе. Надеть пелёнку очень легко, подгузник меняется без лишних движений. Папа легко справится ;) Можно носить и дома, и на прогулке в коляске.',
     ],
     photos: [
-      'https://www.artensoft.com/sources/artensoft_com/ArtensoftPhotoCollageMaker/gallery/0004/photo-collage-example-0004_2560.jpg',
+      'https://images.unsplash.com/photo-1619882903364-55fb81befd7d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80',
       'https://www.artensoft.com/sources/artensoft_com/ArtensoftPhotoCollageMaker/gallery/0002/photo-collage-example-0002_2560.jpg',
       'https://images.unsplash.com/photo-1617929912008-eaa24413b9ac?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80',
     ],
-    new: false,
+    new: true,
     sale: 20,
     category: 'sleeping-bags',
   },
@@ -180,7 +180,7 @@ export const exampleArrProducts = [
       'Удобно маме и папе. Надеть пелёнку очень легко, подгузник меняется без лишних движений. Папа легко справится ;) Можно носить и дома, и на прогулке в коляске.',
     ],
     photos: [
-      'https://www.artensoft.com/sources/artensoft_com/ArtensoftPhotoCollageMaker/gallery/0004/photo-collage-example-0004_2560.jpg',
+      'https://images.unsplash.com/photo-1619874536663-f8470d6d79b7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2134&q=80',
       'https://www.artensoft.com/sources/artensoft_com/ArtensoftPhotoCollageMaker/gallery/0002/photo-collage-example-0002_2560.jpg',
       'https://images.unsplash.com/photo-1617929912008-eaa24413b9ac?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80',
     ],
@@ -203,7 +203,7 @@ export const exampleArrProducts = [
       'Удобно маме и папе. Надеть пелёнку очень легко, подгузник меняется без лишних движений. Папа легко справится ;) Можно носить и дома, и на прогулке в коляске.',
     ],
     photos: [
-      'https://www.artensoft.com/sources/artensoft_com/ArtensoftPhotoCollageMaker/gallery/0004/photo-collage-example-0004_2560.jpg',
+      'https://images.unsplash.com/photo-1619856782185-f6d92ffa77e7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80',
       'https://www.artensoft.com/sources/artensoft_com/ArtensoftPhotoCollageMaker/gallery/0002/photo-collage-example-0002_2560.jpg',
       'https://images.unsplash.com/photo-1617929912008-eaa24413b9ac?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80',
     ],

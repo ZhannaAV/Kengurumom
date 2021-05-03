@@ -7,11 +7,10 @@ function ThumbnailImage({ src, getImage, index }) {
 
   return (
     <li className="thumbnail">
-      <img
-        onClick={handleImageClick}
+      <figure
         className="thumbnail__image"
-        src={src}
-        alt="Второстепенное изображение"
+        onClick={handleImageClick}
+        style={{ backgroundImage: `url(${src})` }}
       />
     </li>
   );
