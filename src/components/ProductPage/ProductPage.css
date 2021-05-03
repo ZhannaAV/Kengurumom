@@ -25,14 +25,29 @@
   color: #dc8962;
 }
 
+.product__price-box {
+  margin: 0 0 40px;
+  padding: 0;
+  display: flex;
+  justify-content: flex-start;
+}
+
 .product__price {
   padding: 0;
-  margin: 0 0 40px;
+  margin: 0;
   font-style: normal;
+  font-weight: bold;
   font-size: 25px;
   line-height: 30px;
-  margin-bottom: 40px;
   color: #513629;
+}
+
+.product__price_old {
+  margin-left: 20px;
+  font-weight: 500;
+  font-size: 20px;
+  color: #dc8962;
+  text-decoration-line: line-through;
 }
 
 .product__specification-box {
@@ -108,7 +123,6 @@
   }
 
   .product__price {
-    font-weight: bold;
     font-size: 30px;
     line-height: 37px;
   }
@@ -161,9 +175,12 @@
   }
 
   .product__price {
-    font-weight: bold;
     font-size: 20px;
     line-height: 24px;
+  }
+
+  .product__price_old {
+    font-size: 16px;
   }
 
   .product__text {

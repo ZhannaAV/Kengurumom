@@ -15,7 +15,6 @@ import { Link, useRouteMatch } from 'react-router-dom';
 // }
 
 export default function PopularItem(props) {
-
   let { path } = useRouteMatch();
 
   return (
@@ -27,13 +26,15 @@ export default function PopularItem(props) {
       />
       <button className="popular__item-cart" alt="В корзину"></button>
       {/* <figcaption className="popular__item-title">{props.name}</figcaption> */}
-      <Link className="popular__item-title" to={`${path}/${props.id}`}>{props.name}</Link>
+      <Link className="popular__item-title" to={`${path}/${props.id}`}>
+        {props.name}
+      </Link>
       <div className="popular__item-price">
-        {props.price}
+        {props.sale
+          ? Math.floor(props.price - (props.price * props.sale) / 100)
+          : props.price}
         {props.sale && (
-          <p className="popular__item-price-sale">
-            {Math.floor(props.price - (props.price * props.sale) / 100)}
-          </p>
+          <p className="popular__item-price-sale">{props.price}</p>
         )}
       </div>
     </figure>
