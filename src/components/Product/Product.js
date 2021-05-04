@@ -1,7 +1,7 @@
 import './Product.css';
 import ProdGallery from '../Product/ProdGallery/ProdGallery';
 
-function Product({ product, media }) {
+function Product({ product, media, onPopupCareOpen }) {
 
   return (
       <section className="product">
@@ -45,9 +45,10 @@ function Product({ product, media }) {
               {product.vendorCode}
             </p>
           </div>
-          <a className="product__care-link" href="#" target="_blank">
+          {/* <a className="product__care-link" href="#" target="_blank" onClick={onPopupBasketOpen}>
             Рекомендация по уходу
-          </a>
+          </a> */}
+          <p className="product__care-link" onClick={onPopupCareOpen}>Рекомендация по уходу</p>
         </div>
       </section>
   );

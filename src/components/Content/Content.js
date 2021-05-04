@@ -34,7 +34,11 @@ function Content(props) {
       </Route>
 
       <Route path={CATALOGUE_PAGE}>
-        <Product product={testObjectOfProduct} media={media}/>
+        <Product 
+          product={testObjectOfProduct}
+          media={media}
+          onPopupCareOpen={props.onPopupCareOpen}
+        />
       </Route>
 
       {/* use for test !!! */}
