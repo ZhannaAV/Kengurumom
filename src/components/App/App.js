@@ -4,7 +4,6 @@ import './App.css';
 import Header from '../Header/Header';
 import SideMenu from '../SideMenu/SideMenu';
 import Content from "../Content/Content";
-import PopupBasket from '../PopupBasket/PopupBasket';
 import PopupCare from '../PopupCare/PopupCare';
 
 function App() {
@@ -56,7 +55,7 @@ function App() {
       />
       
       <PopupCare isOpened={isPopupCareOpened} onClose={handlePopupCareClose}/>
-      <PopupBasket isOpened={isPopupOpened} onClose={setIsPopupOpened}/>
+      {/* <PopupBasket isOpened={isPopupOpened} onClose={setIsPopupOpened}/> */}
       {/* <PopupAddCart isOpened={isPopupOpened} onClose={setIsPopupOpened}/> */}
     </>
   )
