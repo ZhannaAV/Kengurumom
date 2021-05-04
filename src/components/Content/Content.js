@@ -2,7 +2,7 @@ import {Route, Switch} from "react-router-dom";
 import {ABOUT_PAGE, CATALOGUE_PAGE, DELIVERY_PAGE, OFFER, TERMS_OF_USE} from "../../config/links";
 import {testObjectOfProduct} from "../../config/constants";
 import MainPage from "../MainPage/MainPage";
-import About from "../About/About";
+import AboutPage from "../AboutPage/AboutPage";
 import Document from "../Document/Document";
 import DeliveryPage from "../DeliveryPage/DeliveryPage";
 import Product from "../Product/Product";
@@ -18,7 +18,7 @@ function Content(props) {
       </Route>
 
       <Route path={ABOUT_PAGE}>
-        <About/>
+        <AboutPage />
       </Route>
 
       <Route path={OFFER}>
