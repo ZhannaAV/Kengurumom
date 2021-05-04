@@ -23,7 +23,7 @@ export default function PopupBasket(props) {
   }
 
   React.useEffect(() => {
-    if (items.length === 0) setItems(itemsCart); // for test
+    if (items.length === 0) setItems(itemsCart.filter(e => e.num)); // for test
     handleReloadCartSum();
   }, [items]);
 
@@ -34,7 +34,6 @@ export default function PopupBasket(props) {
           {
             items ?
               items.map((item, i) => (
-                item.num ?
                 <div className="popup-basket__item" key={i}>
                   <img className="popup-basket__item-img" src={item.src} alt={item.title} />
                   <h3 className="popup-basket__item-title">{item.title}</h3>
@@ -43,7 +42,7 @@ export default function PopupBasket(props) {
                   <button className="popup-basket__item-del" onClick={() => {handleDelete(item)}}>
                     <img src={deleteIcon} alt={`Удалить из корзины ${item.title}`}/>
                   </button>
-                </div> : <></>
+                  </div>
               )) :
               <>В корзине нет товаров</>
           }
