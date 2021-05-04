@@ -1,0 +1,1 @@
+export const pageNotFoundTitle = "Упс..кажется здесь ничего нет!";
