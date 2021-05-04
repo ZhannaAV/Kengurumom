@@ -1,0 +1,151 @@
+.popup-basket {
+  position: fixed;
+  /*SET REAL TOP AND LEFT*/
+  top: 400px;
+  left: 400px;
+  margin: 0;
+  padding: 20px 15px 20px 20px;
+  border-radius: 10px;
+  background-color: #fff;
+  border: 1px solid #000;
+  max-width: 323px;
+  width: 100%;
+  visibility: hidden;
+  /* z-index: 1000; */
+}
+
+.popup-basket::before {
+  content: "";
+  /* border-radius: 2px; */
+  border-top-left-radius: 2px;
+  border-left: 1px solid #000;
+  border-top: 1px solid #000;
+  background-color: #fff;
+  z-index: 100;
+  position: absolute;
+  top: -16.5px;
+  right: 13px;
+  width: 29px;
+  height: 29px;
+  transform: rotate(45deg) skew(17deg, 17deg);
+}
+
+.popup-basket_visible {
+  visibility: visible;
+}
+
+.popup-basket__content {
+  margin: 0;
+  padding: 0;
+  z-index: 1000;
+  position: relative;
+}
+
+.popup-basket__buttons {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.popup-basket__button {
+  width: unset;
+  height: unset;
+  padding: 8px 25px 11px 26px;
+  font-size: 14px;
+  line-height: 107.9%;
+  text-decoration: none;
+}
+
+.popup-basket__summary {
+  font-family: 'Montserrat';
+  margin: 20px 0;
+  padding: 0;
+  display: block;
+  text-align: right;
+  width: 100%;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #513629;
+}
+
+.popup-basket__summary::after{
+  content:' \20BD';
+}
+
+.popup-basket__items {
+  margin: 0;
+  padding: 0;
+}
+
+.popup-basket__item {
+  margin: 0;
+  padding: 0 0 20px 0;
+  border-bottom: 0.5px solid #513629;
+  display: flex;
+  font-family: 'Montserrat';
+  font-size: 14px;
+  line-height: 17px;
+  color: #513629;
+  font-weight: 600;
+}
+
+.popup-basket__item-img {
+  margin: 0 7px 0 0;
+  padding: 0;
+  width: 87px;
+  height: 87px;
+  border-radius: 10px;
+}
+
+.popup-basket__item-text {
+  margin: 7px 0 14px 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.popup-basket__item-title {
+  margin: 0;
+  padding: 0;
+}
+
+.popup-basket__item-num {
+  margin: 0;
+  padding: 0;
+}
+
+.popup-basket__item-num::after {
+  content: ' шт.';
+}
+
+.popup-basket__item-price-del {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.popup-basket__item-price {
+  margin: 0;
+  padding: 0;
+}
+
+.popup-basket__item-price::after{
+  content:' \20BD';
+}
+
+.popup-basket__item-del {
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  border: 0;
+  cursor: pointer;
+}
