@@ -37,16 +37,12 @@ export default function PopupBasket(props) {
                 item.num ?
                 <div className="popup-basket__item" key={i}>
                   <img className="popup-basket__item-img" src={item.src} alt={item.title} />
-                  <div className="popup-basket__item-text">
-                    <h3 className="popup-basket__item-title">{item.title}</h3>
-                    <p className="popup-basket__item-num">{item.num}</p>
-                    <div className="popup-basket__item-price-del">
-                      <p className="popup-basket__item-price">{item.price}</p>
-                      <button className="popup-basket__item-del" onClick={() => {handleDelete(item)}}>
-                        <img src={deleteIcon} alt={`Удалить из корзины ${item.title}`}/>
-                      </button>
-                    </div>
-                  </div>
+                  <h3 className="popup-basket__item-title">{item.title}</h3>
+                  <p className="popup-basket__item-num">{item.num}</p>
+                  <p className="popup-basket__item-price">{item.price}</p>
+                  <button className="popup-basket__item-del" onClick={() => {handleDelete(item)}}>
+                    <img src={deleteIcon} alt={`Удалить из корзины ${item.title}`}/>
+                  </button>
                 </div> : <></>
               )) :
               <>В корзине нет товаров</>
