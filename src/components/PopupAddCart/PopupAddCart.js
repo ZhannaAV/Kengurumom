@@ -3,7 +3,7 @@ import './PopupAddCart.css';
 import Dialog from '@material-ui/core/Dialog';
 import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 
-import {POPUP_ADD_CART_TITLE, POPUP_ADD_CART_KEEP_SHOPPING, POPUP_ADD_CART_GO_TO_BASKET} from '../../config/texts';
+import {POPUP_ADD_CART_TITLE, POPUP_ADD_CART_KEEP_SHOPPING, POPUP_ADD_CART_GO_TO_BASKET} from './texts';
 import Button from '../Button/Button';
 
 //temp config. replace it with tests

@@ -1,4 +1,4 @@
-.about {
+.about-page {
   width: 100%;
   max-width: 868px;
   margin: 0 auto;
@@ -7,13 +7,13 @@
 }
 
 @media screen and (max-width: 1024px) {
-  .about {
+  .about-page {
     padding-left: 50px;
     padding-right: 50px;
   }
 }
 
-.about__title {
+.about-page__title {
   margin: 0 0 14px 0;
   padding: 0;
   text-align: center;
@@ -23,7 +23,7 @@
   font-weight: 600;
 }
 
-.about__group {
+.about-page__group {
   margin: 100px 0 0 0;
   padding: 0;
   display: flex;
@@ -34,18 +34,18 @@
   color: #513629;
 }
 
-.about__text {
+.about-page__text {
   width: 100%;
   max-width: 453px;
 }
 
-.about__text_colored {
+.about-page__text_colored {
   margin: 0;
   padding: 0;
   color: #dc8962;
 }
 
-.about__img {
+.about-page__img {
   width: 370px;
   height: 280px;
   border: 0;

@@ -8,6 +8,7 @@ import PopupCare from '../PopupCare/PopupCare';
 
 function App() {
   const [isPopupOpened, setIsPopupOpened] = useState(false);
+  const [isPopupCareOpened, setIsPopupCareOpened] = useState(false);
 
   const isDesktop = useMediaQuery({minWidth: 1440});
   const isLaptop = useMediaQuery({maxWidth: 1440});
@@ -34,6 +35,9 @@ function App() {
     setIsPopupOpened(true);
   };
 
+  const handlePopupCareOpen = () => { setIsPopupCareOpened(true) };
+  const handlePopupCareClose = () => { setIsPopupCareOpened(false) };
+
   return (
     <>
       {isLaptop && (
@@ -44,8 +48,14 @@ function App() {
         />
       )}
       <Header media={media} openSideMenu={openSideMenu}/>
-      <Content isOpened={handleOpenPopup} media={media}/>
-      <PopupCare isOpened={isPopupOpened} onClose={setIsPopupOpened}/>
+      <Content 
+        isOpened={handleOpenPopup} 
+        media={media}
+        onPopupCareOpen={handlePopupCareOpen}
+      />
+      
+      <PopupCare isOpened={isPopupCareOpened} onClose={handlePopupCareClose}/>
+      {/* <PopupBasket isOpened={isPopupOpened} onClose={setIsPopupOpened}/> */}
       {/* <PopupAddCart isOpened={isPopupOpened} onClose={setIsPopupOpened}/> */}
     </>
   )

@@ -13,9 +13,9 @@ import {
   POPUP_CARE_DRYCLEANING_TITLE,
   POPUP_CARE_DRYCLEANING_TEXT,
   POPUP_CARE_WHITENING_TITLE,
-  POPUP_CARE_WHITENING_TEXT} from '../../config/texts';
+  POPUP_CARE_WHITENING_TEXT} from './texts';
 
-import {popupCareIcons, popupClose} from '../../config/constants';
+import {popupCareIcons, popupClose} from './constants';
 
 //change main color
 const theme = createMuiTheme({

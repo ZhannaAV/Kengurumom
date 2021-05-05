@@ -3,6 +3,7 @@
   padding: 47px 115px 37px 85px;
   background-color: #FAF1E9;
   box-sizing: border-box;
+  scrollbar-width: thin;
 }
 
 .popup-care__title {

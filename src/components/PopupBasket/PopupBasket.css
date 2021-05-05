@@ -1,0 +1,146 @@
+.popup-basket {
+  position: absolute;
+  /* width: min-content;
+  max-width: 323px; */
+  width: 323px;
+  top: 80px;
+  right: -10px;
+  margin: 0;
+  padding: 0 15px 20px 20px;
+  border-radius: 10px;
+  background-color: #fff;
+  border: 1px solid #000;
+  visibility: hidden;
+  font-family: 'Montserrat';
+  z-index: 1000;
+}
+
+/*arrow at top right corner*/
+.popup-basket::before {
+  content: "";
+  border-top-left-radius: 5px;
+  border-left: 1px solid #000;
+  border-top: 1px solid #000;
+  background-color: #fff;
+  z-index: 100;
+  position: absolute;
+  top: -14.5px;
+  right: 30px;
+  width: 24px;
+  height: 24px;
+  transform: rotate(45deg) skew(17deg, 17deg);
+}
+
+@media screen and (max-width: 768px) {
+  .popup-basket {
+    top: 75px;
+    right: -14px;
+  }
+
+  .popup-basket::before {
+    top: -13.5px;
+  }
+}
+
+.popup-basket_visible {
+  visibility: visible;
+}
+
+.popup-basket__content {
+  margin: 0;
+  padding: 0;
+  z-index: 1000;
+  position: relative;
+}
+
+.popup-basket__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.popup-basket__button {
+  width: unset !important;
+  height: unset !important;
+  padding: 8px 25px 11px 26px;
+  font-size: 14px !important;
+  line-height: 107.9% !important;
+  text-decoration: none;
+}
+
+.popup-basket__summary {
+  margin: 20px 0;
+  padding: 0;
+  display: block;
+  text-align: right;
+  width: 100%;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #513629;
+}
+
+.popup-basket__summary::after{
+  content:' \20BD';
+}
+
+.popup-basket__items {}
+
+.popup-basket__item {
+  margin: 0;
+  padding: 20px 0 20px 0;
+  border-bottom: 0.5px solid rgba(81, 54, 41, 0.6); /*  #513629 */
+  font-size: 14px;
+  line-height: 17px;
+  color: #513629;
+  font-weight: 600;
+
+  display: grid;
+  grid-template-columns: min-content minmax(min-content, 100%) min-content;
+  gap: 7px;
+  grid-template-areas: 
+    'img title title'
+    'img num num'
+    'img price del';
+}
+
+.popup-basket__item-img {
+  width: 87px;
+  height: 87px;
+  border-radius: 10px;
+  grid-area: img;
+}
+
+.popup-basket__item-title {
+  margin: 7px 0 0 0;
+  grid-area: title;
+}
+
+.popup-basket__item-num {
+  margin: 0;
+  grid-area: num;
+}
+
+.popup-basket__item-num::after {
+  content: ' шт.';
+}
+
+.popup-basket__item-price {
+  margin: 0;
+  font-size: 18px;
+  line-height: 22px;
+  grid-area: price;
+}
+
+.popup-basket__item-price::after{
+  content:' \20BD';
+}
+
+.popup-basket__item-del {
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  border: 0;
+  cursor: pointer;
+  grid-area: del;
+}
