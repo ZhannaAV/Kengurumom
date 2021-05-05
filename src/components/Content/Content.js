@@ -7,6 +7,7 @@ import Document from "../Document/Document";
 import DeliveryPage from "../DeliveryPage/DeliveryPage";
 import Product from "../Product/Product";
 import Button from "../Button/Button";
+import NotFoundPage from "../NotFoundPage/NotFoundPage";
 
 function Content(props) {
   const {isOpened, media} = props
@@ -54,6 +55,10 @@ function Content(props) {
         >
           <Button text="CLICK ME!" onClick={isOpened}/>
         </div>
+      </Route>
+
+      <Route path="*">
+        <NotFoundPage />
       </Route>
     </Switch>
 
