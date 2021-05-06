@@ -1,6 +1,6 @@
 import './PopularItem.css';
 import { CATALOGUE_PAGE } from '../../config/links';
-import { Link, useRouteMatch, useHistory } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 // export default function PopularItem(props){
 //   return (
@@ -16,12 +16,11 @@ import { Link, useRouteMatch, useHistory } from 'react-router-dom';
 // }
 
 export default function PopularItem(props) {
-  let { path } = useRouteMatch();
   let history = useHistory();
 
   const handleClick = () => {
-    history.push(`${CATALOGUE_PAGE}/${props.category}/${props.id}`);
-  }
+    history.push(`product/${props.id}`);
+  };
 
   return (
     <figure className={`popular__item ${props.new && 'popular__item_new'}`}>
@@ -33,10 +32,7 @@ export default function PopularItem(props) {
       />
       <button className="popular__item-cart" alt="В корзину"></button>
       {/* <figcaption className="popular__item-title">{props.name}</figcaption> */}
-      <Link
-        className="popular__item-title"
-        to={`${CATALOGUE_PAGE}/${props.category}/${props.id}`}
-      >
+      <Link className="popular__item-title" to={`product/${props.id}`}>
         {props.name}
       </Link>
       <div className="popular__item-price">

@@ -1,7 +1,6 @@
 import './CategoryPage.css';
-import { Switch, Route, useParams, useRouteMatch } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import PopularItem from '../../PopularItem/PopularItem';
-import ProductPage from '../../ProductPage/ProductPage';
 
 function CategoryPage({ products, media }) {
   let { path } = useRouteMatch();
