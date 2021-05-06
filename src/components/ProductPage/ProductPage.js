@@ -2,7 +2,7 @@ import './ProductPage.css';
 import ProdGallery from './ProdGallery/ProdGallery';
 import { useParams } from 'react-router-dom';
 
-function ProductPage({ products, media }) {
+function ProductPage({ products, media, onPopupCareOpen }) {
   let { id } = useParams();
   const product = products.find((product) => product.id === id);
 
