@@ -59,15 +59,6 @@
   justify-content: space-between;
 }
 
-.popup-basket__button {
-  width: unset !important;
-  height: unset !important;
-  padding: 8px 25px 11px 26px;
-  font-size: 14px !important;
-  line-height: 107.9% !important;
-  text-decoration: none;
-}
-
 .popup-basket__summary {
   margin: 20px 0;
   padding: 0;

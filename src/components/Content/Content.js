@@ -1,5 +1,5 @@
 import {Route, Switch} from "react-router-dom";
-import {ABOUT_PAGE, CATALOGUE_PAGE, DELIVERY_PAGE, OFFER, TERMS_OF_USE} from "../../config/links";
+import {MAIN_PAGE, ABOUT_PAGE, CATALOGUE_PAGE, DELIVERY_PAGE, OFFER, TERMS_OF_USE} from "../../config/links";
 import {testObjectOfProduct} from "../../config/constants";
 import MainPage from "../MainPage/MainPage";
 import AboutPage from "../AboutPage/AboutPage";
@@ -10,11 +10,11 @@ import Button from "../Button/Button";
 import NotFoundPage from "../NotFoundPage/NotFoundPage";
 
 function Content(props) {
-  const {isOpened, media} = props
+  const {isOpened, media, onPopupCareOpen} = props
 
   return (
     <Switch>
-      <Route exact path="/">
+      <Route exact path={MAIN_PAGE}>
         <MainPage media={media}/>
       </Route>
 
@@ -38,7 +38,7 @@ function Content(props) {
         <Product 
           product={testObjectOfProduct}
           media={media}
-          onPopupCareOpen={props.onPopupCareOpen}
+          onPopupCareOpen={onPopupCareOpen}
         />
       </Route>
 
