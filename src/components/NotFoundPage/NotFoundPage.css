@@ -25,11 +25,3 @@
   margin: 54px 0;
   padding: 0;
 }
-
-.not-found__button {
-  margin: 0;
-  padding: 10px 20px !important;
-  text-decoration: none;
-  width: unset !important;
-  height: unset !important;
-}

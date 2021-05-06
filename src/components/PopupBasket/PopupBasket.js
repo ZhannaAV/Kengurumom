@@ -1,9 +1,10 @@
 import React from 'react';
 import './PopupBasket.css';
 import {POPUP_CART_ARRANGE, POPUP_CART_CART} from './texts';
+import {BASKET_PAGE} from '../../config/links';
 import Button from '../Button/Button';
 import {deleteIcon} from './constants';
-
+import { Link } from 'react-router-dom';
 import {itemsCart} from './test_items';
 
 export default function PopupBasket(props) {
@@ -52,8 +53,10 @@ export default function PopupBasket(props) {
           Итого: {summaryPrice}
         </p>
         <div className="popup-basket__buttons">
-          <Button btnType="link" linkTo="/cart" type="popup-basket__button" text={POPUP_CART_CART} onClick={props.onClose}/>
-          <Button text={POPUP_CART_ARRANGE}  type="popup-basket__button" onClick={props.onClose} />
+          <Link to={BASKET_PAGE}>
+          <Button text={POPUP_CART_CART} type="button" style="button_type_popup-basket" onClick={props.onClose}/>
+          </Link>
+          <Button text={POPUP_CART_ARRANGE} type="button" style="button_type_popup-basket" onClick={props.onClose} />
         </div>
       </div>
     </div>

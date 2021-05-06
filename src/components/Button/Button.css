@@ -1,54 +1,80 @@
 .button {
-	width: 194px;
-	height: 50px;
-	color: #FAF1E9;
-	font-weight: 500;
-	font-size: 20px;
-	line-height: 24px;
-	background-color: #DC8962;
-	border-radius: 10px;
-	border: none;
-	outline: none;
-	transition: background-color 0.4s ease-in-out;
-	cursor: pointer;
+    width: 194px;
+    height: 50px;
+    color: #FAF1E9;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    background-color: #DC8962;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    transition: background-color 0.4s ease-in-out;
+    cursor: pointer;
 }
 
 .button_outlined {
-	border: 1px solid #513629;
-  color: #513629;
-  font-size: 16px;
-  background-color: #fff;
+    border: 1px solid #513629;
+    color: #513629;
+    font-size: 16px;
+    background-color: #fff;
 }
 
 .button_outlined:hover {
-	border: 1px solid #DC8962;
-  background-color: #DC8962;
-  color: #fff;
+    border: 1px solid #DC8962;
+    background-color: #DC8962;
+    color: #fff;
 }
 
 .button_outlined:active {
-	border: 1px solid #FCBA9B;
-  background-color: #FCBA9B;
-  color: #fff;
+    border: 1px solid #FCBA9B;
+    background-color: #FCBA9B;
+    color: #fff;
 }
 
 @media screen and (max-width: 1440px) {
-	.button{
-		width: 160px;
-		height: 40px;
-		font-size: 16px;
-		line-height: 20px;
-	}
+    .button {
+        width: 160px;
+        height: 40px;
+        font-size: 16px;
+        line-height: 20px;
+    }
 }
 
 .button:hover {
-	background-color: #CA764E;
+    background-color: #CA764E;
 }
 
 .button:active {
-	background-color: #FCBA9B;
+    background-color: #FCBA9B;
 }
 
 .button_type_add-to-card {
-	margin-bottom: 40px;
+    margin-bottom: 40px;
+}
+
+.button_type_not-found {
+    margin: 0;
+    padding: 10px 20px !important;
+    text-decoration: none;
+    width: unset !important;
+    height: unset !important;
+}
+
+.button_type_popup-add-card {
+    font-size: 16px;
+    line-height: 107.9%;
+    width: unset;
+    height: unset;
+    padding: 12px 32px 11px 33px;
+    text-decoration: none;
+}
+
+.button_type_popup-basket {
+    width: unset !important;
+    height: unset !important;
+    padding: 8px 25px 11px 26px;
+    font-size: 14px !important;
+    line-height: 107.9% !important;
+    text-decoration: none;
 }

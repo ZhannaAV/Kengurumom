@@ -1,37 +1,14 @@
 import React from "react";
-import {Link} from 'react-router-dom';
 import './Button.css'
 
 function Button(props) {
-  const {type, text} = props;
-  const btnType = props.btnType || "button";
-  const btnStyle = props.btnStyle || "filled";
-
-  let btnStyleClass = '';
-  if (btnStyle === 'outlined') btnStyleClass = 'button_outlined';
+  const {type, text, style, onClick} = props;
 
   const handleClick = () => {
-    if (typeof props.onClick === "function") {
-      props.onClick();
-    }
+    if (typeof onClick === "function") onClick()
   }
 
-  if (btnType === 'link' && !props.linkTo) {
-    throw Error("Component [Button]: button type is Link so 'linkTo' should be set!");
-  }
-
-  return (
-    <>
-      {
-        btnType === "button" &&
-        <button className={`button ${btnStyleClass} ${type}`} type="button" onClick={handleClick}>{text}</button>
-      }
-      {
-        btnType === "link" &&
-        <Link to={props.linkTo} className={`button ${btnStyleClass} ${type}`} onClick={handleClick}>{text}</Link>
-      }
-    </>
-  )
+  return (<button className={`button ${style}`} type={type} onClick={handleClick}>{text}</button>)
 }
 
 export default Button
