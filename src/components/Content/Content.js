@@ -13,6 +13,7 @@ import DeliveryPage from '../DeliveryPage/DeliveryPage';
 import Button from '../Button/Button';
 import NotFoundPage from '../NotFoundPage/NotFoundPage';
 import CatalogPage from '../CatalogPage/CatalogPage';
+import ProductPage from '../ProductPage/ProductPage';
 
 import { exampleArrProducts } from '../../config/constants';
 
@@ -42,7 +43,11 @@ function Content(props) {
       </Route>
 
       <Route path={CATALOGUE_PAGE}>
-        <CatalogPage
+        <CatalogPage products={exampleArrProducts} />
+      </Route>
+
+      <Route path={`/product/:id`}>
+        <ProductPage
           products={exampleArrProducts}
           media={media}
           onPopupCareOpen={props.onPopupCareOpen}

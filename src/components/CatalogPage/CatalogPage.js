@@ -3,7 +3,7 @@ import { catalogCategories } from '../../config/links';
 import { NavLink, Route, Switch, useRouteMatch } from 'react-router-dom';
 import CategoryPage from './CategoryPage/CategoryPage';
 
-function CatalogPage({ products, media, onPopupCareOpen }) {
+function CatalogPage({ products }) {
   let { path, url } = useRouteMatch();
 
   return (
@@ -28,7 +28,7 @@ function CatalogPage({ products, media, onPopupCareOpen }) {
           <CategoryPage products={products} />
         </Route>
         <Route path={`${path}/:category`}>
-          <CategoryPage products={products} media={media} onPopupCareOpen={onPopupCareOpen} />
+          <CategoryPage products={products} />
         </Route>
       </Switch>
     </section>
