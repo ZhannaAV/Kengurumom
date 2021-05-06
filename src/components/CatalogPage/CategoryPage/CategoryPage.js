@@ -3,7 +3,7 @@ import { Switch, Route, useParams, useRouteMatch } from 'react-router-dom';
 import PopularItem from '../../PopularItem/PopularItem';
 import ProductPage from '../../ProductPage/ProductPage';
 
-function CategoryPage({ products, media }) {
+function CategoryPage({ products, media, onPopupCareOpen }) {
   let { path } = useRouteMatch();
   let { category } = useParams();
   const currentArr = category
@@ -26,7 +26,7 @@ function CategoryPage({ products, media }) {
         </div>
       </Route>
       <Route path={`${path}/:id`}>
-        <ProductPage products={currentArr} media={media} />
+        <ProductPage products={currentArr} media={media} onPopupCareOpen={onPopupCareOpen} />
       </Route>
     </Switch>
   );

@@ -60,9 +60,9 @@ function ProductPage({ products, media }) {
             {product.vendorCode}
           </p>
         </div>
-        <a className="product__care-link" href="#" target="_blank">
+        <p className="product__care-link" onClick={onPopupCareOpen}>
           Рекомендация по уходу
-        </a>
+        </p>
       </div>
     </section>
   );
