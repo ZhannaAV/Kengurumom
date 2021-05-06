@@ -21,6 +21,16 @@ export const catalogueLinks = [
   ['Подарочный сертификат', '/catalog/gift-certificate'],
 ];
 
+export const catalogCategories = [
+  ['Пеленальные коконы', 'changing-cocoons'],
+  ['Спальники', 'sleeping-bags'],
+  ['Пелёнки и пледы', 'napkins'],
+  ['Слюнявчики и грызунки', 'bibs'],
+  ['Милкснуды', 'milksnuds'],
+  [`Органайзеры для${'\u00A0'}детских${'\u00A0'}вещей`, 'organizers'],
+  ['Подарочный сертификат', 'gift-certificate'],
+];
+
 // footer links
 export const TERMS_OF_USE = '/terms-of-use';
 export const OFFER = '/offer';
