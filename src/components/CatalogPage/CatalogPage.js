@@ -1,32 +1,36 @@
 import './CatalogPage.css';
 import { catalogCategories } from '../../config/links';
-import { Link } from 'react-router-dom';
-import PopularItem from '../PopularItem/PopularItem';
+import { NavLink, Route, Switch, useRouteMatch } from 'react-router-dom';
+import CategoryPage from './CategoryPage/CategoryPage';
 
-function CatalogPage({ products }) {
+function CatalogPage({ products, media }) {
+  let { path, url } = useRouteMatch();
+
   return (
     <section className="catalog">
       <h1 className="catalog__title">Каталог</h1>
       <div className="catalog__categories-line">
         <nav className="catalog__categories">
           {catalogCategories.map((link, i) => (
-            <Link key={i} className="catalog__category" to={link[1]}>
+            <NavLink
+              activeClassName="selected"
+              key={i}
+              className="catalog__category"
+              to={`${url}/${link[1]}`}
+            >
               {link[0]}
-            </Link>
+            </NavLink>
           ))}
         </nav>
       </div>
-      <div className="catalog__wrapper">
-        <select className="catalog__sort" id="" name="">
-          <option value="0-3">0-3 мес (55 см)</option>
-        </select>
-        <div className="catalog__products">
-          {products.map((product) => (
-            <PopularItem {...product} key={product.id} />
-          ))}
-        </div>
-        <button className="button catalog__pagination">Показать еще</button>
-      </div>
+      <Switch>
+        <Route exact path={path}>
+          <CategoryPage products={products} />
+        </Route>
+        <Route path={`${path}/:category`}>
+          <CategoryPage products={products} media={media} />
+        </Route>
+      </Switch>
     </section>
   );
 }

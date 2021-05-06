@@ -69,6 +69,7 @@
 
 /*item-image*/
 .popular__item-img {
+  cursor: pointer;
   border: 0;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
