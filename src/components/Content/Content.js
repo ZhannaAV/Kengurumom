@@ -6,6 +6,7 @@ import {
   DELIVERY_PAGE,
   OFFER,
   TERMS_OF_USE,
+  PRODUCT_PAGE,
 } from '../../config/links';
 import MainPage from '../MainPage/MainPage';
 import AboutPage from '../AboutPage/AboutPage';
@@ -47,7 +48,7 @@ function Content(props) {
         <CatalogPage products={exampleArrProducts} />
       </Route>
 
-      <Route path={`/product/:id`}>
+      <Route exact path={`${PRODUCT_PAGE}/:id`}>
         <ProductPage
           products={exampleArrProducts}
           media={media}

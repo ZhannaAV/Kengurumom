@@ -1,5 +1,5 @@
 import './PopularItem.css';
-import { CATALOGUE_PAGE } from '../../config/links';
+import { PRODUCT_PAGE } from '../../config/links';
 import { Link, useHistory } from 'react-router-dom';
 
 // export default function PopularItem(props){
@@ -19,7 +19,7 @@ export default function PopularItem(props) {
   let history = useHistory();
 
   const handleClick = () => {
-    history.push(`product/${props.id}`);
+    history.push(`${PRODUCT_PAGE}/${props.id}`);
   };
 
   return (
@@ -32,7 +32,7 @@ export default function PopularItem(props) {
       />
       <button className="popular__item-cart" alt="В корзину"></button>
       {/* <figcaption className="popular__item-title">{props.name}</figcaption> */}
-      <Link className="popular__item-title" to={`product/${props.id}`}>
+      <Link className="popular__item-title" to={`${PRODUCT_PAGE}/${props.id}`}>
         {props.name}
       </Link>
       <div className="popular__item-price">

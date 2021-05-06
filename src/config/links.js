@@ -6,7 +6,8 @@ export const CATALOGUE_PAGE = '/catalog';
 export const DELIVERY_PAGE = '/delivery';
 export const CONTACTS_PAGE = '/contacts';
 export const BASKET_PAGE = '/basket';
-export const PRESENT_PAGE = '/present'
+export const PRESENT_PAGE = '/present';
+export const PRODUCT_PAGE = '/product';
 
 // catalogue links
 export const catalogueLinks = [

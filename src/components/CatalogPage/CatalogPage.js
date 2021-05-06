@@ -6,6 +6,8 @@ import CategoryPage from './CategoryPage/CategoryPage';
 function CatalogPage({ products }) {
   let { path, url } = useRouteMatch();
 
+// такая структура временная. попозже я исправлю ее на более подходящую. сейчас просто тест работы
+
   return (
     <section className="catalog">
       <h1 className="catalog__title">Каталог</h1>
@@ -27,7 +29,7 @@ function CatalogPage({ products }) {
         <Route exact path={path}>
           <CategoryPage products={products} />
         </Route>
-        <Route path={`${path}/:category`}>
+        <Route exact path={`${path}/:category`}>
           <CategoryPage products={products} />
         </Route>
       </Switch>
