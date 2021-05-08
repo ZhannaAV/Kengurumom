@@ -5,6 +5,7 @@ import Header from '../Header/Header';
 import SideMenu from '../SideMenu/SideMenu';
 import Content from "../Content/Content";
 import PopupCare from '../PopupCare/PopupCare';
+import Footer from '../Footer/Footer';
 
 function App() {
   const [isPopupOpened, setIsPopupOpened] = useState(false);
@@ -53,7 +54,7 @@ function App() {
         media={media}
         onPopupCareOpen={handlePopupCareOpen}
       />
-      
+      <Footer media={media}/>
       <PopupCare isOpened={isPopupCareOpened} onClose={handlePopupCareClose}/>
       {/* <PopupBasket isOpened={isPopupOpened} onClose={setIsPopupOpened}/> */}
       {/* <PopupAddCart isOpened={isPopupOpened} onClose={setIsPopupOpened}/> */}

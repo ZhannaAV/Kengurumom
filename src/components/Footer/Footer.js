@@ -1,8 +1,10 @@
 import Logo from '../Logo/Logo';
 import './Footer.css';
-import { CATALOGUE_TEXT, PERSONAL_SEWING_TEXT, ABOUT_TEXT, DELIVERY_TEXT, CONTACTS_TEXT, TERMS_OF_USE_TEXT, OFFER_TEXT, COPYRIGHT_TEXT, PHONE, TIME_TEXT } from '../../config/texts';
-import { CATALOGUE_PAGE, PERSONAL_SEWING_PAGE, ABOUT_PAGE, DELIVERY_PAGE, CONTACTS_PAGE, TERMS_OF_USE, OFFER } from '../../config/links';
+import { TERMS_OF_USE_TEXT, OFFER_TEXT, COPYRIGHT_TEXT, TIME_TEXT } from './texts';
+import { CATALOGUE_TEXT, PERSONAL_SEWING_TEXT, ABOUT_TEXT, DELIVERY_TEXT, CONTACTS_TEXT, PHONE } from '../../config/texts';
+import { CATALOGUE_PAGE, PERSONAL_SEWING_PAGE, ABOUT_PAGE, DELIVERY_PAGE, CONTACTS_PAGE, TERMS_OF_USE_PAGE, OFFER_PAGE } from '../../config/links';
 import { Link } from 'react-router-dom';
+import Navigation from '../Navigation/Navigation';
 
 
 function Footer(props) {
@@ -13,66 +15,54 @@ function Footer(props) {
         <div className="footer__top">
           <Logo type='light' />
         </div>
-        <nav className="footer__menu">
-          <ul className="footer__menu-links">
-            <li className="footer__menu-item">
+        <Navigation type='footer' media={props.media}/>
+
+        {/* <nav className="footer__menu">
+          
               <Link
-                className="footer__menu-link footer__menu-link_none-decoration"
+                className="footer__menu-link"
                 to={CATALOGUE_PAGE}
               >
                 {CATALOGUE_TEXT}
               </Link>
-              </li>
-            <li className="footer__menu-item">
               <Link
-                className="footer__menu-link footer__menu-link_none-decoration"
+                className="footer__menu-link"
                 to={PERSONAL_SEWING_PAGE}
               >
                 {PERSONAL_SEWING_TEXT}
               </Link>
-              </li>
-            <li className="footer__menu-item">
             <Link
-                className="footer__menu-link footer__menu-link_none-decoration"
+                className="footer__menu-link"
                 to={ABOUT_PAGE}
               >
                 {ABOUT_TEXT}
               </Link>
-              </li>
-            <li className="footer__menu-item">
             <Link
-                className="footer__menu-link footer__menu-link_none-decoration"
+                className="footer__menu-link"
                 to={DELIVERY_PAGE}
               >
                 {DELIVERY_TEXT}
               </Link>
-              </li>
-            <li className="footer__menu-item">
             <Link
-                className="footer__menu-link footer__menu-link_none-decoration"
+                className="footer__menu-link"
                 to={CONTACTS_PAGE}
               >
                 {CONTACTS_TEXT}
-              </Link>
-              </li>
-            <li className="footer__menu-item">
+              </Link> 
               <Link
-                className="footer__menu-link"
-                to={OFFER}
+                className="footer__menu-link footer__menu-link_underlined"
+                to={OFFER_PAGE}
               >
                 {OFFER_TEXT}
               </Link>
-            </li>
-            <li className="footer__menu-item">
               <Link
-                className="footer__menu-link"
-                to={TERMS_OF_USE}
+                className="footer__menu-link footer__menu-link_underlined"
+                to={TERMS_OF_USE_PAGE}
               >
                 {TERMS_OF_USE_TEXT}
-              </Link>
-            </li>
-          </ul>
-        </nav>
+              </Link> 
+         </nav> */}
+
         <div className="footer__contacts">
           <div className="footer__contact footer__contact_type_phone">
             <p className="footer__text">{PHONE}</p>

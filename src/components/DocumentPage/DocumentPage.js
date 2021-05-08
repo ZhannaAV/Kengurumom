@@ -3,10 +3,10 @@ import {
   DOCUMENT_TERMS_OF_USE_TITLE,
   DOCUMENT_OFFER_CONTENT,
   DOCUMENT_TERMS_OF_USE_CONTENT,
-} from "../../config/texts";
-import "./Document.css";
+} from "./texts";
+import "./DocumentPage.css";
 
-export default function Document(props) {
+export default function DocumentPage(props) {
   return (
     <div className="document__container">
       <h2 className="document__title">

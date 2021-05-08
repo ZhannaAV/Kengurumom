@@ -1,26 +1,31 @@
-import { Route, Switch } from 'react-router-dom';
+import { useEffect } from 'react';
+import { Route, Switch, useLocation } from 'react-router-dom';
 import {
   MAIN_PAGE,
   ABOUT_PAGE,
   CATALOGUE_PAGE,
   DELIVERY_PAGE,
-  OFFER,
-  TERMS_OF_USE,
+  OFFER_PAGE,
+  TERMS_OF_USE_PAGE,
   PRODUCT_PAGE,
 } from '../../config/links';
 import MainPage from '../MainPage/MainPage';
 import AboutPage from '../AboutPage/AboutPage';
-import Document from '../Document/Document';
+import DocumentPage from '../DocumentPage/DocumentPage';
 import DeliveryPage from '../DeliveryPage/DeliveryPage';
 import Button from '../Button/Button';
 import NotFoundPage from '../NotFoundPage/NotFoundPage';
 import CatalogPage from '../CatalogPage/CatalogPage';
 import ProductPage from '../ProductPage/ProductPage';
-
 import { exampleArrProducts } from '../../config/constants';
 
 function Content(props) {
   const { isOpened, media, onPopupCareOpen } = props;
+  
+  const {pathname} = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [pathname])
 
   return (
     <Switch>
@@ -32,12 +37,12 @@ function Content(props) {
         <AboutPage />
       </Route>
 
-      <Route path={OFFER}>
-        <Document type="offer" />
+      <Route path={OFFER_PAGE}>
+        <DocumentPage type="offer" />
       </Route>
 
-      <Route path={TERMS_OF_USE}>
-        <Document type="terms-of-use" />
+      <Route path={TERMS_OF_USE_PAGE}>
+        <DocumentPage type="terms-of-use" />
       </Route>
 
       <Route path={DELIVERY_PAGE}>
