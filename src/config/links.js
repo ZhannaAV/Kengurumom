@@ -33,5 +33,5 @@ export const catalogCategories = [
 ];
 
 // footer links
-export const TERMS_OF_USE = '/terms-of-use';
-export const OFFER = '/offer';
+export const TERMS_OF_USE_PAGE = '/terms-of-use';
+export const OFFER_PAGE = '/offer';
