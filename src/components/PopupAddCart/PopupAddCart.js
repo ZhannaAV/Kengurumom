@@ -3,7 +3,6 @@ import './PopupAddCart.css';
 import Dialog from '@material-ui/core/Dialog';
 import { Link } from 'react-router-dom';
 import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-import {POPUP_ADD_CART_TITLE, POPUP_ADD_CART_KEEP_SHOPPING, POPUP_ADD_CART_GO_TO_BASKET} from './texts';
 import {BASKET_PAGE} from '../../config/links';
 import Button from '../Button/Button';
 
@@ -71,7 +70,7 @@ export default function PopupAddCart(props){
         onClose={handleClose}
         aria-labelledby="popup-add-cart"
         open={props.isOpened || false}>
-        <h2 className='popup-add-cart__title'>{POPUP_ADD_CART_TITLE}</h2>
+        <h2 className='popup-add-cart__title'>Товар добавлен в корзину</h2>
         <div className='popup-add-cart__item'>
           <div className="popup-add-cart__item-img-title">
             <img src={item.src} title={item.title} alt={item.title} className="popup-add-cart__item-img"/>
@@ -81,9 +80,9 @@ export default function PopupAddCart(props){
           <p className="popup-add-cart__item-title">{item.price} &#8381;</p>
         </div>
         <div className='popup-add-cart__action-buttons'>
-          <Button text={POPUP_ADD_CART_KEEP_SHOPPING} type='button' style='button_outlined button_type_popup-add-card' onClick={handleClose}/>
+          <Button text="Продолжить покупки" type='button' style='button_outlined button_type_popup-add-card' onClick={handleClose}/>
           <Link to={BASKET_PAGE}>
-          <Button text={POPUP_ADD_CART_GO_TO_BASKET} type='button' style='button_type_popup-add-card' onClick={handleClose}/>
+          <Button text="В корзину" type='button' style='button_type_popup-add-card' onClick={handleClose}/>
           </Link>
         </div>
       </Dialog>
