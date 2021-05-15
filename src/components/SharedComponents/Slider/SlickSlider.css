@@ -106,6 +106,7 @@
 }
 
 .slick-list {
-  overflow: visible !important;
+  /* overflow: visible !important; */
+  padding-top: 30px !important;
   position: static;
 }

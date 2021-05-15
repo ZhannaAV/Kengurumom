@@ -4,20 +4,20 @@ import linkRight from '../../../images/slick-slider-btn-right.svg';
 
 import './SlickSliderArrow.css';
 
-export default function SlickSliderArrow(props){
+export default function SlickSliderArrow({left, right, onClick}){
   let link = '';
   let className = '';
-  if (props.left) {
+  if (left) {
     link = linkLeft;
     className = 'slickSliderArrow_left';
   }
-  if (props.right) {
+  if (right) {
     link = linkRight;
     className = 'slickSliderArrow_right';
   }
 
   return (
-    <button className={`slickSliderArrow ${className}`}>
+    <button className={`slickSliderArrow ${className}`} onClick={onClick}>
       <img src={link} className="slickSliderArrow__img"/>
     </button>
   )

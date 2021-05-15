@@ -55,9 +55,9 @@ const popularConfig = [
   },
 ];
 
-export default function Popular(props){
+export default function Popular({media, products}){
   const [width, setWidth] = React.useState(window.innerWidth);
-  const [slides, setSlides] = React.useState( props.media.isDesktop ? 4 : props.media.isTabletVert ? 3 : props.media.isMobileHor ? 2 : 1);
+  const [slides, setSlides] = React.useState( media.isDesktop ? 4 : media.isTabletVert ? 3 : media.isMobileHor ? 2 : 1);
 
   const updateWidth = () => {
     setWidth(window.innerWidth);
@@ -86,7 +86,7 @@ export default function Popular(props){
           <PopularItem {...item} key={item.title} />
         ))} */}
 
-        {products.slice(0,4).map((item) => (
+        {products.slice(0,6).map((item) => (
           <PopularItem {...item} key={item.id} />
         ))}
       </SlickSlider>

@@ -1,7 +1,7 @@
 .popular {
   margin: 0 auto;
   padding: 130px 0 0 0;
-  width: calc(100% - 66px * 2);
+  width: calc(100% - 20px * 2);
   max-width: 1400px;
   box-sizing: border-box;
   /* overflow-x: hidden; */
@@ -9,7 +9,7 @@
 
 @media screen and (max-width: 1540px) {
   .popular {
-    max-width: 1169px;
+    max-width: 1302px;
     padding-top: 130px;
   }
 }
@@ -41,7 +41,7 @@
 
 /*title*/
 .popular__title {
-  margin: 0 auto 80px auto;
+  margin: 0 auto 50px auto;
   color: #dc8962;
   text-align: center;
   font-weight: 600;
@@ -51,18 +51,18 @@
 
 @media screen and (max-width: 1024px) {
   .popular__title {
-    margin-bottom: 87px;
+    margin-bottom: 57px;
   }
 }
 
 @media screen and (max-width: 768px) {
   .popular__title {
-    margin-bottom: 92px;
+    margin-bottom: 62px;
   }
 }
 
 @media screen and (max-width: 480px) {
   .popular__title {
-    margin-bottom: 63px;
+    margin-bottom: 33px;
   }
 }
