@@ -32,6 +32,23 @@ export const catalogCategories = [
   ['Подарочный сертификат', 'gift-certificate'],
 ];
 
+export const pathTranslate = {
+  'about': 'О бренде',
+  'delivery': 'Доставка',
+  'catalog': 'Каталог',
+  'contacts': 'Контакты',
+  'personal-sewing': 'Индивидуальный пошив',
+  'changing-cocoons': 'Пеленальные коконы',
+  'bibs': 'Слюнявчики и грызунки',
+  'sleeping-bags': 'Спальники',
+  'envelops': 'Конверты на выписку',
+  'napkins': 'Пелёнки и пледы',
+  'milksnuds': 'Милкснуды',
+  'knitted-blankets': 'Вязаные пледы',
+  'organizers': 'Органайзеры для детских вещей',
+  'gift-certificate': 'Подарочный сертификат',
+}
+
 // footer links
 export const TERMS_OF_USE_PAGE = '/terms-of-use';
 export const OFFER_PAGE = '/offer';

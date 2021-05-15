@@ -1,0 +1,13 @@
+.bread{
+    max-width: 1170px;
+    margin: auto;
+    padding-bottom: 30px;
+    padding-top: 150px;
+    color: #DC8962;
+    font-size: 14px;
+    line-height: 17px;
+}
+.bread__crumb{
+    text-decoration: underline;
+    color: #DC8962;
+}
