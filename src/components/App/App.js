@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-import { useState } from 'react';
-import { useMediaQuery } from 'react-responsive';
-=======
 import {Component, useState} from 'react';
 import {useMediaQuery} from 'react-responsive';
-import {Switch, Route} from 'react-router-dom';
 import {ABOUT_PAGE} from '../../config/links';
->>>>>>> ed1650b392eef6521b1f377966a15f4dc0e5c572
 import Header from '../Header/Header';
 import SideMenu from '../SideMenu/SideMenu';
 import TopSlider from '../TopSlider/TopSlider';
@@ -51,7 +45,7 @@ function App() {
                 media={media}
                 openSideMenu={openSideMenu}
             />
-            <Switch>
+            {/* <Switch>
                 <Route exact path='/'>
                     <TopSlider media={media}/>
                     <Popular media={media}/>
@@ -60,13 +54,11 @@ function App() {
                     <Review media={media}/>
                     <Instagram/>
                 </Route>
-            </Switch>
+            </Switch> */}
 
-<<<<<<< HEAD
-=======
             <Switch>
                 <Route exact path="/">
-                    <Slider media={media}/>
+                    <TopSlider media={media}/>
                     <Popular media={media}/>
                     <Advantages/>
                     <SectionsWithBtn/>
@@ -79,8 +71,7 @@ function App() {
                 </Route>
             </Switch>
 
-            {/* <PopupAddCart isOpened={true} onClose={() => }/> */}
->>>>>>> ed1650b392eef6521b1f377966a15f4dc0e5c572
+            {/* <PopupAddCart isOpened={true} /> */}
         </>
     );
 }
