@@ -1,4 +1,6 @@
 import './BreadCrumbs.css'
+
+import {makeStyles} from '@material-ui/core/styles'
 import {pathTranslate as translate} from "../../config/links";
 import Breadcrumbs from '@material-ui/core/Breadcrumbs'
 import Typography from '@material-ui/core/Typography'
@@ -10,16 +12,26 @@ function BreadCrumbs() {
   const history = useHistory()
   const pathNames = pathname.split('/').filter(x => x)
 
+  const useStyles = makeStyles((theme) => ({
+    bread__crumb: {
+      color: "#DC8962",
+      textDecoration: "underline",
+      fontSize: "inherit",
+      lineHeight: "inherit"
+    },
+  }));
+  const classes = useStyles()
+
   return (
-    <Breadcrumbs className='bread' separator='>' aria-label="breadcrumb">
-      <Link color="inherit" onClick={() => history.push('/')}>Главная</Link>
-      {pathNames.map((name, index) => {
-        const pathBack = `/${pathNames.slice(0, index + 1).join("/")}`;
-        const isLast = index === pathNames.length - 1;
-        return isLast ? (<Typography className="bread__crumb">{translate[name]}</Typography>)
-          : (<Link color="inherit" onClick={() => history.push(pathBack)}>{translate[name]}</Link>)
-      })}
-    </Breadcrumbs>
+      <Breadcrumbs className='bread' separator='>' aria-label="breadcrumb">
+        <Link className={classes.bread__crumb} onClick={() => history.push('/')}>Главная</Link>
+        {pathNames.map((name, index) => {
+          const pathBack = `/${pathNames.slice(0, index + 1).join("/")}`;
+          const isLast = index === pathNames.length - 1;
+          return isLast ? (<Typography className={classes.bread__crumb}>{translate[name]}</Typography>)
+            : (<Link className={classes.bread__crumb} onClick={() => history.push(pathBack)}>{translate[name]}</Link>)
+        })}
+      </Breadcrumbs>
   )
 }
 
