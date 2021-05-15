@@ -17,7 +17,8 @@ function BreadCrumbs() {
       color: "#DC8962",
       textDecoration: "underline",
       fontSize: "inherit",
-      lineHeight: "inherit"
+      lineHeight: "inherit",
+      cursor: "pointer"
     },
   }));
   const classes = useStyles()
@@ -28,8 +29,8 @@ function BreadCrumbs() {
         {pathNames.map((name, index) => {
           const pathBack = `/${pathNames.slice(0, index + 1).join("/")}`;
           const isLast = index === pathNames.length - 1;
-          return isLast ? (<Typography className={classes.bread__crumb}>{translate[name]}</Typography>)
-            : (<Link className={classes.bread__crumb} onClick={() => history.push(pathBack)}>{translate[name]}</Link>)
+          return isLast ? (<Typography key={index} className={classes.bread__crumb}>{translate[name] || name}</Typography>)
+            : (<Link key={index} className={classes.bread__crumb} onClick={() => history.push(pathBack)}>{translate[name] || name}</Link>)
         })}
       </Breadcrumbs>
   )

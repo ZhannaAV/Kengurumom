@@ -46,7 +46,7 @@ export const pathTranslate = {
   'milksnuds': 'Милкснуды',
   'knitted-blankets': 'Вязаные пледы',
   'organizers': 'Органайзеры для детских вещей',
-  'gift-certificate': 'Подарочный сертификат',
+  'gift-certificate': 'Подарочный сертификат'
 }
 
 // footer links
