@@ -6,6 +6,7 @@ import {
   ABOUT_PAGE,
   CATALOGUE_PAGE,
   DELIVERY_PAGE,
+  CONTACTS_PAGE,
   OFFER_PAGE,
   TERMS_OF_USE_PAGE,
   PRODUCT_PAGE,
@@ -20,6 +21,7 @@ import CatalogPage from '../CatalogPage/CatalogPage';
 import ProductPage from '../ProductPage/ProductPage';
 import {exampleArrProducts} from '../../config/constants';
 import BreadCrumbs from "../BreadCrumbs/BreadCrumbs";
+import ContactsPage from "../ContactsPage/ContactsPage";
 
 function Content(props) {
   const {isOpened, media, onPopupCareOpen} = props;
@@ -51,6 +53,10 @@ function Content(props) {
 
         <Route path={DELIVERY_PAGE}>
           <DeliveryPage/>
+        </Route>
+
+        <Route path={CONTACTS_PAGE}>
+          <ContactsPage/>
         </Route>
 
         <Route path={CATALOGUE_PAGE}>

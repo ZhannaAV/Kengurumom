@@ -1,6 +1,5 @@
 .bread{
-    max-width: 1170px;
-    margin: auto;
+    padding-left: calc((100% - 1170px)/2);
     padding-bottom: 30px;
     padding-top: 150px;
     color: #DC8962;
@@ -9,13 +8,13 @@
 }
 @media screen and (max-width: 1280px) {
     .bread {
-        width: calc(100% - 80px);
+        padding-left: 40px;
     }
 }
 
 @media screen and (max-width: 1024px) {
     .bread {
-        width: calc(100% - 40px);
+        padding-left: 20px;
     }
 }
 
