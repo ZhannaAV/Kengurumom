@@ -6,10 +6,10 @@ import {deleteIcon} from './constants';
 import { Link } from 'react-router-dom';
 import {itemsCart} from './test_items';
 
-export default function PopupBasket(props) {
+export default function PopupBasket({isOpened, inputItems, onClose}) {
   const [summaryPrice, setSummaryPrice] = React.useState(0);
-  const [items, setItems] = React.useState(props.items || []);
-  const visibilityClass = props.isOpened ? 'popup-basket_visible' : '';
+  const [items, setItems] = React.useState(inputItems || []);
+  const visibilityClass = isOpened ? 'popup-basket_visible' : '';
 
   const handleReloadCartSum = () => {
     if (items) {
@@ -53,9 +53,9 @@ export default function PopupBasket(props) {
         </p>
         <div className="popup-basket__buttons">
           <Link to={BASKET_PAGE}>
-          <Button text="В корзину" type="button" style="button_type_popup-basket" onClick={props.onClose}/>
+          <Button text="В корзину" type="button" style="button_type_popup-basket" onClick={onClose}/>
           </Link>
-          <Button text="Оформить" type="button" style="button_type_popup-basket" onClick={props.onClose} />
+          <Button text="Оформить" type="button" style="button_type_popup-basket" onClick={onClose} />
         </div>
       </div>
     </div>

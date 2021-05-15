@@ -4,7 +4,7 @@ import linkRight from '../../../images/slick-slider-btn-right.svg';
 
 import './SlickSliderArrow.css';
 
-export default function SlickSliderArrow({left, right, onClick}){
+export default function SlickSliderArrow({left = false, right = false, onClick}){
   let link = '';
   let className = '';
   if (left) {

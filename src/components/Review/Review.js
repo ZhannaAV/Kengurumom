@@ -33,9 +33,9 @@ const reviewConfig = [
   },
 ];
 
-export default function Review(props){
+export default function Review({media}){
   const [width, setWidth] = React.useState(window.innerWidth);
-  const [slides, setSlides] = React.useState( props.media.isDesktop ? 3 : props.media.isTabletVert ? 2 : 1);
+  const [slides, setSlides] = React.useState( media.isDesktop ? 3 : media.isTabletVert ? 2 : 1);
 
   const updateWidth = () => {
     setWidth(window.innerWidth)
