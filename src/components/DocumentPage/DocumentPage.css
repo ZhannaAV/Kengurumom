@@ -1,0 +1,86 @@
+.document__container {
+  max-width: 770px;
+  margin: 0 auto;
+  padding: 160px 0 0;
+}
+
+.document__title {
+  font-family: Montserrat Alternates;
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 600;
+  color: #DC8962;
+  text-align: center;
+  padding: 0;
+  margin: 30px auto 50px;
+  max-width: 404px;
+}
+
+.document__content {
+  font-family: Montserrat;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 500;
+  color: #513629;
+  margin-bottom: 200px;
+}
+
+.document__item {
+  padding: 0;
+  margin: 0;
+}
+
+.document__items {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.document__subtitle-text {
+  padding: 0;
+  margin: 0;
+  font-weight: 400;
+}
+
+.document__subtitle{
+  font-weight: 500;
+  padding: 0;
+  margin: 0;
+}
+
+.document__paragraph {
+  padding: 0;
+  margin-bottom: 30px;
+  list-style: none;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 1024px) {
+  .document__content {
+    font-size: 14px;
+    margin-bottom: 90px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .document__container {
+    margin: 0 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .document__content {
+    margin-bottom: 110px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .document__content {
+    margin-bottom: 120px;
+  }
+  
+  .document__container {
+    padding-top: 130px;
+  }
+}
+

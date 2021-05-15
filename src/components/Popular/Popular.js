@@ -13,65 +13,66 @@ import React from 'react';
 const popularConfig = [
   {
     new: false,
-    title: "Пеленальный кокон",
+    title: 'Пеленальный кокон',
     src: popular_cocoon,
     price: 890,
-    priceSale: 1090
+    priceSale: 1090,
   },
   {
     new: true,
-    title: "Спальник",
+    title: 'Спальник',
     src: popular_sleepingbag,
     price: 890,
-    priceSale: undefined
+    priceSale: undefined,
   },
   {
     new: false,
-    title: "Милкснуд",
+    title: 'Милкснуд',
     src: popular_milksnud,
     price: 1090,
-    priceSale: undefined
+    priceSale: undefined,
   },
   {
     new: false,
     title: 'Пелёнка-кокон "Авокадо"',
     src: popular_avokado,
     price: 1200,
-    priceSale: undefined
+    priceSale: undefined,
   },
 ];
 
-export default function Popular(props){
+export default function Popular({ products }) {
   const [width, setWidth] = React.useState(window.innerWidth);
   const [slides, setSlides] = React.useState(4);
 
   const updateWidth = () => {
-    setWidth(window.innerWidth)
+    setWidth(window.innerWidth);
     if (width < 570) {
       setSlides(1);
-    }
-    else if (width < 857) {
+    } else if (width < 857) {
       setSlides(2);
-    }
-    else if (width < 1020) {
+    } else if (width < 1020) {
       setSlides(3);
-    }
-    else {
+    } else {
       setSlides(4);
     }
   };
 
   React.useEffect(() => {
-    window.addEventListener("resize", updateWidth);
-    return () => window.removeEventListener("resize", updateWidth);
+    window.addEventListener('resize', updateWidth);
+    return () => window.removeEventListener('resize', updateWidth);
   });
 
   return (
-    <section class="popular">
-      <h2 class="popular__title">Популярное</h2>
+    <section className="popular">
+      <h2 className="popular__title">Популярное</h2>
       <SlickSlider className="content-slider" slides={slides}>
-        {popularConfig.map(item => (
-          <PopularItem {...item} />
+        {/* {popularConfig.map((item) => (
+          <PopularItem {...item} key={item.title} />
+        ))} */}
+
+        {products.slice(0,4).map((item) => (
+          <PopularItem {...item} key={item.id} />
         ))}
       </SlickSlider>
     </section>

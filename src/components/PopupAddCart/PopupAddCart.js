@@ -1,10 +1,11 @@
 import React from 'react';
 import './PopupAddCart.css';
 import Dialog from '@material-ui/core/Dialog';
-import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-
-import {POPUP_ADD_CART_TITLE, POPUP_ADD_CART_KEEP_SHOPPING, POPUP_ADD_CART_GO_TO_BASKET} from '../../config/texts';
 import { Link } from 'react-router-dom';
+import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import {POPUP_ADD_CART_TITLE, POPUP_ADD_CART_KEEP_SHOPPING, POPUP_ADD_CART_GO_TO_BASKET} from './texts';
+import {BASKET_PAGE} from '../../config/links';
+import Button from '../Button/Button';
 
 //temp config. replace it with tests
 import popular_cocoon from '../../images/popular_cocoon.png';
@@ -80,8 +81,10 @@ export default function PopupAddCart(props){
           <p className="popup-add-cart__item-title">{item.price} &#8381;</p>
         </div>
         <div className='popup-add-cart__action-buttons'>
-          <button className='popup-add-cart__button popup-add-cart__button_keep-shopping' onClick={handleClose}>{POPUP_ADD_CART_KEEP_SHOPPING}</button>
-          <Link to='/cart' className='popup-add-cart__button popup-add-cart__button_go-to-basket' onClick={handleClose}>{POPUP_ADD_CART_GO_TO_BASKET}</Link>
+          <Button text={POPUP_ADD_CART_KEEP_SHOPPING} type='button' style='button_outlined button_type_popup-add-card' onClick={handleClose}/>
+          <Link to={BASKET_PAGE}>
+          <Button text={POPUP_ADD_CART_GO_TO_BASKET} type='button' style='button_type_popup-add-card' onClick={handleClose}/>
+          </Link>
         </div>
       </Dialog>
     </ThemeProvider>

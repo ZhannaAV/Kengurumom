@@ -1,0 +1,257 @@
+.delivery {
+    color: #513629;
+    max-width: 1170px;
+    margin: auto;
+    box-sizing: border-box;
+    padding-bottom: 89px;
+    padding-top: 30px;
+}
+
+.delivery__title {
+    text-align: center;
+    color: #dc8962;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 37px;
+}
+
+.delivery__world-title {
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 30px;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.delivery__world-text {
+    max-width: 406px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 140%;
+    text-align: center;
+    margin: auto;
+}
+
+.delivery__text-aссent {
+    font-weight: 700;
+}
+
+.delivery__subtitle-block {
+    display: flex;
+    width: 220px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 55px auto 40px;
+}
+
+.delivery__subtitle-block_place_payment {
+    width: 192px;
+}
+
+.delivery__subtitle-block_place_refund {
+    width: 320px;
+}
+
+.delivery__subtitle {
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 30px;
+    color: #dc8962;
+    margin: 0;
+}
+
+.delivery__list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.delivery__item:last-child {
+    margin-top: 15px;
+}
+
+.delivery__subtitle-text {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    margin: 0;
+}
+
+.delivery__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    margin: 0;
+}
+
+.delivery__subtitle-methods {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #dc8962;
+    text-align: center;
+    margin-top: 55px;
+    margin-bottom: 45px;
+}
+
+.delivery__counter-list {
+    list-style: none;
+    counter-reset: li;
+    padding-left: 37px;
+    margin: 0;
+}
+
+.delivery__inner {
+    padding-left: 37px;
+}
+
+.delivery__counter-item {
+    margin-top: 40px;
+    margin-bottom: 19px;
+    position: relative;
+}
+
+.delivery__counter-item::before {
+    position: absolute;
+    content: counter(li);
+    counter-increment: li;
+    background-color: #FFCD74;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    left: -37px;
+    top: -5px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FAF1E9;
+    box-sizing: border-box;
+    padding-top: 4px;
+}
+
+.delivery__icon-list {
+    list-style: none;
+    padding-left: 0;
+    max-width: 1050px;
+    margin-top: 19px;
+    margin-bottom: 0;
+}
+
+.delivery__icon-item {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.delivery__icon-item::before {
+    position: absolute;
+    content: '';
+    background: url("../../images/deliveryPage/list_icon.svg") no-repeat left top;
+    width: 21px;
+    height: 19px;
+    left: -33px;
+    top: 0;
+}
+
+
+@media screen and (max-width: 1280px) {
+    .delivery {
+        width: calc(100% - 80px);
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .delivery {
+        width: calc(100% - 40px);
+    }
+
+    .delivery__title {
+        font-size: 25px;
+        line-height: 30px;
+    }
+
+    .delivery__world-title {
+        font-size: 20px;
+        line-height: 24px;
+        margin-top: 56px;
+        margin-bottom: 26px;
+    }
+
+    .delivery__world-text {
+        max-width: 366px;
+        font-size: 18px;
+    }
+
+    .delivery__subtitle-block {
+        margin-top: 64px;
+    }
+
+    .delivery__subtitle-methods {
+        margin: 45px 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .delivery__subtitle-block {
+        margin-top: 60px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .delivery {
+        padding: 77px 0;
+    }
+
+    .delivery__world-title {
+        max-width: 277px;
+        margin: 44px auto 23px;
+    }
+
+    .delivery__subtitle-block {
+        margin-top: 50px;
+    }
+
+    .delivery__subtitle-methods {
+        margin-top: 40px;
+    }
+
+    .delivery__subtitle-text {
+        font-size: 16px;
+        line-height: 20px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .delivery__title {
+        max-width: 150px;
+        margin: auto;
+    }
+
+    .delivery__world-title {
+        max-width: 250px;
+        font-size: 18px;
+        line-height: 22px;
+        margin: 16px auto 27px;
+    }
+
+    .delivery__world-text {
+        max-width: 250px;
+        font-size: 16px;
+        line-height: 140%;
+    }
+
+    .delivery__subtitle-block {
+        margin-top: 37px;
+    }
+
+    .delivery__subtitle-block_place_refund {
+        width: 220px;
+    }
+
+    .delivery__subtitle {
+        width: 145px;
+        text-align: center;
+    }
+
+}          
