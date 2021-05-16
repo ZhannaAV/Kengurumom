@@ -22,6 +22,7 @@ export default function PopupAddCart({isOpened, inputItem, onClose}){
   const [item, setItem] = React.useState(inputItem || null)
 
   React.useEffect(() => {
+    // console.log(item)
     if (!item) setItem(itemsCart.filter(e => e.num)[0]); // for test
   }, []);
 
@@ -37,16 +38,16 @@ export default function PopupAddCart({isOpened, inputItem, onClose}){
         <h2 className='popup-add-cart__title'>Товар добавлен в корзину</h2>
         <div className='popup-add-cart__item'>
           <div className="popup-add-cart__item-img-title">
-            <img src={item.src} title={item.title} alt={item.title} className="popup-add-cart__item-img"/>
-            <p className="popup-add-cart__item-title">{item.title}</p>
+            <img src={item?.src} title={item?.title} alt={item?.title} className="popup-add-cart__item-img"/>
+            <p className="popup-add-cart__item-title">{item?.title}</p>
           </div>
           <p className="popup-add-cart__item-num">1 шт</p>
-          <p className="popup-add-cart__item-title">{item.price} &#8381;</p>
+          <p className="popup-add-cart__item-title">{item?.price} &#8381;</p>
         </div>
         <div className='popup-add-cart__action-buttons'>
           <Button text="Продолжить покупки" type='button' style='button_outlined button_type_popup-add-card' onClick={handleClose}/>
           <Link to={BASKET_PAGE}>
-          <Button text="В корзину" type='button' style='button_type_popup-add-card' onClick={handleClose}/>
+            <Button text="В корзину" type='button' style='button_type_popup-add-card' onClick={handleClose}/>
           </Link>
         </div>
       </Dialog>

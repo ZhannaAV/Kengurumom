@@ -12,15 +12,14 @@ export default function SlickSlider(props){
 
   const settings = {
     dots: true,
-    infinite: true,
+    // infinite: true,
     speed: 500,
     slidesToShow: props.slides ? props.slides : 3,
     slidesToScroll: props.slides ? props.slides : 3,
-    // arrows: false,
-    arrows: true,
+    arrows: props.showArrows,
     // centerMode: true,
-    nextArrow: <SlickSliderArrow right={true} onClick={slider.slickNext}/>,
-    prevArrow: <SlickSliderArrow left={true} onClick={slider.slickPrev}/>
+    nextArrow: <SlickSliderArrow right={true} type={props.arrowType} onClick={slider.slickNext}/>,
+    prevArrow: <SlickSliderArrow left={true} type={props.arrowType} onClick={slider.slickPrev}/>
   };
 
   return (

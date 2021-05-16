@@ -5,10 +5,11 @@ import Header from '../Header/Header';
 import SideMenu from '../SideMenu/SideMenu';
 import Content from "../Content/Content";
 import PopupCare from '../PopupCare/PopupCare';
+import PopupAddCart from '../PopupAddCart/PopupAddCart';
 import Footer from '../Footer/Footer';
 
 function App() {
-  const [isPopupOpened, setIsPopupOpened] = useState(false);
+  const [isPopupAddCartOpened, setIsPopupAddCartOpened] = useState(false);
   const [isPopupCareOpened, setIsPopupCareOpened] = useState(false);
 
   const isDesktop = useMediaQuery({minWidth: 1440});
@@ -32,12 +33,13 @@ function App() {
   const openSideMenu = (_) => setIsSideMenuOpened(true);
   const closeSideMenu = (_) => setIsSideMenuOpened(false);
 
-  const handleOpenPopup = () => {
-    setIsPopupOpened(true);
-  };
-
+  //open popup "Рекомендация по уходу"
   const handlePopupCareOpen = () => { setIsPopupCareOpened(true) };
   const handlePopupCareClose = () => { setIsPopupCareOpened(false) };
+  
+  //open popup "Товар добавлен в корзину"
+  const handlePopupAddCartOpen = () => { setIsPopupAddCartOpened(true) };
+  const handlePopupAddCartClose = () => { setIsPopupAddCartOpened(false) };
 
   return (
     <>
@@ -50,14 +52,14 @@ function App() {
       )}
       <Header media={media} openSideMenu={openSideMenu}/>
       <Content 
-        isOpened={handleOpenPopup} 
         media={media}
         onPopupCareOpen={handlePopupCareOpen}
+        onPopupAddCartOpen={handlePopupAddCartOpen}
       />
       <Footer media={media}/>
       <PopupCare isOpened={isPopupCareOpened} onClose={handlePopupCareClose}/>
       {/* <PopupBasket isOpened={isPopupOpened} onClose={setIsPopupOpened}/> */}
-      {/* <PopupAddCart isOpened={isPopupOpened} onClose={setIsPopupOpened}/> */}
+      <PopupAddCart isOpened={isPopupAddCartOpened} onClose={handlePopupAddCartClose}/>
     </>
   )
 }

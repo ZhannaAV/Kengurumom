@@ -23,7 +23,7 @@ export default function PopupBasket({isOpened, inputItems, onClose}) {
   }
 
   React.useEffect(() => {
-    if (items.length === 0) setItems(itemsCart.filter(e => e.num)); // for test
+    if (items.length === 0 && itemsCart.filter(e => e.num).length > 0) setItems(itemsCart.filter(e => e.num)); // for test
     handleReloadCartSum();
     //return setItems([])
   }, [items]);
