@@ -8,11 +8,11 @@ import { exampleArrProducts } from '../../config/constants';
 
 
 function MainPage(props) {
-  const {media} = props
+  const {media, onPopupAddCartOpen} = props
   return (
     <>
       <Slider media={media}/>
-      <Popular media={media} products={exampleArrProducts} />
+      <Popular media={media} products={exampleArrProducts} onPopupAddCartOpen={onPopupAddCartOpen}/>
       <Advantages/>
       <SectionsWithBtn/>
       <Review media={media}/>

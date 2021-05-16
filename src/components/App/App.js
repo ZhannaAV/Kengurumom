@@ -5,10 +5,13 @@ import Header from '../Header/Header';
 import SideMenu from '../SideMenu/SideMenu';
 import Content from "../Content/Content";
 import PopupCare from '../PopupCare/PopupCare';
+import PopupAddCart from '../PopupAddCart/PopupAddCart';
 import Footer from '../Footer/Footer';
 
 function App() {
-  const [isPopupOpened, setIsPopupOpened] = useState(false);
+  const [cartItems, setCartItems] = useState([]);
+  const [popupAddCartItem, setPopupAddCartItem] = useState(null);
+  const [isPopupAddCartOpened, setIsPopupAddCartOpened] = useState(false);
   const [isPopupCareOpened, setIsPopupCareOpened] = useState(false);
 
   const isDesktop = useMediaQuery({minWidth: 1440});
@@ -32,12 +35,17 @@ function App() {
   const openSideMenu = (_) => setIsSideMenuOpened(true);
   const closeSideMenu = (_) => setIsSideMenuOpened(false);
 
-  const handleOpenPopup = () => {
-    setIsPopupOpened(true);
-  };
-
+  //open popup "Рекомендация по уходу"
   const handlePopupCareOpen = () => { setIsPopupCareOpened(true) };
   const handlePopupCareClose = () => { setIsPopupCareOpened(false) };
+  
+  //open popup "Товар добавлен в корзину"
+  const handlePopupAddCartOpen = (item) => {
+    setCartItems([...cartItems, item])
+    setPopupAddCartItem(item);
+    setIsPopupAddCartOpened(true);
+  };
+  const handlePopupAddCartClose = () => { setIsPopupAddCartOpened(false) };
 
   return (
     <>
@@ -48,16 +56,15 @@ function App() {
           onCloseClick={closeSideMenu}
         />
       )}
-      <Header media={media} openSideMenu={openSideMenu}/>
+      <Header media={media} openSideMenu={openSideMenu} cartItems={cartItems}/>
       <Content 
-        isOpened={handleOpenPopup} 
         media={media}
         onPopupCareOpen={handlePopupCareOpen}
+        onPopupAddCartOpen={handlePopupAddCartOpen}
       />
       <Footer media={media}/>
       <PopupCare isOpened={isPopupCareOpened} onClose={handlePopupCareClose}/>
-      {/* <PopupBasket isOpened={isPopupOpened} onClose={setIsPopupOpened}/> */}
-      {/* <PopupAddCart isOpened={isPopupOpened} onClose={setIsPopupOpened}/> */}
+      <PopupAddCart isOpened={isPopupAddCartOpened} inputItem={popupAddCartItem} onClose={handlePopupAddCartClose}/>
     </>
   )
 }

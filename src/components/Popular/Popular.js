@@ -7,7 +7,7 @@ import popular_avokado from '../../images/popular_avokado.png';
 
 import PopularItem from '../../components/PopularItem/PopularItem';
 import SlickSlider from '../SharedComponents/Slider/SlickSlider';
-import React from 'react';
+import {useState, useEffect} from 'react';
 
 //temp config. replace it with tests
 const popularConfig = [
@@ -39,11 +39,26 @@ const popularConfig = [
     price: 1200,
     priceSale: undefined,
   },
+  {
+    new: false,
+    title: 'Пелёнка-кокон "Авокадо"',
+    src: popular_avokado,
+    price: 1200,
+    priceSale: undefined
+  },
+  {
+    new: false,
+    title: 'Пелёнка-кокон "Авокадо"',
+    src: popular_avokado,
+    price: 1200,
+    priceSale: undefined
+  },
 ];
 
-export default function Popular({ products }) {
-  const [width, setWidth] = React.useState(window.innerWidth);
-  const [slides, setSlides] = React.useState(4);
+export default function Popular({media, products, onPopupAddCartOpen}){
+  const [width, setWidth] = useState(window.innerWidth);
+  const [slides, setSlides] = useState( media.isDesktop ? 4 : media.isTabletVert ? 3 : media.isMobileHor ? 2 : 1);
+  const [showArrows, setShowArrows] = useState(media.isDesktop ? true : false)
 
   const updateWidth = () => {
     setWidth(window.innerWidth);
@@ -58,21 +73,29 @@ export default function Popular({ products }) {
     }
   };
 
-  React.useEffect(() => {
-    window.addEventListener('resize', updateWidth);
-    return () => window.removeEventListener('resize', updateWidth);
+  const updateShowArrows = () => { width > 1380 ? setShowArrows(true) : setShowArrows(false) }
+
+  useEffect(() => {
+    updateWidth();
+    updateShowArrows();
+    window.addEventListener("resize", updateWidth);
+    window.addEventListener("resize", updateShowArrows);
+    return () => {
+      window.removeEventListener("resize", updateWidth);
+      window.removeEventListener("resize", updateShowArrows);
+    }
   });
 
   return (
     <section className="popular">
       <h2 className="popular__title">Популярное</h2>
-      <SlickSlider className="content-slider" slides={slides}>
+      <SlickSlider className="content-slider" slides={slides} showArrows={showArrows} arrowType="popular">
         {/* {popularConfig.map((item) => (
           <PopularItem {...item} key={item.title} />
         ))} */}
 
-        {products.slice(0,4).map((item) => (
-          <PopularItem {...item} key={item.id} />
+        {products.slice(0,6).map((item) => (
+          <PopularItem {...item} key={item.id} onPopupAddCartOpen={onPopupAddCartOpen}/>
         ))}
       </SlickSlider>
     </section>

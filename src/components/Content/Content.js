@@ -24,8 +24,8 @@ import BreadCrumbs from "../BreadCrumbs/BreadCrumbs";
 import ContactsPage from "../ContactsPage/ContactsPage";
 
 function Content(props) {
-  const {isOpened, media, onPopupCareOpen} = props;
-
+  const { media, onPopupCareOpen, onPopupAddCartOpen } = props;
+  
   const {pathname} = useLocation();
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -60,7 +60,7 @@ function Content(props) {
         </Route>
 
         <Route path={CATALOGUE_PAGE}>
-          <CatalogPage products={exampleArrProducts}/>
+          <CatalogPage products={exampleArrProducts} onPopupAddCartOpen={onPopupAddCartOpen}/>
         </Route>
 
         <Route exact path={`${PRODUCT_PAGE}/:id`}>
@@ -68,23 +68,24 @@ function Content(props) {
             products={exampleArrProducts}
             media={media}
             onPopupCareOpen={onPopupCareOpen}
+            onPopupAddCartOpen={onPopupAddCartOpen}
           />
         </Route>
 
-        {/* use for test !!! */}
-        <Route path="/test_popup/">
-          <div
-            style={{
-              width: '100wh',
-              height: '100vh',
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-            }}
-          >
-            <Button text="CLICK ME!" onClick={isOpened}/>
-          </div>
-        </Route>
+      {/* use for test !!! */}
+      <Route path="/test_popup/">
+        <div
+          style={{
+            width: '100wh',
+            height: 'calc(100vh - 1111px);',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}
+        >
+          <Button text="CLICK ME!" onClick={onPopupAddCartOpen} />
+        </div>
+      </Route>
 
         <Route path="*">
           <NotFoundPage/>

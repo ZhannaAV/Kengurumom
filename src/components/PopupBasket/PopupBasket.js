@@ -1,40 +1,46 @@
-import React from 'react';
+import {useState, useEffect} from 'react';
 import './PopupBasket.css';
-import {POPUP_CART_ARRANGE, POPUP_CART_CART} from './texts';
 import {BASKET_PAGE} from '../../config/links';
 import Button from '../Button/Button';
 import {deleteIcon} from './constants';
 import { Link } from 'react-router-dom';
 import {itemsCart} from './test_items';
 
-export default function PopupBasket(props) {
-  const [summaryPrice, setSummaryPrice] = React.useState(0);
-  const [items, setItems] = React.useState(props.items || []);
-  const visibilityClass = props.isOpened ? 'popup-basket_visible' : '';
+export default function PopupBasket({isOpened, cartItems, onClose}) {
+  const [summaryPrice, setSummaryPrice] = useState(0);
+  const [items, setItems] = useState(cartItems || []);
+  const visibilityClass = isOpened ? 'popup-basket_visible' : '';
 
-  const handleReloadCartSum = () => {
-    if (items) {
-      const sum = items.reduce((sum, e) => sum += e.price*e.num, 0);
+  const handleReloadCartSum = (inputItems) => {
+    if (inputItems) {
+      const sum = inputItems.reduce((sum, e) => sum += e.price*e.num, 0);
       setSummaryPrice(sum)
     }
   }
 
   const handleDelete = item => {
-    setItems(items.filter(e => {return e.title !== item.title}))
+    // setItems(items.filter(e => {return e.title !== item.title}))
   }
 
-  React.useEffect(() => {
-    if (items.length === 0) setItems(itemsCart.filter(e => e.num)); // for test
-    handleReloadCartSum();
-    //return setItems([])
-  }, [items]);
+  const resetItemsNum = (inputItems) => {    
+    for(let e of inputItems) {
+      if (!e.num) e.num = 1;
+    }
+    
+    setItems(inputItems);
+  }
+
+  useEffect(() => {
+    resetItemsNum(cartItems)
+    handleReloadCartSum(cartItems);
+  }, [cartItems]);
 
   return (
     <div className={`popup-basket ${visibilityClass}`}>
       <div className="popup-basket__content">
         <div className="popup-basket__items">
           {
-            items ?
+            items && items.length > 0 ?
               items.map((item, i) => (
                 <div className="popup-basket__item" key={i}>
                   <img className="popup-basket__item-img" src={item.src} alt={item.title} />
@@ -46,7 +52,7 @@ export default function PopupBasket(props) {
                   </button>
                   </div>
               )) :
-              <>В корзине нет товаров</>
+              <p className="popup-basket__empty-cart">В корзине нет товаров</p>
           }
         </div>
         <p className="popup-basket__summary">
@@ -54,9 +60,10 @@ export default function PopupBasket(props) {
         </p>
         <div className="popup-basket__buttons">
           <Link to={BASKET_PAGE}>
-          <Button text={POPUP_CART_CART} type="button" style="button_type_popup-basket" onClick={props.onClose}/>
+            <Button text="В корзину" type="button" style="button_type_popup-basket" onClick={onClose}/>
           </Link>
-          <Button text={POPUP_CART_ARRANGE} type="button" style="button_type_popup-basket" onClick={props.onClose} />
+          <Button text="Закрыть" type="button" style="button_type_popup-basket" onClick={onClose} />
+          {/* <Button text="Оформить" type="button" style="button_type_popup-basket" onClick={onClose} /> */}
         </div>
       </div>
     </div>
