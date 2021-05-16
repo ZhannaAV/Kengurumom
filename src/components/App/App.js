@@ -29,12 +29,10 @@ function App() {
     isMobileVert,
   };
 
-  const openSideMenu = (_) => setIsSideMenuOpened(true);
-  const closeSideMenu = (_) => setIsSideMenuOpened(false);
+  const openSideMenu = () => setIsSideMenuOpened(true);
+  const closeSideMenu = () => setIsSideMenuOpened(false);
 
-  const handleOpenPopup = () => {
-    setIsPopupOpened(true);
-  };
+  const handleOpenPopup = () => setIsPopupOpened(true);
 
   const handlePopupCareOpen = () => { setIsPopupCareOpened(true) };
   const handlePopupCareClose = () => { setIsPopupCareOpened(false) };
