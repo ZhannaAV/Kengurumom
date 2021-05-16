@@ -2,7 +2,7 @@ import './CategoryPage.css';
 import { useParams } from 'react-router-dom';
 import PopularItem from '../../PopularItem/PopularItem';
 
-function CategoryPage({ products }) {
+function CategoryPage({ products, onPopupAddCartOpen }) {
   let { category } = useParams();
   const currentArr = category
     ? products.filter((product) => product.category === category)
@@ -15,7 +15,7 @@ function CategoryPage({ products }) {
       </select>
       <div className="catalog__products">
         {currentArr.map((product) => (
-          <PopularItem {...product} key={product.id} />
+          <PopularItem {...product} key={product.id} onPopupAddCartOpen={onPopupAddCartOpen} />
         ))}
       </div>
       <button className="button catalog__pagination">Показать еще</button>

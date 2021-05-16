@@ -7,7 +7,7 @@ import popular_avokado from '../../images/popular_avokado.png';
 
 import PopularItem from '../../components/PopularItem/PopularItem';
 import SlickSlider from '../SharedComponents/Slider/SlickSlider';
-import React from 'react';
+import {useState, useEffect} from 'react';
 
 //temp config. replace it with tests
 const popularConfig = [
@@ -55,10 +55,10 @@ const popularConfig = [
   },
 ];
 
-export default function Popular({media, products}){
-  const [width, setWidth] = React.useState(window.innerWidth);
-  const [slides, setSlides] = React.useState( media.isDesktop ? 4 : media.isTabletVert ? 3 : media.isMobileHor ? 2 : 1);
-  const [showArrows, setShowArrows] = React.useState(media.isDesktop ? true : false)
+export default function Popular({media, products, onPopupAddCartOpen}){
+  const [width, setWidth] = useState(window.innerWidth);
+  const [slides, setSlides] = useState( media.isDesktop ? 4 : media.isTabletVert ? 3 : media.isMobileHor ? 2 : 1);
+  const [showArrows, setShowArrows] = useState(media.isDesktop ? true : false)
 
   const updateWidth = () => {
     setWidth(window.innerWidth);
@@ -75,7 +75,7 @@ export default function Popular({media, products}){
 
   const updateShowArrows = () => { width > 1380 ? setShowArrows(true) : setShowArrows(false) }
 
-  React.useEffect(() => {
+  useEffect(() => {
     updateWidth();
     updateShowArrows();
     window.addEventListener("resize", updateWidth);
@@ -95,7 +95,7 @@ export default function Popular({media, products}){
         ))} */}
 
         {products.slice(0,6).map((item) => (
-          <PopularItem {...item} key={item.id} />
+          <PopularItem {...item} key={item.id} onPopupAddCartOpen={onPopupAddCartOpen}/>
         ))}
       </SlickSlider>
     </section>

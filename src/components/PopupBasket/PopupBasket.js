@@ -1,4 +1,4 @@
-import React from 'react';
+import {useState, useEffect} from 'react';
 import './PopupBasket.css';
 import {BASKET_PAGE} from '../../config/links';
 import Button from '../Button/Button';
@@ -7,8 +7,8 @@ import { Link } from 'react-router-dom';
 import {itemsCart} from './test_items';
 
 export default function PopupBasket({isOpened, inputItems, onClose}) {
-  const [summaryPrice, setSummaryPrice] = React.useState(0);
-  const [items, setItems] = React.useState(inputItems || []);
+  const [summaryPrice, setSummaryPrice] = useState(0);
+  const [items, setItems] = useState(inputItems || []);
   const visibilityClass = isOpened ? 'popup-basket_visible' : '';
 
   const handleReloadCartSum = () => {
@@ -22,7 +22,7 @@ export default function PopupBasket({isOpened, inputItems, onClose}) {
     setItems(items.filter(e => {return e.title !== item.title}))
   }
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (items.length === 0 && itemsCart.filter(e => e.num).length > 0) setItems(itemsCart.filter(e => e.num)); // for test
     handleReloadCartSum();
     //return setItems([])

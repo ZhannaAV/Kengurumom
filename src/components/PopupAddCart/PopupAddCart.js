@@ -1,4 +1,4 @@
-import React from 'react';
+import {useState, useEffect} from 'react';
 import './PopupAddCart.css';
 import Dialog from '@material-ui/core/Dialog';
 import { Link } from 'react-router-dom';
@@ -19,12 +19,12 @@ const theme = createMuiTheme({
 });
 
 export default function PopupAddCart({isOpened, inputItem, onClose}){
-  const [item, setItem] = React.useState(inputItem || null)
+  const [item, setItem] = useState(inputItem || null)
 
-  React.useEffect(() => {
-    // console.log(item)
-    if (!item) setItem(itemsCart.filter(e => e.num)[0]); // for test
-  }, []);
+  useEffect(() => {
+    setItem(inputItem)
+    if (!item) setItem(itemsCart.filter(e => e.num)[0]); // for test    
+  }, [inputItem]);
 
   const handleClose = () => {onClose(false)};
 

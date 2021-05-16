@@ -1,4 +1,4 @@
-import React from 'react';
+import {useRef} from 'react';
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -8,7 +8,7 @@ import SlickSliderArrow from './SlickSliderArrow';
 import './SlickSlider.css';
 
 export default function SlickSlider(props){
-  const slider = React.useRef(null);
+  const slider = useRef(null);
 
   const settings = {
     dots: true,

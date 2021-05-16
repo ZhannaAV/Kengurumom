@@ -24,13 +24,8 @@ import BreadCrumbs from "../BreadCrumbs/BreadCrumbs";
 import ContactsPage from "../ContactsPage/ContactsPage";
 
 function Content(props) {
-<<<<<<< HEAD
-  const {isOpened, media, onPopupCareOpen} = props;
-
-=======
   const { media, onPopupCareOpen, onPopupAddCartOpen } = props;
   
->>>>>>> Fix: style fix part 2
   const {pathname} = useLocation();
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -76,22 +71,6 @@ function Content(props) {
           />
         </Route>
 
-<<<<<<< HEAD
-        {/* use for test !!! */}
-        <Route path="/test_popup/">
-          <div
-            style={{
-              width: '100wh',
-              height: '100vh',
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-            }}
-          >
-            <Button text="CLICK ME!" onClick={isOpened}/>
-          </div>
-        </Route>
-=======
       {/* use for test !!! */}
       <Route path="/test_popup/">
         <div
@@ -106,7 +85,6 @@ function Content(props) {
           <Button text="CLICK ME!" onClick={onPopupAddCartOpen} />
         </div>
       </Route>
->>>>>>> Fix: style fix part 2
 
         <Route path="*">
           <NotFoundPage/>

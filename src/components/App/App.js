@@ -9,6 +9,7 @@ import PopupAddCart from '../PopupAddCart/PopupAddCart';
 import Footer from '../Footer/Footer';
 
 function App() {
+  const [popupAddCartItem, setPopupAddCartItem] = useState(null);
   const [isPopupAddCartOpened, setIsPopupAddCartOpened] = useState(false);
   const [isPopupCareOpened, setIsPopupCareOpened] = useState(false);
 
@@ -38,7 +39,10 @@ function App() {
   const handlePopupCareClose = () => { setIsPopupCareOpened(false) };
   
   //open popup "Товар добавлен в корзину"
-  const handlePopupAddCartOpen = () => { setIsPopupAddCartOpened(true) };
+  const handlePopupAddCartOpen = (item) => {
+    setPopupAddCartItem(item);
+    setIsPopupAddCartOpened(true);
+  };
   const handlePopupAddCartClose = () => { setIsPopupAddCartOpened(false) };
 
   return (
@@ -58,8 +62,7 @@ function App() {
       />
       <Footer media={media}/>
       <PopupCare isOpened={isPopupCareOpened} onClose={handlePopupCareClose}/>
-      {/* <PopupBasket isOpened={isPopupOpened} onClose={setIsPopupOpened}/> */}
-      <PopupAddCart isOpened={isPopupAddCartOpened} onClose={handlePopupAddCartClose}/>
+      <PopupAddCart isOpened={isPopupAddCartOpened} inputItem={popupAddCartItem} onClose={handlePopupAddCartClose}/>
     </>
   )
 }
