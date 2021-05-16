@@ -60,7 +60,7 @@ function Content(props) {
         </Route>
 
         <Route path={CATALOGUE_PAGE}>
-          <CatalogPage products={exampleArrProducts}/>
+          <CatalogPage products={exampleArrProducts} onPopupAddCartOpen={onPopupAddCartOpen}/>
         </Route>
 
         <Route exact path={`${PRODUCT_PAGE}/:id`}>
@@ -68,6 +68,7 @@ function Content(props) {
             products={exampleArrProducts}
             media={media}
             onPopupCareOpen={onPopupCareOpen}
+            onPopupAddCartOpen={onPopupAddCartOpen}
           />
         </Route>
 
