@@ -4,7 +4,6 @@ import {BASKET_PAGE} from '../../config/links';
 import Button from '../Button/Button';
 import {deleteIcon} from './constants';
 import { Link } from 'react-router-dom';
-import {itemsCart} from './test_items';
 
 export default function PopupBasket({isOpened, cartItems, onClose}) {
   const [summaryPrice, setSummaryPrice] = useState(0);

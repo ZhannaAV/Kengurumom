@@ -36,7 +36,7 @@ function Content(props) {
       {pathname !== MAIN_PAGE && (<BreadCrumbs/>)}
       <Switch>
         <Route exact path={MAIN_PAGE}>
-          <MainPage media={media}/>
+          <MainPage media={media} onPopupAddCartOpen={onPopupAddCartOpen}/>
         </Route>
 
         <Route path={ABOUT_PAGE}>

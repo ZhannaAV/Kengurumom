@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import {BASKET_PAGE} from '../../config/links';
 import Button from '../Button/Button';
-import {itemsCart} from './test_items';
 
 //change main color
 const theme = createMuiTheme({
@@ -23,7 +22,6 @@ export default function PopupAddCart({isOpened, inputItem, onClose}){
 
   useEffect(() => {
     setItem(inputItem)
-    if (!item) setItem(itemsCart.filter(e => e.num)[0]); // for test    
   }, [inputItem]);
 
   const handleClose = () => {onClose(false)};
