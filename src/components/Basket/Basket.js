@@ -12,7 +12,7 @@ function Basket({cartItems}) {
     <div className="basket">
         <PopupBasket isOpened={isPopupBasketOpened} cartItems={cartItems} onClose={handlePopupBasketClose} />
         <div className="basket__icon" onClick={handlePopupBasketOpen}></div>
-        <div className="basket__count">9</div>
+        <div className="basket__count">{cartItems ? cartItems.length : 0}</div>
     </div>
   );
 }
