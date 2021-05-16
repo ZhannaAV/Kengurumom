@@ -59,9 +59,9 @@ export default function PopupBasket({isOpened, cartItems, onClose}) {
         </p>
         <div className="popup-basket__buttons">
           <Link to={BASKET_PAGE}>
-            <Button text="В корзину" type="button" style="button_type_popup-basket" onClick={onClose}/>
+            <Button text="В корзину" type="button" btnStyle="button_type_popup-basket" onClick={onClose}/>
           </Link>
-          <Button text="Закрыть" type="button" style="button_type_popup-basket" onClick={onClose} />
+          <Button text="Закрыть" type="button" btnStyle="button_type_popup-basket" onClick={onClose} />
           {/* <Button text="Оформить" type="button" style="button_type_popup-basket" onClick={onClose} /> */}
         </div>
       </div>

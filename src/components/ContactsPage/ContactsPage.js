@@ -27,7 +27,7 @@ function ContactsPage(){
         <input type="phone" className="contacts__input" placeholder="Телефон"/>
         <textarea className="contacts__input contacts__textarea" placeholder="Текст"/>
       </fieldset>
-      <Button type="submit" text="Отправить" style="button_type_contacts"/>
+      <Button type="submit" text="Отправить" btnStyle="button_type_contacts"/>
       <fieldset className="contacts__fieldset">
         <label form="terms" className="contacts__label"><input id="terms" type="checkbox" className="contacts__checkbox"/>Я принимаю условия <Link className="contacts__terms-link" to="/terms-of-use">Политики конфиденциальности</Link></label>
       </fieldset>

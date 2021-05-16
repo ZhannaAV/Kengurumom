@@ -83,7 +83,7 @@ function Content(props) {
             alignItems: 'center',
           }}
         >
-          <Button text="CLICK ME!" onClick={onPopupAddCartOpen} />
+          <Button text="CLICK ME!" btnStyle="" onClick={onPopupAddCartOpen} />
         </div>
       </Route>
 

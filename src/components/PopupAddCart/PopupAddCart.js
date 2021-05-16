@@ -43,9 +43,9 @@ export default function PopupAddCart({isOpened, inputItem, onClose}){
           <p className="popup-add-cart__item-title">{item?.price} &#8381;</p>
         </div>
         <div className='popup-add-cart__action-buttons'>
-          <Button text="Продолжить покупки" type='button' style='button_outlined button_type_popup-add-card' onClick={handleClose}/>
+          <Button text="Продолжить покупки" type='button' btnStyle='button_outlined button_type_popup-add-card' onClick={handleClose}/>
           <Link to={BASKET_PAGE}>
-            <Button text="В корзину" type='button' style='button_type_popup-add-card' onClick={handleClose}/>
+            <Button text="В корзину" type='button' btnStyle='button_type_popup-add-card' onClick={handleClose}/>
           </Link>
         </div>
       </Dialog>
