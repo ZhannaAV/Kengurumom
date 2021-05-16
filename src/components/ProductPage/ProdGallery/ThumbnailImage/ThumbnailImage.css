@@ -1,0 +1,52 @@
+.thumbnail {
+  padding: 0;
+  margin: 0;
+  font-size: 0;
+  height: 0;
+  padding-bottom: 100%;
+}
+
+.thumbnail__image {
+  margin: 0;
+  width: 100%;
+  padding-bottom: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.thumbnails {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+}
+
+@media screen and (min-width: 1920px) {
+  .thumbnails {
+    gap: 40px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .thumbnails {
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .thumbnails {
+    gap: 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .thumbnails {
+    gap: 20px;
+  }
+}

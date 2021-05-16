@@ -1,9 +1,0 @@
-@import url('./__icon/basket__icon.css');
-@import url('./__count/basket__count.css');
-@import url('./__count/_visible/basket__count_visible.css');
-
-.basket {
-  position: relative;
-  width: 64px;
-  height: 64px;
-}
