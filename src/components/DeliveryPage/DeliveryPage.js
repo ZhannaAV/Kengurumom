@@ -10,7 +10,7 @@ function DeliveryPage() {
       <h2 className="delivery__title">Доставка и оплата</h2>
       <p className="delivery__world-title">Мы осуществляем доставку по всему миру</p>
       <p className="delivery__world-text">Онлайн магазин <span className="delivery__text-aссent">kenguru</span> работает
-        с понедельника по пятницу
+        с понедельника по пятницу <br/>
         с 09:00 до 21:00 по МСК</p>
       <div className="delivery__block-delivery">
         <div className="delivery__subtitle-block">
