@@ -31,16 +31,7 @@ export default function SlickSliderArrow({left = false, right = false, type, onC
 
   return (
     <button className={`slick-slider-arrow slick-slider-arrow_type_${type} ${className}`} onClick={onClick}>
-      {
-        type === 'popular' && (
-          <img src={link} className="slick-slider-arrow__img"/>
-        )
-      }
-      {
-        type === 'review' && (
-          <img src={link} className="slick-slider-arrow__img"/>
-        )
-      }
+      <img src={link} className="slick-slider-arrow__img" alt="Показать ещё"/>
     </button>
   )
 }

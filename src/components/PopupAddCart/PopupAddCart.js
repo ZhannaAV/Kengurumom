@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import {BASKET_PAGE} from '../../config/links';
 import Button from '../Button/Button';
-import {itemsCart} from './test_items';
 
 //change main color
 const theme = createMuiTheme({
@@ -23,7 +22,6 @@ export default function PopupAddCart({isOpened, inputItem, onClose}){
 
   useEffect(() => {
     setItem(inputItem)
-    if (!item) setItem(itemsCart.filter(e => e.num)[0]); // for test    
   }, [inputItem]);
 
   const handleClose = () => {onClose(false)};
@@ -45,9 +43,9 @@ export default function PopupAddCart({isOpened, inputItem, onClose}){
           <p className="popup-add-cart__item-title">{item?.price} &#8381;</p>
         </div>
         <div className='popup-add-cart__action-buttons'>
-          <Button text="Продолжить покупки" type='button' style='button_outlined button_type_popup-add-card' onClick={handleClose}/>
+          <Button text="Продолжить покупки" type='button' btnStyle='button_outlined button_type_popup-add-card' onClick={handleClose}/>
           <Link to={BASKET_PAGE}>
-            <Button text="В корзину" type='button' style='button_type_popup-add-card' onClick={handleClose}/>
+            <Button text="В корзину" type='button' btnStyle='button_type_popup-add-card' onClick={handleClose}/>
           </Link>
         </div>
       </Dialog>

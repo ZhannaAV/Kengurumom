@@ -11,7 +11,7 @@ export default function NotFoundPage(){
       <h2 className="not-found__title">Упс..кажется здесь ничего нет!</h2>
       <img className="not-found__img" src={pageNotFoundImg} alt="Страница не найдена" />
       <Link to={MAIN_PAGE}>
-        <Button text="Вернуться на главную" type="button" style="button_type_not-found"/>
+        <Button text="Вернуться на главную" type="button" btnStyle="button_type_not-found"/>
       </Link>
     </section>
   )
