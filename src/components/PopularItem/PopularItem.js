@@ -18,7 +18,7 @@ import { Link, useHistory } from 'react-router-dom';
 //'new' prop is reserved, rename to isNew
 export default function PopularItem({id, photos, name, price, sale = false, new: isNew = false, onPopupAddCartOpen}) {
   let history = useHistory();
-
+  
   const handleClick = () => {
     history.push(`${PRODUCT_PAGE}/${id}`);
   };
@@ -29,8 +29,6 @@ export default function PopularItem({id, photos, name, price, sale = false, new:
       title: name,
       price: sale ? Math.floor(price - (price * sale) / 100) : price
     });
-
-    console.log(`${photos[0]}, ${name}, ${sale ? Math.floor(price - (price * sale) / 100) : price}`)
   }
 
   return (

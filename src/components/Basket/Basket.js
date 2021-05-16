@@ -2,7 +2,7 @@ import {useState} from 'react';
 import PopupBasket from '../PopupBasket/PopupBasket';
 import './Basket.css';
 
-function Basket() {
+function Basket({cartItems}) {
   const [isPopupBasketOpened, setIsPopupBasketOpened] = useState(false);
 
   const handlePopupBasketOpen = () => { setIsPopupBasketOpened(true) };
@@ -10,7 +10,7 @@ function Basket() {
 
   return (
     <div className="basket">
-        <PopupBasket isOpened={isPopupBasketOpened} onClose={handlePopupBasketClose} />
+        <PopupBasket isOpened={isPopupBasketOpened} cartItems={cartItems} onClose={handlePopupBasketClose} />
         <div className="basket__icon" onClick={handlePopupBasketOpen}></div>
         <div className="basket__count">9</div>
     </div>

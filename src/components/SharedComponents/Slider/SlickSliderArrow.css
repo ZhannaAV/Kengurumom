@@ -16,11 +16,21 @@
 }
 
 .slick-slider-arrow_left {
-  left: -25px;
+  left: -45px;
 }
 
 .slick-slider-arrow_right {
-  right: -25px;
+  right: -45px;
+}
+
+@media screen and (max-width: 1540px) {
+  .slick-slider-arrow_left {
+    left: -25px;
+  }
+  
+  .slick-slider-arrow_right {
+    right: -25px;
+  }
 }
 
 .slick-slider-arrow__img {

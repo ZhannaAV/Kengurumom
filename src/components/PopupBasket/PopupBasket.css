@@ -135,3 +135,8 @@
   cursor: pointer;
   grid-area: del;
 }
+
+.popup-basket__empty-cart {
+  margin: 30px 0 0 0;
+  padding: 0;
+}

@@ -9,6 +9,7 @@ import PopupAddCart from '../PopupAddCart/PopupAddCart';
 import Footer from '../Footer/Footer';
 
 function App() {
+  const [cartItems, setCartItems] = useState([]);
   const [popupAddCartItem, setPopupAddCartItem] = useState(null);
   const [isPopupAddCartOpened, setIsPopupAddCartOpened] = useState(false);
   const [isPopupCareOpened, setIsPopupCareOpened] = useState(false);
@@ -40,6 +41,7 @@ function App() {
   
   //open popup "Товар добавлен в корзину"
   const handlePopupAddCartOpen = (item) => {
+    setCartItems([...cartItems, item])
     setPopupAddCartItem(item);
     setIsPopupAddCartOpened(true);
   };
@@ -54,7 +56,7 @@ function App() {
           onCloseClick={closeSideMenu}
         />
       )}
-      <Header media={media} openSideMenu={openSideMenu}/>
+      <Header media={media} openSideMenu={openSideMenu} cartItems={cartItems}/>
       <Content 
         media={media}
         onPopupCareOpen={handlePopupCareOpen}

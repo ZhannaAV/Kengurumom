@@ -76,6 +76,8 @@
   padding: 0 20px 0 0;
   width: 123px;
   height: 123px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .popup-add-cart__item-title {
