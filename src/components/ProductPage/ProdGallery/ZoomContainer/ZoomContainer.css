@@ -1,0 +1,143 @@
+.zoom-container {
+  margin: 0 0 30px;
+  padding: 0;
+  width: 100%;
+  font-size: 0;
+  position: relative;
+}
+
+.zoom-container__arrow {
+  position: absolute;
+  top: calc(50% - 12px);
+  left: 10px;
+  width: 24px;
+  height: 24px;
+  z-index: 1;
+  object-fit: cover;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: opacity 0.2s ease-in-out;
+  display: none;
+  opacity: 0.7;
+}
+
+.zoom-container__arrow:hover {
+  opacity: 1;
+}
+
+.zoom-container__arrow_right {
+  top: calc(50% - 12px);
+  left: calc(100% - 34px);
+  transform: rotate(180deg);
+}
+
+.zoom-container__loop-icon {
+  position: absolute;
+  top: 17px;
+  right: 17px;
+  width: 50px;
+  height: 50px;
+  z-index: 1;
+  object-fit: cover;
+}
+
+.zoom-container__image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  max-height: 607px;
+  border-radius: 10px;
+  pointer-events: none;
+  transition: opacity 0.5s ease-in-out;
+  object-position: 50% 50%;
+}
+
+.zoom-container__image-wrapper {
+  margin: 0;
+  width: 100%;
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  cursor: zoom-in;
+}
+
+.zoom-container__image-wrapper:hover .zoom-container__image {
+  opacity: 0;
+}
+
+
+@media screen and (min-width: 1920px) {
+  .zoom-container {
+    margin-bottom: 40px;
+  }
+
+  .zoom-container__loop-icon {
+    top: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+  }
+
+  .zoom-container__image {
+    max-height: 725px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .zoom-container {
+    margin-bottom: 20px;
+  }
+
+  .zoom-container__loop-icon {
+    top: 14px;
+    right: 14px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .zoom-container {
+    margin-bottom: 15px;
+  }
+
+  .zoom-container__loop-icon {
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .zoom-container__loop-icon {
+    top: 12px;
+    right: 12px;
+    width: 38px;
+    height: 38px;
+  } 
+
+  .zoom-container__arrow {
+    display: block;
+  }
+
+  .zoom-container__image {
+    max-height: 470px;
+  }
+
+  .zoom-container {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .zoom-container__loop-icon {
+    top: 8px;
+    right: 8px;
+    width: 24px;
+    height: 24px;
+  } 
+
+  .zoom-container__image {
+    max-height: 300px;
+  }
+}

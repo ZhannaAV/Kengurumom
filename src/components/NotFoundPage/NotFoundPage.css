@@ -1,0 +1,27 @@
+.not-found {
+  margin: 0 auto;
+  padding: 30px 0 154px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.not-found__title {
+  margin: 0 0 54px 0;
+  padding: 0;
+  text-align: center;
+  color: #dc8962;
+  font-size: 30px;
+  line-height: 37px;
+  font-weight: 600;
+}
+
+.not-found__img {
+  max-width: 451px;
+  width: 100%;
+  object-position: center;
+  object-fit: contain;
+  margin: 54px 0;
+  padding: 0;
+}

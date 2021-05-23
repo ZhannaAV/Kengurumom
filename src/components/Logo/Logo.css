@@ -1,0 +1,29 @@
+.logo {
+    min-width: 170px;
+    height: 62px;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    background-image: url(../../images/icons/header-logo.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity .26s ease-in-out;
+}
+
+.logo:hover {
+    opacity: .8;
+}
+
+.logo_type_light {
+    background-image: url(../../images/icons/footer-logo.svg);
+}
+
+@media screen and (max-width: 768px){
+  .logo {
+    min-width: 130px;
+    height: 47px;
+    background-size: contain;
+  }
+}
