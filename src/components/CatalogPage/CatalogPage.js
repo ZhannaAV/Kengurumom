@@ -12,7 +12,7 @@ function CatalogPage({ products, onPopupAddCartOpen }) {
     <section className="catalog">
       <h1 className="catalog__title">Каталог</h1>
       <div className="catalog__categories-line">
-        <nav className="catalog__categories">
+        {/* <nav className="catalog__categories">
           {catalogCategories.map((link, i) => (
             <NavLink
               activeClassName="selected"
@@ -23,7 +23,7 @@ function CatalogPage({ products, onPopupAddCartOpen }) {
               {link[0]}
             </NavLink>
           ))}
-        </nav>
+        </nav> */}
       </div>
       <Switch>
         <Route exact path={path}>

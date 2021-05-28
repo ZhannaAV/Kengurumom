@@ -15,7 +15,12 @@ function CategoryPage({ products, onPopupAddCartOpen }) {
       </select>
       <div className="catalog__products">
         {currentArr.map((product) => (
-          <PopularItem {...product} key={product.id} onPopupAddCartOpen={onPopupAddCartOpen} />
+          <PopularItem
+            {...product}
+            key={product.id}
+            component={"catalog"}
+            onPopupAddCartOpen={onPopupAddCartOpen}
+          />
         ))}
       </div>
       <button className="button catalog__pagination">Показать еще</button>

@@ -39,12 +39,8 @@ export default function Popular({media, products, onPopupAddCartOpen}){
     <section className="popular">
       <h2 className="popular__title">Популярное</h2>
       <SlickSlider className="content-slider" slides={slides} showArrows={showArrows} arrowType="popular">
-        {/* {popularConfig.map((item) => (
-          <PopularItem {...item} key={item.title} />
-        ))} */}
-
         {products.slice(0,6).map((item) => (
-          <PopularItem {...item} key={item.id} onPopupAddCartOpen={onPopupAddCartOpen}/>
+          <PopularItem {...item} key={item.id} component={"popular"} onPopupAddCartOpen={onPopupAddCartOpen}/>
         ))}
       </SlickSlider>
     </section>
