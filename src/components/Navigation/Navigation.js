@@ -103,12 +103,12 @@ function Navigation({ media, type, openCatalogueMenu, closeCatalogueMenu }) {
         </Link>
       )}
       {type === "footer" && (
-        <Link className="navigation__link_type_footer navigation__link_underlined" to={OFFER_PAGE}>
+        <Link className="navigation__link_type_footer navigation__link_underlined" to={OFFER_PAGE} target="_blank" rel="noopener noreferrer">
           {OFFER_TEXT}
         </Link>
       )}
       {type === "footer" && (
-        <Link className="navigation__link_type_footer navigation__link_underlined" to={TERMS_OF_USE_PAGE}>
+        <Link className="navigation__link_type_footer navigation__link_underlined" to={TERMS_OF_USE_PAGE} target="_blank" rel="noopener noreferrer">
           {TERMS_OF_USE_TEXT}
         </Link>
       )}

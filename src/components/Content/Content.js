@@ -10,6 +10,7 @@ import {
   OFFER_PAGE,
   TERMS_OF_USE_PAGE,
   PRODUCT_PAGE,
+  ORDER_SUCCESS_PAGE,
 } from '../../config/links';
 import MainPage from '../MainPage/MainPage';
 import AboutPage from '../AboutPage/AboutPage';
@@ -22,6 +23,7 @@ import ProductPage from '../ProductPage/ProductPage';
 import {exampleArrProducts} from '../../config/constants';
 import BreadCrumbs from "../BreadCrumbs/BreadCrumbs";
 import ContactsPage from "../ContactsPage/ContactsPage";
+import OrderSuccessPage from '../OrderSuccessPage/OrderSuccessPage';
 
 function Content(props) {
   const { media, onPopupCareOpen, onPopupAddCartOpen } = props;
@@ -70,6 +72,10 @@ function Content(props) {
             onPopupCareOpen={onPopupCareOpen}
             onPopupAddCartOpen={onPopupAddCartOpen}
           />
+        </Route>
+
+        <Route exact path={`${ORDER_SUCCESS_PAGE}/:id`}>
+          <OrderSuccessPage />
         </Route>
 
       {/* use for test !!! */}
