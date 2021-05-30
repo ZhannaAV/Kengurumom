@@ -1,21 +1,19 @@
 import {
-  DOCUMENT_OFFER_TITLE,
-  DOCUMENT_TERMS_OF_USE_TITLE,
   DOCUMENT_OFFER_CONTENT,
   DOCUMENT_TERMS_OF_USE_CONTENT,
 } from "./texts";
 import "./DocumentPage.css";
 
-export default function DocumentPage(props) {
+export default function DocumentPage({type}) {
   return (
     <div className="document__container">
       <h2 className="document__title">
-        {props.type === "offer" && DOCUMENT_OFFER_TITLE}
-        {props.type === "terms-of-use" && DOCUMENT_TERMS_OF_USE_TITLE}
+        {type === "offer" && "Оферта"}
+        {type === "terms-of-use" && "Политика в отношении обработки персональных данных"}
       </h2>
       <div className="document__content">
-        {props.type === "offer" && DOCUMENT_OFFER_CONTENT}
-        {props.type === "terms-of-use" && (
+        {type === "offer" && DOCUMENT_OFFER_CONTENT}
+        {type === "terms-of-use" && (
           <ul className="document__items">
             {DOCUMENT_TERMS_OF_USE_CONTENT.map((mainItem) => (
               <li className="document__item">

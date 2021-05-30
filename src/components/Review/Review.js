@@ -1,41 +1,15 @@
-import React from 'react';
+import {useState, useEffect} from 'react';
 import "./Review.css";
 
-import review_popovadaria from '../../images/review_popovadaria.png';
-import review_kateiva from '../../images/review_kateiva.png';
-import review_dsai_love from '../../images/review_dsai_love.png';
+import reviewConfig from './test_items';
 
 import ReviewItem from '../../components/ReviewItem/ReviewItem';
 import SlickSlider from '../SharedComponents/Slider/SlickSlider';
 
-//temp config. replace it with tests
-const reviewConfig = [
-  {
-    instaTitle: 'popovadaria',
-    instaLink: 'https://www.instagram.com/popovadaria/',
-    instaSrc: review_popovadaria,
-    reviewShort: 'Не устану любить эти подгузники, а они меня в ответ: выпуском серии натуральной детской косметики с любимой лавандой, которая в самые',
-    reviewFull: '',
-  },
-  {
-    instaTitle: 'kate.iva',
-    instaLink: 'https://www.instagram.com/kate.iva/',
-    instaSrc: review_kateiva,
-    reviewShort: 'Супер качество, стильный дизайн, а главное нежность и мягкость для моего ребёнка! Теперь я точно не переживаю за сон своей дочки. Очень',
-    reviewFull: '',
-  },
-  {
-    instaTitle: 'dsai_lov',
-    instaLink: 'https://www.instagram.com/dsai_lov/',
-    instaSrc: review_dsai_love,
-    reviewShort: 'Подгузники ооочень мягкие и тонкие, запаха химического нет никакого, впитывают отлично, высокая посадка и отлично сидят на малыше. Что',
-    reviewFull: '',
-  },
-];
-
-export default function Review(props){
-  const [width, setWidth] = React.useState(window.innerWidth);
-  const [slides, setSlides] = React.useState(3);
+export default function Review({media}){
+  const [width, setWidth] = useState(window.innerWidth);
+  const [slides, setSlides] = useState( media.isDesktop ? 3 : media.isTabletVert ? 2 : 1);
+  const [showArrows, setShowArrows] = useState(media.isDesktop ? true : false)
 
   const updateWidth = () => {
     setWidth(window.innerWidth)
@@ -50,15 +24,23 @@ export default function Review(props){
     }
   };
 
-  React.useEffect(() => {
+  const updateShowArrows = () => { width > 1200 ? setShowArrows(true) : setShowArrows(false) }
+
+  useEffect(() => {
+    updateWidth();
+    updateShowArrows();
     window.addEventListener("resize", updateWidth);
-    return () => window.removeEventListener("resize", updateWidth);
+    window.addEventListener("resize", updateShowArrows);
+    return () => {
+      window.removeEventListener("resize", updateWidth);
+      window.removeEventListener("resize", updateShowArrows);
+    };
   });
 
   return (
     <section className="review">
       <h2 className="review__title">Отзывы счастливых мам</h2>
-      <SlickSlider className="content-slider" slides={slides}>
+      <SlickSlider className="content-slider" slides={slides} showArrows={showArrows} arrowType="review">
         {reviewConfig.map(item => (
           <ReviewItem {...item} key={item.instaTitle}/>
         ))}

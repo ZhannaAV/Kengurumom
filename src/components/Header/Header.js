@@ -5,7 +5,7 @@ import Logo from '../Logo/Logo';
 import Navigation from '../Navigation/Navigation';
 import './Header.css';
 
-function Header({ media, openSideMenu }) {
+function Header({ media, openSideMenu, cartItems }) {
 
 	const [isCatMenuOpnd, setIsCatMenuOpnd] = useState(false);
 
@@ -36,7 +36,7 @@ function Header({ media, openSideMenu }) {
 							isCatMenuOpnd={isCatMenuOpnd}
 						/>
 				}
-				<Basket />
+				<Basket cartItems={cartItems}/>
 				{
 					media.isLaptop 
 						&& 	<button 

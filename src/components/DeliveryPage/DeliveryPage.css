@@ -4,7 +4,6 @@
     margin: auto;
     box-sizing: border-box;
     padding-bottom: 89px;
-    padding-top: 30px;
 }
 
 .delivery__title {
@@ -13,6 +12,7 @@
     font-weight: 600;
     font-size: 30px;
     line-height: 37px;
+    margin: 0;
 }
 
 .delivery__world-title {

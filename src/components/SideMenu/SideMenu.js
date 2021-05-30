@@ -11,14 +11,14 @@ function SideMenu({
 
 		<div className={cn("side-menu", {"side-menu_invisible": !isOpened} )} >
 
-            <div className={cn("side-menu__overlay", { "side-menu__overlay_invisible": !isOpened} )} onClick={onCloseClick} ></div>
+            <div className={cn("side-menu__overlay", { "side-menu__overlay_invisible": !isOpened} )} onClick={onCloseClick}/>
 			<div className={cn("side-menu__container", { "side-menu__container_opened": isOpened } )}>
                 <div className="side-menu__top">
                     {
                         media.isMobileHor
                         &&  <Logo type='light' />
                     }    
-                    <button type="button" className="side-menu__close-button" onClick={onCloseClick}></button>
+                    <button type="button" className="side-menu__close-button" onClick={onCloseClick}/>
                 </div>
                 
 				<Navigation

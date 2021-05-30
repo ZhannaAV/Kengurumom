@@ -5,7 +5,7 @@ import StyledText from '../StyledText/StyledText';
 import {photoAbout} from './constants';
 import {ABOUT} from './texts';
 
-export default function AboutPage(props) {
+function AboutPage() {
   return(
     <section className='about-page'>
       <h2 className='about-page__title'>О бренде</h2>
@@ -25,3 +25,5 @@ export default function AboutPage(props) {
     </section>
   );
 }
+
+export default AboutPage;
