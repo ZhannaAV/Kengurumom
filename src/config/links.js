@@ -8,6 +8,7 @@ export const CONTACTS_PAGE = '/contacts';
 export const BASKET_PAGE = '/basket';
 export const PRESENT_PAGE = '/present';
 export const PRODUCT_PAGE = '/product';
+export const ORDER_SUCCESS_PAGE = '/order-success';
 
 // catalogue links
 export const catalogueLinks = [
