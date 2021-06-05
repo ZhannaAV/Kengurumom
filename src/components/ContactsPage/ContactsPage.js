@@ -9,15 +9,15 @@ function ContactsPage(){
     <ul className="contacts__data">
       <li className="contacts__item">
         <h3 className="contacts__item-title">Телефон</h3>
-        <p className="contacts__phone">+7 964 589 06 96</p>
+        <a href="tel:+79645890696" className="contacts__link">+7 964 589 06 96</a>
       </li>
       <li className="contacts__item">
         <h3 className="contacts__item-title">Instagram</h3>
-        <Link to='/' className="contacts__link">kenguru.mom</Link>
+        <a href="#" target="_blank" className="contacts__link">kenguru.mom</a>
       </li>
       <li className="contacts__item">
         <h3 className="contacts__item-title">Почта</h3>
-        <Link to='/' className="contacts__link">kenguru.mom@gmail.com</Link>
+        <a href="mailto:kenguru.mom@gmail.com" className="contacts__link">kenguru.mom@gmail.com</a>
       </li>
     </ul>
     <form className="contacts__form">
@@ -25,7 +25,7 @@ function ContactsPage(){
       <fieldset className="contacts__fieldset">
         <input type="text" className="contacts__input" placeholder="Имя"/>
         <input type="phone" className="contacts__input" placeholder="Телефон"/>
-        <textarea className="contacts__input contacts__textarea" placeholder="Текст"/>
+        <textarea className="contacts__input contacts__textarea" placeholder="Ваше сообщение"/>
       </fieldset>
       <Button type="submit" text="Отправить" btnStyle="button_type_contacts"/>
       <fieldset className="contacts__fieldset">
