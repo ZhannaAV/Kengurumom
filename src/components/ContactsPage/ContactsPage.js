@@ -1,5 +1,4 @@
 import './ContactsPage.css'
-import {Link} from 'react-router-dom'
 import Button from "../Button/Button";
 function ContactsPage(){
   return (
@@ -9,15 +8,15 @@ function ContactsPage(){
     <ul className="contacts__data">
       <li className="contacts__item">
         <h3 className="contacts__item-title">Телефон</h3>
-        <p className="contacts__phone">+7 964 589 06 96</p>
+        <a href="tel:+79645890696" className="contacts__link">+7 964 589 06 96</a>
       </li>
       <li className="contacts__item">
         <h3 className="contacts__item-title">Instagram</h3>
-        <Link to='/' className="contacts__link">kenguru.mom</Link>
+        <a href="#" target="_blank" className="contacts__link">kenguru.mom</a>
       </li>
       <li className="contacts__item">
         <h3 className="contacts__item-title">Почта</h3>
-        <Link to='/' className="contacts__link">kenguru.mom@gmail.com</Link>
+        <a href="mailto:kenguru.mom@gmail.com" className="contacts__link">kenguru.mom@gmail.com</a>
       </li>
     </ul>
     <form className="contacts__form">
@@ -25,11 +24,11 @@ function ContactsPage(){
       <fieldset className="contacts__fieldset">
         <input type="text" className="contacts__input" placeholder="Имя"/>
         <input type="phone" className="contacts__input" placeholder="Телефон"/>
-        <textarea className="contacts__input contacts__textarea" placeholder="Текст"/>
+        <textarea className="contacts__input contacts__textarea" placeholder="Ваше сообщение"/>
       </fieldset>
       <Button type="submit" text="Отправить" btnStyle="button_type_contacts"/>
       <fieldset className="contacts__fieldset">
-        <label form="terms" className="contacts__label"><input id="terms" type="checkbox" className="contacts__checkbox"/>Я принимаю условия <Link className="contacts__terms-link" to="/terms-of-use">Политики конфиденциальности</Link></label>
+        <label form="terms" className="contacts__label"><input id="terms" type="checkbox" className="contacts__checkbox"/>Я принимаю условия <a className="contacts__terms-link" href="/terms-of-use" target="_blank" >Политики конфиденциальности</a></label>
       </fieldset>
     </form>
   </div>
