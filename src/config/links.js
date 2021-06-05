@@ -6,7 +6,7 @@ export const CATALOGUE_PAGE = '/catalog';
 export const DELIVERY_PAGE = '/delivery';
 export const CONTACTS_PAGE = '/contacts';
 export const BASKET_PAGE = '/basket';
-export const PRESENT_PAGE = '/present';
+export const PRESENT_PAGE = '/gift-certificate';
 export const PRODUCT_PAGE = '/product';
 export const ORDER_SUCCESS_PAGE = '/order-success';
 
@@ -47,7 +47,8 @@ export const pathTranslate = {
   'milksnuds': 'Милкснуды',
   'knitted-blankets': 'Вязаные пледы',
   'organizers': 'Органайзеры для детских вещей',
-  'gift-certificate': 'Подарочный сертификат'
+  'gift-certificate': 'Подарочный сертификат',
+  'terms-of-use': 'Политика конфиденциальности'
 }
 
 // footer links

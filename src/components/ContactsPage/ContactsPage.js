@@ -1,5 +1,4 @@
 import './ContactsPage.css'
-import {Link} from 'react-router-dom'
 import Button from "../Button/Button";
 function ContactsPage(){
   return (
@@ -29,7 +28,7 @@ function ContactsPage(){
       </fieldset>
       <Button type="submit" text="Отправить" btnStyle="button_type_contacts"/>
       <fieldset className="contacts__fieldset">
-        <label form="terms" className="contacts__label"><input id="terms" type="checkbox" className="contacts__checkbox"/>Я принимаю условия <Link className="contacts__terms-link" to="/terms-of-use">Политики конфиденциальности</Link></label>
+        <label form="terms" className="contacts__label"><input id="terms" type="checkbox" className="contacts__checkbox"/>Я принимаю условия <a className="contacts__terms-link" href="/terms-of-use" target="_blank" >Политики конфиденциальности</a></label>
       </fieldset>
     </form>
   </div>
