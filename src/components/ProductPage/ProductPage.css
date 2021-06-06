@@ -235,17 +235,7 @@
   }
 }
 
-@media screen and (max-width: 480px) {
-  .product {
-    padding-top: 130px;
-  }
-}
-
 @media screen and (max-width: 320px) {
-  .product {
-    padding-bottom: 50px;
-  }
-
   .product__title {
     max-width: 200px;
     font-size: 20px;

@@ -80,9 +80,3 @@
   line-height: 140%;
   color: #dc8962;
 }
-
-@media screen and (max-width: 480px) {
-  .catalog {
-    padding-top: 100px;
-  }
-}
