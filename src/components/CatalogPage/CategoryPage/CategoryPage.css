@@ -67,7 +67,6 @@
 .catalog__products {
   width: 100%;
   display: grid;
-  /* grid-template-columns: repeat(4, 1fr); */
   grid-template-columns: repeat(auto-fit, minmax(268px, 1fr));
   gap: 50px 30px;
   margin-bottom: 50px;

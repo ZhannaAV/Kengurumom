@@ -53,3 +53,11 @@
   outline: none;
   background-color: #fff;
 }
+
+.slick-slider-arrow_type_menu {
+  transform: translate(0, -50%);
+  border: 1px solid #FAF1E9;
+  border-radius: 50%;
+  outline: none;
+  background-color: #FAF1E9;
+}

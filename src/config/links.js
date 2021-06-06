@@ -29,8 +29,10 @@ export const catalogCategories = [
   ['Пелёнки и пледы', 'napkins'],
   ['Слюнявчики и грызунки', 'bibs'],
   ['Милкснуды', 'milksnuds'],
+  ['Вязаные пледы', 'knitted-blankets'],
   [`Органайзеры для${'\u00A0'}детских${'\u00A0'}вещей`, 'organizers'],
-  ['Подарочный сертификат', 'gift-certificate'],
+  ['Конверты на выписку', 'envelops'],
+  [`Подарочный${'\u00A0'}сертификат`, 'gift-certificate'],
 ];
 
 export const pathTranslate = {

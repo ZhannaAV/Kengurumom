@@ -1,6 +1,6 @@
-import {useEffect} from 'react';
-import './Content.css'
-import {Route, Switch, useLocation} from 'react-router-dom';
+import { useEffect } from 'react';
+import './Content.css';
+import { Route, Switch, useLocation } from 'react-router-dom';
 import {
   MAIN_PAGE,
   ABOUT_PAGE,
@@ -27,42 +27,46 @@ import OrderSuccessPage from '../OrderSuccessPage/OrderSuccessPage';
 
 function Content(props) {
   const { media, onPopupCareOpen, onPopupAddCartOpen } = props;
-  
-  const {pathname} = useLocation();
+
+  const { pathname } = useLocation();
   useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [pathname])
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   return (
     <main className="content">
-      {pathname !== MAIN_PAGE && (<BreadCrumbs/>)}
+      {pathname !== MAIN_PAGE && <BreadCrumbs />}
       <Switch>
         <Route exact path={MAIN_PAGE}>
-          <MainPage media={media} onPopupAddCartOpen={onPopupAddCartOpen}/>
+          <MainPage media={media} onPopupAddCartOpen={onPopupAddCartOpen} />
         </Route>
 
         <Route path={ABOUT_PAGE}>
-          <AboutPage/>
+          <AboutPage />
         </Route>
 
         <Route path={OFFER_PAGE}>
-          <DocumentPage type="offer"/>
+          <DocumentPage type="offer" />
         </Route>
 
         <Route path={TERMS_OF_USE_PAGE}>
-          <DocumentPage type="terms-of-use"/>
+          <DocumentPage type="terms-of-use" />
         </Route>
 
         <Route path={DELIVERY_PAGE}>
-          <DeliveryPage/>
+          <DeliveryPage />
         </Route>
 
         <Route path={CONTACTS_PAGE}>
-          <ContactsPage/>
+          <ContactsPage />
         </Route>
 
         <Route path={CATALOGUE_PAGE}>
-          <CatalogPage products={exampleArrProducts} onPopupAddCartOpen={onPopupAddCartOpen}/>
+          <CatalogPage
+            media={media}
+            products={exampleArrProducts}
+            onPopupAddCartOpen={onPopupAddCartOpen}
+          />
         </Route>
 
         <Route exact path={`${PRODUCT_PAGE}/:id`}>
@@ -94,7 +98,7 @@ function Content(props) {
       </Route>
 
         <Route path="*">
-          <NotFoundPage/>
+          <NotFoundPage />
         </Route>
       </Switch>
     </main>

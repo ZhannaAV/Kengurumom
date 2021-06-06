@@ -17,6 +17,9 @@ export default function SlickSliderArrow({left = false, right = false, type, onC
     else if (type === 'review') {
       link = linkLeftAngle
     }
+    else if (type === 'menu') {
+      link = linkLeftAngle
+    }
     className = 'slick-slider-arrow_left';
   }
   if (right) {
@@ -24,6 +27,9 @@ export default function SlickSliderArrow({left = false, right = false, type, onC
       link = linkRight;
     }
     else if (type === 'review') {
+      link = linkRightAngle;
+    }
+    else if (type === 'menu') {
       link = linkRightAngle;
     }
     className = 'slick-slider-arrow_right';
