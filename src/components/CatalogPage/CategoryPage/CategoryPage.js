@@ -1,6 +1,7 @@
 import './CategoryPage.css';
 import { useParams } from 'react-router-dom';
 import PopularItem from '../../PopularItem/PopularItem';
+import CustomSelect from '../../CustomSelect/CustomSelect';
 
 function CategoryPage({ products, onPopupAddCartOpen }) {
   let { category } = useParams();
@@ -10,15 +11,19 @@ function CategoryPage({ products, onPopupAddCartOpen }) {
 
   return (
     <div className="catalog__wrapper">
-      <select className="catalog__sort" id="" name="">
-        <option value="0-3">0-3 мес (55 см)</option>
-      </select>
+      <div className="catalog__sort">
+        <CustomSelect
+          page="category"
+          options={['Цена по убыванию', 'Цена по возрастанию']}
+          startValue="Сортировать:"
+        />
+      </div>
       <div className="catalog__products">
         {currentArr.map((product) => (
           <PopularItem
             {...product}
             key={product.id}
-            component={"catalog"}
+            component={'catalog'}
             onPopupAddCartOpen={onPopupAddCartOpen}
           />
         ))}

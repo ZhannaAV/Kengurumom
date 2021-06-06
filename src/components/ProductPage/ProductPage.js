@@ -1,8 +1,9 @@
 import './ProductPage.css';
 import ProdGallery from './ProdGallery/ProdGallery';
 import { useParams } from 'react-router-dom';
+import CustomSelect from '../CustomSelect/CustomSelect';
 
-function ProductPage({ products, media, onPopupCareOpen, onPopupAddCartOpen}) {
+function ProductPage({ products, media, onPopupCareOpen, onPopupAddCartOpen }) {
   let { id } = useParams();
   const product = products.find((product) => product.id === id);
 
@@ -15,7 +16,7 @@ function ProductPage({ products, media, onPopupCareOpen, onPopupAddCartOpen}) {
       price: product.sale ? 
         Math.floor(product.price - (product.price * product.sale) / 100) : product.price
     });
-  }
+  };
 
   return (
     <section className="product">
@@ -37,17 +38,14 @@ function ProductPage({ products, media, onPopupCareOpen, onPopupAddCartOpen}) {
         </div>
         <div className="product__specification-box">
           <p className="product__text">Размер:</p>
-          <select
-            className="select-custom"
-            id="product-clothes-size"
-            name="clothes-size"
-          >
-            <option value="0-3">0-3 мес (55 см)</option>
-            <option value="3-6">3-6 мес (65 см)</option>
-            <option value="7-12">7-12 мес (77 см)</option>
-          </select>
+          <CustomSelect options={product.sizes} startValue="Выбрать..." />
         </div>
-        <button className="button button_type_add-to-card" onClick={handlePopupAddCartOpen}>В корзину</button>
+        <button
+          className="button button_type_add-to-card"
+          onClick={handlePopupAddCartOpen}
+        >
+          В корзину
+        </button>
         <div className="product__specification-box">
           <p className="product__text">Рекомендуемый возраст:</p>
           <p className="product__text" id="product-recommended-age">
