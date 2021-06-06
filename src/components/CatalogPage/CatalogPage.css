@@ -17,7 +17,7 @@
   margin: 0 0 40px;
   padding: 0;
   width: 100%;
-  min-height: 150px;
+  min-height: max-content;
   background-color: #faf1e9;
   display: flex;
 }
