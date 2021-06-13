@@ -5,8 +5,8 @@ import './Basket.css';
 function Basket({ cartItems, onDeleteCartItem }) {
   const [isPopupBasketOpened, setIsPopupBasketOpened] = useState(false);
 
-  const handlePopupBasketOpen = () => {
-    setIsPopupBasketOpened(true);
+  const handlePopupBasketToggle = () => {
+    setIsPopupBasketOpened(!isPopupBasketOpened);
   };
   const handlePopupBasketClose = () => {
     setIsPopupBasketOpened(false);
@@ -24,7 +24,7 @@ function Basket({ cartItems, onDeleteCartItem }) {
         onDeleteCartItem={onDeleteCartItem}
         onClose={handlePopupBasketClose}
       />
-      <div className='basket__icon' onClick={handlePopupBasketOpen}></div>
+      <div className='basket__icon' onClick={handlePopupBasketToggle}></div>
       {cartItems && cartItems.length > 0 && (
         <div className='basket__count'>{getTotalCartItems()}</div>
       )}
