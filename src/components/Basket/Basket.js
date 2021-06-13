@@ -1,9 +1,16 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import PopupBasket from '../PopupBasket/PopupBasket';
 import './Basket.css';
 
 function Basket({ cartItems, onDeleteCartItem }) {
   const [isPopupBasketOpened, setIsPopupBasketOpened] = useState(false);
+
+  const location = useLocation();
+
+  useEffect(() => {
+    setIsPopupBasketOpened(false);
+  }, [location]);
 
   const handlePopupBasketToggle = () => {
     setIsPopupBasketOpened(!isPopupBasketOpened);
