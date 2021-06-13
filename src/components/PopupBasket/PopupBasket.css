@@ -79,7 +79,12 @@
   content:' \20BD';
 }
 
-.popup-basket__items {}
+.popup-basket__items {
+  overflow-y: auto;
+  max-height: 400px;
+  scrollbar-width: thin;
+  padding-right: 5px;
+}
 
 .popup-basket__item {
   margin: 0;
