@@ -1,13 +1,18 @@
 .header {
     position: fixed;
-    top: 0;
+    top: -130px;
     left: 0;
     width: 100%;
-    margin: 0;
+    margin: 130px 0 0 0;
     z-index: 10;
     background-color: rgba(255, 255, 255, .9);
     border-bottom: solid 1px #ccc;
+    transition: margin-top ease-in .3s;
 }
+
+.header_sticky_hide {
+    margin-top: 0;
+  }
 
 .header-dummy {
     width: 100%;
