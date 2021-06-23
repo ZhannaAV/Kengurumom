@@ -3,10 +3,11 @@ import Basket from '../Basket/Basket';
 import CatalogueMenu from '../CatalogueMenu/CatalogueMenu';
 import Logo from '../Logo/Logo';
 import Navigation from '../Navigation/Navigation';
+import useScrollPosition from './useScrollPosition';
 import './Header.css';
 
 function Header({ media, openSideMenu, cartItems, onDeleteCartItem }) {
-
+	const [isVisible, setIsBeVisible] = useState(false);
 	const [isCatMenuOpnd, setIsCatMenuOpnd] = useState(false);
 
 
@@ -20,10 +21,18 @@ function Header({ media, openSideMenu, cartItems, onDeleteCartItem }) {
 		document.removeEventListener('click', hideCatalogue);
 	};
 
+	useScrollPosition(
+    ({ previousPos, currentPos }) => {
+      const _isVisible = currentPos.y < previousPos.y;
+      if (_isVisible !== isVisible) setIsBeVisible(_isVisible);
+    },
+    [isVisible]
+  );
+
 	return (
 		<>
 		<div className="header-dummy"></div>
-		<header className="header">
+		<header className={`header ${isVisible ? 'header_sticky_hide' : ''}`}>
 			<div className="header__content">
 				<Logo />
 				<Navigation
