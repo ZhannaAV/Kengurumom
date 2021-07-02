@@ -1,7 +1,7 @@
 import './CatalogPage.css';
 import { catalogCategories } from '../../config/links';
 import { NavLink, Route, Switch, useRouteMatch } from 'react-router-dom';
-import CategoryPage from '../CategoryPage/CategoryPage';
+import CategoryPage from './CategoryPage/CategoryPage';
 
 function CatalogPage({ products, onPopupAddCartOpen }) {
   let { path, url } = useRouteMatch();

@@ -1,4 +1,4 @@
-import Slider from "../TopSlider/TopSlider";
+import TopSlider from "../TopSlider/TopSlider";
 import Popular from "../Popular/Popular";
 import Advantages from "../Advantages/Advantages";
 import SectionsWithBtn from "../SectionsWithBtn/SectionsWithBtn";
@@ -11,7 +11,7 @@ function MainPage(props) {
   const {media, onPopupAddCartOpen} = props
   return (
     <>
-      <Slider media={media}/>
+      <TopSlider media={media}/>
       <Popular media={media} products={exampleArrProducts} onPopupAddCartOpen={onPopupAddCartOpen}/>
       <Advantages/>
       <SectionsWithBtn/>
