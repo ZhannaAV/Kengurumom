@@ -5,11 +5,7 @@ import Button from '../Button/Button';
 import {deleteIcon} from './constants';
 import { Link } from 'react-router-dom';
 
-<<<<<<< HEAD
-export default function PopupBasket({isOpened, cartItems, onClose}) {
-=======
 export default function PopupBasket({isOpened, cartItems, onClose, onDeleteCartItem}) {
->>>>>>> 178ba0a90685f3fa1191f68570bfe0be4b29e479
   const [summaryPrice, setSummaryPrice] = useState(0);
   const [items, setItems] = useState(cartItems || []);
   const visibilityClass = isOpened ? 'popup-basket_visible' : '';
@@ -22,11 +18,7 @@ export default function PopupBasket({isOpened, cartItems, onClose, onDeleteCartI
   }
 
   const handleDelete = item => {
-<<<<<<< HEAD
-    // setItems(items.filter(e => {return e.title !== item.title}))
-=======
     onDeleteCartItem(item);
->>>>>>> 178ba0a90685f3fa1191f68570bfe0be4b29e479
   }
 
   const resetItemsNum = (inputItems) => {    

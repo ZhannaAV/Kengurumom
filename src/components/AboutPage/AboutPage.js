@@ -5,11 +5,7 @@ import StyledText from '../StyledText/StyledText';
 import {photoAbout} from './constants';
 import {ABOUT} from './texts';
 
-<<<<<<< HEAD
-function AboutPage() {
-=======
 export default function AboutPage() {
->>>>>>> 178ba0a90685f3fa1191f68570bfe0be4b29e479
   return(
     <section className='about-page'>
       <h2 className='about-page__title'>О бренде</h2>
@@ -28,10 +24,4 @@ export default function AboutPage() {
       }
     </section>
   );
-<<<<<<< HEAD
 }
-
-export default AboutPage;
-=======
-}
->>>>>>> 178ba0a90685f3fa1191f68570bfe0be4b29e479

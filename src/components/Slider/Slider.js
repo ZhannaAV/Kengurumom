@@ -1,11 +1,11 @@
-import './TopSlider.css';
+import './Slider.css';
 import slider1 from '../../images/slider/photo-on-slider-1.jpg';
 import slider2 from '../../images/slider/photo-on-slider-2.jpg';
 // import { useState } from 'react';
 // import cn from 'classnames';
 import Button from "../Button/Button";
 
-function TopSlider() {
+function Slider() {
 
 	// const [isFirstSlide, setIsFirstSlide] = useState(true);
 
@@ -57,4 +57,4 @@ function TopSlider() {
     );
 }
 
-export default TopSlider;
+export default Slider;

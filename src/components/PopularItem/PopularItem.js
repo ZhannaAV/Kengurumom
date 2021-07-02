@@ -16,11 +16,6 @@ import { Link, useHistory } from 'react-router-dom';
 // }
 
 //'new' prop is reserved, rename to isNew
-<<<<<<< HEAD
-export default function PopularItem({id, photos, name, price, sale = false, new: isNew = false, onPopupAddCartOpen}) {
-  let history = useHistory();
-  
-=======
 export default function PopularItem({
   id,
   photos,
@@ -33,39 +28,12 @@ export default function PopularItem({
 }) {
   let history = useHistory();
 
->>>>>>> 178ba0a90685f3fa1191f68570bfe0be4b29e479
   const handleClick = () => {
     history.push(`${PRODUCT_PAGE}/${id}`);
   };
 
   const handlePopupAddCartOpen = () => {
     onPopupAddCartOpen({
-<<<<<<< HEAD
-      src: photos[0],
-      title: name,
-      price: sale ? Math.floor(price - (price * sale) / 100) : price
-    });
-  }
-
-  return (
-    <figure className={`popular__item ${isNew && 'popular__item_new'}`}>
-      <img
-        onClick={handleClick}
-        src={photos?.[0]}
-        alt={name}
-        className="popular__item-img"
-      />
-      <button className="popular__item-cart" alt="В корзину" onClick={handlePopupAddCartOpen}></button>
-      {/* <figcaption className="popular__item-title">{name}</figcaption> */}
-      <Link className="popular__item-title" to={`${PRODUCT_PAGE}/${id}`}>
-        {name}
-      </Link>
-      <div className="popular__item-price">
-        {sale ? Math.floor(price - (price * sale) / 100) : price}
-        {sale && (
-          <p className="popular__item-price-sale">{price}</p>
-        )}
-=======
       id: id,
       src: photos[0],
       title: name,
@@ -96,7 +64,6 @@ export default function PopularItem({
       <div className={`${component}__item-price`}>
         {sale ? Math.floor(price - (price * sale) / 100) : price}
         {sale && <p className={`${component}__item-price-sale`}>{price}</p>}
->>>>>>> 178ba0a90685f3fa1191f68570bfe0be4b29e479
       </div>
     </figure>
   );

@@ -58,8 +58,6 @@
   position: absolute;
   top: 30px;
   right: 30px;
-<<<<<<< HEAD
-=======
 }
 
 @media screen and (max-width: 1024px) {
@@ -102,5 +100,4 @@
   .popup-care {
     padding: 62px 18px 37px 9px;
   }
->>>>>>> 178ba0a90685f3fa1191f68570bfe0be4b29e479
 }

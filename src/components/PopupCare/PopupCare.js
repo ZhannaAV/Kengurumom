@@ -1,11 +1,7 @@
 import React from 'react';
 import './PopupCare.css';
 import Dialog from '@material-ui/core/Dialog';
-<<<<<<< HEAD
-import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-=======
 import { ThemeProvider, createMuiTheme, makeStyles } from '@material-ui/core/styles';
->>>>>>> 178ba0a90685f3fa1191f68570bfe0be4b29e479
 import {popupCareIcons, popupClose} from './constants';
 
 //change main color
@@ -22,26 +18,6 @@ const theme = createMuiTheme({
         borderRadius: '20px',
       }
     },
-<<<<<<< HEAD
-    MuiDialog: {
-      paperWidthSm: {
-        width: "100%",
-        maxWidth: "1167px",
-      },
-      paper: {
-        position: "absolute",
-        top: "177px",
-      },
-      paperScrollPaper: {
-        maxHeight: "calc(100% - 177px - 100px)",
-      }
-    }
-  }
-});
-
-export default function PopupCare({isOpened, onClose}){
-  const handleClose = () => {onClose(false)};
-=======
   },
 });
 
@@ -84,16 +60,11 @@ const useStyles = makeStyles(theme => ({
 export default function PopupCare({isOpened, onClose}){
   const handleClose = () => {onClose(false)};
   const classes = useStyles(theme);
->>>>>>> 178ba0a90685f3fa1191f68570bfe0be4b29e479
 
   return (
     <ThemeProvider theme={theme}>
       <Dialog
-<<<<<<< HEAD
-        classes={{paper: 'popup-care'}}
-=======
         classes={classes}
->>>>>>> 178ba0a90685f3fa1191f68570bfe0be4b29e479
         onClose={handleClose}
         aria-labelledby="popup-care"
         open={isOpened || false}>

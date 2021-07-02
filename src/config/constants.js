@@ -278,11 +278,7 @@ export const exampleArrProducts = [
     ],
     new: false,
     sale: undefined,
-<<<<<<< HEAD
-    category: 'napkins',
-=======
     category: 'changing-cocoons',
->>>>>>> 178ba0a90685f3fa1191f68570bfe0be4b29e479
   },
   {
     name: 'Спальник',
@@ -305,11 +301,7 @@ export const exampleArrProducts = [
     ],
     new: true,
     sale: 5,
-<<<<<<< HEAD
-    category: 'organizers',
-=======
     category: 'changing-cocoons',
->>>>>>> 178ba0a90685f3fa1191f68570bfe0be4b29e479
   },
   {
     name: 'Пелёнка-кокон "Авокадо"',

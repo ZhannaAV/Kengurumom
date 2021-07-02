@@ -1,10 +1,5 @@
 .popup-basket {
   position: absolute;
-<<<<<<< HEAD
-  /* width: min-content;
-  max-width: 323px; */
-=======
->>>>>>> 178ba0a90685f3fa1191f68570bfe0be4b29e479
   width: 323px;
   top: 80px;
   right: -10px;
@@ -45,15 +40,12 @@
   }
 }
 
-<<<<<<< HEAD
-=======
 @media screen and (max-width:500px) {
   .popup-basket {
     width: calc(100vw - 125px);
   }
 }
 
->>>>>>> 178ba0a90685f3fa1191f68570bfe0be4b29e479
 .popup-basket_visible {
   visibility: visible;
 }
@@ -87,16 +79,12 @@
   content:' \20BD';
 }
 
-<<<<<<< HEAD
-.popup-basket__items {}
-=======
 .popup-basket__items {
   overflow-y: auto;
   max-height: 400px;
   scrollbar-width: thin;
   padding-right: 5px;
 }
->>>>>>> 178ba0a90685f3fa1191f68570bfe0be4b29e479
 
 .popup-basket__item {
   margin: 0;

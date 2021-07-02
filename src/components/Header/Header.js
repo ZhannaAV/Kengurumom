@@ -6,13 +6,8 @@ import Navigation from '../Navigation/Navigation';
 import useScrollPosition from './useScrollPosition';
 import './Header.css';
 
-<<<<<<< HEAD
-function Header({ media, openSideMenu, cartItems }) {
-
-=======
 function Header({ media, openSideMenu, cartItems, onDeleteCartItem }) {
 	const [isVisible, setIsBeVisible] = useState(false);
->>>>>>> 178ba0a90685f3fa1191f68570bfe0be4b29e479
 	const [isCatMenuOpnd, setIsCatMenuOpnd] = useState(false);
 
 
@@ -51,11 +46,7 @@ function Header({ media, openSideMenu, cartItems, onDeleteCartItem }) {
 							isCatMenuOpnd={isCatMenuOpnd}
 						/>
 				}
-<<<<<<< HEAD
-				<Basket cartItems={cartItems}/>
-=======
 				<Basket onDeleteCartItem={onDeleteCartItem} cartItems={cartItems}/>
->>>>>>> 178ba0a90685f3fa1191f68570bfe0be4b29e479
 				{
 					media.isLaptop 
 						&& 	<button 

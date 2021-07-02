@@ -17,12 +17,9 @@ export default function SlickSliderArrow({left = false, right = false, type, onC
     else if (type === 'review') {
       link = linkLeftAngle
     }
-<<<<<<< HEAD
-=======
     else if (type === 'menu') {
       link = linkLeftAngle
     }
->>>>>>> 178ba0a90685f3fa1191f68570bfe0be4b29e479
     className = 'slick-slider-arrow_left';
   }
   if (right) {
@@ -32,12 +29,9 @@ export default function SlickSliderArrow({left = false, right = false, type, onC
     else if (type === 'review') {
       link = linkRightAngle;
     }
-<<<<<<< HEAD
-=======
     else if (type === 'menu') {
       link = linkRightAngle;
     }
->>>>>>> 178ba0a90685f3fa1191f68570bfe0be4b29e479
     className = 'slick-slider-arrow_right';
   }
 

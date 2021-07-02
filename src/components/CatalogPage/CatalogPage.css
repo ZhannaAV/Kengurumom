@@ -17,11 +17,7 @@
   margin: 0 0 40px;
   padding: 0;
   width: 100%;
-<<<<<<< HEAD
-  min-height: 150px;
-=======
   min-height: max-content;
->>>>>>> 178ba0a90685f3fa1191f68570bfe0be4b29e479
   background-color: #faf1e9;
   display: flex;
 }
@@ -83,8 +79,4 @@
   font-weight: 600;
   line-height: 140%;
   color: #dc8962;
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 178ba0a90685f3fa1191f68570bfe0be4b29e479

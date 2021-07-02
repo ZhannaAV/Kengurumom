@@ -1,12 +1,4 @@
 .header {
-<<<<<<< HEAD
-    position: fixed;
-    width: 100%;
-    margin: 0;
-    z-index: 10;
-    background-color: #fff;
-    border-bottom: solid 1px #ddd;
-=======
   position: fixed;
   top: -130px;
   left: 0;
@@ -26,7 +18,6 @@
   width: 100%;
   margin: 0;
   height: 130px;
->>>>>>> 178ba0a90685f3fa1191f68570bfe0be4b29e479
 }
 
 .header__container {

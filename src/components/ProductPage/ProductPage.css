@@ -235,21 +235,7 @@
   }
 }
 
-<<<<<<< HEAD
-@media screen and (max-width: 480px) {
-  .product {
-    padding-top: 130px;
-  }
-}
-
 @media screen and (max-width: 320px) {
-  .product {
-    padding-bottom: 50px;
-  }
-
-=======
-@media screen and (max-width: 320px) {
->>>>>>> 178ba0a90685f3fa1191f68570bfe0be4b29e479
   .product__title {
     max-width: 200px;
     font-size: 20px;

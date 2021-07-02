@@ -2,13 +2,6 @@ import './CatalogPage.css';
 import { catalogCategories } from '../../config/links';
 import { NavLink, Route, Switch, useRouteMatch } from 'react-router-dom';
 import CategoryPage from './CategoryPage/CategoryPage';
-<<<<<<< HEAD
-
-function CatalogPage({ products, onPopupAddCartOpen }) {
-  let { path, url } = useRouteMatch();
-
-// такая структура временная. попозже я исправлю ее на более подходящую. сейчас просто тест работы
-=======
 import { useState, useEffect } from 'react';
 import SlickSlider from '../SharedComponents/Slider/SlickSlider';
 
@@ -50,15 +43,11 @@ function CatalogPage({ products, onPopupAddCartOpen, media }) {
   });
 
   // такая структура временная. попозже я исправлю ее на более подходящую. сейчас просто тест работы
->>>>>>> 178ba0a90685f3fa1191f68570bfe0be4b29e479
 
   return (
     <section className="catalog">
       <h1 className="catalog__title">Каталог</h1>
       <div className="catalog__categories-line">
-<<<<<<< HEAD
-        <nav className="catalog__categories">
-=======
           <SlickSlider
             className="menu-slider"
             slides={slides}
@@ -77,7 +66,6 @@ function CatalogPage({ products, onPopupAddCartOpen, media }) {
             ))}
           </SlickSlider>
         {/* <nav className="catalog__categories">
->>>>>>> 178ba0a90685f3fa1191f68570bfe0be4b29e479
           {catalogCategories.map((link, i) => (
             <NavLink
               activeClassName="selected"
@@ -88,16 +76,6 @@ function CatalogPage({ products, onPopupAddCartOpen, media }) {
               {link[0]}
             </NavLink>
           ))}
-<<<<<<< HEAD
-        </nav>
-      </div>
-      <Switch>
-        <Route exact path={path}>
-          <CategoryPage products={products} onPopupAddCartOpen={onPopupAddCartOpen}/>
-        </Route>
-        <Route exact path={`${path}/:category`}>
-          <CategoryPage products={products} onPopupAddCartOpen={onPopupAddCartOpen}/>
-=======
         </nav> */}
       </div>
       <Switch>
@@ -112,7 +90,6 @@ function CatalogPage({ products, onPopupAddCartOpen, media }) {
             products={products}
             onPopupAddCartOpen={onPopupAddCartOpen}
           />
->>>>>>> 178ba0a90685f3fa1191f68570bfe0be4b29e479
         </Route>
       </Switch>
     </section>

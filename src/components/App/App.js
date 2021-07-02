@@ -13,40 +13,6 @@ function App() {
   const [popupAddCartItem, setPopupAddCartItem] = useState(null);
   const [isPopupAddCartOpened, setIsPopupAddCartOpened] = useState(false);
   const [isPopupCareOpened, setIsPopupCareOpened] = useState(false);
-<<<<<<< HEAD
-
-  const isDesktop = useMediaQuery({minWidth: 1440});
-  const isLaptop = useMediaQuery({maxWidth: 1439});
-  const isTabletHor = useMediaQuery({maxWidth: 1280});
-  const isTabletVert = useMediaQuery({maxWidth: 1024});
-  const isMobileHor = useMediaQuery({maxWidth: 768});
-  const isMobileVert = useMediaQuery({maxWidth: 480});
-
-  const [isSideMenuOpened, setIsSideMenuOpened] = useState(false);
-
-  const media = {
-    isDesktop,
-    isLaptop,
-    isTabletHor,
-    isTabletVert,
-    isMobileHor,
-    isMobileVert,
-  };
-
-  const openSideMenu = (_) => setIsSideMenuOpened(true);
-  const closeSideMenu = (_) => setIsSideMenuOpened(false);
-
-  //open popup "Рекомендация по уходу"
-  const handlePopupCareOpen = () => { setIsPopupCareOpened(true) };
-  const handlePopupCareClose = () => { setIsPopupCareOpened(false) };
-  
-  //open popup "Товар добавлен в корзину"
-  const handlePopupAddCartOpen = (item) => {
-    setCartItems([...cartItems, item])
-    setPopupAddCartItem(item);
-    setIsPopupAddCartOpened(true);
-  };
-=======
 
   const isDesktop = useMediaQuery({minWidth: 1440});
   const isLaptop = useMediaQuery({maxWidth: 1440});
@@ -92,7 +58,6 @@ function App() {
     }
   }
 
->>>>>>> 178ba0a90685f3fa1191f68570bfe0be4b29e479
   const handlePopupAddCartClose = () => { setIsPopupAddCartOpened(false) };
 
   return (
@@ -104,11 +69,7 @@ function App() {
           onCloseClick={closeSideMenu}
         />
       )}
-<<<<<<< HEAD
-      <Header media={media} openSideMenu={openSideMenu} cartItems={cartItems}/>
-=======
       <Header media={media} openSideMenu={openSideMenu} cartItems={cartItems} onDeleteCartItem={handlePopupDeleteCartItem}/>
->>>>>>> 178ba0a90685f3fa1191f68570bfe0be4b29e479
       <Content 
         media={media}
         onPopupCareOpen={handlePopupCareOpen}
