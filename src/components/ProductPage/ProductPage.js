@@ -1,19 +1,36 @@
 import './ProductPage.css';
 import ProdGallery from './ProdGallery/ProdGallery';
 import { useParams } from 'react-router-dom';
+<<<<<<< HEAD
 
 function ProductPage({ products, media, onPopupCareOpen, onPopupAddCartOpen}) {
+=======
+import CustomSelect from '../CustomSelect/CustomSelect';
+
+function ProductPage({ products, media, onPopupCareOpen, onPopupAddCartOpen }) {
+>>>>>>> 178ba0a90685f3fa1191f68570bfe0be4b29e479
   let { id } = useParams();
   const product = products.find((product) => product.id === id);
 
   const handlePopupAddCartOpen = () => {
     onPopupAddCartOpen({
+<<<<<<< HEAD
       src: product.photos[0],
       title: product.name,
       price: product.sale ? 
         Math.floor(product.price - (product.price * product.sale) / 100) : product.price
     });
   }
+=======
+      id: product.id,
+      src: product.photos[0],
+      title: product.name,
+      num: 1,
+      price: product.sale ? 
+        Math.floor(product.price - (product.price * product.sale) / 100) : product.price
+    });
+  };
+>>>>>>> 178ba0a90685f3fa1191f68570bfe0be4b29e479
 
   return (
     <section className="product">
@@ -35,6 +52,7 @@ function ProductPage({ products, media, onPopupCareOpen, onPopupAddCartOpen}) {
         </div>
         <div className="product__specification-box">
           <p className="product__text">Размер:</p>
+<<<<<<< HEAD
           <select
             className="select-custom"
             id="product-clothes-size"
@@ -46,6 +64,16 @@ function ProductPage({ products, media, onPopupCareOpen, onPopupAddCartOpen}) {
           </select>
         </div>
         <button className="button button_type_add-to-card" onClick={handlePopupAddCartOpen}>В корзину</button>
+=======
+          <CustomSelect options={product.sizes} startValue="Выбрать..." />
+        </div>
+        <button
+          className="button button_type_add-to-card"
+          onClick={handlePopupAddCartOpen}
+        >
+          В корзину
+        </button>
+>>>>>>> 178ba0a90685f3fa1191f68570bfe0be4b29e479
         <div className="product__specification-box">
           <p className="product__text">Рекомендуемый возраст:</p>
           <p className="product__text" id="product-recommended-age">

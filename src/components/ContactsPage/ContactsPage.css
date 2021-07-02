@@ -38,6 +38,7 @@
     line-height: 22px;
 }
 
+<<<<<<< HEAD
 .contacts__phone{
     font-weight: 500;
     font-size: 20px;
@@ -45,11 +46,17 @@
     margin: 0;
 }
 
+=======
+>>>>>>> 178ba0a90685f3fa1191f68570bfe0be4b29e479
 .contacts__link{
     font-weight: 500;
     font-size: 20px;
     line-height: 24px;
     color: inherit;
+<<<<<<< HEAD
+=======
+    text-decoration: underline;
+>>>>>>> 178ba0a90685f3fa1191f68570bfe0be4b29e479
 }
 
 .contacts__form{
@@ -95,6 +102,10 @@
 }
 
 .contacts__label{
+<<<<<<< HEAD
+=======
+    font-family: Montserrat;
+>>>>>>> 178ba0a90685f3fa1191f68570bfe0be4b29e479
     font-size: 12px;
     line-height: 107.9%;
     width: 100%;
@@ -103,3 +114,43 @@
     color: inherit;
 }
 
+<<<<<<< HEAD
+=======
+@media screen and (max-width: 1024px) {
+    .contacts{
+        max-width: 788px;
+
+    }
+    .contacts__title{
+        font-size: 25px;
+        line-height: 30px;
+    }
+}
+
+@media screen and (max-width: 830px) {
+    .contacts{
+        max-width: 830px;
+        margin: 0 20px;
+    }
+}
+
+@media screen and (max-width: 730px) {
+    .contacts__inner{
+        flex-direction: column;
+    }
+
+    .contacts__data{
+        margin-bottom: 84px;
+    }
+    .contacts__form{
+        align-self: center;
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 390px) {
+.contacts__label{
+    font-size: 9px;
+}
+}
+>>>>>>> 178ba0a90685f3fa1191f68570bfe0be4b29e479

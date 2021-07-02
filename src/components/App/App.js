@@ -13,6 +13,7 @@ function App() {
   const [popupAddCartItem, setPopupAddCartItem] = useState(null);
   const [isPopupAddCartOpened, setIsPopupAddCartOpened] = useState(false);
   const [isPopupCareOpened, setIsPopupCareOpened] = useState(false);
+<<<<<<< HEAD
 
   const isDesktop = useMediaQuery({minWidth: 1440});
   const isLaptop = useMediaQuery({maxWidth: 1439});
@@ -45,6 +46,53 @@ function App() {
     setPopupAddCartItem(item);
     setIsPopupAddCartOpened(true);
   };
+=======
+
+  const isDesktop = useMediaQuery({minWidth: 1440});
+  const isLaptop = useMediaQuery({maxWidth: 1440});
+  const isTabletHor = useMediaQuery({maxWidth: 1280});
+  const isTabletVert = useMediaQuery({maxWidth: 1024});
+  const isMobileHor = useMediaQuery({maxWidth: 768});
+  const isMobileVert = useMediaQuery({maxWidth: 480});
+
+  const [isSideMenuOpened, setIsSideMenuOpened] = useState(false);
+
+  const media = {
+    isDesktop,
+    isLaptop,
+    isTabletHor,
+    isTabletVert,
+    isMobileHor,
+    isMobileVert,
+  };
+
+  const openSideMenu = (_) => setIsSideMenuOpened(true);
+  const closeSideMenu = (_) => setIsSideMenuOpened(false);
+
+  //open popup "Рекомендация по уходу"
+  const handlePopupCareOpen = () => { setIsPopupCareOpened(true) };
+  const handlePopupCareClose = () => { setIsPopupCareOpened(false) };
+  
+  //open popup "Товар добавлен в корзину"
+  const handlePopupAddCartOpen = (item) => {
+    if (!cartItems.map(e => e.id).includes(item.id)) {
+      setCartItems([...cartItems, item])
+    } else {
+      setCartItems(cartItems.map(e => ({num: e.id === item.id ? e.num++ : e.num, ...e})));
+    }
+    setPopupAddCartItem(item);
+    setIsPopupAddCartOpened(true);
+  };
+
+  const handlePopupDeleteCartItem = (item) => {
+    if (cartItems.filter(e => e.id === item.id)[0].num > 1) {
+      setCartItems(cartItems.map(e => ({num: e.id === item.id ? e.num-- : e.num, ...e})));
+    } else {
+      setCartItems(cartItems.filter(e => e.id !== item.id))
+    }
+  }
+
+>>>>>>> 178ba0a90685f3fa1191f68570bfe0be4b29e479
   const handlePopupAddCartClose = () => { setIsPopupAddCartOpened(false) };
 
   return (
@@ -56,7 +104,11 @@ function App() {
           onCloseClick={closeSideMenu}
         />
       )}
+<<<<<<< HEAD
       <Header media={media} openSideMenu={openSideMenu} cartItems={cartItems}/>
+=======
+      <Header media={media} openSideMenu={openSideMenu} cartItems={cartItems} onDeleteCartItem={handlePopupDeleteCartItem}/>
+>>>>>>> 178ba0a90685f3fa1191f68570bfe0be4b29e479
       <Content 
         media={media}
         onPopupCareOpen={handlePopupCareOpen}

@@ -103,12 +103,20 @@ function Navigation({ media, type, openCatalogueMenu, closeCatalogueMenu }) {
         </Link>
       )}
       {type === "footer" && (
+<<<<<<< HEAD
         <Link className="navigation__link_type_footer navigation__link_underlined" to={OFFER_PAGE}>
+=======
+        <Link className="navigation__link_type_footer navigation__link_underlined" to={OFFER_PAGE} target="_blank" rel="noopener noreferrer">
+>>>>>>> 178ba0a90685f3fa1191f68570bfe0be4b29e479
           {OFFER_TEXT}
         </Link>
       )}
       {type === "footer" && (
+<<<<<<< HEAD
         <Link className="navigation__link_type_footer navigation__link_underlined" to={TERMS_OF_USE_PAGE}>
+=======
+        <Link className="navigation__link_type_footer navigation__link_underlined" to={TERMS_OF_USE_PAGE} target="_blank" rel="noopener noreferrer">
+>>>>>>> 178ba0a90685f3fa1191f68570bfe0be4b29e479
           {TERMS_OF_USE_TEXT}
         </Link>
       )}

@@ -56,6 +56,10 @@
   display: flex;
   flex-direction: column;
   max-width: 1170px;
+<<<<<<< HEAD
+=======
+  padding: 0 20px;
+>>>>>>> 178ba0a90685f3fa1191f68570bfe0be4b29e479
 }
 
 .catalog__sort {
@@ -66,7 +70,11 @@
 .catalog__products {
   width: 100%;
   display: grid;
+<<<<<<< HEAD
   grid-template-columns: repeat(4, 1fr);
+=======
+  grid-template-columns: repeat(auto-fit, minmax(268px, 1fr));
+>>>>>>> 178ba0a90685f3fa1191f68570bfe0be4b29e479
   gap: 50px 30px;
   margin-bottom: 50px;
 }
@@ -79,4 +87,8 @@
   font-weight: 600;
   line-height: 140%;
   color: #dc8962;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 178ba0a90685f3fa1191f68570bfe0be4b29e479
