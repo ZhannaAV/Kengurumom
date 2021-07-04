@@ -1,6 +1,7 @@
-import './ContactsPage.css'
-import Button from "../Button/Button";
-function ContactsPage(){
+import './ContactsPage.css';
+import Button from '../Button/Button';
+
+function ContactsPage() {
   return (
 <section className="contacts contacts_centered">
 <h2 className="contacts__title">Контакты</h2>
@@ -12,7 +13,7 @@ function ContactsPage(){
       </li>
       <li className="contacts__item">
         <h3 className="contacts__item-title">Instagram</h3>
-        <a href="#" target="_blank" className="contacts__link">kenguru.mom</a>
+        <a href="https" target="_blank" className="contacts__link">kenguru.mom</a>
       </li>
       <li className="contacts__item">
         <h3 className="contacts__item-title">Почта</h3>
@@ -28,11 +29,25 @@ function ContactsPage(){
       </fieldset>
       <Button type="submit" text="Отправить" btnStyle="button_type_contacts"/>
       <fieldset className="contacts__fieldset">
-        <label form="terms" className="contacts__label"><input id="terms" type="checkbox" className="contacts__checkbox"/>Я принимаю условия <a className="contacts__terms-link" href="/terms-of-use" target="_blank" >Политики конфиденциальности</a></label>
+        <label
+          form="terms"
+          className="contacts__label">
+          <input
+            id="terms"
+            type="checkbox"
+            className="contacts__checkbox"/>
+            Я принимаю условия
+          <a
+            className="contacts__terms-link"
+            href="/terms-of-use"
+            target="_blank" >
+            Политики конфиденциальности
+          </a>
+        </label>
       </fieldset>
     </form>
   </div>
 </section>
-  )
+  );
 }
-export default ContactsPage
+export default ContactsPage;

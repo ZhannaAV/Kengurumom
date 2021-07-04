@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import PopularItem from '../PopularItem/PopularItem';
 
 function CategoryPage({ products, onPopupAddCartOpen }) {
-  let { category } = useParams();
+  const { category } = useParams();
   const currentArr = category
     ? products.filter((product) => product.category === category)
     : products;

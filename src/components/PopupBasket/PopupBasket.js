@@ -1,36 +1,38 @@
-import {useState, useEffect} from 'react';
+import { useState, useEffect } from 'react';
 import './PopupBasket.css';
-import {BASKET_PAGE} from '../../config/links';
-import Button from '../Button/Button';
-import {deleteIcon} from './constants';
 import { Link } from 'react-router-dom';
+import { BASKET_PAGE } from '../../config/links';
+import Button from '../Button/Button';
+import { deleteIcon } from './constants';
 
-export default function PopupBasket({isOpened, cartItems, onClose, onDeleteCartItem}) {
+export default function PopupBasket({
+  isOpened, cartItems, onClose, onDeleteCartItem,
+}) {
   const [summaryPrice, setSummaryPrice] = useState(0);
   const [items, setItems] = useState(cartItems || []);
   const visibilityClass = isOpened ? 'popup-basket_visible' : '';
 
   const handleReloadCartSum = (inputItems) => {
     if (inputItems) {
-      const sum = inputItems.reduce((sum, e) => sum += e.price*e.num, 0);
-      setSummaryPrice(sum)
+      const sum = inputItems.reduce((sum, e) => sum += e.price * e.num, 0);
+      setSummaryPrice(sum);
     }
-  }
+  };
 
-  const handleDelete = item => {
+  const handleDelete = (item) => {
     onDeleteCartItem(item);
-  }
+  };
 
-  const resetItemsNum = (inputItems) => {    
-    for(let e of inputItems) {
+  const resetItemsNum = (inputItems) => {
+    for (const e of inputItems) {
       if (!e.num) e.num = 1;
     }
-    
+
     setItems(inputItems);
-  }
+  };
 
   useEffect(() => {
-    resetItemsNum(cartItems)
+    resetItemsNum(cartItems);
     handleReloadCartSum(cartItems);
   }, [cartItems]);
 
@@ -39,19 +41,19 @@ export default function PopupBasket({isOpened, cartItems, onClose, onDeleteCartI
       <div className="popup-basket__content">
         <div className="popup-basket__items">
           {
-            items && items.length > 0 ?
-              items.map((item, i) => (
+            items && items.length > 0
+              ? items.map((item, i) => (
                 <div className="popup-basket__item" key={i}>
                   <img className="popup-basket__item-img" src={item.src} alt={item.title} />
                   <h3 className="popup-basket__item-title">{item.title}</h3>
                   <p className="popup-basket__item-num">{item.num}</p>
                   <p className="popup-basket__item-price">{item.price}</p>
-                  <button className="popup-basket__item-del" onClick={() => {handleDelete(item)}}>
+                  <button className="popup-basket__item-del" onClick={() => { handleDelete(item); }}>
                     <img src={deleteIcon} alt={`Удалить из корзины ${item.title}`}/>
                   </button>
                   </div>
-              )) :
-              <p className="popup-basket__empty-cart">В корзине нет товаров</p>
+              ))
+              : <p className="popup-basket__empty-cart">В корзине нет товаров</p>
           }
         </div>
         <p className="popup-basket__summary">

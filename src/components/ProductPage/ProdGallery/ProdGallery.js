@@ -1,7 +1,7 @@
 import './ProdGallery.css';
+import { useState } from 'react';
 import ThumbnailImage from './ThumbnailImage/ThumbnailImage';
 import ZoomContainer from './ZoomContainer/ZoomContainer';
-import { useState } from 'react';
 
 function ProdGallery({ photos, media }) {
   const [currentImageIndex, setCurrentImageIndex] = useState(null);

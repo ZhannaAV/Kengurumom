@@ -1,21 +1,23 @@
 import './ZoomContainer.css';
+import { useState, useEffect } from 'react';
 import loopImg from '../../../../images/product/loop.svg';
 import arrowImg from '../../../../images/product/product-arrow.jpg';
 import PopupProductGallery from './PopupProductGallery/PopupProductGallery';
-import { useState, useEffect } from 'react';
 
 function ZoomContainer({ slides, currentThumb, media }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPopupOpened, setIsPopupOpened] = useState(false);
 
   useEffect(() => {
-    !media.isMobileVert && setIsPopupOpened(false);
-  }, [media.isMobileVert])
+    if (!media.isMobileVert) {
+      setIsPopupOpened(false);
+    }
+  }, [media.isMobileVert]);
 
   useEffect(() => {
-    currentThumb !== null &&
-      currentThumb !== currentIndex &&
+    if (currentThumb !== null && currentThumb !== currentIndex) {
       setCurrentIndex(currentThumb);
+    }
   }, [currentThumb]);
 
   const [activeSlide, setActiveSlide] = useState(slides[0]);
@@ -57,7 +59,9 @@ function ZoomContainer({ slides, currentThumb, media }) {
   };
 
   const handleLoopClick = () => {
-    media.isMobileVert && setIsPopupOpened(true);
+    if (media.isMobileVert) {
+      setIsPopupOpened(true);
+    }
   };
 
   const closedPopup = () => {
@@ -66,46 +70,38 @@ function ZoomContainer({ slides, currentThumb, media }) {
 
   return (
     <>
-    <PopupProductGallery isOpened={isPopupOpened} image={activeSlide} closePopup={closedPopup} />
-    <div className="zoom-container">
-      <img
-        onClick={handleLoopClick}
-        src={loopImg}
-        alt="Лупа"
-        className="zoom-container__loop-icon"
-      />
-      <img
-        src={arrowImg}
-        alt="Предыдущая"
-        className="zoom-container__arrow"
-        onClick={handleLeftArrowClick}
-      />
-      <img
-        src={arrowImg}
-        alt="Следующая"
-        className="zoom-container__arrow zoom-container__arrow_right"
-        onClick={handleRightArrowClick}
-      />
-      {!media.isMobileVert ? (
-        <figure
-          onMouseMove={handleZoomMove}
-          style={zoomParams}
-          className="zoom-container__image-wrapper"
-        >
-          <img
-            className="zoom-container__image"
-            src={activeSlide}
-            alt="Главное изображение"
-          />
-        </figure>
-      ) : (
+      <PopupProductGallery isOpened={isPopupOpened} image={activeSlide} closePopup={closedPopup} />
+      <div className='zoom-container'>
         <img
-          className="zoom-container__image"
-          src={activeSlide}
-          alt="Главное изображение"
+          onClick={handleLoopClick}
+          src={loopImg}
+          alt='Лупа'
+          className='zoom-container__loop-icon'
         />
-      )}
-    </div>
+        <img
+          src={arrowImg}
+          alt='Предыдущая'
+          className='zoom-container__arrow'
+          onClick={handleLeftArrowClick}
+        />
+        <img
+          src={arrowImg}
+          alt='Следующая'
+          className='zoom-container__arrow zoom-container__arrow_right'
+          onClick={handleRightArrowClick}
+        />
+        {!media.isMobileVert ? (
+          <figure
+            onMouseMove={handleZoomMove}
+            style={zoomParams}
+            className='zoom-container__image-wrapper'
+          >
+            <img className='zoom-container__image' src={activeSlide} alt='Главное изображение' />
+          </figure>
+        ) : (
+          <img className='zoom-container__image' src={activeSlide} alt='Главное изображение' />
+        )}
+      </div>
     </>
   );
 }

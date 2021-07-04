@@ -1,9 +1,11 @@
-import Logo from "../Logo/Logo";
-import "./Footer.css";
-import { PHONE } from "../../config/texts";
-import Navigation from "../Navigation/Navigation";
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable jsx-a11y/anchor-has-content */
+import Logo from '../Logo/Logo';
+import './Footer.css';
+import { PHONE } from '../../config/texts';
+import Navigation from '../Navigation/Navigation';
 
-function Footer({media}) {
+function Footer({ media }) {
   return (
     <footer className="footer">
       <div className="footer__container">

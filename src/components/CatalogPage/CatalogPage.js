@@ -1,18 +1,20 @@
 import './CatalogPage.css';
-import { catalogCategories } from '../../config/links';
-import { NavLink, Route, Switch, useRouteMatch } from 'react-router-dom';
-import CategoryPage from './CategoryPage/CategoryPage';
+import {
+  NavLink, Route, Switch, useRouteMatch,
+} from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import { catalogCategories } from '../../config/links';
+import CategoryPage from './CategoryPage/CategoryPage';
 import SlickSlider from '../SharedComponents/Slider/SlickSlider';
 
 function CatalogPage({ products, onPopupAddCartOpen, media }) {
-  let { path, url } = useRouteMatch();
+  const { path, url } = useRouteMatch();
 
   const [width, setWidth] = useState(window.innerWidth);
   const [slides, setSlides] = useState(
-    media.isDesktop ? 5 : media.isTabletVert ? 4 : media.isMobileHor ? 2 : 1
+    media.isDesktop ? 5 : media.isTabletVert ? 4 : media.isMobileHor ? 2 : 1,
   );
-  const [showArrows, setShowArrows] = useState(media.isDesktop ? true : false);
+  const [showArrows, setShowArrows] = useState(!!media.isDesktop);
 
   const updateWidth = () => {
     setWidth(window.innerWidth);
@@ -28,7 +30,8 @@ function CatalogPage({ products, onPopupAddCartOpen, media }) {
   };
 
   const updateShowArrows = () => {
-    width > 1380 ? setShowArrows(true) : setShowArrows(false);
+    if (width > 1380) setShowArrows(true);
+    else setShowArrows(false);
   };
 
   useEffect(() => {

@@ -36,22 +36,22 @@ export const catalogCategories = [
 ];
 
 export const pathTranslate = {
-  'about': 'О бренде',
-  'delivery': 'Доставка',
-  'catalog': 'Каталог',
-  'contacts': 'Контакты',
+  about: 'О бренде',
+  delivery: 'Доставка',
+  catalog: 'Каталог',
+  contacts: 'Контакты',
   'personal-sewing': 'Индивидуальный пошив',
   'changing-cocoons': 'Пеленальные коконы',
-  'bibs': 'Слюнявчики и грызунки',
+  bibs: 'Слюнявчики и грызунки',
   'sleeping-bags': 'Спальники',
-  'envelops': 'Конверты на выписку',
-  'napkins': 'Пелёнки и пледы',
-  'milksnuds': 'Милкснуды',
+  envelops: 'Конверты на выписку',
+  napkins: 'Пелёнки и пледы',
+  milksnuds: 'Милкснуды',
   'knitted-blankets': 'Вязаные пледы',
-  'organizers': 'Органайзеры для детских вещей',
+  organizers: 'Органайзеры для детских вещей',
   'gift-certificate': 'Подарочный сертификат',
-  'terms-of-use': 'Политика конфиденциальности'
-}
+  'terms-of-use': 'Политика конфиденциальности',
+};
 
 // footer links
 export const TERMS_OF_USE_PAGE = '/terms-of-use';

@@ -1,3 +1,4 @@
+/* eslint-disable no-underscore-dangle */
 import { useState } from 'react';
 import Basket from '../Basket/Basket';
 import CatalogueMenu from '../CatalogueMenu/CatalogueMenu';
@@ -6,62 +7,63 @@ import Navigation from '../Navigation/Navigation';
 import useScrollPosition from './useScrollPosition';
 import './Header.css';
 
-function Header({ media, openSideMenu, cartItems, onDeleteCartItem }) {
-	const [isVisible, setIsBeVisible] = useState(false);
-	const [isCatMenuOpnd, setIsCatMenuOpnd] = useState(false);
+function Header({
+  media, openSideMenu, cartItems, onDeleteCartItem,
+}) {
+  const [isVisible, setIsBeVisible] = useState(false);
+  const [isCatMenuOpnd, setIsCatMenuOpnd] = useState(false);
 
+  const hideCatalogue = () => {
+    setIsCatMenuOpnd(false);
+    document.removeEventListener('click', hideCatalogue);
+  };
 
-	const showCatalogue = _ => {
-		setIsCatMenuOpnd(true);
-		document.addEventListener('click', hideCatalogue);
-	};	
-	
-	const hideCatalogue = _ => { 
-		setIsCatMenuOpnd(false);
-		document.removeEventListener('click', hideCatalogue);
-	};
+  const showCatalogue = () => {
+    setIsCatMenuOpnd(true);
+    document.addEventListener('click', hideCatalogue);
+  };
 
-	useScrollPosition(
+  useScrollPosition(
     ({ previousPos, currentPos }) => {
       const _isVisible = currentPos.y < previousPos.y;
       if (_isVisible !== isVisible) setIsBeVisible(_isVisible);
-	  hideCatalogue();
+      hideCatalogue();
     },
-    [isVisible]
+    [isVisible],
   );
 
-	return (
-		<>
-		<div className="header-dummy"></div>
-		<header className={`header ${isVisible ? 'header_sticky_hide' : ''}`}>
-			<div className="header__content">
-				<Logo />
-				<Navigation
-					media={media}
-					openCatalogueMenu={showCatalogue}
-					closeCatalogueMenu={hideCatalogue}
-				/>
-				{
-					media.isDesktop 
-						&& <CatalogueMenu 
-							isCatMenuOpnd={isCatMenuOpnd}
-						/>
-				}
-				<Basket onDeleteCartItem={onDeleteCartItem} cartItems={cartItems}/>
-				{
-					media.isLaptop 
-						&& 	<button 
-								type="button" 
-								className="header__burger-button" 
-								onClick={openSideMenu}
-							>
-							</button>
-				}
+  return (
+    <>
+      <div className="header-dummy"></div>
+      <header className={`header ${isVisible ? 'header_sticky_hide' : ''}`}>
+        <div className="header__content">
+          <Logo />
+          <Navigation
+            media={media}
+            openCatalogueMenu={showCatalogue}
+            closeCatalogueMenu={hideCatalogue}
+          />
+          {
+            media.isDesktop
+            && <CatalogueMenu
+              isCatMenuOpnd={isCatMenuOpnd}
+            />
+          }
+          <Basket onDeleteCartItem={onDeleteCartItem} cartItems={cartItems} />
+          {
+            media.isLaptop
+            && <button
+              type="button"
+              className="header__burger-button"
+              onClick={openSideMenu}
+            >
+            </button>
+          }
 
-			</div>
-		</header>
-		</>
-	);
+        </div>
+      </header>
+    </>
+  );
 }
 
 export default Header;

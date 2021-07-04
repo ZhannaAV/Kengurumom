@@ -1,35 +1,35 @@
-import {useState, useEffect} from 'react';
+import { useState, useEffect } from 'react';
 import './PopupAddCart.css';
 import Dialog from '@material-ui/core/Dialog';
 import { Link } from 'react-router-dom';
 import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-import {BASKET_PAGE} from '../../config/links';
+import { BASKET_PAGE } from '../../config/links';
 import Button from '../Button/Button';
 
-//change main color
+// change main color
 const theme = createMuiTheme({
   overrides: {
     MuiBackdrop: {
       root: {
-        backgroundColor: 'rgba(81, 54, 41, 0.7)'
-      }
-    }
-  }
+        backgroundColor: 'rgba(81, 54, 41, 0.7)',
+      },
+    },
+  },
 });
 
-export default function PopupAddCart({isOpened, inputItem, onClose}){
-  const [item, setItem] = useState(inputItem || null)
+export default function PopupAddCart({ isOpened, inputItem, onClose }) {
+  const [item, setItem] = useState(inputItem || null);
 
   useEffect(() => {
-    setItem(inputItem)
+    setItem(inputItem);
   }, [inputItem]);
 
-  const handleClose = () => {onClose(false)};
+  const handleClose = () => { onClose(false); };
 
   return (
     <ThemeProvider theme={theme}>
       <Dialog
-        classes={{paper: 'popup-add-cart'}}
+        classes={{ paper: 'popup-add-cart' }}
         onClose={handleClose}
         aria-labelledby="popup-add-cart"
         open={isOpened || false}>

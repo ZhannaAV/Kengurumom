@@ -15,11 +15,11 @@ const CustomSelect = ({ options, startValue, page }) => {
     setSelectedOption(value);
     setIsOpen(false);
     setIsSelectActive(false);
-    console.log(selectedOption);
+    // console.log(selectedOption);
   };
 
   return (
-    <section className={`select ${page && 'select_'+page}`}>
+    <section className={`select ${page && `select_${page}`}`}>
       <div className="select__wrapper">
         <div
           className={`select__header ${
