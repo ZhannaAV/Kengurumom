@@ -1,6 +1,6 @@
 import './PopularItem.css';
-import { PRODUCT_PAGE } from '../../config/links';
 import { Link, useHistory } from 'react-router-dom';
+import { PRODUCT_PAGE } from '../../config/links';
 
 // export default function PopularItem({id, src, name, priceSale, sale = false, new: isNew = false}){
 //   return (
@@ -15,7 +15,7 @@ import { Link, useHistory } from 'react-router-dom';
 //   );
 // }
 
-//'new' prop is reserved, rename to isNew
+// 'new' prop is reserved, rename to isNew
 export default function PopularItem({
   id,
   photos,
@@ -26,7 +26,7 @@ export default function PopularItem({
   onPopupAddCartOpen,
   component,
 }) {
-  let history = useHistory();
+  const history = useHistory();
 
   const handleClick = () => {
     history.push(`${PRODUCT_PAGE}/${id}`);
@@ -34,17 +34,17 @@ export default function PopularItem({
 
   const handlePopupAddCartOpen = () => {
     onPopupAddCartOpen({
-      id: id,
+      id,
       src: photos[0],
       title: name,
       num: 1,
-      price: sale ? Math.floor(price - (price * sale) / 100) : price
+      price: sale ? Math.floor(price - (price * sale) / 100) : price,
     });
   };
 
   return (
     <figure
-      className={`${component}__item ${isNew && component + '__item_new'}`}
+      className={`${component}__item ${isNew && `${component}__item_new`}`}
     >
       <img
         onClick={handleClick}

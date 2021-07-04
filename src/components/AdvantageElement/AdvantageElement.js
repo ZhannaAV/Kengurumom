@@ -1,6 +1,8 @@
 import './AdvantageElement.css';
 
-function AdvantageElement({ image, alt, title, description }) {
+function AdvantageElement({
+  image, alt, title, description,
+}) {
   return (
     <li className="advantage-element">
       <img className="advantage-element__image" src={image} alt={alt} />

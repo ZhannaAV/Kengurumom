@@ -1,8 +1,8 @@
 import React from 'react';
-import './DeliveryPage.css'
-import iconDelivery from '../../images/deliveryPage/delivery_icon.svg'
-import iconPay from '../../images/deliveryPage/pay_icon.svg'
-import iconRefund from '../../images/deliveryPage/refund_icon.svg'
+import './DeliveryPage.css';
+import iconDelivery from '../../images/deliveryPage/delivery_icon.svg';
+import iconPay from '../../images/deliveryPage/pay_icon.svg';
+import iconRefund from '../../images/deliveryPage/refund_icon.svg';
 
 function DeliveryPage() {
   return (
@@ -17,7 +17,7 @@ function DeliveryPage() {
           <img src={iconDelivery} alt="иконка доставки"/>
           <h3 className="delivery__subtitle">Доставка</h3>
         </div>
-        {/*текст блока доставка*/}
+        {/* текст блока доставка */}
         <ul className="delivery__list">
           <li className="delivery__item">
             <p className="delivery__text">Для доставки ваших заказов по территории России и стран СНГ(Беларусь, Армения,
@@ -43,11 +43,11 @@ function DeliveryPage() {
           </li>
         </ul>
         <h4 className="delivery__subtitle-methods">Cпособы доставки</h4>
-        {/*понумерованный список подблока доставки*/}
+        {/* понумерованный список подблока доставки */}
         <ol className="delivery__counter-list">
           <li className="delivery__counter-item"><h5 className="delivery__subtitle-text">Самовывоз из пункта выдачи
             компании СДЭК</h5></li>
-          {/*список с галочкой*/}
+          {/* список с галочкой */}
           <ul className="delivery__icon-list">
             <li className="delivery__icon-item"><p className="delivery__text">отправляем каждый рабочий день</p></li>
             <li className="delivery__icon-item"><p className="delivery__text">оплатить заказ можно как при оформлении,
@@ -89,7 +89,7 @@ function DeliveryPage() {
           </ul>
         </ol>
       </div>
-      {/*блок оплата*/}
+      {/* блок оплата */}
       <div className="delivery__block-payment">
         <div className="delivery__subtitle-block delivery__subtitle-block_place_payment">
           <img src={iconPay} alt="иконка оплаты"/>
@@ -117,7 +117,7 @@ function DeliveryPage() {
           </ul>
         </div>
       </div>
-      {/*блок обмен и возврат*/}
+      {/* блок обмен и возврат */}
       <div className="delivery__block-refund">
         <div className="delivery__subtitle-block delivery__subtitle-block_place_refund">
           <img src={iconRefund} alt="иконка возврата"/>
@@ -159,7 +159,7 @@ function DeliveryPage() {
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default DeliveryPage
+export default DeliveryPage;

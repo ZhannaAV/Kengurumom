@@ -5,5 +5,5 @@ export const CATALOGUE_TEXT = 'Каталог';
 export const DELIVERY_TEXT = 'Доставка';
 export const CONTACTS_TEXT = 'Контакты';
 export const PHONE = '+7 925 343 34 34';
-export const OFFER_TEXT = "Оферта";
-export const TERMS_OF_USE_TEXT = "Политика конфиденциальности";
+export const OFFER_TEXT = 'Оферта';
+export const TERMS_OF_USE_TEXT = 'Политика конфиденциальности';

@@ -1,14 +1,13 @@
-import Slider from "../Slider/Slider";
-import Popular from "../Popular/Popular";
-import Advantages from "../Advantages/Advantages";
-import SectionsWithBtn from "../SectionsWithBtn/SectionsWithBtn";
-import Review from "../Review/Review";
-import Instagram from "../Instagram/Instagram";
+import Slider from '../Slider/Slider';
+import Popular from '../Popular/Popular';
+import Advantages from '../Advantages/Advantages';
+import SectionsWithBtn from '../SectionsWithBtn/SectionsWithBtn';
+import Review from '../Review/Review';
+import Instagram from '../Instagram/Instagram';
 import { exampleArrProducts } from '../../config/constants';
 
-
 function MainPage(props) {
-  const {media, onPopupAddCartOpen} = props
+  const { media, onPopupAddCartOpen } = props;
   return (
     <>
       <Slider media={media}/>
@@ -18,7 +17,7 @@ function MainPage(props) {
       <Review media={media}/>
       <Instagram/>
     </>
-  )
+  );
 }
 
-export default MainPage
+export default MainPage;

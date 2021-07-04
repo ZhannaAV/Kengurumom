@@ -19,7 +19,7 @@ const CustomSelect = ({ options, startValue, page }) => {
   };
 
   return (
-    <section className={`select ${page && 'select_'+page}`}>
+    <section className={`select ${page && `select_${page}`}`}>
       <div className="select__wrapper">
         <div
           className={`select__header ${

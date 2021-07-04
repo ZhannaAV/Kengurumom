@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
-//Styled Components
-const StyledParagraph = styled.p`${props => props.style}`;
-const StyledSpan = styled.span`${props => props.style}`;
+// Styled Components
+const StyledParagraph = styled.p`${(props) => props.style}`;
+const StyledSpan = styled.span`${(props) => props.style}`;
 
-export default function StyledText({text, styles}){
-  //set default style/className for main paragraph
+export default function StyledText({ text, styles }) {
+  // set default style/className for main paragraph
   if (!styles.default.style && !styles.default.className) {
     throw Error('StyledText Component [default]: nor styles, nor className set');
   }
@@ -16,10 +16,10 @@ export default function StyledText({text, styles}){
   if (styles.default.style) style = styles.default.style;
   if (styles.default.className) className = styles.default.className;
 
-  //return word of sentence OR styled span if we have tags
-  const createWordComponent = word => {
+  // return word of sentence OR styled span if we have tags
+  const createWordComponent = (word) => {
     let output = word;
-    if (/<(\w+?)>(.+)<\/\1>/.test(word)){
+    if (/<(\w+?)>(.+)<\/\1>/.test(word)) {
       const tagName = word.replace(/<(\w+?)>(.+)<\/\1>/, '$1');
       const text = word.replace(/<(\w+?)>(.+)<\/\1>/, '$2');
 
@@ -28,23 +28,22 @@ export default function StyledText({text, styles}){
       }
 
       if (styles[tagName].style) {
-        output = <StyledSpan key={text} style={styles[tagName].style}> {text} </StyledSpan>
-      }
-      else if (styles[tagName].className) {
-        output = <StyledSpan key={text} className={styles[tagName].className}> {text} </StyledSpan>
+        output = <StyledSpan key={text} style={styles[tagName].style}> {text} </StyledSpan>;
+      } else if (styles[tagName].className) {
+        output = <StyledSpan key={text} className={styles[tagName].className}> {text} </StyledSpan>;
       }
     }
     return output;
-  }
+  };
 
-  //create array of groups of words and objects (without this we`ll have every word at single line in our html code! not good) 
+  // create array of groups of words and objects (without this we`ll have every word at single line in our html code! not good)
   const words = text.split(/(<\w+?>.+?<\/\w+?>)/).map(createWordComponent);
 
-  return <StyledParagraph style={style} className={className}>{words}</StyledParagraph>
+  return <StyledParagraph style={style} className={className}>{words}</StyledParagraph>;
 }
 
-//Usage
-/* <StyledText 
+// Usage
+/* <StyledText
   text="Let's make some <ml>multistyle</ml> <ms>multistyle</ms> text for <pixi>Pixi.js!</pixi>"
   styles={{
       "default": {

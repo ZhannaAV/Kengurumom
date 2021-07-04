@@ -1,15 +1,14 @@
 import './Slider.css';
-import slider1 from '../../images/slider/photo-on-slider-1.jpg';
-import slider2 from '../../images/slider/photo-on-slider-2.jpg';
 import { useState } from 'react';
 import cn from 'classnames';
-import Button from "../Button/Button";
+import slider1 from '../../images/slider/photo-on-slider-1.jpg';
+import slider2 from '../../images/slider/photo-on-slider-2.jpg';
+import Button from '../Button/Button';
 
 function Slider() {
+  const [isFirstSlide, setIsFirstSlide] = useState(true);
 
-	const [isFirstSlide, setIsFirstSlide] = useState(true);
-
-    return (
+  return (
         <section className="slider">
 			<ul className="slider__list">
 				<li className="slider__slide slider__slide_active">
@@ -35,10 +34,10 @@ function Slider() {
 				<li className="slider__slide">
 					<div className="slider__cover">
 						<div className="slider__contain">
-							<h2 className="slider__title"><span className="slider__title_accent">Индивидуальный </span> 
+							<h2 className="slider__title"><span className="slider__title_accent">Индивидуальный </span>
 								пошив
 							</h2>
-							<p className="slider__subtitle">По Вашим размерам 
+							<p className="slider__subtitle">По Вашим размерам
 								и Вашему выбору ткани
 							</p>
                             <Button text={'В каталог'}/>
@@ -54,7 +53,7 @@ function Slider() {
 				<li className="slider__dott"></li>
 			</ul>
 		</section>
-    );
+  );
 }
 
 export default Slider;

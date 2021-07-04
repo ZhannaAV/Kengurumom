@@ -1,9 +1,9 @@
-import {useState} from 'react';
-import {useMediaQuery} from 'react-responsive';
+import { useState } from 'react';
+import { useMediaQuery } from 'react-responsive';
 import './App.css';
 import Header from '../Header/Header';
 import SideMenu from '../SideMenu/SideMenu';
-import Content from "../Content/Content";
+import Content from '../Content/Content';
 import PopupCare from '../PopupCare/PopupCare';
 import PopupAddCart from '../PopupAddCart/PopupAddCart';
 import Footer from '../Footer/Footer';
@@ -14,12 +14,12 @@ function App() {
   const [isPopupAddCartOpened, setIsPopupAddCartOpened] = useState(false);
   const [isPopupCareOpened, setIsPopupCareOpened] = useState(false);
 
-  const isDesktop = useMediaQuery({minWidth: 1440});
-  const isLaptop = useMediaQuery({maxWidth: 1440});
-  const isTabletHor = useMediaQuery({maxWidth: 1280});
-  const isTabletVert = useMediaQuery({maxWidth: 1024});
-  const isMobileHor = useMediaQuery({maxWidth: 768});
-  const isMobileVert = useMediaQuery({maxWidth: 480});
+  const isDesktop = useMediaQuery({ minWidth: 1440 });
+  const isLaptop = useMediaQuery({ maxWidth: 1440 });
+  const isTabletHor = useMediaQuery({ maxWidth: 1280 });
+  const isTabletVert = useMediaQuery({ maxWidth: 1024 });
+  const isMobileHor = useMediaQuery({ maxWidth: 768 });
+  const isMobileVert = useMediaQuery({ maxWidth: 480 });
 
   const [isSideMenuOpened, setIsSideMenuOpened] = useState(false);
 
@@ -35,30 +35,30 @@ function App() {
   const openSideMenu = (_) => setIsSideMenuOpened(true);
   const closeSideMenu = (_) => setIsSideMenuOpened(false);
 
-  //open popup "Рекомендация по уходу"
-  const handlePopupCareOpen = () => { setIsPopupCareOpened(true) };
-  const handlePopupCareClose = () => { setIsPopupCareOpened(false) };
-  
-  //open popup "Товар добавлен в корзину"
+  // open popup "Рекомендация по уходу"
+  const handlePopupCareOpen = () => { setIsPopupCareOpened(true); };
+  const handlePopupCareClose = () => { setIsPopupCareOpened(false); };
+
+  // open popup "Товар добавлен в корзину"
   const handlePopupAddCartOpen = (item) => {
-    if (!cartItems.map(e => e.id).includes(item.id)) {
-      setCartItems([...cartItems, item])
+    if (!cartItems.map((e) => e.id).includes(item.id)) {
+      setCartItems([...cartItems, item]);
     } else {
-      setCartItems(cartItems.map(e => ({num: e.id === item.id ? e.num++ : e.num, ...e})));
+      setCartItems(cartItems.map((e) => ({ num: e.id === item.id ? e.num++ : e.num, ...e })));
     }
     setPopupAddCartItem(item);
     setIsPopupAddCartOpened(true);
   };
 
   const handlePopupDeleteCartItem = (item) => {
-    if (cartItems.filter(e => e.id === item.id)[0].num > 1) {
-      setCartItems(cartItems.map(e => ({num: e.id === item.id ? e.num-- : e.num, ...e})));
+    if (cartItems.filter((e) => e.id === item.id)[0].num > 1) {
+      setCartItems(cartItems.map((e) => ({ num: e.id === item.id ? e.num-- : e.num, ...e })));
     } else {
-      setCartItems(cartItems.filter(e => e.id !== item.id))
+      setCartItems(cartItems.filter((e) => e.id !== item.id));
     }
-  }
+  };
 
-  const handlePopupAddCartClose = () => { setIsPopupAddCartOpened(false) };
+  const handlePopupAddCartClose = () => { setIsPopupAddCartOpened(false); };
 
   return (
     <>
@@ -70,7 +70,7 @@ function App() {
         />
       )}
       <Header media={media} openSideMenu={openSideMenu} cartItems={cartItems} onDeleteCartItem={handlePopupDeleteCartItem}/>
-      <Content 
+      <Content
         media={media}
         onPopupCareOpen={handlePopupCareOpen}
         onPopupAddCartOpen={handlePopupAddCartOpen}
@@ -79,7 +79,7 @@ function App() {
       <PopupCare isOpened={isPopupCareOpened} onClose={handlePopupCareClose}/>
       <PopupAddCart isOpened={isPopupAddCartOpened} inputItem={popupAddCartItem} onClose={handlePopupAddCartClose}/>
     </>
-  )
+  );
 }
 
 export default App;

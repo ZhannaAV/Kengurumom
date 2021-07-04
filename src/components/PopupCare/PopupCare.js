@@ -2,29 +2,29 @@ import React from 'react';
 import './PopupCare.css';
 import Dialog from '@material-ui/core/Dialog';
 import { ThemeProvider, createMuiTheme, makeStyles } from '@material-ui/core/styles';
-import {popupCareIcons, popupClose} from './constants';
+import { popupCareIcons, popupClose } from './constants';
 
-//change main color
+// change main color
 const theme = createMuiTheme({
   overrides: {
     MuiBackdrop: {
       root: {
         backgroundColor: 'rgba(81, 54, 41, 0.7)',
-      }
+      },
     },
     MuiPaper: {
       root: {
         backgroundColor: '#FAF1E9',
         borderRadius: '20px',
-      }
+      },
     },
   },
 });
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   paperWidthSm: {
-    width: "100%",
-    maxWidth: "1167px",
+    width: '100%',
+    maxWidth: '1167px',
   },
   paper: {
     margin: '0',
@@ -34,7 +34,7 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: '#FAF1E9',
     boxSizing: 'border-box',
     scrollbarWidth: 'thin',
-    
+
     [theme.breakpoints.down(1207)]: {
       width: 'calc(100% - 2*20px);',
       marginLeft: '20px',
@@ -57,8 +57,8 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function PopupCare({isOpened, onClose}){
-  const handleClose = () => {onClose(false)};
+export default function PopupCare({ isOpened, onClose }) {
+  const handleClose = () => { onClose(false); };
   const classes = useStyles(theme);
 
   return (
@@ -75,24 +75,24 @@ export default function PopupCare({isOpened, onClose}){
             <h3 className='popup-care__text-title'>
               Стирка<img src={popupCareIcons.wash} alt="Стирка" className="popup-care__text-title-img"/>
             </h3>
-            <p className="popup-care__text">Рекомендуемая температура стирки изделий из трикотажного хлопка - 40 градусов на малых и средних оборотах. 
-            Для трикотажных хлопковых вещей рекомендуется применять мягко действующие очищающие средства: гели для деликатных тканей, порошки для детского белья. 
+            <p className="popup-care__text">Рекомендуемая температура стирки изделий из трикотажного хлопка - 40 градусов на малых и средних оборотах.
+            Для трикотажных хлопковых вещей рекомендуется применять мягко действующие очищающие средства: гели для деликатных тканей, порошки для детского белья.
             Чтобы сохранить яркость цвета изделий, мы рекомендуем стирать изделия с изнанки.</p>
           </li>
           <li>
             <h3 className='popup-care__text-title'>
               Сушка<img src={popupCareIcons.drying} alt="Сушка" className="popup-care__text-title-img"/>
             </h3>
-            <p className="popup-care__text">Конверты и съёмные утеплители следует сушить в горизонтальном положении, в расправленном виде. Трикотажные изделия 
+            <p className="popup-care__text">Конверты и съёмные утеплители следует сушить в горизонтальном положении, в расправленном виде. Трикотажные изделия
             достаточно развесить на сушилке в вертикальном положении. Использование сушильных машин крайне нежелательно, так как может привести к деформации изделия.</p>
           </li>
           <li>
             <h3 className='popup-care__text-title'>
               Глажка<img src={popupCareIcons.ironing} alt="Глажка" className="popup-care__text-title-img"/>
             </h3>
-            <p className="popup-care__text">Гладить любые наши изделия рекомендуется при температуре не более 100-110 градусов, с использованием марли. Трикотажные 
-            хлопковые изделия имеют свойство усадки после стирки. Вернуть изделиям прежний вид и размер поможет не только правильная стирка, но и правильное глажение. 
-            Отпаривать необходимо в щадящем режиме. Трикотажные изделия можно слегка растягивать при глажке – это вернёт их прежний вид и избавит от усадки. Ткани с 
+            <p className="popup-care__text">Гладить любые наши изделия рекомендуется при температуре не более 100-110 градусов, с использованием марли. Трикотажные
+            хлопковые изделия имеют свойство усадки после стирки. Вернуть изделиям прежний вид и размер поможет не только правильная стирка, но и правильное глажение.
+            Отпаривать необходимо в щадящем режиме. Трикотажные изделия можно слегка растягивать при глажке – это вернёт их прежний вид и избавит от усадки. Ткани с
             блёстками и другими видами напыления гладить можно только с изнаночной стороны.</p>
           </li>
           <li>
@@ -105,7 +105,7 @@ export default function PopupCare({isOpened, onClose}){
             <h3 className='popup-care__text-title'>
               Отбеливание<img src={popupCareIcons.whitening} alt="Отбеливание" className="popup-care__text-title-img"/>
             </h3>
-            <p className="popup-care__text">Моющие средства, содержащие отбеливающие вещества и хлор могут испортить ткань, поэтому их применение не рекомендуется. 
+            <p className="popup-care__text">Моющие средства, содержащие отбеливающие вещества и хлор могут испортить ткань, поэтому их применение не рекомендуется.
             Возможно использование пятновыводителя без хлора, но лучше всегда предварительно проверить действие выбранного средства на незаметном участке изделия.</p>
           </li>
         </ul>

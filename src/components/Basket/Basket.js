@@ -19,9 +19,7 @@ function Basket({ cartItems, onDeleteCartItem }) {
     setIsPopupBasketOpened(false);
   };
 
-  const getTotalCartItems = () => {
-    return cartItems.reduce((sum, e) => sum + e.num, 0);
-  }
+  const getTotalCartItems = () => cartItems.reduce((sum, e) => sum + e.num, 0);
 
   return (
     <div className='basket'>

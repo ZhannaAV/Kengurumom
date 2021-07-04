@@ -6,30 +6,31 @@ import Navigation from '../Navigation/Navigation';
 import useScrollPosition from './useScrollPosition';
 import './Header.css';
 
-function Header({ media, openSideMenu, cartItems, onDeleteCartItem }) {
-	const [isVisible, setIsBeVisible] = useState(false);
-	const [isCatMenuOpnd, setIsCatMenuOpnd] = useState(false);
+function Header({
+  media, openSideMenu, cartItems, onDeleteCartItem,
+}) {
+  const [isVisible, setIsBeVisible] = useState(false);
+  const [isCatMenuOpnd, setIsCatMenuOpnd] = useState(false);
 
+  const showCatalogue = (_) => {
+    setIsCatMenuOpnd(true);
+    document.addEventListener('click', hideCatalogue);
+  };
 
-	const showCatalogue = _ => {
-		setIsCatMenuOpnd(true);
-		document.addEventListener('click', hideCatalogue);
-	};	
-	
-	const hideCatalogue = _ => { 
-		setIsCatMenuOpnd(false);
-		document.removeEventListener('click', hideCatalogue);
-	};
+  const hideCatalogue = (_) => {
+    setIsCatMenuOpnd(false);
+    document.removeEventListener('click', hideCatalogue);
+  };
 
-	useScrollPosition(
+  useScrollPosition(
     ({ previousPos, currentPos }) => {
       const _isVisible = currentPos.y < previousPos.y;
       if (_isVisible !== isVisible) setIsBeVisible(_isVisible);
     },
-    [isVisible]
+    [isVisible],
   );
 
-	return (
+  return (
 		<>
 		<div className="header-dummy"></div>
 		<header className={`header ${isVisible ? 'header_sticky_hide' : ''}`}>
@@ -41,17 +42,17 @@ function Header({ media, openSideMenu, cartItems, onDeleteCartItem }) {
 					closeCatalogueMenu={hideCatalogue}
 				/>
 				{
-					media.isDesktop 
-						&& <CatalogueMenu 
+					media.isDesktop
+						&& <CatalogueMenu
 							isCatMenuOpnd={isCatMenuOpnd}
 						/>
 				}
 				<Basket onDeleteCartItem={onDeleteCartItem} cartItems={cartItems}/>
 				{
-					media.isLaptop 
-						&& 	<button 
-								type="button" 
-								className="header__burger-button" 
+					media.isLaptop
+						&& 	<button
+								type="button"
+								className="header__burger-button"
 								onClick={openSideMenu}
 							>
 							</button>
@@ -60,7 +61,7 @@ function Header({ media, openSideMenu, cartItems, onDeleteCartItem }) {
 			</div>
 		</header>
 		</>
-	);
+  );
 }
 
 export default Header;

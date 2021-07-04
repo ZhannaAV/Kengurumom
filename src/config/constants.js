@@ -13,7 +13,6 @@ import photoInstFive from '../images/instagram/inst-5.jpg';
 import photoInstSix from '../images/instagram/inst-6.jpg';
 import photoInstSeven from '../images/instagram/inst-7.jpg';
 import photoInstEight from '../images/instagram/inst-8.jpg';
-import {useMediaQuery} from "react-responsive";
 
 export const instagramPhotoData = [
   { link: photoInstOne },

@@ -5,5 +5,5 @@ import photoAboutImg_3 from '../../images/about/about-3.jpg';
 export const photoAbout = [
   photoAboutImg_1,
   photoAboutImg_2,
-  photoAboutImg_3
+  photoAboutImg_3,
 ];
