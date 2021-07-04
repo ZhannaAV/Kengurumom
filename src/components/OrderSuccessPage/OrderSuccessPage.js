@@ -1,9 +1,9 @@
 import { Link, useParams } from 'react-router-dom';
-import {MAIN_PAGE} from '../../config/links';
+import { MAIN_PAGE } from '../../config/links';
 import Button from '../Button/Button';
 import './OrderSuccessPage.css';
 
-export default function OrderSuccessPage () {
+export default function OrderSuccessPage() {
   const { id } = useParams();
 
   return (

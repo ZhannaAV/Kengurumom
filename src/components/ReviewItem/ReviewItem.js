@@ -1,6 +1,8 @@
 import './ReviewItem.css';
 
-export default function ReviewItem({instaTitle, instaSrc, instaLink, reviewShort}){
+export default function ReviewItem({
+  instaTitle, instaSrc, instaLink, reviewShort,
+}) {
   return (
     <figure className="review__item">
       <img src={instaSrc} alt={instaTitle} className="review__item-img"/>

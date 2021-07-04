@@ -1,6 +1,7 @@
-import './ContactsPage.css'
-import Button from "../Button/Button";
-function ContactsPage(){
+import './ContactsPage.css';
+import Button from '../Button/Button';
+
+function ContactsPage() {
   return (
 <section className="contacts contacts_centered">
 <h2 className="contacts__title">Контакты</h2>
@@ -33,6 +34,6 @@ function ContactsPage(){
     </form>
   </div>
 </section>
-  )
+  );
 }
-export default ContactsPage
+export default ContactsPage;

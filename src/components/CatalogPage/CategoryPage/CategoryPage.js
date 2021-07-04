@@ -4,7 +4,7 @@ import PopularItem from '../../PopularItem/PopularItem';
 import CustomSelect from '../../CustomSelect/CustomSelect';
 
 function CategoryPage({ products, onPopupAddCartOpen }) {
-  let { category } = useParams();
+  const { category } = useParams();
   const currentArr = category
     ? products.filter((product) => product.category === category)
     : products;

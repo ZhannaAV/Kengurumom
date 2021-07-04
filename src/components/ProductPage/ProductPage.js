@@ -1,11 +1,13 @@
 import './ProductPage.css';
-import ProdGallery from './ProdGallery/ProdGallery';
 import { useParams } from 'react-router-dom';
+import ProdGallery from './ProdGallery/ProdGallery';
 import CustomSelect from '../CustomSelect/CustomSelect';
 
-function ProductPage({ products, media, onPopupCareOpen, onPopupAddCartOpen }) {
-  let { id } = useParams();
-  const product = products.find((product) => product.id === id);
+function ProductPage({
+  products, media, onPopupCareOpen, onPopupAddCartOpen,
+}) {
+  const { id } = useParams();
+  const product = products.find((productData) => productData.id === id);
 
   const handlePopupAddCartOpen = () => {
     onPopupAddCartOpen({
@@ -13,8 +15,8 @@ function ProductPage({ products, media, onPopupCareOpen, onPopupAddCartOpen }) {
       src: product.photos[0],
       title: product.name,
       num: 1,
-      price: product.sale ? 
-        Math.floor(product.price - (product.price * product.sale) / 100) : product.price
+      price: product.sale
+        ? Math.floor(product.price - (product.price * product.sale) / 100) : product.price,
     });
   };
 

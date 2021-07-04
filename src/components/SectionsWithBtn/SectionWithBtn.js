@@ -1,8 +1,10 @@
-import './SectionWithBtn.css'
+import './SectionWithBtn.css';
 
-function SectionWithBtn (props){
-    const {placeText, placeImage, img, alt, title, text} = props
-    return (
+function SectionWithBtn(props) {
+  const {
+    placeText, placeImage, img, alt, title, text,
+  } = props;
+  return (
         <section
             className={`section-btn section-btn_for_${props.for}`}>
             <div className={`section-btn__block section-btn__block_place_${placeText}`}>
@@ -15,6 +17,6 @@ function SectionWithBtn (props){
             <img className={`section-btn__image section-btn__image_place_${placeImage}`} src={img}
                  alt={alt}/>
         </section>
-    )
+  );
 }
-export default SectionWithBtn
+export default SectionWithBtn;

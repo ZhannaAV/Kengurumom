@@ -6,30 +6,28 @@ import linkRightAngle from '../../../images/slick-slider-btn-right-angle.svg';
 
 import './SlickSliderArrow.css';
 
-export default function SlickSliderArrow({left = false, right = false, type, onClick}){
+export default function SlickSliderArrow({
+  left = false, right = false, type, onClick,
+}) {
   let link = '';
   let className = '';
 
   if (left) {
     if (type === 'popular') {
-      link = linkLeft
-    }
-    else if (type === 'review') {
-      link = linkLeftAngle
-    }
-    else if (type === 'menu') {
-      link = linkLeftAngle
+      link = linkLeft;
+    } else if (type === 'review') {
+      link = linkLeftAngle;
+    } else if (type === 'menu') {
+      link = linkLeftAngle;
     }
     className = 'slick-slider-arrow_left';
   }
   if (right) {
     if (type === 'popular') {
       link = linkRight;
-    }
-    else if (type === 'review') {
+    } else if (type === 'review') {
       link = linkRightAngle;
-    }
-    else if (type === 'menu') {
+    } else if (type === 'menu') {
       link = linkRightAngle;
     }
     className = 'slick-slider-arrow_right';
@@ -39,5 +37,5 @@ export default function SlickSliderArrow({left = false, right = false, type, onC
     <button className={`slick-slider-arrow slick-slider-arrow_type_${type} ${className}`} onClick={onClick}>
       <img src={link} className="slick-slider-arrow__img" alt="Показать ещё"/>
     </button>
-  )
+  );
 }

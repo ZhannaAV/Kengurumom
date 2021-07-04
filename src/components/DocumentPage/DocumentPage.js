@@ -1,19 +1,19 @@
 import {
   DOCUMENT_OFFER_CONTENT,
   DOCUMENT_TERMS_OF_USE_CONTENT,
-} from "./texts";
-import "./DocumentPage.css";
+} from './texts';
+import './DocumentPage.css';
 
-export default function DocumentPage({type}) {
+export default function DocumentPage({ type }) {
   return (
     <div className="document__container">
       <h2 className="document__title">
-        {type === "offer" && "Оферта"}
-        {type === "terms-of-use" && "Политика в отношении обработки персональных данных"}
+        {type === 'offer' && 'Оферта'}
+        {type === 'terms-of-use' && 'Политика в отношении обработки персональных данных'}
       </h2>
       <div className="document__content">
-        {type === "offer" && DOCUMENT_OFFER_CONTENT}
-        {type === "terms-of-use" && (
+        {type === 'offer' && DOCUMENT_OFFER_CONTENT}
+        {type === 'terms-of-use' && (
           <ul className="document__items">
             {DOCUMENT_TERMS_OF_USE_CONTENT.map((mainItem) => (
               <li className="document__item">
