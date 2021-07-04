@@ -8,7 +8,7 @@
     z-index: 1000;
     overflow: hidden;
     visibility: visible;
-    transition: visibility 0s 1s .5s ease-in-out;
+    transition: visibility 0s 1s .2s ease-in-out;
 }
 
 .side-menu_invisible {
@@ -31,14 +31,14 @@
     min-width: 500px;
     height: 100vh;
     background-color: #dc8962;
-    border-bottom-left-radius: 10px;
+    /* border-bottom-left-radius: 10px; */
     /* box-shadow: -5px 5px 5px rgba(0, 0, 0, .1); */
     border: 0 1px 1px 1px solid #ccc;
     padding-right: 25px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    transition: all .3s ease-in-out;
+    transition: all .2s ease-in-out;
 }
 
 .side-menu__top {
@@ -65,7 +65,7 @@
     cursor: pointer;
     outline: none;
     border: none;
-    transition: all .26s ease-in-out;
+    transition: all .2s ease-in-out;
 }
 
 .side-menu__close-button:hover {

@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import {useMediaQuery} from 'react-responsive';
 import './App.css';
 import Header from '../Header/Header';
@@ -7,6 +7,7 @@ import Content from "../Content/Content";
 import PopupCare from '../PopupCare/PopupCare';
 import PopupAddCart from '../PopupAddCart/PopupAddCart';
 import Footer from '../Footer/Footer';
+import { useLocation } from 'react-router-dom';
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
@@ -15,7 +16,7 @@ function App() {
   const [isPopupCareOpened, setIsPopupCareOpened] = useState(false);
 
   const isDesktop = useMediaQuery({minWidth: 1440});
-  const isLaptop = useMediaQuery({maxWidth: 1440});
+  const isLaptop = useMediaQuery({maxWidth: 1439});
   const isTabletHor = useMediaQuery({maxWidth: 1280});
   const isTabletVert = useMediaQuery({maxWidth: 1024});
   const isMobileHor = useMediaQuery({maxWidth: 768});
@@ -32,8 +33,8 @@ function App() {
     isMobileVert,
   };
 
-  const openSideMenu = (_) => setIsSideMenuOpened(true);
-  const closeSideMenu = (_) => setIsSideMenuOpened(false);
+  const openSideMenu = () => setIsSideMenuOpened(true);
+  const closeSideMenu = () => setIsSideMenuOpened(false);
 
   //open popup "Рекомендация по уходу"
   const handlePopupCareOpen = () => { setIsPopupCareOpened(true) };
@@ -58,6 +59,11 @@ function App() {
     }
   }
 
+  const { pathname } = useLocation();
+  useEffect(() => {
+    closeSideMenu();
+  }, [pathname]);
+
   const handlePopupAddCartClose = () => { setIsPopupAddCartOpened(false) };
 
   return (
@@ -69,15 +75,30 @@ function App() {
           onCloseClick={closeSideMenu}
         />
       )}
-      <Header media={media} openSideMenu={openSideMenu} cartItems={cartItems} onDeleteCartItem={handlePopupDeleteCartItem}/>
+      <Header 
+        media={media} 
+        openSideMenu={openSideMenu} 
+        cartItems={cartItems} 
+        onDeleteCartItem={handlePopupDeleteCartItem}
+      />
       <Content 
         media={media}
         onPopupCareOpen={handlePopupCareOpen}
         onPopupAddCartOpen={handlePopupAddCartOpen}
+        closeSideMenu={closeSideMenu}
       />
-      <Footer media={media}/>
-      <PopupCare isOpened={isPopupCareOpened} onClose={handlePopupCareClose}/>
-      <PopupAddCart isOpened={isPopupAddCartOpened} inputItem={popupAddCartItem} onClose={handlePopupAddCartClose}/>
+      <Footer 
+        media={media}
+      />
+      <PopupCare 
+        isOpened={isPopupCareOpened} 
+        onClose={handlePopupCareClose}
+      />
+      <PopupAddCart 
+        isOpened={isPopupAddCartOpened} 
+        inputItem={popupAddCartItem} 
+        onClose={handlePopupAddCartClose}
+      />
     </>
   )
 }

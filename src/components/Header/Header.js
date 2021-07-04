@@ -25,6 +25,7 @@ function Header({ media, openSideMenu, cartItems, onDeleteCartItem }) {
     ({ previousPos, currentPos }) => {
       const _isVisible = currentPos.y < previousPos.y;
       if (_isVisible !== isVisible) setIsBeVisible(_isVisible);
+	  hideCatalogue();
     },
     [isVisible]
   );

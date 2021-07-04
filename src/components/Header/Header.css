@@ -5,7 +5,7 @@
   width: 100%;
   margin: 130px 0 0 0;
   z-index: 10;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 1);
   border-bottom: solid 1px #ccc;
   transition: margin-top ease-in 0.3s;
 }
@@ -82,6 +82,10 @@
     padding: 20px 0;
     min-height: 120px;
   }
+
+  .header-dummy {
+    height: 120px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -93,5 +97,9 @@
 
   .header__content {
     min-height: 110px;
+  }
+
+  .header-dummy {
+    height: 110px;
   }
 }
