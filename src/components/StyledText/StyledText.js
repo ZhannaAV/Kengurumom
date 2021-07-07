@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import React from 'react';
 import styled from 'styled-components';
 
@@ -21,22 +22,23 @@ export default function StyledText({ text, styles }) {
     let output = word;
     if (/<(\w+?)>(.+)<\/\1>/.test(word)) {
       const tagName = word.replace(/<(\w+?)>(.+)<\/\1>/, '$1');
-      const text = word.replace(/<(\w+?)>(.+)<\/\1>/, '$2');
+      const tmpText = word.replace(/<(\w+?)>(.+)<\/\1>/, '$2');
 
       if (!styles[tagName].style && !styles[tagName].className) {
         throw Error(`StyledText Component [${tagName}]: nor styles, nor className set`);
       }
 
       if (styles[tagName].style) {
-        output = <StyledSpan key={text} style={styles[tagName].style}> {text} </StyledSpan>;
+        output = <StyledSpan key={tmpText} style={styles[tagName].style}> {tmpText} </StyledSpan>;
       } else if (styles[tagName].className) {
-        output = <StyledSpan key={text} className={styles[tagName].className}> {text} </StyledSpan>;
+        output = <StyledSpan key={tmpText} className={styles[tagName].className}> {tmpText} </StyledSpan>;
       }
     }
     return output;
   };
 
-  // create array of groups of words and objects (without this we`ll have every word at single line in our html code! not good)
+  // create array of groups of words and objects
+  // (without this we`ll have every word at single line in our html code! not good)
   const words = text.split(/(<\w+?>.+?<\/\w+?>)/).map(createWordComponent);
 
   return <StyledParagraph style={style} className={className}>{words}</StyledParagraph>;

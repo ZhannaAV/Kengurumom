@@ -1,6 +1,5 @@
 import './Slider.css';
 import { useState } from 'react';
-// import cn from 'classnames';
 import slider1 from '../../images/slider/photo-on-slider-1.jpg';
 import slider2 from '../../images/slider/photo-on-slider-2.jpg';
 import Button from '../Button/Button';
