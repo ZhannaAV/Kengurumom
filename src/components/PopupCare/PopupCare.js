@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import React from 'react';
 import './PopupCare.css';
 import Dialog from '@material-ui/core/Dialog';
@@ -21,7 +22,7 @@ const theme = createMuiTheme({
   },
 });
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   paperWidthSm: {
     width: '100%',
     maxWidth: '1167px',

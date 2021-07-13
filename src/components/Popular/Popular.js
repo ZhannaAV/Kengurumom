@@ -1,3 +1,5 @@
+/* eslint-disable no-nested-ternary */
+/* eslint-disable max-len */
 import { useState, useEffect } from 'react';
 import './Popular.css';
 
@@ -22,7 +24,10 @@ export default function Popular({ media, products, onPopupAddCartOpen }) {
     }
   };
 
-  const updateShowArrows = () => { width > 1380 ? setShowArrows(true) : setShowArrows(false); };
+  const updateShowArrows = () => {
+    if (width > 1380) setShowArrows(true);
+    else setShowArrows(false);
+  };
 
   useEffect(() => {
     updateWidth();

@@ -8,6 +8,7 @@ import SlickSlider from '../SharedComponents/Slider/SlickSlider';
 
 export default function Review({ media }) {
   const [width, setWidth] = useState(window.innerWidth);
+  // eslint-disable-next-line no-nested-ternary
   const [slides, setSlides] = useState(media.isDesktop ? 3 : media.isTabletVert ? 2 : 1);
   const [showArrows, setShowArrows] = useState(!!media.isDesktop);
 
@@ -22,7 +23,10 @@ export default function Review({ media }) {
     }
   };
 
-  const updateShowArrows = () => { width > 1200 ? setShowArrows(true) : setShowArrows(false); };
+  const updateShowArrows = () => {
+    if (width > 1200) setShowArrows(true);
+    else setShowArrows(false);
+  };
 
   useEffect(() => {
     updateWidth();

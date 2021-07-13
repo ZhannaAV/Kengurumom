@@ -1,6 +1,8 @@
-import { useState } from 'react';
+/* eslint-disable no-return-assign */
+import { useState, useEffect } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import './App.css';
+import { useLocation } from 'react-router-dom';
 import Header from '../Header/Header';
 import SideMenu from '../SideMenu/SideMenu';
 import Content from '../Content/Content';
@@ -15,7 +17,7 @@ function App() {
   const [isPopupCareOpened, setIsPopupCareOpened] = useState(false);
 
   const isDesktop = useMediaQuery({ minWidth: 1440 });
-  const isLaptop = useMediaQuery({ maxWidth: 1440 });
+  const isLaptop = useMediaQuery({ maxWidth: 1439 });
   const isTabletHor = useMediaQuery({ maxWidth: 1280 });
   const isTabletVert = useMediaQuery({ maxWidth: 1024 });
   const isMobileHor = useMediaQuery({ maxWidth: 768 });
@@ -32,8 +34,8 @@ function App() {
     isMobileVert,
   };
 
-  const openSideMenu = (_) => setIsSideMenuOpened(true);
-  const closeSideMenu = (_) => setIsSideMenuOpened(false);
+  const openSideMenu = () => setIsSideMenuOpened(true);
+  const closeSideMenu = () => setIsSideMenuOpened(false);
 
   // open popup "Рекомендация по уходу"
   const handlePopupCareOpen = () => { setIsPopupCareOpened(true); };
@@ -44,7 +46,7 @@ function App() {
     if (!cartItems.map((e) => e.id).includes(item.id)) {
       setCartItems([...cartItems, item]);
     } else {
-      setCartItems(cartItems.map((e) => ({ num: e.id === item.id ? e.num++ : e.num, ...e })));
+      setCartItems(cartItems.map((e) => ({ num: e.id === item.id ? e.num += 1 : e.num, ...e })));
     }
     setPopupAddCartItem(item);
     setIsPopupAddCartOpened(true);
@@ -52,11 +54,16 @@ function App() {
 
   const handlePopupDeleteCartItem = (item) => {
     if (cartItems.filter((e) => e.id === item.id)[0].num > 1) {
-      setCartItems(cartItems.map((e) => ({ num: e.id === item.id ? e.num-- : e.num, ...e })));
+      setCartItems(cartItems.map((e) => ({ num: e.id === item.id ? e.num -= 1 : e.num, ...e })));
     } else {
       setCartItems(cartItems.filter((e) => e.id !== item.id));
     }
   };
+
+  const { pathname } = useLocation();
+  useEffect(() => {
+    closeSideMenu();
+  }, [pathname]);
 
   const handlePopupAddCartClose = () => { setIsPopupAddCartOpened(false); };
 
@@ -69,15 +76,30 @@ function App() {
           onCloseClick={closeSideMenu}
         />
       )}
-      <Header media={media} openSideMenu={openSideMenu} cartItems={cartItems} onDeleteCartItem={handlePopupDeleteCartItem}/>
+      <Header
+        media={media}
+        openSideMenu={openSideMenu}
+        cartItems={cartItems}
+        onDeleteCartItem={handlePopupDeleteCartItem}
+      />
       <Content
         media={media}
         onPopupCareOpen={handlePopupCareOpen}
         onPopupAddCartOpen={handlePopupAddCartOpen}
+        closeSideMenu={closeSideMenu}
       />
-      <Footer media={media}/>
-      <PopupCare isOpened={isPopupCareOpened} onClose={handlePopupCareClose}/>
-      <PopupAddCart isOpened={isPopupAddCartOpened} inputItem={popupAddCartItem} onClose={handlePopupAddCartClose}/>
+      <Footer
+        media={media}
+      />
+      <PopupCare
+        isOpened={isPopupCareOpened}
+        onClose={handlePopupCareClose}
+      />
+      <PopupAddCart
+        isOpened={isPopupAddCartOpened}
+        inputItem={popupAddCartItem}
+        onClose={handlePopupAddCartClose}
+      />
     </>
   );
 }

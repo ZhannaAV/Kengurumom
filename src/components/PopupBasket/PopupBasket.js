@@ -1,3 +1,7 @@
+/* eslint-disable no-param-reassign */
+/* eslint-disable no-return-assign */
+/* eslint-disable no-restricted-syntax */
+/* eslint-disable max-len */
 import { useState, useEffect } from 'react';
 import './PopupBasket.css';
 import { Link } from 'react-router-dom';
@@ -14,7 +18,7 @@ export default function PopupBasket({
 
   const handleReloadCartSum = (inputItems) => {
     if (inputItems) {
-      const sum = inputItems.reduce((sum, e) => sum += e.price * e.num, 0);
+      const sum = inputItems.reduce((s, e) => s += e.price * e.num, 0);
       setSummaryPrice(sum);
     }
   };
@@ -27,7 +31,6 @@ export default function PopupBasket({
     for (const e of inputItems) {
       if (!e.num) e.num = 1;
     }
-
     setItems(inputItems);
   };
 
@@ -64,7 +67,7 @@ export default function PopupBasket({
             <Button text="В корзину" type="button" btnStyle="button_type_popup-basket" onClick={onClose}/>
           </Link>
           <Button text="Закрыть" type="button" btnStyle="button_type_popup-basket" onClick={onClose} />
-          {/* <Button text="Оформить" type="button" style="button_type_popup-basket" onClick={onClose} /> */}
+          {/* <Button text="Оформить" type="button" btnStyle="button_type_popup-basket" onClick={onClose} /> */}
         </div>
       </div>
     </div>

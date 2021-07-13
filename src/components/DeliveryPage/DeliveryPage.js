@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import React from 'react';
 import './DeliveryPage.css';
 import iconDelivery from '../../images/deliveryPage/delivery_icon.svg';

@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable jsx-a11y/anchor-has-content */
 import Logo from '../Logo/Logo';
 import './Footer.css';
 import { PHONE } from '../../config/texts';

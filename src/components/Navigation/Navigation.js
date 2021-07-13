@@ -9,6 +9,7 @@ import {
   OFFER_PAGE,
   TERMS_OF_USE_PAGE,
 } from '../../config/links';
+
 import {
   PERSONAL_SEWING_TEXT,
   CATALOGUE_TEXT,
@@ -90,9 +91,9 @@ function Navigation({
           { navigation__link: type !== 'footer' },
           { navigation__link_type_footer: type === 'footer' },
         )}
-          // className="navigation__link"
-        to={CONTACTS_PAGE}>
-          {CONTACTS_TEXT}
+          to={CONTACTS_PAGE}>
+            {CONTACTS_TEXT}
+
         </Link>
       )}
       {(type !== 'footer' && (!media.isMobileVert || type === 'side')) && (
@@ -105,12 +106,22 @@ function Navigation({
         </Link>
       )}
       {type === 'footer' && (
-        <Link className="navigation__link_type_footer navigation__link_underlined" to={OFFER_PAGE} target="_blank" rel="noopener noreferrer">
+        <Link
+          className="navigation__link_type_footer navigation__link_underlined"
+          to={OFFER_PAGE}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           {OFFER_TEXT}
         </Link>
       )}
       {type === 'footer' && (
-        <Link className="navigation__link_type_footer navigation__link_underlined" to={TERMS_OF_USE_PAGE} target="_blank" rel="noopener noreferrer">
+        <Link
+          className="navigation__link_type_footer navigation__link_underlined"
+          to={TERMS_OF_USE_PAGE}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           {TERMS_OF_USE_TEXT}
         </Link>
       )}

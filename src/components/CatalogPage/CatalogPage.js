@@ -1,3 +1,4 @@
+/* eslint-disable no-nested-ternary */
 import './CatalogPage.css';
 import {
   NavLink, Route, Switch, useRouteMatch,
@@ -30,7 +31,8 @@ function CatalogPage({ products, onPopupAddCartOpen, media }) {
   };
 
   const updateShowArrows = () => {
-    width > 1380 ? setShowArrows(true) : setShowArrows(false);
+    if (width > 1380) setShowArrows(true);
+    else setShowArrows(false);
   };
 
   useEffect(() => {
