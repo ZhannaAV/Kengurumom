@@ -7,7 +7,7 @@ import Navigation from '../Navigation/Navigation';
 import useScrollPosition from './useScrollPosition';
 import './Header.css';
 
-function Header({ media, openSideMenu, cartItems, onDeleteCartItem }) {
+function Header({ media, openSideMenu }) {
   const [isVisible, setIsBeVisible] = useState(false);
   const [isCatMenuOpnd, setIsCatMenuOpnd] = useState(false);
 
@@ -32,7 +32,7 @@ function Header({ media, openSideMenu, cartItems, onDeleteCartItem }) {
 
   return (
     <>
-      <div className='header-dummy'></div>
+      <div className='header-dummy' />
       <header className={`header ${isVisible ? 'header_sticky_hide' : ''}`}>
         <div className='header__content'>
           <Logo />
@@ -42,9 +42,9 @@ function Header({ media, openSideMenu, cartItems, onDeleteCartItem }) {
             closeCatalogueMenu={hideCatalogue}
           />
           {media.isDesktop && <CatalogueMenu isCatMenuOpnd={isCatMenuOpnd} />}
-          <Basket onDeleteCartItem={onDeleteCartItem} cartItems={cartItems} />
+          <Basket />
           {media.isLaptop && (
-            <button type='button' className='header__burger-button' onClick={openSideMenu}></button>
+            <button type='button' className='header__burger-button' onClick={openSideMenu} />
           )}
         </div>
       </header>
