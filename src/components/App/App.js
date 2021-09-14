@@ -1,6 +1,7 @@
 /* eslint-disable no-return-assign */
 import { useState, useEffect } from 'react';
 import { useMediaQuery } from 'react-responsive';
+import { useSelector } from 'react-redux';
 import './App.css';
 import { useLocation } from 'react-router-dom';
 import Header from '../Header/Header';
@@ -15,6 +16,8 @@ function App() {
   const [popupAddCartItem, setPopupAddCartItem] = useState(null);
   const [isPopupAddCartOpened, setIsPopupAddCartOpened] = useState(false);
   const [isPopupCareOpened, setIsPopupCareOpened] = useState(false);
+  const goods = useSelector(state => state.goods.goodsInBasket);
+  console.log(goods);
 
   const isDesktop = useMediaQuery({ minWidth: 1440 });
   const isLaptop = useMediaQuery({ maxWidth: 1439 });
@@ -38,63 +41,55 @@ function App() {
   const closeSideMenu = () => setIsSideMenuOpened(false);
 
   // open popup "Рекомендация по уходу"
-  const handlePopupCareOpen = () => { setIsPopupCareOpened(true); };
-  const handlePopupCareClose = () => { setIsPopupCareOpened(false); };
+  const handlePopupCareOpen = () => {
+    setIsPopupCareOpened(true);
+  };
+  const handlePopupCareClose = () => {
+    setIsPopupCareOpened(false);
+  };
 
   // open popup "Товар добавлен в корзину"
-  const handlePopupAddCartOpen = (item) => {
-    if (!cartItems.map((e) => e.id).includes(item.id)) {
+  const handlePopupAddCartOpen = item => {
+    if (!cartItems.map(e => e.id).includes(item.id)) {
       setCartItems([...cartItems, item]);
     } else {
-      setCartItems(cartItems.map((e) => ({ num: e.id === item.id ? e.num += 1 : e.num, ...e })));
+      setCartItems(cartItems.map(e => ({ num: e.id === item.id ? (e.num += 1) : e.num, ...e })));
     }
     setPopupAddCartItem(item);
     setIsPopupAddCartOpened(true);
   };
 
-  const handlePopupDeleteCartItem = (item) => {
-    if (cartItems.filter((e) => e.id === item.id)[0].num > 1) {
-      setCartItems(cartItems.map((e) => ({ num: e.id === item.id ? e.num -= 1 : e.num, ...e })));
-    } else {
-      setCartItems(cartItems.filter((e) => e.id !== item.id));
-    }
-  };
+  // const handlePopupDeleteCartItem = item => {
+  //   if (cartItems.filter(e => e.id === item.id)[0].num > 1) {
+  //     setCartItems(cartItems.map(e => ({ num: e.id === item.id ? (e.num -= 1) : e.num, ...e })));
+  //   } else {
+  //     setCartItems(cartItems.filter(e => e.id !== item.id));
+  //   }
+  // };
 
   const { pathname } = useLocation();
   useEffect(() => {
     closeSideMenu();
   }, [pathname]);
 
-  const handlePopupAddCartClose = () => { setIsPopupAddCartOpened(false); };
+  const handlePopupAddCartClose = () => {
+    setIsPopupAddCartOpened(false);
+  };
 
   return (
     <>
       {isLaptop && (
-        <SideMenu
-          media={media}
-          isOpened={isSideMenuOpened}
-          onCloseClick={closeSideMenu}
-        />
+        <SideMenu media={media} isOpened={isSideMenuOpened} onCloseClick={closeSideMenu} />
       )}
-      <Header
-        media={media}
-        openSideMenu={openSideMenu}
-        cartItems={cartItems}
-        onDeleteCartItem={handlePopupDeleteCartItem}
-      />
+      <Header media={media} openSideMenu={openSideMenu} />
       <Content
         media={media}
         onPopupCareOpen={handlePopupCareOpen}
         onPopupAddCartOpen={handlePopupAddCartOpen}
         closeSideMenu={closeSideMenu}
       />
-      <Footer
-        media={media}
-      />
-      <PopupCare
-        isOpened={isPopupCareOpened}
-        onClose={handlePopupCareClose}
-      />
+      <Footer media={media} />
+      <PopupCare isOpened={isPopupCareOpened} onClose={handlePopupCareClose} />
       <PopupAddCart
         isOpened={isPopupAddCartOpened}
         inputItem={popupAddCartItem}
