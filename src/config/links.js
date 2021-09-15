@@ -47,6 +47,7 @@ export const pathTranslate = {
   envelops: 'Конверты на выписку',
   napkins: 'Пелёнки и пледы',
   milksnuds: 'Милкснуды',
+  basket: 'Корзина',
   'knitted-blankets': 'Вязаные пледы',
   organizers: 'Органайзеры для детских вещей',
   'gift-certificate': 'Подарочный сертификат',

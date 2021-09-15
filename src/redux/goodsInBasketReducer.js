@@ -4,10 +4,11 @@ const initialState = {
   goodsInBasket: [
     {
       id: 1,
-      title: 'пелёнка',
+      title: 'Пеленка-кокон "Авокадо',
       num: 2,
       price: 200,
       src: '',
+      article: 'KNG.EW.K2152',
     },
   ],
   goodsTotaSummInBasket: 400,

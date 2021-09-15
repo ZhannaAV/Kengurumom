@@ -1,7 +1,5 @@
-/* eslint-disable no-return-assign */
 import { useState, useEffect } from 'react';
 import { useMediaQuery } from 'react-responsive';
-import { useSelector } from 'react-redux';
 import './App.css';
 import { useLocation } from 'react-router-dom';
 import Header from '../Header/Header';
@@ -16,8 +14,6 @@ function App() {
   const [popupAddCartItem, setPopupAddCartItem] = useState(null);
   const [isPopupAddCartOpened, setIsPopupAddCartOpened] = useState(false);
   const [isPopupCareOpened, setIsPopupCareOpened] = useState(false);
-  const goods = useSelector(state => state.goods.goodsInBasket);
-  console.log(goods);
 
   const isDesktop = useMediaQuery({ minWidth: 1440 });
   const isLaptop = useMediaQuery({ maxWidth: 1439 });
@@ -53,6 +49,7 @@ function App() {
     if (!cartItems.map(e => e.id).includes(item.id)) {
       setCartItems([...cartItems, item]);
     } else {
+      // eslint-disable-next-line no-return-assign
       setCartItems(cartItems.map(e => ({ num: e.id === item.id ? (e.num += 1) : e.num, ...e })));
     }
     setPopupAddCartItem(item);

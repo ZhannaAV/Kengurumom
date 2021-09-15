@@ -1,0 +1,28 @@
+.basket-page{
+  max-width: 1170px;
+  padding-bottom: 88px;
+}
+
+.basket-page_centered{
+  margin: auto;
+}
+
+.basket_page__title{
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 37px;
+  text-align: center;
+  margin: 0;
+}
+
+.basket-page__top{
+  display: flex;
+  justify-content: space-between;
+}
+
+.basket-page__table{
+  border: 1px solid #513629;
+  box-sizing: border-box;
+  border-radius: 10px;
+  width: 100%;
+}
