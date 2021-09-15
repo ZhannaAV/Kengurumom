@@ -11,6 +11,7 @@ import {
   TERMS_OF_USE_PAGE,
   PRODUCT_PAGE,
   ORDER_SUCCESS_PAGE,
+  BASKET_PAGE,
 } from '../../config/links';
 import MainPage from '../MainPage/MainPage';
 import AboutPage from '../AboutPage/AboutPage';
@@ -24,6 +25,7 @@ import { exampleArrProducts } from '../../config/constants';
 import BreadCrumbs from '../BreadCrumbs/BreadCrumbs';
 import ContactsPage from '../ContactsPage/ContactsPage';
 import OrderSuccessPage from '../OrderSuccessPage/OrderSuccessPage';
+import BasketPage from '../BasketPage/BasketPage';
 
 function Content(props) {
   const { media, onPopupCareOpen, onPopupAddCartOpen } = props;
@@ -34,7 +36,7 @@ function Content(props) {
   }, [pathname]);
 
   return (
-    <main className="content">
+    <main className='content'>
       {pathname !== MAIN_PAGE && <BreadCrumbs />}
       <Switch>
         <Route exact path={MAIN_PAGE}>
@@ -46,11 +48,11 @@ function Content(props) {
         </Route>
 
         <Route path={OFFER_PAGE}>
-          <DocumentPage type="offer" />
+          <DocumentPage type='offer' />
         </Route>
 
         <Route path={TERMS_OF_USE_PAGE}>
-          <DocumentPage type="terms-of-use" />
+          <DocumentPage type='terms-of-use' />
         </Route>
 
         <Route path={DELIVERY_PAGE}>
@@ -59,6 +61,10 @@ function Content(props) {
 
         <Route path={CONTACTS_PAGE}>
           <ContactsPage />
+        </Route>
+
+        <Route path={BASKET_PAGE}>
+          <BasketPage />
         </Route>
 
         <Route path={CATALOGUE_PAGE}>
@@ -82,22 +88,22 @@ function Content(props) {
           <OrderSuccessPage />
         </Route>
 
-      {/* use for test !!! */}
-      <Route path="/test_popup/">
-        <div
-          style={{
-            width: '100wh',
-            height: 'calc(100vh - 1111px);',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-          }}
-        >
-          <Button text="CLICK ME!" btnStyle="" onClick={onPopupAddCartOpen} />
-        </div>
-      </Route>
+        {/* use for test !!! */}
+        <Route path='/test_popup/'>
+          <div
+            style={{
+              width: '100wh',
+              height: 'calc(100vh - 1111px);',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
+          >
+            <Button text='CLICK ME!' btnStyle='' onClick={onPopupAddCartOpen} />
+          </div>
+        </Route>
 
-        <Route path="*">
+        <Route path='*'>
           <NotFoundPage />
         </Route>
       </Switch>
