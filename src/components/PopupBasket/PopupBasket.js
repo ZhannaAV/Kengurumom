@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 import { connect, useDispatch } from 'react-redux';
 import { BASKET_PAGE } from '../../config/links';
 import Button from '../Button/Button';
-import { deleteIcon } from './constants';
+import deleteIcon from '../../images/cart_delete_icon.svg';
 import { removeProduct } from '../../redux/actions';
 
-const PopupBasket = ({ isOpened, onClose, goods, goodsTotalSumm }) => {
+const PopupBasket = ({ isOpened, onClose, goods, goodsTotalSum }) => {
   const visibilityClass = isOpened ? 'popup-basket_visible' : '';
   const dispatch = useDispatch();
 
@@ -17,7 +17,7 @@ const PopupBasket = ({ isOpened, onClose, goods, goodsTotalSumm }) => {
           {goods.length > 0 ? (
             goods.map(product => (
               <div className='popup-basket__item' key={product.id}>
-                <img className='popup-basket__item-img' src={product.src} alt={product.title} />
+                <img className='popup-basket__item-img' src={product.img} alt={product.title} />
                 <h3 className='popup-basket__item-title'>{product.title}</h3>
                 <p className='popup-basket__item-num'>{product.num}</p>
                 <p className='popup-basket__item-price'>{product.price}</p>
@@ -33,7 +33,7 @@ const PopupBasket = ({ isOpened, onClose, goods, goodsTotalSumm }) => {
             <p className='popup-basket__empty-cart'>В корзине нет товаров</p>
           )}
         </div>
-        <p className='popup-basket__summary'>Итого: {goodsTotalSumm}</p>
+        <p className='popup-basket__summary'>Итого: {goodsTotalSum}</p>
         <div className='popup-basket__buttons'>
           <Link to={BASKET_PAGE}>
             <Button
@@ -59,7 +59,7 @@ const PopupBasket = ({ isOpened, onClose, goods, goodsTotalSumm }) => {
 
 const MapStateToProps = state => ({
   goods: state.goods.goodsInBasket,
-  goodsTotalSumm: state.goods.goodsTotaSummInBasket,
+  goodsTotalSum: state.goods.goodsTotalSumInBasket,
 });
 
 export default connect(MapStateToProps)(PopupBasket);
