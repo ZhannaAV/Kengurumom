@@ -1,6 +1,8 @@
 .basket-page{
   max-width: 1170px;
   padding-bottom: 88px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .basket-page_centered{
@@ -18,6 +20,26 @@
 .basket-page__top{
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
+}
+
+.basket-page__info{
+  font-family: 'Montserrat Alternates', Arial, sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #513629;
+}
+
+.basket-page__clear-btn{
+  border: none;
+  background-color: transparent;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #513629;
+  padding: 0;
+  cursor: pointer;
 }
 
 .basket-page__table{
@@ -25,4 +47,6 @@
   box-sizing: border-box;
   border-radius: 10px;
   width: 100%;
+  padding: 25px;
 }
+
