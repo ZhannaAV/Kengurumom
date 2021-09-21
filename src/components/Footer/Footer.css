@@ -12,9 +12,9 @@
   padding: 0 20px 45px;
   display: grid;
   grid-template-areas:
-    "logo ."
-    "menu contacts"
-    "menu copyright";
+    'logo .'
+    'menu contacts'
+    'menu copyright';
 }
 
 .footer__contact {
@@ -46,9 +46,9 @@
   grid-area: contacts;
   display: grid;
   grid-template-areas:
-    "phone"
-    "time"
-    "social";
+    'phone'
+    'time'
+    'social';
 }
 
 .footer__copyright {
@@ -80,33 +80,36 @@
 }
 
 .footer__social-link_icon_instagram {
-  background-image: url("../../images/icons/Instagram.svg");
+  background-image: url('../../images/icons/Instagram.svg');
+  transition: all 0.26s ease-in-out;
 }
 
 .footer__social-link_icon_instagram:hover {
-  background-image: url("../../images/icons/Instagram-hover.svg");
+  background-image: url('../../images/icons/Instagram-hover.svg');
 }
 
 .footer__social-link_icon_telegram {
-  background-image: url("../../images/icons/tg.svg");
+  background-image: url('../../images/icons/tg.svg');
+  transition: all 0.26s ease-in-out;
 }
 
 .footer__social-link_icon_telegram:hover {
-  background-image: url("../../images/icons/tg-hover.svg");
+  background-image: url('../../images/icons/tg-hover.svg');
 }
 
 .footer__social-link_icon_whatsapp {
-  background-image: url("../../images/icons/wa.svg");
+  background-image: url('../../images/icons/wa.svg');
+  transition: all 0.26s ease-in-out;
 }
 
 .footer__social-link_icon_whatsapp:hover {
-  background-image: url("../../images/icons/wa-hover.svg");
+  background-image: url('../../images/icons/wa-hover.svg');
 }
 
 .footer__social-link {
   text-decoration: none;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   background-color: transparent;
   margin: 0;
@@ -175,17 +178,17 @@
 @media screen and (max-width: 660px) {
   .footer__container {
     grid-template-areas:
-      "logo"
-      "contacts"
-      "menu"
-      "copyright";
+      'logo'
+      'contacts'
+      'menu'
+      'copyright';
   }
 
   .footer__contacts {
     grid-template-areas:
-      "social"
-      "phone"
-      "time";
+      'social'
+      'phone'
+      'time';
     justify-items: center;
   }
 

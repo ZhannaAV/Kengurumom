@@ -9,7 +9,6 @@ function SideMenu({
   return (
 
     <div className={cn('side-menu', { 'side-menu_invisible': !isOpened })} >
-
       <div
         className={cn('side-menu__overlay', { 'side-menu__overlay_invisible': !isOpened })}
         onClick={onCloseClick}>
@@ -28,7 +27,7 @@ function SideMenu({
             type='side'
           />
         </div>
-    </div>
+      </div>
   );
 }
 

@@ -6,7 +6,6 @@ import {
   ABOUT_PAGE,
   DELIVERY_PAGE,
   CONTACTS_PAGE,
-  OFFER_PAGE,
   TERMS_OF_USE_PAGE,
 } from '../../config/links';
 
@@ -39,7 +38,6 @@ function Navigation({
           { navigation__link: type !== 'footer' },
           { navigation__link_type_footer: type === 'footer' },
         )}
-          // className="navigation__link"
           to={CATALOGUE_PAGE}
           onMouseOver={type !== 'side' && openCatalogueMenu}
         >
@@ -53,7 +51,6 @@ function Navigation({
             { navigation__link: type !== 'footer' },
             { navigation__link_type_footer: type === 'footer' },
           )}
-            // className="navigation__link"
           to={PERSONAL_SEWING_PAGE}
         >
           {PERSONAL_SEWING_TEXT}
@@ -66,7 +63,6 @@ function Navigation({
             { navigation__link: type !== 'footer' },
             { navigation__link_type_footer: type === 'footer' },
           )}
-            // className="navigation__link"
           to={ABOUT_PAGE}
         >
           {ABOUT_TEXT}
@@ -79,7 +75,6 @@ function Navigation({
             { navigation__link: type !== 'footer' },
             { navigation__link_type_footer: type === 'footer' },
           )}
-            // className="navigation__link"
           to={DELIVERY_PAGE}
         >
           {DELIVERY_TEXT}
@@ -108,7 +103,7 @@ function Navigation({
       {type === 'footer' && (
         <Link
           className="navigation__link_type_footer navigation__link_underlined"
-          to={OFFER_PAGE}
+          to={'/'}
           target="_blank"
           rel="noopener noreferrer"
         >
