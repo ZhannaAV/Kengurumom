@@ -9,21 +9,22 @@ function Slider() {
 
   return (
     <section className="slider">
+      {/* <div className="slider__wrapper"> */}
       <ul className={`slider__list ${isSecondSlideVisible ? 'slider__list_pos_second' : ''}`}>
         <li className="slider__slide">
           <div className="slider__cover">
             <div className="slider__contain">
               <h2 className="slider__title">
-               <span className="slider__title_accent">Kenguru </span>
-                 комфорт  и эстетика с первых дней
+                <span className="slider__title_accent">Kenguru </span>
+                комфорт  и эстетика с первых дней
               </h2>
               <p className="slider__subtitle">Качественная одежда и аксессуары
                 для новорожденных и мам.
               </p>
               <p className="slider__subtitle">
-                                От сердца к сердцу!
+                От сердца к сердцу!
               </p>
-              <Button text={'Заказать'}/>
+              <Button text={'Заказать'} />
             </div>
             <div className="slider__overlay">
               <img className="slider__background" src={slider1} alt="#" />
@@ -39,11 +40,12 @@ function Slider() {
               <p className="slider__subtitle">По Вашим размерам
                 и Вашему выбору ткани
               </p>
-              <Button text={'В каталог'}/>
+              <Button text={'В каталог'} />
             </div>
-            <div className="slider__overlay">
-              <img className="slider__background" src={slider2} alt="#" />
-            </div>
+
+          <div className="slider__overlay">
+            <img className="slider__background" src={slider2} alt="#" />
+          </div>
           </div>
         </li>
       </ul>
@@ -63,6 +65,7 @@ function Slider() {
         >
         </button>
       </div>
+      {/* </div> */}
     </section>
   );
 }
