@@ -19,22 +19,22 @@ function BasketTableProduct({ product }) {
       <div className='basket_page__product-counter'>
         <button
           className='basket_page__product-counter-btn'
-          onClick={() => dispatch(increaseProduct(product))}
+          onClick={() => dispatch(reduceProduct(product))}
         >
           <img
             className='basket_page__counter-image'
-            src={minusIcon}
+            src={plusIcon}
             alt={`Удалить из корзины ${product.title}`}
           />
         </button>
         <span className='basket_page__product-number'>{product.num}</span>
         <button
           className='basket_page__product-counter-btn'
-          onClick={() => dispatch(reduceProduct(product))}
+          onClick={() => dispatch(increaseProduct(product))}
         >
           <img
             className='basket_page__counter-image'
-            src={plusIcon}
+            src={minusIcon}
             alt={`Удалить из корзины ${product.title}`}
           />
         </button>

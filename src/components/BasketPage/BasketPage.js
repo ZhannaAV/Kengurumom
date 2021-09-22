@@ -2,6 +2,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import './BasketPage.css';
 import BasketTableProduct from '../BasketTableProduct/BasketTableProduct';
 import { clearBasket } from '../../redux/actions';
+import BasketForm from '../BasketForm/BasketForm';
 
 function BasketPage() {
   const goods = useSelector(state => state.goods.goodsInBasket);
@@ -26,6 +27,7 @@ function BasketPage() {
             ))}
           </div>
           <p className='basket-page__total'>Сумма: {goodsTotalSum} ₽</p>
+          <BasketForm />
         </>
       )}
     </section>
