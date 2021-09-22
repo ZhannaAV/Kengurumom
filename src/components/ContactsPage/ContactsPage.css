@@ -82,21 +82,6 @@
     height: 85px;
 }
 
-.contacts__checkbox{
-    width: 14px;
-    height: 12px;
-    margin-right: 7px;
-}
-
-.contacts__label{
-    font-family: Montserrat;
-    font-size: 12px;
-    line-height: 107.9%;
-    width: 100%;
-}
-.contacts__terms-link{
-    color: inherit;
-}
 
 @media screen and (max-width: 1024px) {
     .contacts{
@@ -130,8 +115,3 @@
     }
 }
 
-@media screen and (max-width: 390px) {
-.contacts__label{
-    font-size: 9px;
-}
-}

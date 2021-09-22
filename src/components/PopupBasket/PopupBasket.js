@@ -17,15 +17,15 @@ const PopupBasket = ({ isOpened, onClose, goods, goodsTotalSum }) => {
           {goods.length > 0 ? (
             goods.map(product => (
               <div className='popup-basket__item' key={product.id}>
-                <img className='popup-basket__item-img' src={product.img} alt={product.title} />
-                <h3 className='popup-basket__item-title'>{product.title}</h3>
+                <img className='popup-basket__item-img' src={product.photo} alt={product.name} />
+                <h3 className='popup-basket__item-title'>{product.name}</h3>
                 <p className='popup-basket__item-num'>{product.num}</p>
                 <p className='popup-basket__item-price'>{product.price}</p>
                 <button
                   className='popup-basket__item-del'
                   onClick={() => dispatch(removeProduct(product))}
                 >
-                  <img src={deleteIcon} alt={`Удалить из корзины ${product.title}`} />
+                  <img src={deleteIcon} alt={`Удалить из корзины ${product.name}`} />
                 </button>
               </div>
             ))

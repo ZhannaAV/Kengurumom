@@ -15,9 +15,11 @@ function BasketPage() {
       <h2 className='basket_page__title'>Корзина</h2>
       <div className='basket-page__top'>
         <p className='basket-page__info'>Ваш заказ({goodsCounterInBasket})</p>
-        <button onClick={() => dispatch(clearBasket())} className='basket-page__clear-btn'>
-          Очистить
-        </button>
+        {goodsCounterInBasket > 0 && (
+          <button onClick={() => dispatch(clearBasket())} className='basket-page__clear-btn'>
+            Очистить
+          </button>
+        )}
       </div>
       {goodsCounterInBasket > 0 && (
         <>
