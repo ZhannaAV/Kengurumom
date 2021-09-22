@@ -80,7 +80,7 @@
 @media screen and (max-width: 768px) {
   .basket_page__product-counter {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 
   .basket_page__product-number {
@@ -153,5 +153,6 @@
   }
   .basket_page__product-remove{
     justify-self: center;
+    margin-top: 10px;
   }
 }

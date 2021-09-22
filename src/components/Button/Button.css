@@ -89,6 +89,14 @@
     font-family: Montserrat;
 }
 
+.button_type_order{
+  width: 100%;
+  height: 50px;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 500;
+}
+
 @media screen and (max-width: 550px) {
   .button_type_popup-add-card {
     font-size: 14px;
