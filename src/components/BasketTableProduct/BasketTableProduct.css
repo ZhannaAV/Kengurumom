@@ -116,14 +116,42 @@
 @media screen and (max-width: 450px) {
   .basket_page__product {
     grid-template-areas:
-      'image title counter price remover'
-      'article article article article article';
+      'image title'
+      'image article'
+      'image price'
+      'remover counter';
     grid-column-gap: 15px;
+    grid-template-columns: 100px;
   }
-  .basket_page__product-title, .basket_page__product-article {
+  .basket_page__product-img {
+    width: 100px;
+    height: 100px;
+    align-self: flex-start;
+  }
+  .basket_page__product-article {
     font-size: 10px;
+    margin: 0;
   }
-  .basket_page__product-price, .basket_page__product-number{
+  .basket_page__product-title{
     font-size: 12px;
+    margin: 0;
+  }
+
+  .basket_page__product-number{
+    font-size: 12px;
+    margin: 0 20px;
+  }
+
+  .basket_page__product-counter {
+    flex-direction: row;
+    align-items: center;
+    justify-self: right;
+  }
+
+  .basket_page__product-price{
+    justify-self: right;
+  }
+  .basket_page__product-remove{
+    justify-self: center;
   }
 }
