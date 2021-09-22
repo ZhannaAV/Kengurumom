@@ -14,21 +14,29 @@ function BasketTableProduct({ product }) {
 
       <h3 className='basket_page__product-title'>{product.title}</h3>
 
-      <p className='basket_page__product-article'>{product.article}</p>
+      <p className='basket_page__product-article'>Артикл {product.article}</p>
 
       <div className='basket_page__product-counter'>
         <button
           className='basket_page__product-counter-btn'
           onClick={() => dispatch(increaseProduct(product))}
         >
-          <img src={minusIcon} alt={`Удалить из корзины ${product.title}`} />
+          <img
+            className='basket_page__counter-image'
+            src={minusIcon}
+            alt={`Удалить из корзины ${product.title}`}
+          />
         </button>
         <span className='basket_page__product-number'>{product.num}</span>
         <button
           className='basket_page__product-counter-btn'
           onClick={() => dispatch(reduceProduct(product))}
         >
-          <img src={plusIcon} alt={`Удалить из корзины ${product.title}`} />
+          <img
+            className='basket_page__counter-image'
+            src={plusIcon}
+            alt={`Удалить из корзины ${product.title}`}
+          />
         </button>
       </div>
 
@@ -38,7 +46,11 @@ function BasketTableProduct({ product }) {
         className='basket_page__product-remove'
         onClick={() => dispatch(removeProduct(product))}
       >
-        <img src={deleteIcon} alt={`Удалить из корзины ${product.title}`} />
+        <img
+          className='basket-page__remove-img'
+          src={deleteIcon}
+          alt={`Удалить из корзины ${product.title}`}
+        />
       </button>
     </div>
   );

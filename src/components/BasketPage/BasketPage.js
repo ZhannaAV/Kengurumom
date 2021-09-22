@@ -6,6 +6,7 @@ import { clearBasket } from '../../redux/actions';
 function BasketPage() {
   const goods = useSelector(state => state.goods.goodsInBasket);
   const goodsCounterInBasket = useSelector(state => state.goods.goodsCounterInBasket);
+  const goodsTotalSum = useSelector(state => state.goods.goodsTotalSumInBasket);
   const dispatch = useDispatch();
 
   return (
@@ -18,11 +19,14 @@ function BasketPage() {
         </button>
       </div>
       {goodsCounterInBasket > 0 && (
-        <div className='basket-page__table'>
-          {goods.map(product => (
-            <BasketTableProduct product={product} />
-          ))}
-        </div>
+        <>
+          <div className='basket-page__table'>
+            {goods.map(product => (
+              <BasketTableProduct product={product} />
+            ))}
+          </div>
+          <p className='basket-page__total'>Сумма: {goodsTotalSum} ₽</p>
+        </>
       )}
     </section>
   );
