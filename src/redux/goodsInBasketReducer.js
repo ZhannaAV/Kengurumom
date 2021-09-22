@@ -7,32 +7,30 @@ import {
 } from './types';
 
 const initialState = {
-  goodsInBasket: [
-    {
-      id: 1,
-      title: 'Пеленка-кокон "Авокадо',
-      num: 2,
-      price: 200,
-      img: 'https://images.unsplash.com/photo-1619800174740-db1639d3936e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2134&q=80',
-      article: 'KNG.EW.K2152',
-    },
-    {
-      id: 2,
-      title: 'Пеленка-кокон "Авокадо',
-      num: 2,
-      price: 200,
-      img: 'https://images.unsplash.com/photo-1619800174740-db1639d3936e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2134&q=80',
-      article: 'KNG.EW.K2152',
-    },
-  ],
-  goodsTotalSumInBasket: 800,
-  goodsCounterInBasket: 4,
+  goodsInBasket: [],
+  goodsTotalSumInBasket: 0,
+  goodsCounterInBasket: 0,
 };
 
 export const goodsInBasketReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_PPODUCT:
-      return { ...state, goodsInBasket: [...state.goodsInBasket, action.payload] };
+      return {
+        ...state,
+        goodsInBasket: [
+          ...state.goodsInBasket,
+          {
+            id: action.payload.id,
+            name: action.payload.name,
+            price: action.payload.price,
+            vendorCode: action.payload.vendorCode,
+            photo: action.payload.photos[0],
+            num: 1,
+          },
+        ],
+        goodsTotalSumInBasket: state.goodsTotalSumInBasket + action.payload.price,
+        goodsCounterInBasket: state.goodsCounterInBasket + 1,
+      };
 
     case REMOVE_PPODUCT:
       return {
@@ -50,7 +48,7 @@ export const goodsInBasketReducer = (state = initialState, action) => {
       return {
         ...state,
         goodsInBasket: state.goodsInBasket.map(p => {
-          if (action.payload.id === p.id) {
+          if (action.payload === p.id) {
             // eslint-disable-next-line no-param-reassign
             p.num += 1;
             return p;
@@ -65,7 +63,7 @@ export const goodsInBasketReducer = (state = initialState, action) => {
       return {
         ...state,
         goodsInBasket: state.goodsInBasket.map(p => {
-          if (action.payload.id === p.id) {
+          if (action.payload === p.id) {
             // eslint-disable-next-line no-param-reassign
             p.num -= 1;
             return p;
