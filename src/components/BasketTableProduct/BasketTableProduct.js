@@ -14,7 +14,7 @@ function BasketTableProduct({ product }) {
 
       <h3 className='basket_page__product-title'>{product.title}</h3>
 
-      <p className='basket_page__product-article'>Артикл {product.article}</p>
+      <p className='basket_page__product-article'>Артикул {product.article}</p>
 
       <div className='basket_page__product-counter'>
         <button
