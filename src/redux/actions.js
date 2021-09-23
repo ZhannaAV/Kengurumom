@@ -26,16 +26,16 @@ export function clearBasket() {
   };
 }
 
-export function increaseProduct(id) {
+export function increaseProduct(id, price) {
   return {
     type: INCREASE_PRODUCT,
-    payload: id,
+    payload: { id, price },
   };
 }
 
-export function reduceProduct(id) {
+export function reduceProduct(id, price) {
   return {
     type: REDUCE_PRODUCT,
-    payload: id,
+    payload: { id, price },
   };
 }
