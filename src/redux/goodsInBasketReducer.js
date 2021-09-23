@@ -6,6 +6,8 @@ import {
   REMOVE_PPODUCT,
 } from './types';
 
+import { addNewItem, incrementItem, decrementItem, changeSum, changeCounter } from './utils';
+
 const initialState = {
   goodsInBasket: [],
   goodsTotalSumInBasket: 0,
@@ -13,32 +15,25 @@ const initialState = {
 };
 
 export const goodsInBasketReducer = (state = initialState, action) => {
+  const { id, price, num } = action.payload || {};
+  const { goodsInBasket, goodsTotalSumInBasket, goodsCounterInBasket } = state;
   switch (action.type) {
     case ADD_PPODUCT:
       return {
         ...state,
-        goodsInBasket: [
-          ...state.goodsInBasket,
-          {
-            id: action.payload.id,
-            name: action.payload.name,
-            price: action.payload.price,
-            vendorCode: action.payload.vendorCode,
-            photo: action.payload.photos[0],
-            num: 1,
-          },
-        ],
-        goodsTotalSumInBasket: state.goodsTotalSumInBasket + action.payload.price,
-        goodsCounterInBasket: state.goodsCounterInBasket + 1,
+        goodsInBasket: goodsInBasket.some(p => p.id === id)
+          ? incrementItem(goodsInBasket, id)
+          : addNewItem(goodsInBasket, action.payload),
+        goodsTotalSumInBasket: changeSum(INCREASE_PRODUCT, goodsTotalSumInBasket, price),
+        goodsCounterInBasket: changeCounter(INCREASE_PRODUCT, goodsCounterInBasket),
       };
 
     case REMOVE_PPODUCT:
       return {
         ...state,
-        goodsInBasket: state.goodsInBasket.filter(p => action.payload.id !== p.id),
-        goodsTotalSumInBasket:
-          state.goodsTotalSumInBasket - action.payload.price * action.payload.num,
-        goodsCounterInBasket: state.goodsCounterInBasket - action.payload.num,
+        goodsInBasket: goodsInBasket.filter(p => id !== p.id),
+        goodsTotalSumInBasket: changeSum(REDUCE_PRODUCT, goodsTotalSumInBasket, price, num),
+        goodsCounterInBasket: changeCounter(REDUCE_PRODUCT, goodsCounterInBasket, num),
       };
 
     case CLEAR_BASKET:
@@ -47,31 +42,17 @@ export const goodsInBasketReducer = (state = initialState, action) => {
     case INCREASE_PRODUCT:
       return {
         ...state,
-        goodsInBasket: state.goodsInBasket.map(p => {
-          if (action.payload === p.id) {
-            // eslint-disable-next-line no-param-reassign
-            p.num += 1;
-            return p;
-          }
-          return p;
-        }),
-        goodsTotalSumInBasket: state.goodsTotalSumInBasket + action.payload.price,
-        goodsCounterInBasket: state.goodsCounterInBasket + 1,
+        goodsInBasket: incrementItem(goodsInBasket, id),
+        goodsTotalSumInBasket: changeSum(INCREASE_PRODUCT, goodsTotalSumInBasket, price),
+        goodsCounterInBasket: changeCounter(INCREASE_PRODUCT, goodsCounterInBasket),
       };
 
     case REDUCE_PRODUCT:
       return {
         ...state,
-        goodsInBasket: state.goodsInBasket.map(p => {
-          if (action.payload === p.id) {
-            // eslint-disable-next-line no-param-reassign
-            p.num -= 1;
-            return p;
-          }
-          return p;
-        }),
-        goodsTotalSumInBasket: state.goodsTotalSumInBasket - action.payload.price,
-        goodsCounterInBasket: state.goodsCounterInBasket - 1,
+        goodsInBasket: decrementItem(goodsInBasket, id),
+        goodsTotalSumInBasket: changeSum(REDUCE_PRODUCT, goodsTotalSumInBasket, price),
+        goodsCounterInBasket: changeCounter(REDUCE_PRODUCT, goodsCounterInBasket),
       };
 
     default:

@@ -19,7 +19,7 @@ function BasketTableProduct({ product }) {
       <div className='basket_page__product-counter'>
         <button
           className='basket_page__product-counter-btn'
-          onClick={() => dispatch(reduceProduct(product.id))}
+          onClick={() => dispatch(reduceProduct(product.id, product.price))}
         >
           <img
             className='basket_page__counter-image'
@@ -30,7 +30,7 @@ function BasketTableProduct({ product }) {
         <span className='basket_page__product-number'>{product.num}</span>
         <button
           className='basket_page__product-counter-btn'
-          onClick={() => dispatch(increaseProduct(product.id))}
+          onClick={() => dispatch(increaseProduct(product.id, product.price))}
         >
           <img
             className='basket_page__counter-image'
