@@ -1,19 +1,23 @@
 import './PopularItem.css';
 import { Link, useHistory } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 import { PRODUCT_PAGE } from '../../config/links';
+import { addProduct } from '../../redux/actions';
 
 // 'new' prop is reserved, rename to isNew
-export default function PopularItem({
-  id,
-  photos,
-  name,
-  price,
-  sale = false,
-  new: isNew = false,
-  onPopupAddCartOpen,
-  component,
-}) {
+export default function PopularItem(product) {
+  const {
+    id,
+    photos,
+    name,
+    price,
+    sale = false,
+    new: isNew = false,
+    onPopupAddCartOpen,
+    component,
+  } = product;
   const history = useHistory();
+  const dispatch = useDispatch();
 
   const handleClick = () => {
     history.push(`${PRODUCT_PAGE}/${id}`);
@@ -30,20 +34,16 @@ export default function PopularItem({
   };
 
   return (
-    <figure
-      className={`${component}__item ${isNew && `${component}__item_new`}`}
-    >
-      <img
-        onClick={handleClick}
-        src={photos[0]}
-        alt={name}
-        className={`${component}__item-img`}
-      />
+    <figure className={`${component}__item ${isNew && `${component}__item_new`}`}>
+      <img onClick={handleClick} src={photos[0]} alt={name} className={`${component}__item-img`} />
       <button
         className={`${component}__item-cart`}
-        alt="В корзину"
-        onClick={handlePopupAddCartOpen}
-      ></button>
+        alt='В корзину'
+        onClick={() => {
+          dispatch(addProduct(product));
+          handlePopupAddCartOpen();
+        }}
+      />
       {/* <figcaption className="popular__item-title">{name}</figcaption> */}
       <Link className={`${component}__item-title`} to={`${PRODUCT_PAGE}/${id}`}>
         {name}
