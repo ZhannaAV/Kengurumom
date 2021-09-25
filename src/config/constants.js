@@ -47,7 +47,7 @@ export const exampleArrProducts = [
     ],
     new: false,
     sale: undefined,
-    category: 'changing-cocoons',
+    category: 'Пеленальные коконы',
   },
   {
     name: 'Пеленальный кокон',
@@ -70,7 +70,7 @@ export const exampleArrProducts = [
     ],
     new: false,
     sale: 20,
-    category: 'sleeping-bags',
+    category: 'Спальники',
   },
   {
     name: 'Милкснуд',
@@ -93,7 +93,7 @@ export const exampleArrProducts = [
     ],
     new: false,
     sale: undefined,
-    category: 'milksnuds',
+    category: 'Милкснуды',
   },
   {
     name: 'Спальник',
@@ -116,7 +116,7 @@ export const exampleArrProducts = [
     ],
     new: true,
     sale: 5,
-    category: 'milksnuds',
+    category: 'Спальники',
   },
   {
     name: 'Пелёнка-кокон "Авокадо"',
@@ -139,7 +139,7 @@ export const exampleArrProducts = [
     ],
     new: false,
     sale: undefined,
-    category: 'changing-cocoons',
+    category: 'Пеленальные коконы',
   },
   {
     name: 'Пеленальный кокон',
@@ -162,7 +162,7 @@ export const exampleArrProducts = [
     ],
     new: true,
     sale: 20,
-    category: 'sleeping-bags',
+    category: 'Спальники',
   },
   {
     name: 'Милкснуд',
@@ -185,7 +185,7 @@ export const exampleArrProducts = [
     ],
     new: false,
     sale: undefined,
-    category: 'milksnuds',
+    category: 'Милкснуды',
   },
   {
     name: 'Спальник',
@@ -208,7 +208,7 @@ export const exampleArrProducts = [
     ],
     new: true,
     sale: 5,
-    category: 'milksnuds',
+    category: 'Милкснуды',
   },
   {
     name: 'Пелёнка-кокон "Авокадо"',
@@ -231,7 +231,7 @@ export const exampleArrProducts = [
     ],
     new: false,
     sale: undefined,
-    category: 'changing-cocoons',
+    category: 'Пеленальные коконы',
   },
   {
     name: 'Пеленальный кокон',
@@ -254,7 +254,7 @@ export const exampleArrProducts = [
     ],
     new: false,
     sale: 20,
-    category: 'sleeping-bags',
+    category: 'Спальники',
   },
   {
     name: 'Милкснуд',
@@ -277,7 +277,7 @@ export const exampleArrProducts = [
     ],
     new: false,
     sale: undefined,
-    category: 'changing-cocoons',
+    category: 'Пеленальные коконы',
   },
   {
     name: 'Спальник',
@@ -300,7 +300,7 @@ export const exampleArrProducts = [
     ],
     new: true,
     sale: 5,
-    category: 'changing-cocoons',
+    category: 'Пеленальные коконы',
   },
   {
     name: 'Пелёнка-кокон "Авокадо"',
@@ -323,7 +323,7 @@ export const exampleArrProducts = [
     ],
     new: false,
     sale: undefined,
-    category: 'gift-certificate',
+    category: 'Вязаные пледы',
   },
   {
     name: 'Пеленальный кокон',
@@ -346,7 +346,7 @@ export const exampleArrProducts = [
     ],
     new: true,
     sale: 20,
-    category: 'gift-certificate',
+    category: 'Вязаные пледы',
   },
   {
     name: 'Милкснуд',
@@ -369,7 +369,7 @@ export const exampleArrProducts = [
     ],
     new: true,
     sale: 50,
-    category: 'bibs',
+    category: 'Слюнявчики и грызунки',
   },
   {
     name: 'Спальник',
@@ -392,7 +392,7 @@ export const exampleArrProducts = [
     ],
     new: true,
     sale: 5,
-    category: 'bibs',
+    category: 'Слюнявчики и грызунки',
   },
 ];
 

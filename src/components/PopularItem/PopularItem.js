@@ -1,7 +1,7 @@
 import './PopularItem.css';
 import { Link, useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { PRODUCT_PAGE } from '../../config/links';
+import { CATALOGUE_PAGE } from '../../config/links';
 import { addProduct } from '../../redux/actions';
 
 // 'new' prop is reserved, rename to isNew
@@ -20,7 +20,7 @@ export default function PopularItem(product) {
   const dispatch = useDispatch();
 
   const handleClick = () => {
-    history.push(`${PRODUCT_PAGE}/${id}`);
+    history.push(`${CATALOGUE_PAGE}/${id}`);
   };
 
   const handlePopupAddCartOpen = () => {
@@ -45,7 +45,7 @@ export default function PopularItem(product) {
         }}
       />
       {/* <figcaption className="popular__item-title">{name}</figcaption> */}
-      <Link className={`${component}__item-title`} to={`${PRODUCT_PAGE}/${id}`}>
+      <Link className={`${component}__item-title`} to={`${CATALOGUE_PAGE}/${id}`}>
         {name}
       </Link>
       <div className={`${component}__item-price`}>

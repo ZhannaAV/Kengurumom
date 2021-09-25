@@ -9,7 +9,6 @@ import {
   CONTACTS_PAGE,
   OFFER_PAGE,
   TERMS_OF_USE_PAGE,
-  PRODUCT_PAGE,
   ORDER_SUCCESS_PAGE,
   BASKET_PAGE,
 } from '../../config/links';
@@ -67,7 +66,7 @@ function Content(props) {
           <BasketPage />
         </Route>
 
-        <Route path={CATALOGUE_PAGE}>
+        <Route exact path={CATALOGUE_PAGE}>
           <CatalogPage
             media={media}
             products={exampleArrProducts}
@@ -75,7 +74,7 @@ function Content(props) {
           />
         </Route>
 
-        <Route exact path={`${PRODUCT_PAGE}/:id`}>
+        <Route exact path={`${CATALOGUE_PAGE}/:id`}>
           <ProductPage
             products={exampleArrProducts}
             media={media}

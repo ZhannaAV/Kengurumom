@@ -1,21 +1,25 @@
 /* eslint-disable no-nested-ternary */
 import './CatalogPage.css';
-import {
-  NavLink, Route, Switch, useRouteMatch,
-} from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { catalogCategories } from '../../config/links';
-import CategoryPage from './CategoryPage/CategoryPage';
 import SlickSlider from '../SharedComponents/Slider/SlickSlider';
+import ProductsList from '../ProductsList/ProductsList';
+import CustomSelect from '../CustomSelect/CustomSelect';
 
 function CatalogPage({ products, onPopupAddCartOpen, media }) {
-  const { path, url } = useRouteMatch();
-
+  const [category, setCategory] = useState('');
+  const [filteredList, setFilteredList] = useState(products);
   const [width, setWidth] = useState(window.innerWidth);
   const [slides, setSlides] = useState(
     media.isDesktop ? 5 : media.isTabletVert ? 4 : media.isMobileHor ? 2 : 1,
   );
   const [showArrows, setShowArrows] = useState(!!media.isDesktop);
+
+  useEffect(() => {
+    setFilteredList(
+      category ? products.filter(product => product.category === category) : products,
+    );
+  }, [category]);
 
   const updateWidth = () => {
     setWidth(window.innerWidth);
@@ -46,56 +50,38 @@ function CatalogPage({ products, onPopupAddCartOpen, media }) {
     };
   });
 
-  // такая структура временная. попозже я исправлю ее на более подходящую. сейчас просто тест работы
-
   return (
-    <section className="catalog">
-      <h1 className="catalog__title">Каталог</h1>
-      <div className="catalog__categories-line">
-          <SlickSlider
-            className="menu-slider"
-            slides={slides}
-            showArrows={showArrows}
-            arrowType="menu"
-          >
-            {catalogCategories.map((link, i) => (
-              <NavLink
-                activeClassName="selected"
-                key={i}
-                className="catalog__category"
-                to={`${url}/${link[1]}`}
-              >
-                {link[0]}
-              </NavLink>
-            ))}
-          </SlickSlider>
-        {/* <nav className="catalog__categories">
-          {catalogCategories.map((link, i) => (
-            <NavLink
-              activeClassName="selected"
+    <section className='catalog'>
+      <h1 className='catalog__title'>Каталог</h1>
+      <div className='catalog__categories-line'>
+        <SlickSlider
+          className='menu-slider'
+          slides={slides}
+          showArrows={showArrows}
+          arrowType='menu'
+        >
+          {catalogCategories.map((categoryTitle, i) => (
+            <button
               key={i}
-              className="catalog__category"
-              to={`${url}/${link[1]}`}
+              className='catalog__category'
+              onClick={() => setCategory(categoryTitle)}
             >
-              {link[0]}
-            </NavLink>
+              {categoryTitle}
+            </button>
           ))}
-        </nav> */}
+        </SlickSlider>
       </div>
-      <Switch>
-        <Route exact path={path}>
-          <CategoryPage
-            products={products}
-            onPopupAddCartOpen={onPopupAddCartOpen}
+      <div className='catalog__wrapper'>
+        <div className='catalog__sort'>
+          <CustomSelect
+            page='category'
+            options={['Цена по убыванию', 'Цена по возрастанию']}
+            startValue='Сортировать:'
           />
-        </Route>
-        <Route exact path={`${path}/:category`}>
-          <CategoryPage
-            products={products}
-            onPopupAddCartOpen={onPopupAddCartOpen}
-          />
-        </Route>
-      </Switch>
+        </div>
+        <ProductsList list={filteredList} onPopupAddCartOpen={onPopupAddCartOpen} />
+        <button className='button catalog__pagination'>Показать еще</button>
+      </div>
     </section>
   );
 }
