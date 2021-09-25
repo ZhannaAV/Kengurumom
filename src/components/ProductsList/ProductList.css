@@ -2,6 +2,17 @@
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(268px, 1fr));
-  gap: 50px 30px;
+  gap: 30px 30px;
   margin-bottom: 50px;
+  min-height: 200px;
+}
+
+.products-list__no-data-text {
+  justify-self: center;
+  margin-top: 50px;
+}
+
+
+.products-list__pagination {
+  align-self: center;
 }

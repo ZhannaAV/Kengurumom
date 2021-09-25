@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import './PhotoGrid.css';
 import PhotoElement from '../PhotoElement/PhotoElement';
-import { instagramPhotoData } from '../../config/constants';
+import { instagramPhotoData } from '../../config/test-db';
 
 function PhotoGrid() {
   const [elements, setElements] = useState([]);

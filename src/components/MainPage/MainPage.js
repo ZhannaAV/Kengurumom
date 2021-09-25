@@ -4,7 +4,7 @@ import Advantages from '../Advantages/Advantages';
 import SectionsWithBtn from '../SectionsWithBtn/SectionsWithBtn';
 import Review from '../Review/Review';
 import Instagram from '../Instagram/Instagram';
-import { exampleArrProducts } from '../../config/constants';
+import { exampleArrProducts } from '../../config/test-db';
 
 function MainPage(props) {
   const { media, onPopupAddCartOpen } = props;

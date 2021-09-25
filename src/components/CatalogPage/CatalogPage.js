@@ -75,8 +75,7 @@ function CatalogPage({ products, onPopupAddCartOpen, media }) {
           {catalogCategories.map((categoryTitle, i) => (
             <button
               key={i}
-              className={`catalog__category ${
-                categoryTitle === category && 'catalog__category_active'
+              className={`catalog__category ${categoryTitle === category && 'catalog__category_active'
               }`}
               onClick={() => setCategory(categoryTitle)}
             >
@@ -100,8 +99,12 @@ function CatalogPage({ products, onPopupAddCartOpen, media }) {
             Сбросить фильтр
           </button>
         </div>
-        <ProductsList list={filteredList} onPopupAddCartOpen={onPopupAddCartOpen} />
-        <button className='button catalog__pagination'>Показать еще</button>
+        <ProductsList list={filteredList} onPopupAddCartOpen={onPopupAddCartOpen} media={media}/>
+        {/* {filteredList.length > 8
+        && (<button onClick={handleClickMore}
+            className='button catalog__pagination'>Показать ещё</button>
+
+        )} */}
       </div>
     </section>
   );

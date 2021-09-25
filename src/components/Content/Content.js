@@ -20,7 +20,7 @@ import Button from '../Button/Button';
 import NotFoundPage from '../NotFoundPage/NotFoundPage';
 import CatalogPage from '../CatalogPage/CatalogPage';
 import ProductPage from '../ProductPage/ProductPage';
-import { exampleArrProducts } from '../../config/constants';
+import { exampleArrProducts } from '../../config/test-db';
 import BreadCrumbs from '../BreadCrumbs/BreadCrumbs';
 import ContactsPage from '../ContactsPage/ContactsPage';
 import OrderSuccessPage from '../OrderSuccessPage/OrderSuccessPage';
