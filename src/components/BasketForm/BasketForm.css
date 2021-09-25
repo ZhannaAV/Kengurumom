@@ -6,10 +6,9 @@
   width: 100%;
   border: none;
   padding: 0;
-  margin-bottom: 20px;
 }
 
-.basket-page__tel {
+.basket-page__input {
   width: 100%;
   border: 1px solid #513629;
   border-radius: 10px;
@@ -18,7 +17,11 @@
   box-sizing: border-box;
 }
 
-.basket-page__tel:focus, .basket-page__address:focus {
+.basket-page__input + .basket-page__input{
+  margin-top: 10px;
+}
+
+.basket-page__input:focus, .basket-page__address:focus {
   outline: none;
   border: 1px solid #ca764e;
   border-radius: 10px;
@@ -33,6 +36,22 @@
   padding: 17px 20px 0;
   box-sizing: border-box;
 }
+
+.basket-page__fieldset + .basket-page__fieldset{
+  margin-top: 10px;
+}
+
+.basket-page__radio + .basket-page__radio{
+  margin-top: 15px;
+}
+
+.basket-page__label{
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 18px;
+  line-height: 127%;
+  color: #513629;
+}
+
 
 @media screen and (max-width: 425px) {
   .basket-page__form {
