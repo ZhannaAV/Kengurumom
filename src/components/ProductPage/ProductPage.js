@@ -41,7 +41,17 @@ function ProductPage({ products, media, onPopupCareOpen, onPopupAddCartOpen }) {
         </div>
         <div className='product__specification-box'>
           <p className='product__text'>Размер:</p>
-          <CustomSelect options={product.sizes} startValue='Выбрать...' />
+          {/* <CustomSelect options={product.sizes} startValue='Выбрать...' /> */}
+          <CustomSelect
+            page='product'
+            options={product.sizes.map((size => ({
+              value: size.value,
+              label: size.label,
+            })))}
+            // startValue='Сортировать:'
+            startValue={'min'}
+            // cb={handleOrderDirection}
+          />
         </div>
         <button className='button button_type_add-to-card' onClick={handlePopupAddCartOpen}>
           В корзину
