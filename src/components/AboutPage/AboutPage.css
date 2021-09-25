@@ -2,7 +2,7 @@
   width: 100%;
   max-width: 868px;
   margin: 0 auto;
-  padding: 160px 0 158px 0;
+  padding: 0 0 158px 0;
   box-sizing: border-box;
 }
 
@@ -50,4 +50,10 @@
   height: 280px;
   border: 0;
   border-radius: 10px;
+}
+
+@media screen and (max-width: 480px) {
+  .about-page {
+    padding-top: 0;
+  }
 }

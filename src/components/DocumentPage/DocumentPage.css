@@ -72,6 +72,9 @@
   .document__content {
     margin-bottom: 110px;
   }
+  .document__title {
+    margin-top: 0;
+  }
 }
 
 @media screen and (max-width: 320px) {
