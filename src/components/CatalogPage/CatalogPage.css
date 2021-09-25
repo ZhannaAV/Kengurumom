@@ -53,6 +53,10 @@
   color: #dc8962;
 }
 
+.catalog__category_active{
+  color: #CA764E;
+}
+
 .catalog__wrapper {
   margin: 0 auto;
   display: flex;
@@ -62,18 +66,31 @@
 }
 
 .catalog__sort {
+  display: flex;
+  align-items: baseline;
   align-self: flex-end;
   margin: 0 0 40px;
 }
 
+.catalog__btn-clear-filter{
+  text-align: right;
+  margin-left: 5px;
+  border: none;
+  background-color: transparent;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #513629;
+  padding: 0;
+  cursor: pointer;
+}
 
+.catalog__btn-clear-filter:disabled{
+  opacity: .6;
+  cursor: auto;
+}
 
 .catalog__pagination {
   align-self: center;
 }
 
-.selected {
-  font-weight: 600;
-  line-height: 140%;
-  color: #dc8962;
-}
