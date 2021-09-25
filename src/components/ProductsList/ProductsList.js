@@ -67,12 +67,12 @@ function ProductsList({ list, onPopupAddCartOpen, media }) {
         : (list
           .filter((product, index) => index < itemsCount)
           .map(product => (
-          <PopularItem
-            {...product}
-            key={product.id}
-            component={'catalog'}
-            onPopupAddCartOpen={onPopupAddCartOpen}
-          />
+            <PopularItem
+              {...product}
+              key={product.id}
+              component={'catalog'}
+              onPopupAddCartOpen={onPopupAddCartOpen}
+            />
           ))
         )
       }

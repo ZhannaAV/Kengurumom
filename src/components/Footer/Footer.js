@@ -2,7 +2,7 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
 import Logo from '../Logo/Logo';
 import './Footer.css';
-import { PHONE } from '../../config/texts';
+import { TEL, PHONE_TEXT } from '../../config/texts';
 import Navigation from '../Navigation/Navigation';
 
 function Footer({ media }) {
@@ -15,7 +15,9 @@ function Footer({ media }) {
         <Navigation type="footer" media={media} />
         <div className="footer__contacts">
           <div className="footer__contact footer__contact_type_phone">
-            <p className="footer__text">{PHONE}</p>
+            <a href={`tel:${TEL}`} className='footer__text'>
+              {PHONE_TEXT}
+            </a>
           </div>
           <div className="footer__contact footer__contact_type_time">
             <p className="footer__text">Звонки и заказы:</p>

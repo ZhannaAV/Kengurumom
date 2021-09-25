@@ -1,6 +1,7 @@
 import './ContactsPage.css';
 import Button from '../Button/Button';
 import TermsCheckbox from '../TermsCheckbox/TermsCheckbox';
+import { TEL, PHONE_TEXT } from '../../config/texts';
 
 function ContactsPage() {
   return (
@@ -10,8 +11,8 @@ function ContactsPage() {
         <ul className='contacts__data'>
           <li className='contacts__item'>
             <h3 className='contacts__item-title'>Телефон</h3>
-            <a href='tel:+79645890696' className='contacts__link'>
-              +7 964 589 06 96
+            <a href={`tel:${TEL}`} className='contacts__link'>
+              {PHONE_TEXT}
             </a>
           </li>
           <li className='contacts__item'>
