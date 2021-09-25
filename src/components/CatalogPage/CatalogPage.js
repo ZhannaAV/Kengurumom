@@ -7,8 +7,8 @@ import ProductsList from '../ProductsList/ProductsList';
 import CustomSelect from '../CustomSelect/CustomSelect';
 
 function CatalogPage({ products, onPopupAddCartOpen, media }) {
-  const [category, setCategory] = useState('');
-  const [filteredList, setFilteredList] = useState(products);
+  const [category, setCategory] = useState(localStorage.getItem('category') || '');
+  const [filteredList, setFilteredList] = useState([]);
   const [width, setWidth] = useState(window.innerWidth);
   const [slides, setSlides] = useState(
     media.isDesktop ? 5 : media.isTabletVert ? 4 : media.isMobileHor ? 2 : 1,
@@ -19,6 +19,13 @@ function CatalogPage({ products, onPopupAddCartOpen, media }) {
     setFilteredList(
       category ? products.filter(product => product.category === category) : products,
     );
+  }, []);
+
+  useEffect(() => {
+    setFilteredList(
+      category ? products.filter(product => product.category === category) : products,
+    );
+    localStorage.setItem('category', category);
   }, [category]);
 
   const updateWidth = () => {
@@ -50,6 +57,11 @@ function CatalogPage({ products, onPopupAddCartOpen, media }) {
     };
   });
 
+  function clearFilter() {
+    setCategory('');
+    localStorage.setItem('category', '');
+  }
+
   return (
     <section className='catalog'>
       <h1 className='catalog__title'>Каталог</h1>
@@ -63,7 +75,9 @@ function CatalogPage({ products, onPopupAddCartOpen, media }) {
           {catalogCategories.map((categoryTitle, i) => (
             <button
               key={i}
-              className='catalog__category'
+              className={`catalog__category ${
+                categoryTitle === category && 'catalog__category_active'
+              }`}
               onClick={() => setCategory(categoryTitle)}
             >
               {categoryTitle}
@@ -78,6 +92,13 @@ function CatalogPage({ products, onPopupAddCartOpen, media }) {
             options={['Цена по убыванию', 'Цена по возрастанию']}
             startValue='Сортировать:'
           />
+          <button
+            className={'catalog__btn-clear-filter'}
+            disabled={category === ''}
+            onClick={clearFilter}
+          >
+            Сбросить фильтр
+          </button>
         </div>
         <ProductsList list={filteredList} onPopupAddCartOpen={onPopupAddCartOpen} />
         <button className='button catalog__pagination'>Показать еще</button>
