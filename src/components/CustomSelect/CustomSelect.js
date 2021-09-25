@@ -15,7 +15,6 @@ const CustomSelect = ({ options, startValue, page }) => {
     setSelectedOption(value);
     setIsOpen(false);
     setIsSelectActive(false);
-    // console.log(selectedOption);
   };
 
   return (
@@ -30,7 +29,7 @@ const CustomSelect = ({ options, startValue, page }) => {
           <div className="select__main-option">{selectedOption || startValue}</div>
         </div>
         <div className={`select__container ${isOpen && 'select__container_opened'}`}>
-          <div className="select__list">
+          <ul className="select__list">
             {options.map((option, i) => (
               <li
                 className={`select__list-item ${
@@ -39,10 +38,10 @@ const CustomSelect = ({ options, startValue, page }) => {
                 onClick={onOptionClicked(option)}
                 key={i}
               >
-                <div className="test">{option}</div>
+                <span className="select__item-text">{option}</span>
               </li>
             ))}
-          </div>
+          </ul>
         </div>
       </div>
     </section>

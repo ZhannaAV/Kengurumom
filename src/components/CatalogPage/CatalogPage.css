@@ -53,8 +53,8 @@
   color: #dc8962;
 }
 
-.catalog__category_active{
-  color: #CA764E;
+.catalog__category_active {
+  color: #ca764e;
 }
 
 .catalog__wrapper {
@@ -72,25 +72,31 @@
   margin: 0 0 40px;
 }
 
-.catalog__btn-clear-filter{
+.catalog__btn-clear-filter {
   text-align: right;
   margin-left: 5px;
-  border: none;
   background-color: transparent;
   font-weight: 500;
   font-size: 14px;
   line-height: 17px;
   color: #513629;
-  padding: 0;
+  padding: 9px;
   cursor: pointer;
+  border: 0.5px solid transparent;
+  height: 30px;
+  border-radius: 10px;
 }
 
-.catalog__btn-clear-filter:disabled{
-  opacity: .6;
+.catalog__btn-clear-filter:hover {
+  border: 0.5px solid #faf1e9;
+}
+
+.catalog__btn-clear-filter:disabled {
+  border: none;
+  opacity: 0.6;
   cursor: auto;
 }
 
 .catalog__pagination {
   align-self: center;
 }
-

@@ -21,7 +21,7 @@
 
 .select__header {
   cursor: pointer;
-  padding: 0;
+  padding: 9px 29px;
   margin: 0;
   width: 100%;
   color: #513629;
@@ -30,7 +30,7 @@
   border-radius: 10px;
   border: 0.5px solid transparent;
   transition: all 0.4s ease-in-out;
-  height: 30px;
+  min-height: 30px;
   position: relative;
 }
 
@@ -60,7 +60,7 @@
 }
 
 .select__main-option {
-  margin: 6px auto 6px 10%;
+  /* margin: 6px auto 6px 10%; */
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -99,20 +99,21 @@
 }
 
 .select__list-item {
-  height: 30px;
+  /* height: 30px; */
   text-align: center;
   cursor: pointer;
   list-style: none;
   margin: 0;
+  padding: 9px 29px;
   border: 0.5px solid #513629;
   border-top: none;
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   transition: background-color 0.4s ease-in-out;
 }
 
-.test {
+.select__item-text {
   margin: 0;
   padding: 0;
   font-style: normal;
@@ -128,6 +129,7 @@
 
 .select__list-item:hover {
   background-color: #dc8962;
+  color: #FAF1E9;
 }
 
 .select__list-item__active {
