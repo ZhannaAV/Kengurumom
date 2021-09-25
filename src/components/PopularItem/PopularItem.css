@@ -163,7 +163,7 @@
   height: 82px;
   object-fit: none;
   cursor: pointer;
-  
+
   background-image: url('../../images/popular_cart.svg');
   background-repeat: no-repeat;
   background-size: unset;
@@ -190,7 +190,14 @@
   justify-content: flex-start;
   align-content: center;
   margin: 0 auto;
-  padding: 0;
+  padding: 0 0 21px;
+  width: 100%;
+  border-radius: 10px;
+  transition: box-shadow .26s ease-in-out;
+}
+
+.catalog__item:hover {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 .catalog__item_new::before {
@@ -298,7 +305,7 @@
   height: 82px;
   object-fit: none;
   cursor: pointer;
-  
+
   background-image: url('../../images/popular_cart.svg');
   background-repeat: no-repeat;
   background-size: unset;
