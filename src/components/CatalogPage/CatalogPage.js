@@ -9,6 +9,7 @@ import CustomSelect from '../CustomSelect/CustomSelect';
 function CatalogPage({ products, onPopupAddCartOpen, media }) {
   const [category, setCategory] = useState(localStorage.getItem('category') || '');
   const [filteredList, setFilteredList] = useState([]);
+  const [order, setOrder] = useState('asc');
   const [width, setWidth] = useState(window.innerWidth);
   const [slides, setSlides] = useState(
     media.isDesktop ? 5 : media.isTabletVert ? 4 : media.isMobileHor ? 2 : 1,
@@ -16,17 +17,25 @@ function CatalogPage({ products, onPopupAddCartOpen, media }) {
   const [showArrows, setShowArrows] = useState(!!media.isDesktop);
 
   useEffect(() => {
+    const orderFunction = (a, b) => order === 'asc' ? a.price - b.price : b.price - a.price;
+
     setFilteredList(
-      category ? products.filter(product => product.category === category) : products,
+      category
+        ? products.filter(product => product.category === category).sort(orderFunction)
+        : products.sort(orderFunction),
     );
   }, []);
 
   useEffect(() => {
+    const orderFunction = (a, b) => order === 'asc' ? a.price - b.price : b.price - a.price;
+
     setFilteredList(
-      category ? products.filter(product => product.category === category) : products,
+      category
+        ? products.filter(product => product.category === category).sort(orderFunction)
+        : products.sort(orderFunction),
     );
     localStorage.setItem('category', category);
-  }, [category]);
+  }, [category, order]);
 
   const updateWidth = () => {
     setWidth(window.innerWidth);
@@ -62,6 +71,10 @@ function CatalogPage({ products, onPopupAddCartOpen, media }) {
     localStorage.setItem('category', '');
   }
 
+  const handleOrderDirection = (orderDirection) => {
+    setOrder(orderDirection);
+  };
+
   return (
     <section className='catalog'>
       <h1 className='catalog__title'>Каталог</h1>
@@ -86,10 +99,26 @@ function CatalogPage({ products, onPopupAddCartOpen, media }) {
       </div>
       <div className='catalog__wrapper'>
         <div className='catalog__sort'>
-          <CustomSelect
+          {/* <CustomSelect
             page='category'
             options={['Цена по убыванию', 'Цена по возрастанию']}
             startValue='Сортировать:'
+          /> */}
+          <CustomSelect
+            page='category'
+            options={[
+              {
+                value: 'desc',
+                label: 'Цена по убыванию',
+              },
+              {
+                value: 'asc',
+                label: 'Цена по возрастанию',
+              },
+            ]}
+            // startValue='Сортировать:'
+            startValue={order}
+            cb={handleOrderDirection}
           />
           <button
             className={'catalog__btn-clear-filter'}

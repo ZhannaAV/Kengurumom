@@ -7,7 +7,7 @@
 .select_category {
   margin: 0;
   padding: 0;
-  width: 232px;
+  width: 252px;
 }
 
 .select__wrapper {
@@ -41,7 +41,7 @@
   right: 10%;
   width: 10px;
   height: 9px;
-  background-image: url(../../images/product/Triangle.svg);
+  background-image: url('../../images/product/Triangle.svg');
   background-repeat: no-repeat;
   transition: transform 0.4s ease-in-out;
 }
