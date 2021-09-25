@@ -55,7 +55,6 @@ function ProductsList({ list, onPopupAddCartOpen, media }) {
 
   window.addEventListener('resize', resetResizeTimer());
   // ===============================================================
-
   function handleClickMore() {
     const itemsSum = itemsCount;
     setItemsCount(itemsSum + itemsCountAdded);
