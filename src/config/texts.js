@@ -4,7 +4,8 @@ export const ABOUT_TEXT = 'О бренде';
 export const CATALOGUE_TEXT = 'Каталог';
 export const DELIVERY_TEXT = 'Доставка';
 export const CONTACTS_TEXT = 'Контакты';
-export const PHONE = '+7 925 343 34 34';
+export const PHONE_TEXT = '+7 964 589 06 96';
+export const TEL = '+79645890696';
 export const OFFER_TEXT = 'Оферта';
 export const TERMS_OF_USE_TEXT = 'Политика конфиденциальности';
 

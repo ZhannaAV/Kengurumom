@@ -134,6 +134,8 @@
   margin: 0 0 22px 0;
   padding: 0;
   text-align: right;
+  color: inherit;
+  text-decoration: none;
 }
 
 .footer__wrapper {

@@ -15,7 +15,8 @@ import {
   ABOUT_TEXT,
   DELIVERY_TEXT,
   CONTACTS_TEXT,
-  PHONE,
+  PHONE_TEXT,
+  TEL,
   OFFER_TEXT,
   TERMS_OF_USE_TEXT,
 } from '../../config/texts';
@@ -92,13 +93,16 @@ function Navigation({
         </Link>
       )}
       {(type !== 'footer' && (!media.isMobileVert || type === 'side')) && (
-        <Link
-          onMouseOver={type !== 'side' && closeCatalogueMenu}
-          className="navigation__link"
-          to={CONTACTS_PAGE}
-        >
-          {PHONE}
-        </Link>
+        // <Link
+        //   onMouseOver={type !== 'side' && closeCatalogueMenu}
+        //   className="navigation__link"
+        //   to={CONTACTS_PAGE}
+        // >
+        //   {PHONE_TEXT}
+        // </Link>
+        <a onMouseOver={type !== 'side' && closeCatalogueMenu} href={`tel:${TEL}`} className='navigation__link'>
+              {PHONE_TEXT}
+            </a>
       )}
       {type === 'footer' && (
         <Link
