@@ -1,8 +1,10 @@
 import './Slider.css';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import slider1 from '../../images/slider/photo-on-slider-1.jpg';
 import slider2 from '../../images/slider/photo-on-slider-2.jpg';
 import Button from '../Button/Button';
+import { CATALOGUE_PAGE, PERSONAL_SEWING_PAGE } from '../../config/links';
 
 function Slider() {
   const [isSecondSlideVisible, setIsSecondSlideVisible] = useState(false);
@@ -24,7 +26,7 @@ function Slider() {
               <p className="slider__subtitle">
                 От сердца к сердцу!
               </p>
-              <Button text={'Заказать'} />
+              <Link to={CATALOGUE_PAGE}><Button btnStyle={''} text={'В каталог'} type={'button'} /></Link>
             </div>
             <div className="slider__overlay">
               <img className="slider__background" src={slider1} alt="#" />
@@ -40,7 +42,7 @@ function Slider() {
               <p className="slider__subtitle">По Вашим размерам
                 и Вашему выбору ткани
               </p>
-              <Button text={'В каталог'} />
+              <Link to={PERSONAL_SEWING_PAGE}><Button btnStyle={''} text={'Заказать'} type={'button'} /></Link>
             </div>
 
           <div className="slider__overlay">
