@@ -1,7 +1,7 @@
 .basket_page__product {
   display: grid;
   grid-column-gap: 20px;
-  grid-template-columns: 123px;
+  grid-template-columns: 2fr 4fr 4fr 2fr 2fr 1fr;
   grid-template-areas: 'image title article counter price remover';
   align-items: center;
 }
@@ -35,6 +35,7 @@
 
 .basket_page__product-counter {
   grid-area: counter;
+  align-items: center;
 }
 
 .basket_page__product-counter-btn {
@@ -113,7 +114,7 @@
   }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 510px) {
   .basket_page__product {
     grid-template-areas:
       'image title'
@@ -146,6 +147,7 @@
     flex-direction: row;
     align-items: center;
     justify-self: right;
+
   }
 
   .basket_page__product-price{
