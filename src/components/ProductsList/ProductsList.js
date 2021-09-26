@@ -62,7 +62,7 @@ function ProductsList({ list, onPopupAddCartOpen, media }) {
   return (<>
     <div className='products-list'>
       {list.length === 0
-        ? (<span class="products-list__no-data-text">{NODATA}</span>)
+        ? (<span className="products-list__no-data-text">{NODATA}</span>)
         : (list
           .filter((product, index) => index < itemsCount)
           .map(product => (

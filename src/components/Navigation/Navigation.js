@@ -40,14 +40,14 @@ function Navigation({
           { navigation__link_type_footer: type === 'footer' },
         )}
           to={CATALOGUE_PAGE}
-          onMouseOver={type !== 'side' && openCatalogueMenu}
+          onMouseOver={type !== 'side' ? openCatalogueMenu : undefined}
         >
           {CATALOGUE_TEXT}
         </Link>
       )}
       {(media.isDesktop || type === 'side' || type === 'footer') && (
         <Link
-          onMouseOver={type !== 'side' && closeCatalogueMenu}
+          onMouseOver={type !== 'side' ? closeCatalogueMenu : undefined}
           className={cn(
             { navigation__link: type !== 'footer' },
             { navigation__link_type_footer: type === 'footer' },
@@ -59,7 +59,7 @@ function Navigation({
       )}
       {(media.isDesktop || type === 'side' || type === 'footer') && (
         <Link
-          onMouseOver={type !== 'side' && closeCatalogueMenu}
+          onMouseOver={type !== 'side' ? closeCatalogueMenu : undefined}
           className={cn(
             { navigation__link: type !== 'footer' },
             { navigation__link_type_footer: type === 'footer' },
@@ -71,7 +71,7 @@ function Navigation({
       )}
       {(!media.isTabletVert || type === 'side' || type === 'footer') && (
         <Link
-          onMouseOver={type !== 'side' && closeCatalogueMenu}
+          onMouseOver={type !== 'side' ? closeCatalogueMenu : undefined}
           className={cn(
             { navigation__link: type !== 'footer' },
             { navigation__link_type_footer: type === 'footer' },
@@ -100,7 +100,7 @@ function Navigation({
         // >
         //   {PHONE_TEXT}
         // </Link>
-        <a onMouseOver={type !== 'side' && closeCatalogueMenu} href={`tel:${TEL}`} className='navigation__link'>
+        <a onMouseOver={type !== 'side' ? closeCatalogueMenu : undefined} href={`tel:${TEL}`} className='navigation__link'>
               {PHONE_TEXT}
             </a>
       )}
