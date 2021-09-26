@@ -25,6 +25,7 @@ export const instagramPhotoData = [
   { link: photoInstEight },
 ];
 
+// эта структура будет использоваться для БД
 export const exampleArrProducts = [
   {
     name: 'Пелёнка-кокон "Авокадо"',
