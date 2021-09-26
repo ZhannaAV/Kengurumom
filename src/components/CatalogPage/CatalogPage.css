@@ -95,7 +95,15 @@
   opacity: 0.6;
   cursor: auto;
 }
-/* 
+/*
 .catalog__pagination {
   align-self: center;
 } */
+
+@media screen and (max-width: 480px) {
+  .catalog__sort {
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+  }
+}
