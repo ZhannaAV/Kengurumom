@@ -45,8 +45,8 @@ function ProductPage({ products, media, onPopupCareOpen, onPopupAddCartOpen }) {
           <CustomSelect
             page='product'
             options={product.sizes.map((size => ({
-              value: size.value,
-              label: size.label,
+              value: size.value || '',
+              label: size.label || '',
             })))}
             // startValue='Сортировать:'
             startValue={'min'}

@@ -45,7 +45,7 @@ const CustomSelect = ({ options, startValue, page, cb }) => {
           }`}
           onClick={toggling}
         >
-          <div className="select__main-option">{optionsMap[selectedOption].label || optionsMap[startValue].label}</div>
+          <div className="select__main-option">{optionsMap[selectedOption]?.label || optionsMap[startValue]?.label}</div>
         </div>
         <div className={`select__container ${isOpened && 'select__container_opened'}`}>
           <ul className="select__list">
